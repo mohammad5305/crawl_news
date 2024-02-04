@@ -28,14 +28,13 @@ push_news() {
 }
 
 export -f push_news
-export SHORT_COMMITS
+export SHORT_COMMITS URL CHANNEL_ID
 
-# 's/^[[:space:]]*$/\x0/'
 if [ -f "$OLD_FEED" ]
 then
     diff $OLD_FEED $CURRENT_FEED --changed-group-format="%>" --unchanged-group-format="" | tac -s $'\n----' |   sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 else
-    sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' $CURRENT_FEED | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    tac -s $'\n----' | sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' $CURRENT_FEED | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 fi
 
 if [ -s "$SHORT_COMMITS" ]; then

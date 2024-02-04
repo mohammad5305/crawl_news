@@ -21,7 +21,7 @@ push_news() {
         # TODO: normalize the string(converting html entities)
         echo "<a href='${LINK}'>${HEADER}</a>" >> $SHORT_COMMITS
     else
-        curl -s -X POST "$URL" -d chat_id=$ID -d text="$1"
+        curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d text="$1"
     fi
 }
 
@@ -38,5 +38,5 @@ fi
 
 
 while read -r COMMIT; do
-    curl -s -X POST $URL -d chat_id=$ID -d parse_mode="HTML" -d text="$COMMIT"
+    curl -s -X POST $URL -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="$COMMIT"
 done < $SHORT_COMMITS

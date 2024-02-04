@@ -10,7 +10,7 @@ SHORT_COMMITS=$(mktemp -p /tmp crawl.XXXX)
 
 wget https://github.com/crawl/crawl/commits/master.atom -O /tmp/master.atom
 
-xml sel -N x=http://www.w3.org/2005/Atom -t -m "//x:entry" -v "x:content"  -v "x:link/@href" -n -o "----" -n /tmp/master.atom | sed -e 's/&amp;\|&#38;/\&/g' -e 's/&lt;\|&#60;/</g' -e 's/&gt;\|&#62;/>/g' -e 's/&quot;\|&#34;/"/g' -e "s/&apos;\|&#39;/'/g" -e 's/&nbsp;|&#160;/ /g' | grep -v '^$' | sed 's/^[ \t]*//' > $CURRENT_FEED
+xmlstarlet sel -N x=http://www.w3.org/2005/Atom -t -m "//x:entry" -v "x:content"  -v "x:link/@href" -n -o "----" -n /tmp/master.atom | sed -e 's/&amp;\|&#38;/\&/g' -e 's/&lt;\|&#60;/</g' -e 's/&gt;\|&#62;/>/g' -e 's/&quot;\|&#34;/"/g' -e "s/&apos;\|&#39;/'/g" -e 's/&nbsp;|&#160;/ /g' | grep -v '^$' | sed 's/^[ \t]*//' > $CURRENT_FEED
 
 push_news() {
     DATA=$(echo "$1" | grep -v "^\s*$")

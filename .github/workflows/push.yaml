@@ -11,7 +11,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install deps
-        run: sudo apt install xmlstarlet
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: xmlstarlet
+          version: 1.0
 
       - name: Run script
         env: 
@@ -22,4 +25,6 @@ jobs:
         with:
           add: './current.txt'
           message: 'gh action: current feed updated'
+          default_author: github_actions
+
 

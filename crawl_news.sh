@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eo pipefail
+
 OLD_FEED=./current.txt
 CURRENT_FEED=$(mktemp -p /tmp crawl_feed.XXX)
 BOT_TOKEN=${BOT_TOKEN:=""}
@@ -41,3 +43,5 @@ if [ -s "$SHORT_COMMITS" ]; then
     mapfile LINKS < $SHORT_COMMITS
     curl -s -X POST $URL -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="<b>minor changes:</b>"$'\n'"$(join_by $'\n' "${LINKS[@]}")"
 fi
+
+mv "$CURRENT_FEED" "$OLD_FEED"

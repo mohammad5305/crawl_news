@@ -1,0 +1,180 @@
+<pre style='white-space:pre-wrap;width:81ex'>Fix dactions not being processed after level peek (Darby)
+Each level stores an index into the global list of scheduled dactions
+that reflects 'the last daction that was done on this level'. The idea
+being that whenever you reenter a level where you've already been, it will
+use this index to process only the 'new' dactions that have been added
+since you were there last.
+The problem is that (for some reason), the dactions_done wasn't actually
+being marshalled properly, but the game was assuming that it was impossible
+to save a floor without all dactions being caught up. And this is
+distinctly NOT the case in at least one situation (and maybe more): level
+excursions!
+Essentially, making a level excursion to any floor would cause any dactions
+scheduled (but not yet processed on that floor) to never happen there.
+An easy way to demonstrate this is by pulling Kirke to another floor, away
+from her hogs, and killing her there. Then peeking back at the old level.
+If you did this, and then returned for real, the hogs left behind would
+never transform back, since the excursion had made the game save that
+floor's dactions_done as 'total number of dactions that exist'.
+This potentially affects countless things, in a wide variety of stuations.
+Even doing things with the shopping list triggers level excursions, which
+would have invalidated daction state on the floor with the shop, I'm
+pretty sure.
+This fix is a very simple one, and seems to work (and feels like what this
+code always should have been). But it's possible I'm overlooking something,
+of course, and it can't be as simple as it seems. Fingers crossed?</pre>
+https://github.com/crawl/crawl/commit/058985b245d8e15b62c93770fc0a68c0a486c9b2
+----
+<pre style='white-space:pre-wrap;width:81ex'>Catch a missing Depths gem (GnomeSayin)
+evilmike_zot_entry_gauntlet doesn't use the same standardized function
+of zot_entry_setup like the other zot entry vaults do because it uses
+a different monster set than the others. As such, it was missed in
+866d48a, which was mostly checking the presence of that function being
+called. I edited Zot gem placement in 2f004bd, but I missed out on this
+one also because I was just editing the use of that function. (I also
+didn't catch it in afdcd2b adjusting a lot of gem placement, because it
+wasn't one of the rune branch uses as I was worried about at the time).
+Sorry, everybody who missed out on the gem this way. I'll fit another
+review of smoky and midnight gems into the next big vault review for the
+early start of 0.32.</pre>
+https://github.com/crawl/crawl/commit/a30500b4d33089dca1961d26eb856987e73f79ad
+----
+<pre style='white-space:pre-wrap;width:81ex'>fix: Apply attack delay to WJC rampage kills (Undo)
+7bd419a0e5 introduced a bug where if the player killed their rampage target
+during WJC postmoves, that move would take zero delay and fail to end the
+turn. Using this bug, the player could equip seven-league and a high damage
+weapon like the lochaber axe or dark maul, and bounce around the screen
+making zero delay WJC attack moves.
+move_player_action implicitly assumes that either an attack or a movement
+will be attempted if it's being called: In this case, after 7bd419a0e5,
+its movement attempt was being blocked, and there was no target monster
+left to attack, so it eventually just returned without applying time_taken
+or ending the turn.
+This commit hopefully fixes the bug, by applying attack delay and ending
+the turn if our rampage target dies during WJC postmoves.</pre>
+https://github.com/crawl/crawl/commit/ec2d92a32c3302389850c69901d24765efb774bc
+----
+<pre style='white-space:pre-wrap;width:81ex'>fix: Serpent of Hell placement in Dis (Sar)
+The subvault dis_grunt of iron_city_of_dis had bad substitutions that
+could sometimes replace the glyph used for the SoH with some other
+definition. I've reworked the substitutions to (1) always place the SoH
+if Dis is its target branch, (2) randomize placement between the two
+locations for the SoH the map uses, and (3) retain the slight
+randomization of the spawn location in the rune chamber regardless of
+whether SoH places on this map.
+(cherry picked from commit 3a7656b989bb67f3439edfef999a82b942910c4d)</pre>
+https://github.com/crawl/crawl/commit/2adb59ae066ca224ec4abdf2428c32241198b94c
+----
+<pre style='white-space:pre-wrap;width:81ex'>Remove a duplicate description (regret-index)</pre>
+https://github.com/crawl/crawl/commit/5c88369fb25b9c1cfc7e561e3047f90ce2bf400f
+----
+<pre style='white-space:pre-wrap;width:81ex'>Don't crash on bad mut names (regret-index)</pre>
+https://github.com/crawl/crawl/commit/b04dd89b9bd9097e3352ad954d28c124a79564c4
+----
+<pre style='white-space:pre-wrap;width:81ex'>Fix two misnamed mutations (regret-index)</pre>
+https://github.com/crawl/crawl/commit/abbd88f42ed78f4ea2af56e676c474b162bafa17
+----
+<pre style='white-space:pre-wrap;width:81ex'>Fix ?/u showing potion of (regret-index)
+potion of mutation is not a mutation named potion of.</pre>
+https://github.com/crawl/crawl/commit/6a59d0303af20491a56fafc4115e235261e8ddd8
+----
+<pre style='white-space:pre-wrap;width:81ex'>Don't let spectral weapons get free hits every now and again
+Actual triggered attacks by spectral weapons were handled by
+spectral_weapon_fineff, but it was still possible for the spectral weapon
+monster to randomly path into the player (or, presumably, something else).
+And since all it takes in Crawl logic to initiate an attack is 'trying to
+move into something we're not aligned with'), this would cause an attack.
+Potentially multiple attacks in a row, in fact.
+Since we never really want fight_melee to happen for spectral weapons, this
+specifically blocks that.
+(We could just reduce their speed to 0, but the sight of them dancing back
+and forth feels a minor shame to lose, I think)</pre>
+https://github.com/crawl/crawl/commit/d9ff4809687eb7863654db568fbd9a9b20c7bced
+----
+<pre style='white-space:pre-wrap;width:81ex'>Fix a very strange crash involving Vehumet wrath and quivering plasma beam
+If Vehumet wrath triggered while the player had plasma beam quivered, the
+game would reliably crash. The exact cause of this is a bit complicated and
+also complete nonsense.
+-God wrath creates an 'avatar' monster to serve as the origin of hostile
+spell effects against the player. This avatar uses MONS_PLAYER_SHADOW (for
+some reason...), which is invisibly placed at the player's own position
+-The force_more that happens when god wrath triggers causes the UI to
+refresh, which causes a recalculation of whether the quivered spell has
+any visible targets (so that it can be dimmed if it does not)
+-Calculating visible targets for beam-based spells involves firing a tracer
+at every single tile in LoS (including the player's own position!) until
+it finds one that hits anything hostile to the player.
+-Plasma beam's tracer IN PARTICULAR fires a second beam at each spot,
+immediately after the first, without resetting the tracer's state (to
+account for monsters that may be immune to electricity but not fire)
+-Because of some weirdness that I do not like, beam::agent() specifically
+checks if there is a MONS_PLAYER_SHADOW at the player's position, and
+then if the beam's source_id is MID_PLAYER, it returns the player shadow
+instead (this is somehow needed to make player shadows not copy the brand
+on player launchers for mimic ranged attacks...)
+-Seperately, code that makes player allies stop beam attacks short if they
+would hit the player checks specifically that the agent() is a monster and
+that the beam is friendly. And then, when it would otherwise hit the
+player, 'rewinds' the beam one tile and stops it 'right before'.
+All together, what causes the crash is:
+-Plasma beam tracer tries aiming at the player
+-Plasma beam's agent is hijacked by the Vehumet wrath avatar, since one
+currently exists
+-The beam's agent is now a monster (Vehumet), but the beam itself IS STILL
+FRIENDLY (because it's a player tracer), so it tries to regress the ray
+one tile to avoid hitting the player.
+-And because it's plasma beam, it repeats this a second time without
+resetting the beam and tries to regress a second time and then the math
+becomes very unhappy
+A bunch of shadow mimic stuff is kind of a mess, but for now just verify
+that the MONS_PLAYER_SHADOW standing beneath the player is actually their
+shadow and not the shadow of a vengeful god who has decided to add some
+variety to their day and assault the player's patience instead.</pre>
+https://github.com/crawl/crawl/commit/36ad0d86fdf5a31c56917e87de145b2c77cec3fa
+----
+<pre style='white-space:pre-wrap;width:81ex'>feat: A spell icon for Martyr's Knell (Sastreii)
+(cherry picked from commit 5a2aebc5c2ff56217ad0f224068f0e939ed537ac)</pre>
+https://github.com/crawl/crawl/commit/74fbe469d6564fc4c7fd6e52d321a0d4237238da
+----
+<pre style='white-space:pre-wrap;width:81ex'>Fix found gems shattering not being hidden by default (without more_gem_info)
+It still leaves a note and milestone regardless of the more_gem_info
+option, but the note is hidden unless the option is turned on.</pre>
+https://github.com/crawl/crawl/commit/978bd804decfaea159a8d67b11f2449c68979559
+----
+<pre style='white-space:pre-wrap;width:81ex'>task: 0.31 trunk tournament reminder</pre>
+https://github.com/crawl/crawl/commit/e66fa4eb29bf7b720200d5fbfce887e1803ce131
+----
+<pre style='white-space:pre-wrap;width:81ex'>task: Update the debian changelog for 0.31.0
+(cherry picked from commit 5180dd6056c141b7ef092b4df485498114467054)</pre>
+https://github.com/crawl/crawl/commit/efbe487952aa0785dbad63195ee6a4c18c157f87
+----
+<pre style='white-space:pre-wrap;width:81ex'>feat: New small abomination tiles from Sastreii
+Tweaks to the blue one to make it look less like an abyssal tree, color
+tweaks to the other one, and a new variant added.
+(cherry picked from commit 2b8753d7e0eaf7b277a50fd64ef26e6b134fe243)</pre>
+https://github.com/crawl/crawl/commit/9740d1a105e0403dafbed86c939c038765d0f1f4
+----
+<pre style='white-space:pre-wrap;width:81ex'>unbrace</pre>
+https://github.com/crawl/crawl/commit/8eac1daf1a28193137d1432847893150a0e32542
+----
+<pre style='white-space:pre-wrap;width:81ex'>Deal with some teleport islands
+Possibly water_maze_lemuel doesn't need the scrolls of teleportation after
+it gets a hatch, but it does also make early unspoiled enlightenment into
+the spiral guaranteed to be worthwhile, so I guess it's fine.</pre>
+https://github.com/crawl/crawl/commit/d77652238b28f1c87bf19d82a956e658abf5987a
+----
+<pre style='white-space:pre-wrap;width:81ex'>Don't make firewood slow down ally travelspeed (CarefulOdds)
+Something about demonic plant caution and brainless zombies goes here.</pre>
+https://github.com/crawl/crawl/commit/fa3d79c85def20982656fa910a6538b0d18bf261
+----
+<pre style='white-space:pre-wrap;width:81ex'>docs: md fix for webserver changelog
+From using this changelog format on other projects, I've learned that
+there's variation in whether a list is supported without a blank line
+following a previous paragraph (github rendering supports this, but many
+automated tools do not). This moves the changelog to the stricter
+format.</pre>
+https://github.com/crawl/crawl/commit/86f1af28a2bfe8a4ae90129724c78c0396031143
+----
+<pre style='white-space:pre-wrap;width:81ex'>docs: update webtiles server changelog</pre>
+https://github.com/crawl/crawl/commit/eba56dac1ed68018b77b255bd51508cfb4ef0db0
+----

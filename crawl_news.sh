@@ -23,7 +23,7 @@ push_news() {
         # TODO: normalize the string(converting html entities)
         echo "<a href='${LINK}'>${HEADER}</a>" >> $SHORT_COMMITS
     else
-        curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d text="$1"
+        curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="<b>${HEADER}</b>"$'\n'"${LINK}"
     fi
 }
 
@@ -34,10 +34,10 @@ if [ -f "$OLD_FEED" ]
 then
     diff $OLD_FEED $CURRENT_FEED --changed-group-format="%>" --unchanged-group-format="" | tac -s $'\n----' |   sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 else
-    tac -s $'\n----' | sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' $CURRENT_FEED | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    tac -s $'\n----' $CURRENT_FEED | sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 fi
 
 if [ -s "$SHORT_COMMITS" ]; then
     mapfile LINKS < $SHORT_COMMITS
-    curl -s -X POST $URL -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="$(join_by $'\n' "${LINKS[@]}")"
+    curl -s -X POST $URL -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="<b>minor changes:</b>"$'\n'"$(join_by $'\n' "${LINKS[@]}")"
 fi

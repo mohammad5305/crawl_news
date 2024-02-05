@@ -2,7 +2,7 @@
 
 set -xe
 
-OLD_FEED=./current.txt
+OLD_FEED=./current.json
 CURRENT_FEED=$(mktemp -p /tmp crawl_feed.XXX)
 BOT_TOKEN=${BOT_TOKEN:=""}
 CHANNEL_ID=${CHANNEL_ID:="@dcss_news"}
@@ -10,20 +10,20 @@ URL="https://api.telegram.org/bot${BOT_TOKEN}/sendMessage"
 
 SHORT_COMMITS=$(mktemp -p /tmp crawl.XXXX)
 
-wget https://github.com/crawl/crawl/commits/master.atom -O /tmp/master.atom
+curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/crawl/crawl/commits?per_page=100" -o $CURRENT_FEED
 
-xmlstarlet sel -N x=http://www.w3.org/2005/Atom -t -m "//x:entry" -v "x:content"  -v "x:link/@href" -n -o "----" -n /tmp/master.atom | sed -e 's/&amp;\|&#38;/\&/g' -e 's/&lt;\|&#60;/</g' -e 's/&gt;\|&#62;/>/g' -e 's/&quot;\|&#34;/"/g' -e "s/&apos;\|&#39;/'/g" -e 's/&nbsp;|&#160;/ /g' | grep -v '^$' | sed 's/^[ \t]*//' > $CURRENT_FEED
 
+
+# TODO: handle the case where one of message get lost(due to connection error or something)
 push_news() {
     DATA=$(echo "$1" | grep -v "^\s*$")
-    IFS=$'\n' read -rd '' HEADER LINK <<<"$DATA"
 
-    if [[ $(echo "$DATA" | wc -l ) == 2 ]]
+    if [[ $(echo "$DATA" | wc -l ) == 1 ]]
     then
         # TODO: normalize the string(converting html entities)
-        echo "<a href='${LINK}'>${HEADER}</a>" >> $SHORT_COMMITS
+        echo "$DATA" >> $SHORT_COMMITS
     else
-        curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="<b>${HEADER}</b>"$'\n'"${LINK}"
+        curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="$DATA"
     fi
 }
 
@@ -32,9 +32,9 @@ export SHORT_COMMITS URL CHANNEL_ID
 
 if [ -f "$OLD_FEED" ]
 then
-    diff $OLD_FEED $CURRENT_FEED --changed-group-format="%>" --unchanged-group-format="" | tac -s $'\n----' | sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    jq -s -r '(.[0] - .[1])[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", $msg[1:][], .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" "$OLD_FEED" | tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 else
-    tac -s $'\n----' $CURRENT_FEED | sed -e 's/----/\x0/' -e 's/<[^>]\+>//g' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    jq -r '.[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", $msg[1:][], .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" |  tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 fi
 
 if [ -s "$SHORT_COMMITS" ]; then

@@ -13,17 +13,17 @@ SHORT_COMMITS=$(mktemp -p /tmp crawl.XXXX)
 curl -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/crawl/crawl/commits?per_page=100" -o $CURRENT_FEED
 
 
-
 # TODO: handle the case where one of message get lost(due to connection error or something)
 push_news() {
     DATA=$(echo "$1" | grep -v "^\s*$")
 
     if [[ $(echo "$DATA" | wc -l ) == 1 ]]
     then
-        # TODO: normalize the string(converting html entities)
+        # TODO: normalize the string(converting html entities like &) and causes to some message be trimmed
         echo "$DATA" >> $SHORT_COMMITS
     else
         curl -s -X POST "$URL" -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="$DATA"
+        sleep 5
     fi
 }
 

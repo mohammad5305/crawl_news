@@ -1,5 +1,163 @@
 [
   {
+    "sha": "a335ffa919b07a2a1d92b669ab729fd87e7803a0",
+    "node_id": "C_kwDOAV-JftoAKGEzMzVmZmE5MTliMDdhMmExZDkyYjY2OWFiNzI5ZmQ4N2U3ODAzYTA",
+    "commit": {
+      "author": {
+        "name": "advil",
+        "email": "rawlins@gmail.com",
+        "date": "2024-02-05T17:10:52Z"
+      },
+      "committer": {
+        "name": "advil",
+        "email": "rawlins@gmail.com",
+        "date": "2024-02-05T17:46:42Z"
+      },
+      "message": "refactor: generalize some feature description code\n\n2c8f65ca5f32ac introduced some code to try to allow redefined features\nto be conditioned on layouts, for the sake of Dis statues. This code\nmade various assumptions like: there is always a layout, a level always\nhas vaults, and a layout is always at position 0 of the level vault\nvector. bc18a39e1d331e tried to fix some of these assumptions, but\ndidn't really handle the case where a level has no vaults at all (can be\ntrue in the abyss), which leads to an empty level vault vector.\n(Accessing position 0 of such a vector may fail to crash under various\ncompiler and runtime circumstances...)\n\nThis commit refactors to (i) reuse previously existing, slightly more\nrobust code to find the vault at a position, and (ii) adds a function to\ntry to more robustly find a layout if one exists. It's unclear to me\nwhether the position 0 assumption was or wasn't safe if there is a\nlayout (it wasn't guaranteed, but may have been true in practice), but\nthis code doesn't make it. As far as I can tell this works with the dis\nstatue case.",
+      "tree": {
+        "sha": "f544658eefe4a055bd708ef680aa8873af84a36a",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f544658eefe4a055bd708ef680aa8873af84a36a"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a335ffa919b07a2a1d92b669ab729fd87e7803a0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a335ffa919b07a2a1d92b669ab729fd87e7803a0",
+    "html_url": "https://github.com/crawl/crawl/commit/a335ffa919b07a2a1d92b669ab729fd87e7803a0",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a335ffa919b07a2a1d92b669ab729fd87e7803a0/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+        "html_url": "https://github.com/crawl/crawl/commit/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf"
+      }
+    ]
+  },
+  {
+    "sha": "42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+    "node_id": "C_kwDOAV-JftoAKDQyYTI0OGU1Y2ExZmJiMDFjZDZhNGJjMzlhZmMwNTJiZjY4MmQzY2Y",
+    "commit": {
+      "author": {
+        "name": "Nicholas Feinberg",
+        "email": "pleasingfung@gmail.com",
+        "date": "2024-02-05T15:52:04Z"
+      },
+      "committer": {
+        "name": "Nicholas Feinberg",
+        "email": "pleasingfung@gmail.com",
+        "date": "2024-02-05T15:52:04Z"
+      },
+      "message": "Fix an unsigned comparison (Monkooky)",
+      "tree": {
+        "sha": "f5a7812b4d3ed392acec41f471e46b51fbad4fac",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f5a7812b4d3ed392acec41f471e46b51fbad4fac"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+    "html_url": "https://github.com/crawl/crawl/commit/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/42a248e5ca1fbb01cd6a4bc39afc052bf682d3cf/comments",
+    "author": {
+      "login": "PleasingFungus",
+      "id": 1192475,
+      "node_id": "MDQ6VXNlcjExOTI0NzU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/PleasingFungus",
+      "html_url": "https://github.com/PleasingFungus",
+      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
+      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
+      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
+      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
+      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
+      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "PleasingFungus",
+      "id": 1192475,
+      "node_id": "MDQ6VXNlcjExOTI0NzU=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/PleasingFungus",
+      "html_url": "https://github.com/PleasingFungus",
+      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
+      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
+      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
+      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
+      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
+      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8db1b9f803e66aaf5e71c1268fef851e155a92a1",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/8db1b9f803e66aaf5e71c1268fef851e155a92a1",
+        "html_url": "https://github.com/crawl/crawl/commit/8db1b9f803e66aaf5e71c1268fef851e155a92a1"
+      }
+    ]
+  },
+  {
     "sha": "8db1b9f803e66aaf5e71c1268fef851e155a92a1",
     "node_id": "C_kwDOAV-JftoAKDhkYjFiOWY4MDNlNjZhYWY1ZTcxYzEyNjhmZWY4NTFlMTU1YTkyYTE",
     "commit": {
@@ -7643,164 +7801,6 @@
         "sha": "29cbedb7bc507aed543316c5fc42cb86ebb49251",
         "url": "https://api.github.com/repos/crawl/crawl/commits/29cbedb7bc507aed543316c5fc42cb86ebb49251",
         "html_url": "https://github.com/crawl/crawl/commit/29cbedb7bc507aed543316c5fc42cb86ebb49251"
-      }
-    ]
-  },
-  {
-    "sha": "29cbedb7bc507aed543316c5fc42cb86ebb49251",
-    "node_id": "C_kwDOAV-JftoAKDI5Y2JlZGI3YmM1MDdhZWQ1NDMzMTZjNWZjNDJjYjg2ZWJiNDkyNTE",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2024-01-10T15:13:31Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2024-01-10T15:18:53Z"
-      },
-      "message": "Autopickup elemental evokers by default\n\nExcluding the horn of Geryon, because it doesn't currently exist on\nthe \\ menu, and we want players to be able to manually disable these\nif desired.\n\nPossibly the horn should be enabled in both places, since it is treated\ninternally as an xp evoker, but I'm not touching that here.",
-      "tree": {
-        "sha": "b16f96f9ac4fef385d2e790d9446f78a286f92bc",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b16f96f9ac4fef385d2e790d9446f78a286f92bc"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/29cbedb7bc507aed543316c5fc42cb86ebb49251",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/29cbedb7bc507aed543316c5fc42cb86ebb49251",
-    "html_url": "https://github.com/crawl/crawl/commit/29cbedb7bc507aed543316c5fc42cb86ebb49251",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/29cbedb7bc507aed543316c5fc42cb86ebb49251/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-        "html_url": "https://github.com/crawl/crawl/commit/beaec30b815a6a2a7b707cb0a926c1f9d1335513"
-      }
-    ]
-  },
-  {
-    "sha": "beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-    "node_id": "C_kwDOAV-JftoAKGJlYWVjMzBiODE1YTZhMmE3YjcwN2NiMGE5MjZjMWY5ZDEzMzU1MTM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-01-09T22:56:10Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-01-09T22:56:10Z"
-      },
-      "message": "Let monsters cast ensnare on other monsters (Oneirical)\n\nI overlooked this when scanning for other 'low damage beams with\nside-effects' since there isn't actually a corresponding zap type in the\nlist.",
-      "tree": {
-        "sha": "4a1bb8899c0988d0b10b2ece73e3209f26735077",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4a1bb8899c0988d0b10b2ece73e3209f26735077"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-    "html_url": "https://github.com/crawl/crawl/commit/beaec30b815a6a2a7b707cb0a926c1f9d1335513",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/beaec30b815a6a2a7b707cb0a926c1f9d1335513/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "a12eea24be46dbc2e487727b5f10a52765ec4bce",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/a12eea24be46dbc2e487727b5f10a52765ec4bce",
-        "html_url": "https://github.com/crawl/crawl/commit/a12eea24be46dbc2e487727b5f10a52765ec4bce"
       }
     ]
   }

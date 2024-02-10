@@ -32,9 +32,9 @@ export SHORT_COMMITS URL CHANNEL_ID
 
 if [ -f "$OLD_FEED" ]
 then
-    jq -s -r '(.[0] - .[1])[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", (  $msg[1:][] | gsub("\n"; " ") ), .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" "$OLD_FEED" | tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    jq -s -r '(.[0] - .[1])[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", (  $msg[1:][] | gsub("\n "; "") ), .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" "$OLD_FEED" | tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 else
-    jq -r '.[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", $msg[1:][], .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" | tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
+    jq -r '.[] | ( (.commit.message / "\n\n") as $msg | if ( $msg | length ) > 1 then "<b>"+ $msg[0] + "</b>", (  $msg[1:][] | gsub("\n "; "") ), .html_url else "<a href=\"" + .html_url + "\">" + $msg[0] + "</a>" end), "----"' "$CURRENT_FEED" | tac -s '----' | sed 's/----/\x0/' | xargs -0 -I{} -- bash -c 'push_news "$@"' _ {}
 fi
 
 [ -s "$SHORT_COMMITS" ] && curl -s -X POST $URL -d chat_id=$CHANNEL_ID -d parse_mode="HTML" -d text="<b>minor changes:</b>"$'\n'"$(cat $SHORT_COMMITS)"

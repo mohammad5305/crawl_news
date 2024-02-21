@@ -1,5 +1,84 @@
 [
   {
+    "sha": "123bbc5fe1a83ed3031b0cdf76e85e20b4250677",
+    "node_id": "C_kwDOAV-JftoAKDEyM2JiYzVmZTFhODNlZDMwMzFiMGNkZjc2ZTg1ZTIwYjQyNTA2Nzc",
+    "commit": {
+      "author": {
+        "name": "elliptic",
+        "email": "hyperelliptical@gmail.com",
+        "date": "2024-02-21T16:27:25Z"
+      },
+      "committer": {
+        "name": "elliptic",
+        "email": "hyperelliptical@gmail.com",
+        "date": "2024-02-21T16:34:14Z"
+      },
+      "message": "Don't apply -Move on Coglin if there are no monsters left\n\nTry this out since this seems responsible for a fair proportion of the\nannoyances, e.g. players immediately wanting to manually move at the end of\na fight. This commit also tries to wipe existing -Move that might still be\nremaining from a previous Coglin action if the action that concluded the\nfight was fast (e.g. a fast melee attack). (In principle maybe this part\nshould be implemented somewhere else so that -Move is also removed if the\naction concluding the fight was a fast action that doesn't normally cause\n-Move (e.g. swapping a ring and having an ally kill the last enemy in that\n0.5 time), but that seems super rare so this should be sufficient for\ntesting the change.)\n\nNote that invisible monsters still count for this, so this does leak their\nexistence - this seemed better than alternatives.",
+      "tree": {
+        "sha": "16d4ebe015f1433fc5f0296b8269c42c97fd85d4",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/16d4ebe015f1433fc5f0296b8269c42c97fd85d4"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/123bbc5fe1a83ed3031b0cdf76e85e20b4250677",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/123bbc5fe1a83ed3031b0cdf76e85e20b4250677",
+    "html_url": "https://github.com/crawl/crawl/commit/123bbc5fe1a83ed3031b0cdf76e85e20b4250677",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/123bbc5fe1a83ed3031b0cdf76e85e20b4250677/comments",
+    "author": {
+      "login": "elliptic",
+      "id": 759974,
+      "node_id": "MDQ6VXNlcjc1OTk3NA==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/elliptic",
+      "html_url": "https://github.com/elliptic",
+      "followers_url": "https://api.github.com/users/elliptic/followers",
+      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
+      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
+      "organizations_url": "https://api.github.com/users/elliptic/orgs",
+      "repos_url": "https://api.github.com/users/elliptic/repos",
+      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/elliptic/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "elliptic",
+      "id": 759974,
+      "node_id": "MDQ6VXNlcjc1OTk3NA==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/elliptic",
+      "html_url": "https://github.com/elliptic",
+      "followers_url": "https://api.github.com/users/elliptic/followers",
+      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
+      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
+      "organizations_url": "https://api.github.com/users/elliptic/orgs",
+      "repos_url": "https://api.github.com/users/elliptic/repos",
+      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/elliptic/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "28b100f6187186b248dd2c1599bac5d1f9b7b813",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/28b100f6187186b248dd2c1599bac5d1f9b7b813",
+        "html_url": "https://github.com/crawl/crawl/commit/28b100f6187186b248dd2c1599bac5d1f9b7b813"
+      }
+    ]
+  },
+  {
     "sha": "28b100f6187186b248dd2c1599bac5d1f9b7b813",
     "node_id": "C_kwDOAV-JftoAKDI4YjEwMGY2MTg3MTg2YjI0OGRkMmMxNTk5YmFjNWQxZjliN2I4MTM",
     "commit": {
@@ -7817,85 +7896,6 @@
         "sha": "9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
         "url": "https://api.github.com/repos/crawl/crawl/commits/9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
         "html_url": "https://github.com/crawl/crawl/commit/9b00542b0a5f8a8706d73ab98737bf59522dc7e7"
-      }
-    ]
-  },
-  {
-    "sha": "9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
-    "node_id": "C_kwDOAV-JftoAKDliMDA1NDJiMGE1ZjhhODcwNmQ3M2FiOTg3MzdiZjU5NTIyZGM3ZTc",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-02-15T23:07:28Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-02-15T23:25:40Z"
-      },
-      "message": "Fix dactions that could cause Ancestors/Bound Souls to incorrectly die\n\nBecause entering a new floor causes all dactions from the entire game's\nhistory to fire (see 063869c3723e ), the dactions for losing your Hep\nancestor (due to piety loss/excommunication) or bound soul (due to binding\na new one) could happen repeatedly. This usually did nothing, but in the\nAbyss in particular could cause them to simply die - a minor nuissance for\nan ancestor, but a permanent mysterious loss for a bound soul.\n\nNow we try to be a bit more picky about whether we actually kill something\nwith this daction: check that the player still doesn't qualify for an\nancestor, or that the bound soul we're trying to remove isn't the player's\ncurrent companion.",
-      "tree": {
-        "sha": "26211ddf0df379196afe863d841d14ed83c8d734",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/26211ddf0df379196afe863d841d14ed83c8d734"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
-    "html_url": "https://github.com/crawl/crawl/commit/9b00542b0a5f8a8706d73ab98737bf59522dc7e7",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/9b00542b0a5f8a8706d73ab98737bf59522dc7e7/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "4bb08483cd727a2bddb2a9dfae8cf14f3102660f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/4bb08483cd727a2bddb2a9dfae8cf14f3102660f",
-        "html_url": "https://github.com/crawl/crawl/commit/4bb08483cd727a2bddb2a9dfae8cf14f3102660f"
       }
     ]
   }

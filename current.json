@@ -1,5 +1,637 @@
 [
   {
+    "sha": "6ff4911247d8e431da39d0e179a050177c30bcbd",
+    "node_id": "C_kwDOAV-JftoAKDZmZjQ5MTEyNDdkOGU0MzFkYTM5ZDBlMTc5YTA1MDE3N2MzMGJjYmQ",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T16:35:50Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T16:35:50Z"
+      },
+      "message": "fix: remove 3.12 from ci webserver testing\n\nUnfortunately, pinned versions fro 3.8 are broken in 3.12 because of\npackage deprecation. I don't think our current version management for\nthese tests is a very good approach, but I don't have a fix right now.\nSo, temporarily disable 3.12 altogether. These tests currently don't do\nmuch so it shouldn't be a big deal.",
+      "tree": {
+        "sha": "acb53fbe8676c08926663bbe2296590ca0631fbe",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/acb53fbe8676c08926663bbe2296590ca0631fbe"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6ff4911247d8e431da39d0e179a050177c30bcbd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6ff4911247d8e431da39d0e179a050177c30bcbd",
+    "html_url": "https://github.com/crawl/crawl/commit/6ff4911247d8e431da39d0e179a050177c30bcbd",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6ff4911247d8e431da39d0e179a050177c30bcbd/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "14b72cc9fea45df2666a12294d1d6c69c4aad631",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/14b72cc9fea45df2666a12294d1d6c69c4aad631",
+        "html_url": "https://github.com/crawl/crawl/commit/14b72cc9fea45df2666a12294d1d6c69c4aad631"
+      }
+    ]
+  },
+  {
+    "sha": "14b72cc9fea45df2666a12294d1d6c69c4aad631",
+    "node_id": "C_kwDOAV-JftoAKDE0YjcyY2M5ZmVhNDVkZjI2NjZhMTIyOTRkMWQ2YzY5YzRhYWQ2MzE",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T16:33:09Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T16:33:09Z"
+      },
+      "message": "fix: further update webtiles tests\n\nIt seems that these tests weren't updated when webtiles code was\nrefactored into a subdirectory. It sort of doesn't matter, because\nessentially all of our source code is excluded in tox.ini anyways. (What\nis the point of having these tests when everything is excluded? I have\nwondered this myself.)",
+      "tree": {
+        "sha": "dd9bc7d258d1d3a06f5ab76f28372bec49a491f5",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/dd9bc7d258d1d3a06f5ab76f28372bec49a491f5"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/14b72cc9fea45df2666a12294d1d6c69c4aad631",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/14b72cc9fea45df2666a12294d1d6c69c4aad631",
+    "html_url": "https://github.com/crawl/crawl/commit/14b72cc9fea45df2666a12294d1d6c69c4aad631",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/14b72cc9fea45df2666a12294d1d6c69c4aad631/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+        "html_url": "https://github.com/crawl/crawl/commit/424f3ba4f7b419a335c6fe818a39c3c8e20874f1"
+      }
+    ]
+  },
+  {
+    "sha": "424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+    "node_id": "C_kwDOAV-JftoAKDQyNGYzYmE0ZjdiNDE5YTMzNWM2ZmU4MThhMzljM2M4ZTIwODc0ZjE",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:52:09Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:52:09Z"
+      },
+      "message": "fix: update requirements files for webserver tests\n\nThis is for py38, we'll see if it works for other CI targets.",
+      "tree": {
+        "sha": "c4caad1d7ea679d1eb06832c99a95b2706501e9d",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c4caad1d7ea679d1eb06832c99a95b2706501e9d"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+    "html_url": "https://github.com/crawl/crawl/commit/424f3ba4f7b419a335c6fe818a39c3c8e20874f1",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/424f3ba4f7b419a335c6fe818a39c3c8e20874f1/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+        "html_url": "https://github.com/crawl/crawl/commit/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08"
+      }
+    ]
+  },
+  {
+    "sha": "bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+    "node_id": "C_kwDOAV-JftoAKGJkZDZjOWM2ZWRhYmJjNDNmNmNiNTNmMzNkZTViOTc4ZjMyODVmMDg",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:39:15Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:39:15Z"
+      },
+      "message": "fix: convert CI macos pyyaml dep to homebrew\n\nI have some reservations about this, but once any python stuff at all is\ninstalled via homebrew, it becomes hard to go back.",
+      "tree": {
+        "sha": "4e1a3c7e355d4046c5b7615df86596535b25a90b",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4e1a3c7e355d4046c5b7615df86596535b25a90b"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+    "html_url": "https://github.com/crawl/crawl/commit/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/bdd6c9c6edabbc43f6cb53f33de5b978f3285f08/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "66263ccf9e868b8f52025d15cab20e0874e6372f",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/66263ccf9e868b8f52025d15cab20e0874e6372f",
+        "html_url": "https://github.com/crawl/crawl/commit/66263ccf9e868b8f52025d15cab20e0874e6372f"
+      }
+    ]
+  },
+  {
+    "sha": "66263ccf9e868b8f52025d15cab20e0874e6372f",
+    "node_id": "C_kwDOAV-JftoAKDY2MjYzY2NmOWU4NjhiOGY1MjAyNWQxNWNhYjIwZTA4NzRlNjM3MmY",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:34:22Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:34:22Z"
+      },
+      "message": "fix: update some CI python versions\n\nPython 3.6 no longer works here. I believe we've gotten all servers past\neol python versions at this point, so it's safe to only test current\nversions.\n\nAlso, I (conservatively) updated the python 3.7 installs for catch2\ntests to 3.8. This could probably go further?",
+      "tree": {
+        "sha": "24e12b5ddff85d7f74cfe5230b006be8f3d6ca72",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/24e12b5ddff85d7f74cfe5230b006be8f3d6ca72"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/66263ccf9e868b8f52025d15cab20e0874e6372f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/66263ccf9e868b8f52025d15cab20e0874e6372f",
+    "html_url": "https://github.com/crawl/crawl/commit/66263ccf9e868b8f52025d15cab20e0874e6372f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/66263ccf9e868b8f52025d15cab20e0874e6372f/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "93cc1272122b719a06f08ef6e39369b0d5e6e058",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/93cc1272122b719a06f08ef6e39369b0d5e6e058",
+        "html_url": "https://github.com/crawl/crawl/commit/93cc1272122b719a06f08ef6e39369b0d5e6e058"
+      }
+    ]
+  },
+  {
+    "sha": "93cc1272122b719a06f08ef6e39369b0d5e6e058",
+    "node_id": "C_kwDOAV-JftoAKDkzY2MxMjcyMTIyYjcxOWEwNmYwOGVmNmUzOTM2OWIwZDVlNmUwNTg",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:21:16Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T15:21:16Z"
+      },
+      "message": "fix: possibly unbreak macos CI pip3 call\n\nThis will probably fix this immediate call, but it's unclear to me\nwhether the fixed version will install pyyaml in the right place.",
+      "tree": {
+        "sha": "d11bea3cadc3d06cd954942639c522d158f6c348",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d11bea3cadc3d06cd954942639c522d158f6c348"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/93cc1272122b719a06f08ef6e39369b0d5e6e058",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/93cc1272122b719a06f08ef6e39369b0d5e6e058",
+    "html_url": "https://github.com/crawl/crawl/commit/93cc1272122b719a06f08ef6e39369b0d5e6e058",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/93cc1272122b719a06f08ef6e39369b0d5e6e058/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f73a246b04ad4c364ad309e282f57646f2e42811",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/f73a246b04ad4c364ad309e282f57646f2e42811",
+        "html_url": "https://github.com/crawl/crawl/commit/f73a246b04ad4c364ad309e282f57646f2e42811"
+      }
+    ]
+  },
+  {
+    "sha": "f73a246b04ad4c364ad309e282f57646f2e42811",
+    "node_id": "C_kwDOAV-JftoAKGY3M2EyNDZiMDRhZDRjMzY0YWQzMDllMjgyZjU3NjQ2ZjJlNDI4MTE",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T14:48:11Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T14:48:11Z"
+      },
+      "message": "fix: reorder some CI steps\n\nHomebrew and system installed python have an unfortunate interaction\nfrom time to time. Most recent github statement on this:\n\nhttps://github.com/actions/runner-images/issues/9471#issuecomment-1984202712\n\nWe already had a workaround in place from c6129fcb3f40, but it is not\nworking for the current round of the bug. I think reordering should be\nthe fix. Previously this CI issue must have triggered later in our build\nprocess (currently unclear to me how; maybe the brew calls in the prior\nstep only recently triggered a dependency upgrade; right now the culprit\nis libpng). This commit should ensure it is always triggered before any\nbrew calls.",
+      "tree": {
+        "sha": "e82be3432e640b31f61086c6afe2cd7ad33776b6",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e82be3432e640b31f61086c6afe2cd7ad33776b6"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f73a246b04ad4c364ad309e282f57646f2e42811",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/f73a246b04ad4c364ad309e282f57646f2e42811",
+    "html_url": "https://github.com/crawl/crawl/commit/f73a246b04ad4c364ad309e282f57646f2e42811",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f73a246b04ad4c364ad309e282f57646f2e42811/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a50f3326c405b0f502dc6d57b52de72be468b04c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/a50f3326c405b0f502dc6d57b52de72be468b04c",
+        "html_url": "https://github.com/crawl/crawl/commit/a50f3326c405b0f502dc6d57b52de72be468b04c"
+      }
+    ]
+  },
+  {
+    "sha": "a50f3326c405b0f502dc6d57b52de72be468b04c",
+    "node_id": "C_kwDOAV-JftoAKGE1MGYzMzI2YzQwNWIwZjUwMmRjNmQ1N2I1MmRlNzJiZTQ2OGIwNGM",
+    "commit": {
+      "author": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T14:21:08Z"
+      },
+      "committer": {
+        "name": "Kyle Rawlins",
+        "email": "rawlins@gmail.com",
+        "date": "2024-03-17T14:21:08Z"
+      },
+      "message": "fix: convert some string `+`s to `make_stringf`\n\nCrawl string templating is all over the place, but imo using + for\ntemplating is the worst of the available options.",
+      "tree": {
+        "sha": "0114be87e06d9bdb34a04f300bd57e07103cbb65",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0114be87e06d9bdb34a04f300bd57e07103cbb65"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a50f3326c405b0f502dc6d57b52de72be468b04c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a50f3326c405b0f502dc6d57b52de72be468b04c",
+    "html_url": "https://github.com/crawl/crawl/commit/a50f3326c405b0f502dc6d57b52de72be468b04c",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a50f3326c405b0f502dc6d57b52de72be468b04c/comments",
+    "author": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "rawlins",
+      "id": 6290753,
+      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/rawlins",
+      "html_url": "https://github.com/rawlins",
+      "followers_url": "https://api.github.com/users/rawlins/followers",
+      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
+      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
+      "organizations_url": "https://api.github.com/users/rawlins/orgs",
+      "repos_url": "https://api.github.com/users/rawlins/repos",
+      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/rawlins/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c8563f6773ecfd61cef1c4a1ca094e5abb82359e",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c8563f6773ecfd61cef1c4a1ca094e5abb82359e",
+        "html_url": "https://github.com/crawl/crawl/commit/c8563f6773ecfd61cef1c4a1ca094e5abb82359e"
+      }
+    ]
+  },
+  {
     "sha": "c8563f6773ecfd61cef1c4a1ca094e5abb82359e",
     "node_id": "C_kwDOAV-JftoAKGM4NTYzZjY3NzNlY2ZkNjFjZWYxYzRhMWNhMDk0ZTVhYmI4MjM1OWU",
     "commit": {
@@ -7264,638 +7896,6 @@
         "sha": "01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
         "url": "https://api.github.com/repos/crawl/crawl/commits/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
         "html_url": "https://github.com/crawl/crawl/commit/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e"
-      }
-    ]
-  },
-  {
-    "sha": "01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
-    "node_id": "C_kwDOAV-JftoAKDAxMzM4ZjcyZGZhMWZhMmVmZmVmNGM4MmI1ZGZhZjc5YzdmYTQ0OWU",
-    "commit": {
-      "author": {
-        "name": "Alex Jurkiewicz",
-        "email": "alex@jurkiewi.cz",
-        "date": "2023-12-29T04:59:50Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-08T05:04:18Z"
-      },
-      "message": "Ignore non-.yaml files in games.d/\n\nUse case: I disable forks by renaming them to `bcrawl.yaml.disabled`.",
-      "tree": {
-        "sha": "ead60e641bb6d522d70f8b9954396d211ac33ee8",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ead60e641bb6d522d70f8b9954396d211ac33ee8"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
-    "html_url": "https://github.com/crawl/crawl/commit/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/01338f72dfa1fa2effef4c82b5dfaf79c7fa449e/comments",
-    "author": {
-      "login": "alexjurkiewicz",
-      "id": 379509,
-      "node_id": "MDQ6VXNlcjM3OTUwOQ==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/379509?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/alexjurkiewicz",
-      "html_url": "https://github.com/alexjurkiewicz",
-      "followers_url": "https://api.github.com/users/alexjurkiewicz/followers",
-      "following_url": "https://api.github.com/users/alexjurkiewicz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/alexjurkiewicz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/alexjurkiewicz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/alexjurkiewicz/subscriptions",
-      "organizations_url": "https://api.github.com/users/alexjurkiewicz/orgs",
-      "repos_url": "https://api.github.com/users/alexjurkiewicz/repos",
-      "events_url": "https://api.github.com/users/alexjurkiewicz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/alexjurkiewicz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "3af422c12e27c2b632070ae359bc07930dedaf31",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/3af422c12e27c2b632070ae359bc07930dedaf31",
-        "html_url": "https://github.com/crawl/crawl/commit/3af422c12e27c2b632070ae359bc07930dedaf31"
-      }
-    ]
-  },
-  {
-    "sha": "3af422c12e27c2b632070ae359bc07930dedaf31",
-    "node_id": "C_kwDOAV-JftoAKDNhZjQyMmMxMmUyN2MyYjYzMjA3MGFlMzU5YmMwNzkzMGRlZGFmMzE",
-    "commit": {
-      "author": {
-        "name": "Quinten Konyn",
-        "email": "qkonyn@gmail.com",
-        "date": "2024-02-27T00:28:54Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-08T05:02:33Z"
-      },
-      "message": "Check for flight item removal safety on swap\n\nWhen removing an item, `_safe_to_remove_or_wear` checked for\nthe safety of removing the item if it provided flight and the\nplayer was above lava or deep water. However when swapping two\nitems, `remove` is false and the removal of the old item is\nimplicit. The function to check the safety of flight removal\n`safe_to_remove` is not called in this case.\n\nThis commit adds a flight removal safety check in the branch of\n`_safe_to_remove_or_wear` that has determined that we're swapping\nout an old item, echoing the check that was already happening for\nnon-swap removal.\n\nI added comments to both `safe_to_remove` checks, because it is\nnot immediately clear that only flight removal safety is checked by\nthat funciton. `_safe_to_remove_or_wear` has a comment stating that\nit checks for stat zero and does not mention flight, so I wanted\nto make sure the code doing something other than what that\ncomment says was clearly signalled.\n\nResolves #3502.",
-      "tree": {
-        "sha": "ba981aa3558af5e30364df3878a36eb1beb2b69c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ba981aa3558af5e30364df3878a36eb1beb2b69c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3af422c12e27c2b632070ae359bc07930dedaf31",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/3af422c12e27c2b632070ae359bc07930dedaf31",
-    "html_url": "https://github.com/crawl/crawl/commit/3af422c12e27c2b632070ae359bc07930dedaf31",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3af422c12e27c2b632070ae359bc07930dedaf31/comments",
-    "author": {
-      "login": "crystalsolenoid",
-      "id": 8132415,
-      "node_id": "MDQ6VXNlcjgxMzI0MTU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8132415?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/crystalsolenoid",
-      "html_url": "https://github.com/crystalsolenoid",
-      "followers_url": "https://api.github.com/users/crystalsolenoid/followers",
-      "following_url": "https://api.github.com/users/crystalsolenoid/following{/other_user}",
-      "gists_url": "https://api.github.com/users/crystalsolenoid/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/crystalsolenoid/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/crystalsolenoid/subscriptions",
-      "organizations_url": "https://api.github.com/users/crystalsolenoid/orgs",
-      "repos_url": "https://api.github.com/users/crystalsolenoid/repos",
-      "events_url": "https://api.github.com/users/crystalsolenoid/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/crystalsolenoid/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "ee4d739957fccf1206a354bc266ae16a6824afb1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/ee4d739957fccf1206a354bc266ae16a6824afb1",
-        "html_url": "https://github.com/crawl/crawl/commit/ee4d739957fccf1206a354bc266ae16a6824afb1"
-      }
-    ]
-  },
-  {
-    "sha": "ee4d739957fccf1206a354bc266ae16a6824afb1",
-    "node_id": "C_kwDOAV-JftoAKGVlNGQ3Mzk5NTdmY2NmMTIwNmEzNTRiYzI2NmFlMTZhNjgyNGFmYjE",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-08T03:10:09Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-08T03:13:22Z"
-      },
-      "message": "Add a few more ancestor names.",
-      "tree": {
-        "sha": "ce01a421dfb7d9c61e9a0b77795ce814a403f00b",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ce01a421dfb7d9c61e9a0b77795ce814a403f00b"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/ee4d739957fccf1206a354bc266ae16a6824afb1",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/ee4d739957fccf1206a354bc266ae16a6824afb1",
-    "html_url": "https://github.com/crawl/crawl/commit/ee4d739957fccf1206a354bc266ae16a6824afb1",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/ee4d739957fccf1206a354bc266ae16a6824afb1/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-        "html_url": "https://github.com/crawl/crawl/commit/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3"
-      }
-    ]
-  },
-  {
-    "sha": "5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-    "node_id": "C_kwDOAV-JftoAKDVmNzU3OWJmZmViMjhmMGFlNmFhOWNkMGEzZjhkOTA1NjFjYjU5ZjM",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-08T01:47:23Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-08T01:47:23Z"
-      },
-      "message": "Adjust foul flame melee attack description.\n\nSince it does extra damage to everything, mostly to holies and good god\nworshippers, but that needs to be conveyed in limited space.",
-      "tree": {
-        "sha": "f070d894c909ed763774e30aa09f48ed9fd65e0c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f070d894c909ed763774e30aa09f48ed9fd65e0c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-    "html_url": "https://github.com/crawl/crawl/commit/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5f7579bffeb28f0ae6aa9cd0a3f8d90561cb59f3/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-        "html_url": "https://github.com/crawl/crawl/commit/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878"
-      }
-    ]
-  },
-  {
-    "sha": "8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-    "node_id": "C_kwDOAV-JftoAKDhmN2U4ZTZlZjc0ZTg4ZmFmYmU0Y2U5MGNmODgwMmM4NjQ2NmY4Nzg",
-    "commit": {
-      "author": {
-        "name": "Alex Jurkiewicz",
-        "email": "alex@jurkiewi.cz",
-        "date": "2024-01-29T14:52:37Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-08T01:42:26Z"
-      },
-      "message": "fix: Update game.html tags\n\nThere were a number of `<div>` and `<span>` tags that were self-closed\n(eg `<div/>`). Trailing slashes in opening tags are ignored by HTML\nparsers and by convention only used for \"void\" tags (those that don't\nsupport closing tags).\n\nThis led to HTML parsers in some cases misparsing the document, where eg\n`<div/><div/>` would be interpreted as `<div><div></div></div>` instead\nof the intended `<div></div><div></div>`.\n\nRead more:\nhttps://developer.mozilla.org/en-US/docs/Glossary/Void_element#self-closing_tags\n\nConvert all `<div>` and `<span>` to standards compliance.\n\nAlso, make the following (mostly cosmetic) changes with Prettier:\n\n* Consistent 2-space indentation\n* Add a trailing slash to all `<link/>` tags\n* Don't use HTML comments to keep sequential `<span>`s on the same line\n* Clean up inline style strings\n* Consistent JS quoting\n\nCloses #3497.",
-      "tree": {
-        "sha": "04617676331156e57cd4eee918e6f0a773dd9b94",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/04617676331156e57cd4eee918e6f0a773dd9b94"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-    "html_url": "https://github.com/crawl/crawl/commit/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8f7e8e6ef74e88fafbe4ce90cf8802c86466f878/comments",
-    "author": {
-      "login": "alexjurkiewicz",
-      "id": 379509,
-      "node_id": "MDQ6VXNlcjM3OTUwOQ==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/379509?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/alexjurkiewicz",
-      "html_url": "https://github.com/alexjurkiewicz",
-      "followers_url": "https://api.github.com/users/alexjurkiewicz/followers",
-      "following_url": "https://api.github.com/users/alexjurkiewicz/following{/other_user}",
-      "gists_url": "https://api.github.com/users/alexjurkiewicz/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/alexjurkiewicz/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/alexjurkiewicz/subscriptions",
-      "organizations_url": "https://api.github.com/users/alexjurkiewicz/orgs",
-      "repos_url": "https://api.github.com/users/alexjurkiewicz/repos",
-      "events_url": "https://api.github.com/users/alexjurkiewicz/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/alexjurkiewicz/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-        "html_url": "https://github.com/crawl/crawl/commit/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e"
-      }
-    ]
-  },
-  {
-    "sha": "31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-    "node_id": "C_kwDOAV-JftoAKDMxYzY1MDFiZjNjYzRiY2I5NWIwN2ZiYjI1NWY1ZGYzM2VkMzY1NmU",
-    "commit": {
-      "author": {
-        "name": "yrdzrfxndfvh",
-        "email": "scratn0b@gmail.com",
-        "date": "2024-02-24T03:37:59Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-08T01:38:46Z"
-      },
-      "message": "Remove redundant 'unblindable' flags\n\nObsoleted by b856850.\n\nCloses #3587.",
-      "tree": {
-        "sha": "415c94681228811d04fb868863b94a9278185ed8",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/415c94681228811d04fb868863b94a9278185ed8"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-    "html_url": "https://github.com/crawl/crawl/commit/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/31c6501bf3cc4bcb95b07fbb255f5df33ed3656e/comments",
-    "author": {
-      "login": "yrdzrfxndfvh",
-      "id": 27397852,
-      "node_id": "MDQ6VXNlcjI3Mzk3ODUy",
-      "avatar_url": "https://avatars.githubusercontent.com/u/27397852?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/yrdzrfxndfvh",
-      "html_url": "https://github.com/yrdzrfxndfvh",
-      "followers_url": "https://api.github.com/users/yrdzrfxndfvh/followers",
-      "following_url": "https://api.github.com/users/yrdzrfxndfvh/following{/other_user}",
-      "gists_url": "https://api.github.com/users/yrdzrfxndfvh/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/yrdzrfxndfvh/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/yrdzrfxndfvh/subscriptions",
-      "organizations_url": "https://api.github.com/users/yrdzrfxndfvh/orgs",
-      "repos_url": "https://api.github.com/users/yrdzrfxndfvh/repos",
-      "events_url": "https://api.github.com/users/yrdzrfxndfvh/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/yrdzrfxndfvh/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-        "html_url": "https://github.com/crawl/crawl/commit/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8"
-      }
-    ]
-  },
-  {
-    "sha": "d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-    "node_id": "C_kwDOAV-JftoAKGQwZTUxMDJmMjg3MGIzMDVjMWFjMjNiNzNkOWIyZmY3OWY1OTg0Yzg",
-    "commit": {
-      "author": {
-        "name": "elliptic",
-        "email": "hyperelliptical@gmail.com",
-        "date": "2024-03-07T23:01:58Z"
-      },
-      "committer": {
-        "name": "elliptic",
-        "email": "hyperelliptical@gmail.com",
-        "date": "2024-03-07T23:07:47Z"
-      },
-      "message": "Remove a magic breakpoint in book acquirement\n\nA character with no magic skills has a 0% chance of getting a spellbook\ninstead of a manual from acquirement. Previously the chance of getting a\nspellbook increased up to 40% as the proportion of a character's skills\nthat were magic increased up to 25%, and then suddenly the chance jumped\nall the way to 100%. This commit removes the breakpoint, so magic-oriented\ncharacters who previously had a 100% chance of getting a spellbook will\nnow get a mix of spellbooks and manuals.",
-      "tree": {
-        "sha": "7cf872ae69f502d50fd8a94ca47515cbac4c1558",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7cf872ae69f502d50fd8a94ca47515cbac4c1558"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-    "html_url": "https://github.com/crawl/crawl/commit/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d0e5102f2870b305c1ac23b73d9b2ff79f5984c8/comments",
-    "author": {
-      "login": "elliptic",
-      "id": 759974,
-      "node_id": "MDQ6VXNlcjc1OTk3NA==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/elliptic",
-      "html_url": "https://github.com/elliptic",
-      "followers_url": "https://api.github.com/users/elliptic/followers",
-      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
-      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
-      "organizations_url": "https://api.github.com/users/elliptic/orgs",
-      "repos_url": "https://api.github.com/users/elliptic/repos",
-      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/elliptic/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "elliptic",
-      "id": 759974,
-      "node_id": "MDQ6VXNlcjc1OTk3NA==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/elliptic",
-      "html_url": "https://github.com/elliptic",
-      "followers_url": "https://api.github.com/users/elliptic/followers",
-      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
-      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
-      "organizations_url": "https://api.github.com/users/elliptic/orgs",
-      "repos_url": "https://api.github.com/users/elliptic/repos",
-      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/elliptic/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "007c2181c8e07c8c736813acec4b3cfc78fada23",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/007c2181c8e07c8c736813acec4b3cfc78fada23",
-        "html_url": "https://github.com/crawl/crawl/commit/007c2181c8e07c8c736813acec4b3cfc78fada23"
-      }
-    ]
-  },
-  {
-    "sha": "007c2181c8e07c8c736813acec4b3cfc78fada23",
-    "node_id": "C_kwDOAV-JftoAKDAwN2MyMTgxYzhlMDdjOGM3MzY4MTNhY2VjNGIzY2ZjNzhmYWRhMjM",
-    "commit": {
-      "author": {
-        "name": "elliptic",
-        "email": "hyperelliptical@gmail.com",
-        "date": "2024-03-07T22:51:33Z"
-      },
-      "committer": {
-        "name": "elliptic",
-        "email": "hyperelliptical@gmail.com",
-        "date": "2024-03-07T23:07:47Z"
-      },
-      "message": "Tweak weighting in talisman acquirement\n\nMost talismans aren't randarts and thus are useless if they are duplicates,\nso increase the weight scaling factor for not-already-seen talismans.\n\nAlso, if you have the skill for a talisman of a given tier, that probably\nmeans you already have at least one talisman of that tier and are most\ninterested in a talisman of tier one higher, not a second talisman of\nthe same tier (and a talisman of lower tier is even less likely to be\ninteresting).",
-      "tree": {
-        "sha": "7166d9802d208fd40725e7bc034707666784c3ab",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7166d9802d208fd40725e7bc034707666784c3ab"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/007c2181c8e07c8c736813acec4b3cfc78fada23",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/007c2181c8e07c8c736813acec4b3cfc78fada23",
-    "html_url": "https://github.com/crawl/crawl/commit/007c2181c8e07c8c736813acec4b3cfc78fada23",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/007c2181c8e07c8c736813acec4b3cfc78fada23/comments",
-    "author": {
-      "login": "elliptic",
-      "id": 759974,
-      "node_id": "MDQ6VXNlcjc1OTk3NA==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/elliptic",
-      "html_url": "https://github.com/elliptic",
-      "followers_url": "https://api.github.com/users/elliptic/followers",
-      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
-      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
-      "organizations_url": "https://api.github.com/users/elliptic/orgs",
-      "repos_url": "https://api.github.com/users/elliptic/repos",
-      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/elliptic/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "elliptic",
-      "id": 759974,
-      "node_id": "MDQ6VXNlcjc1OTk3NA==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/759974?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/elliptic",
-      "html_url": "https://github.com/elliptic",
-      "followers_url": "https://api.github.com/users/elliptic/followers",
-      "following_url": "https://api.github.com/users/elliptic/following{/other_user}",
-      "gists_url": "https://api.github.com/users/elliptic/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/elliptic/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/elliptic/subscriptions",
-      "organizations_url": "https://api.github.com/users/elliptic/orgs",
-      "repos_url": "https://api.github.com/users/elliptic/repos",
-      "events_url": "https://api.github.com/users/elliptic/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/elliptic/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d6aa9b3b29c7fd4e54533c025c2809b57f938bc2",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d6aa9b3b29c7fd4e54533c025c2809b57f938bc2",
-        "html_url": "https://github.com/crawl/crawl/commit/d6aa9b3b29c7fd4e54533c025c2809b57f938bc2"
       }
     ]
   }

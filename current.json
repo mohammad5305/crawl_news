@@ -1,5 +1,637 @@
 [
   {
+    "sha": "153ae1a8d698412b03db5c23a45e81b6b72dd4ee",
+    "node_id": "C_kwDOAV-JftoAKDE1M2FlMWE4ZDY5ODQxMmIwM2RiNWMyM2E0NWU4MWI2YjcyZGQ0ZWU",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T03:35:11Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T03:35:11Z"
+      },
+      "message": "Don't crash on gavotting a dead monster\n\nThe pushing order is sorted so that this shouldn't happen from Gavotte\nitself, but some scenarios (such as lost souls sacrificing themselves to\nsave something else that was just pushed into a wall) can result in\nmonsters dying prematurely, resulting in a crash.\n\nThis fixes #3739",
+      "tree": {
+        "sha": "79525ca7695f8e9de041c9a0abc070d895a31364",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/79525ca7695f8e9de041c9a0abc070d895a31364"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/153ae1a8d698412b03db5c23a45e81b6b72dd4ee",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/153ae1a8d698412b03db5c23a45e81b6b72dd4ee",
+    "html_url": "https://github.com/crawl/crawl/commit/153ae1a8d698412b03db5c23a45e81b6b72dd4ee",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/153ae1a8d698412b03db5c23a45e81b6b72dd4ee/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "107c3107db1d1113e047210108891f9c453c6ec3",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/107c3107db1d1113e047210108891f9c453c6ec3",
+        "html_url": "https://github.com/crawl/crawl/commit/107c3107db1d1113e047210108891f9c453c6ec3"
+      }
+    ]
+  },
+  {
+    "sha": "107c3107db1d1113e047210108891f9c453c6ec3",
+    "node_id": "C_kwDOAV-JftoAKDEwN2MzMTA3ZGIxZDExMTNlMDQ3MjEwMTA4ODkxZjljNDUzYzZlYzM",
+    "commit": {
+      "author": {
+        "name": "SentientSupper",
+        "email": "trollinterminator@gmail.com",
+        "date": "2024-03-16T16:45:30Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T01:52:41Z"
+      },
+      "message": "Fix pressing f twice to aim quivered Dr breath\n\nPreviously pressing f with a quivered breath would not let you start\naiming your breath until you pressed it again.",
+      "tree": {
+        "sha": "064f6f90ccf8ef3de26debd8ef61ad72b3cbb9b6",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/064f6f90ccf8ef3de26debd8ef61ad72b3cbb9b6"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/107c3107db1d1113e047210108891f9c453c6ec3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/107c3107db1d1113e047210108891f9c453c6ec3",
+    "html_url": "https://github.com/crawl/crawl/commit/107c3107db1d1113e047210108891f9c453c6ec3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/107c3107db1d1113e047210108891f9c453c6ec3/comments",
+    "author": {
+      "login": "SentientSupper",
+      "id": 146337911,
+      "node_id": "U_kgDOCLjwdw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SentientSupper",
+      "html_url": "https://github.com/SentientSupper",
+      "followers_url": "https://api.github.com/users/SentientSupper/followers",
+      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
+      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
+      "repos_url": "https://api.github.com/users/SentientSupper/repos",
+      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0cd9e5b16809b0597c30085cd38648d044f65154",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/0cd9e5b16809b0597c30085cd38648d044f65154",
+        "html_url": "https://github.com/crawl/crawl/commit/0cd9e5b16809b0597c30085cd38648d044f65154"
+      }
+    ]
+  },
+  {
+    "sha": "0cd9e5b16809b0597c30085cd38648d044f65154",
+    "node_id": "C_kwDOAV-JftoAKDBjZDllNWIxNjgwOWIwNTk3YzMwMDg1Y2QzODY0OGQwNDRmNjUxNTQ",
+    "commit": {
+      "author": {
+        "name": "Wizard Ike",
+        "email": "ikec4@yahoo.com",
+        "date": "2024-03-05T08:25:43Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T01:29:06Z"
+      },
+      "message": "Fix jinxbite doing extra attacks",
+      "tree": {
+        "sha": "c72de90912bca437b516333747b4b4e950faa667",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c72de90912bca437b516333747b4b4e950faa667"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0cd9e5b16809b0597c30085cd38648d044f65154",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/0cd9e5b16809b0597c30085cd38648d044f65154",
+    "html_url": "https://github.com/crawl/crawl/commit/0cd9e5b16809b0597c30085cd38648d044f65154",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0cd9e5b16809b0597c30085cd38648d044f65154/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+        "html_url": "https://github.com/crawl/crawl/commit/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075"
+      }
+    ]
+  },
+  {
+    "sha": "b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+    "node_id": "C_kwDOAV-JftoAKGI1YWYzZGMwMTg2ZjBiYTI4OGQxZWE2M2I0MTY2OGU5Y2U3YzkwNzU",
+    "commit": {
+      "author": {
+        "name": "yrdzrfxndfvh",
+        "email": "scratn0b@gmail.com",
+        "date": "2024-03-27T12:48:43Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2024-03-28T01:25:49Z"
+      },
+      "message": "add Charlatan's Orb to shop of orbs",
+      "tree": {
+        "sha": "d0ab1c9a8d6dcb2292ffec81d249b7182dc799dc",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d0ab1c9a8d6dcb2292ffec81d249b7182dc799dc"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+    "html_url": "https://github.com/crawl/crawl/commit/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b5af3dc0186f0ba288d1ea63b41668e9ce7c9075/comments",
+    "author": {
+      "login": "yrdzrfxndfvh",
+      "id": 27397852,
+      "node_id": "MDQ6VXNlcjI3Mzk3ODUy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27397852?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yrdzrfxndfvh",
+      "html_url": "https://github.com/yrdzrfxndfvh",
+      "followers_url": "https://api.github.com/users/yrdzrfxndfvh/followers",
+      "following_url": "https://api.github.com/users/yrdzrfxndfvh/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yrdzrfxndfvh/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yrdzrfxndfvh/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yrdzrfxndfvh/subscriptions",
+      "organizations_url": "https://api.github.com/users/yrdzrfxndfvh/orgs",
+      "repos_url": "https://api.github.com/users/yrdzrfxndfvh/repos",
+      "events_url": "https://api.github.com/users/yrdzrfxndfvh/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yrdzrfxndfvh/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+        "html_url": "https://github.com/crawl/crawl/commit/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8"
+      }
+    ]
+  },
+  {
+    "sha": "c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+    "node_id": "C_kwDOAV-JftoAKGMzNWMwZGQxN2I1MjA3YjlkMmYxMzIzZTVjMzFjNTY4ZmZhZWM5ZDg",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T00:01:39Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T00:08:50Z"
+      },
+      "message": "Rename a couple things for improved clarity\n\nAlso don't display 'it is liquified' when moving the cursor over tiles of\nmud, only Leda's proper.",
+      "tree": {
+        "sha": "9586567b41b884be2055adf67dafb091624532a7",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/9586567b41b884be2055adf67dafb091624532a7"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+    "html_url": "https://github.com/crawl/crawl/commit/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c35c0dd17b5207b9d2f1323e5c31c568ffaec9d8/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1478e51eecbf59064c075e6b0a238ec06bc44e11",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/1478e51eecbf59064c075e6b0a238ec06bc44e11",
+        "html_url": "https://github.com/crawl/crawl/commit/1478e51eecbf59064c075e6b0a238ec06bc44e11"
+      }
+    ]
+  },
+  {
+    "sha": "1478e51eecbf59064c075e6b0a238ec06bc44e11",
+    "node_id": "C_kwDOAV-JftoAKDE0NzhlNTFlZWNiZjU5MDY0YzA3NWU2YjBhMjM4ZWMwNmJjNDRlMTE",
+    "commit": {
+      "author": {
+        "name": "Monkooky",
+        "email": "buisinessmonkey@gmail.com",
+        "date": "2024-03-26T18:19:10Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T00:08:50Z"
+      },
+      "message": "Fix grey drac breath display\n\nRemoves a <liquefied> from the display that was appearing as-is. Also,\ndon't display leda's text for mud and make mud show liquiefied description.\n\n[Committer's note: squashed and edited typoes]",
+      "tree": {
+        "sha": "2cc47989b4f7c1d1c3b1c08d2c40fe8b3fcd378e",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2cc47989b4f7c1d1c3b1c08d2c40fe8b3fcd378e"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/1478e51eecbf59064c075e6b0a238ec06bc44e11",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/1478e51eecbf59064c075e6b0a238ec06bc44e11",
+    "html_url": "https://github.com/crawl/crawl/commit/1478e51eecbf59064c075e6b0a238ec06bc44e11",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/1478e51eecbf59064c075e6b0a238ec06bc44e11/comments",
+    "author": {
+      "login": "Monkooky",
+      "id": 6244827,
+      "node_id": "MDQ6VXNlcjYyNDQ4Mjc=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6244827?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Monkooky",
+      "html_url": "https://github.com/Monkooky",
+      "followers_url": "https://api.github.com/users/Monkooky/followers",
+      "following_url": "https://api.github.com/users/Monkooky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Monkooky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Monkooky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Monkooky/subscriptions",
+      "organizations_url": "https://api.github.com/users/Monkooky/orgs",
+      "repos_url": "https://api.github.com/users/Monkooky/repos",
+      "events_url": "https://api.github.com/users/Monkooky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Monkooky/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+        "html_url": "https://github.com/crawl/crawl/commit/a0577c09bc123ee2c6ad3a7218cc061ef8488672"
+      }
+    ]
+  },
+  {
+    "sha": "a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+    "node_id": "C_kwDOAV-JftoAKGEwNTc3YzA5YmMxMjNlZTJjNmFkM2E3MjE4Y2MwNjFlZjg0ODg2NzI",
+    "commit": {
+      "author": {
+        "name": "Monkooky",
+        "email": "buisinessmonkey@gmail.com",
+        "date": "2024-03-26T18:44:16Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-03-28T00:08:49Z"
+      },
+      "message": "Simplify liquefaction\n\nLeda's Liquefaction would set a 'liquid' flag for all tiles in range; then\nfor non-water empty tiles would set the mechanically relevant\n'liquid_actual' flag.\n\nThe only read of either flag is through the 'liquefied' function, which\nwould disregard water tiles and non-empty tiles. Line 694 would never\nreturn true, a line 688 would pre-empt it and return false.",
+      "tree": {
+        "sha": "a5910cf1cac7bd7638119274e9e8438ddf32ed7f",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a5910cf1cac7bd7638119274e9e8438ddf32ed7f"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+    "html_url": "https://github.com/crawl/crawl/commit/a0577c09bc123ee2c6ad3a7218cc061ef8488672",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a0577c09bc123ee2c6ad3a7218cc061ef8488672/comments",
+    "author": {
+      "login": "Monkooky",
+      "id": 6244827,
+      "node_id": "MDQ6VXNlcjYyNDQ4Mjc=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6244827?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Monkooky",
+      "html_url": "https://github.com/Monkooky",
+      "followers_url": "https://api.github.com/users/Monkooky/followers",
+      "following_url": "https://api.github.com/users/Monkooky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Monkooky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Monkooky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Monkooky/subscriptions",
+      "organizations_url": "https://api.github.com/users/Monkooky/orgs",
+      "repos_url": "https://api.github.com/users/Monkooky/repos",
+      "events_url": "https://api.github.com/users/Monkooky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Monkooky/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "165e151e7203914179a656dbb84c58e079e683b0",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/165e151e7203914179a656dbb84c58e079e683b0",
+        "html_url": "https://github.com/crawl/crawl/commit/165e151e7203914179a656dbb84c58e079e683b0"
+      }
+    ]
+  },
+  {
+    "sha": "165e151e7203914179a656dbb84c58e079e683b0",
+    "node_id": "C_kwDOAV-JftoAKDE2NWUxNTFlNzIwMzkxNDE3OWE2NTZkYmI4NGM1OGUwNzllNjgzYjA",
+    "commit": {
+      "author": {
+        "name": "wheals",
+        "email": "whealswithinwheals@gmail.com",
+        "date": "2024-03-27T22:29:54Z"
+      },
+      "committer": {
+        "name": "wheals",
+        "email": "whealswithinwheals@gmail.com",
+        "date": "2024-03-27T22:29:54Z"
+      },
+      "message": "fix: crash on loading a coglin with ring of flight (#3728)\n\nFixes #3728",
+      "tree": {
+        "sha": "45623e4b6c9a6fcacfc1514fcb15993951567296",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/45623e4b6c9a6fcacfc1514fcb15993951567296"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/165e151e7203914179a656dbb84c58e079e683b0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/165e151e7203914179a656dbb84c58e079e683b0",
+    "html_url": "https://github.com/crawl/crawl/commit/165e151e7203914179a656dbb84c58e079e683b0",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/165e151e7203914179a656dbb84c58e079e683b0/comments",
+    "author": {
+      "login": "wheals",
+      "id": 6370042,
+      "node_id": "MDQ6VXNlcjYzNzAwNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6370042?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/wheals",
+      "html_url": "https://github.com/wheals",
+      "followers_url": "https://api.github.com/users/wheals/followers",
+      "following_url": "https://api.github.com/users/wheals/following{/other_user}",
+      "gists_url": "https://api.github.com/users/wheals/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/wheals/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/wheals/subscriptions",
+      "organizations_url": "https://api.github.com/users/wheals/orgs",
+      "repos_url": "https://api.github.com/users/wheals/repos",
+      "events_url": "https://api.github.com/users/wheals/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/wheals/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "wheals",
+      "id": 6370042,
+      "node_id": "MDQ6VXNlcjYzNzAwNDI=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6370042?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/wheals",
+      "html_url": "https://github.com/wheals",
+      "followers_url": "https://api.github.com/users/wheals/followers",
+      "following_url": "https://api.github.com/users/wheals/following{/other_user}",
+      "gists_url": "https://api.github.com/users/wheals/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/wheals/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/wheals/subscriptions",
+      "organizations_url": "https://api.github.com/users/wheals/orgs",
+      "repos_url": "https://api.github.com/users/wheals/repos",
+      "events_url": "https://api.github.com/users/wheals/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/wheals/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e9ae4304268925dba0e2b7e244d35ba0559dbdac",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/e9ae4304268925dba0e2b7e244d35ba0559dbdac",
+        "html_url": "https://github.com/crawl/crawl/commit/e9ae4304268925dba0e2b7e244d35ba0559dbdac"
+      }
+    ]
+  },
+  {
     "sha": "e9ae4304268925dba0e2b7e244d35ba0559dbdac",
     "node_id": "C_kwDOAV-JftoAKGU5YWU0MzA0MjY4OTI1ZGJhMGUyYjdlMjQ0ZDM1YmEwNTU5ZGJkYWM",
     "commit": {
@@ -7245,619 +7877,6 @@
         "sha": "0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
         "url": "https://api.github.com/repos/crawl/crawl/commits/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
         "html_url": "https://github.com/crawl/crawl/commit/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93"
-      }
-    ]
-  },
-  {
-    "sha": "0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
-    "node_id": "C_kwDOAV-JftoAKDBmNmYxZGQ0YjkyNzNhZDcwYzJjMGY3MzdkYWQ1NDQ0ZDI1NWJiOTM",
-    "commit": {
-      "author": {
-        "name": "SentientSupper",
-        "email": "trollinterminator@gmail.com",
-        "date": "2024-03-16T12:59:42Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-18T04:25:21Z"
-      },
-      "message": "Fix cursed item background not being red\n\nIn local tiles. Should be fine for ISFLAG_CURSED to be included in\nget_item_known_info now that the only source of curses is ash.\n\nCloses #3683",
-      "tree": {
-        "sha": "02231de58591fde159d65971e5069c7d1f7ee4dd",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/02231de58591fde159d65971e5069c7d1f7ee4dd"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
-    "html_url": "https://github.com/crawl/crawl/commit/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0f6f1dd4b9273ad70c2c0f737dad5444d255bb93/comments",
-    "author": {
-      "login": "SentientSupper",
-      "id": 146337911,
-      "node_id": "U_kgDOCLjwdw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SentientSupper",
-      "html_url": "https://github.com/SentientSupper",
-      "followers_url": "https://api.github.com/users/SentientSupper/followers",
-      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
-      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
-      "repos_url": "https://api.github.com/users/SentientSupper/repos",
-      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b0416c464d86f8ad4f4f762269e034875eaaaed6",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b0416c464d86f8ad4f4f762269e034875eaaaed6",
-        "html_url": "https://github.com/crawl/crawl/commit/b0416c464d86f8ad4f4f762269e034875eaaaed6"
-      }
-    ]
-  },
-  {
-    "sha": "b0416c464d86f8ad4f4f762269e034875eaaaed6",
-    "node_id": "C_kwDOAV-JftoAKGIwNDE2YzQ2NGQ4NmY4YWQ0ZjRmNzYyMjY5ZTAzNDg3NWVhYWFlZDY",
-    "commit": {
-      "author": {
-        "name": "SentientSupper",
-        "email": "trollinterminator@gmail.com",
-        "date": "2024-03-17T15:21:06Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-18T04:18:08Z"
-      },
-      "message": "Display chance for wand of warping to blink\n\nWhen targeting.",
-      "tree": {
-        "sha": "f042a707154aa691484952867925ca9fed51f64a",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f042a707154aa691484952867925ca9fed51f64a"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b0416c464d86f8ad4f4f762269e034875eaaaed6",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b0416c464d86f8ad4f4f762269e034875eaaaed6",
-    "html_url": "https://github.com/crawl/crawl/commit/b0416c464d86f8ad4f4f762269e034875eaaaed6",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b0416c464d86f8ad4f4f762269e034875eaaaed6/comments",
-    "author": {
-      "login": "SentientSupper",
-      "id": 146337911,
-      "node_id": "U_kgDOCLjwdw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SentientSupper",
-      "html_url": "https://github.com/SentientSupper",
-      "followers_url": "https://api.github.com/users/SentientSupper/followers",
-      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
-      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
-      "repos_url": "https://api.github.com/users/SentientSupper/repos",
-      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-        "html_url": "https://github.com/crawl/crawl/commit/00dc8146b4e2e6da77b16ec0906181527fc0ad2f"
-      }
-    ]
-  },
-  {
-    "sha": "00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-    "node_id": "C_kwDOAV-JftoAKDAwZGM4MTQ2YjRlMmU2ZGE3N2IxNmVjMDkwNjE4MTUyN2ZjMGFkMmY",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-18T01:26:36Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-03-18T01:26:36Z"
-      },
-      "message": "Fix spelling.",
-      "tree": {
-        "sha": "f5017e2204ae1daeb341198eb611cf0e1a50fdf5",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f5017e2204ae1daeb341198eb611cf0e1a50fdf5"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-    "html_url": "https://github.com/crawl/crawl/commit/00dc8146b4e2e6da77b16ec0906181527fc0ad2f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/00dc8146b4e2e6da77b16ec0906181527fc0ad2f/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "fba4d74c8c6943720a6cf22ddde001757be003b6",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/fba4d74c8c6943720a6cf22ddde001757be003b6",
-        "html_url": "https://github.com/crawl/crawl/commit/fba4d74c8c6943720a6cf22ddde001757be003b6"
-      }
-    ]
-  },
-  {
-    "sha": "fba4d74c8c6943720a6cf22ddde001757be003b6",
-    "node_id": "C_kwDOAV-JftoAKGZiYTRkNzRjOGM2OTQzNzIwYTZjZjIyZGRkZTAwMTc1N2JlMDAzYjY",
-    "commit": {
-      "author": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-17T22:38:08Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-17T22:38:37Z"
-      },
-      "message": "Update CREDITS for bjo*\n\nPer request: https://github.com/crawl/crawl/pull/3688#issuecomment-2002327035.",
-      "tree": {
-        "sha": "457e19107874e8d9da887455cb37807e93f14b3b",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/457e19107874e8d9da887455cb37807e93f14b3b"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fba4d74c8c6943720a6cf22ddde001757be003b6",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/fba4d74c8c6943720a6cf22ddde001757be003b6",
-    "html_url": "https://github.com/crawl/crawl/commit/fba4d74c8c6943720a6cf22ddde001757be003b6",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fba4d74c8c6943720a6cf22ddde001757be003b6/comments",
-    "author": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-        "html_url": "https://github.com/crawl/crawl/commit/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d"
-      }
-    ]
-  },
-  {
-    "sha": "77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-    "node_id": "C_kwDOAV-JftoAKDc3YmI2ZDM3ZjM5MDMxZDI0YWMzYWU5ZTcyM2NmMWE3ZDA2NjJhNGQ",
-    "commit": {
-      "author": {
-        "name": "SentientSupper",
-        "email": "trollinterminator@gmail.com",
-        "date": "2024-03-17T06:14:34Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-17T22:36:58Z"
-      },
-      "message": "Show undead players as immune to polymorph",
-      "tree": {
-        "sha": "93f151fba00bf9bdb69ab5d192cfc0052c247b9b",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/93f151fba00bf9bdb69ab5d192cfc0052c247b9b"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-    "html_url": "https://github.com/crawl/crawl/commit/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/77bb6d37f39031d24ac3ae9e723cf1a7d0662a4d/comments",
-    "author": {
-      "login": "SentientSupper",
-      "id": 146337911,
-      "node_id": "U_kgDOCLjwdw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SentientSupper",
-      "html_url": "https://github.com/SentientSupper",
-      "followers_url": "https://api.github.com/users/SentientSupper/followers",
-      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
-      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
-      "repos_url": "https://api.github.com/users/SentientSupper/repos",
-      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-        "html_url": "https://github.com/crawl/crawl/commit/5810ea11cc8d25f82317bb29715a5bc1e2584cc5"
-      }
-    ]
-  },
-  {
-    "sha": "5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-    "node_id": "C_kwDOAV-JftoAKDU4MTBlYTExY2M4ZDI1ZjgyMzE3YmIyOTcxNWE1YmMxZTI1ODRjYzU",
-    "commit": {
-      "author": {
-        "name": "SentientSupper",
-        "email": "trollinterminator@gmail.com",
-        "date": "2024-03-17T05:43:54Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-17T22:36:58Z"
-      },
-      "message": "Show player as immune to charming with clarity",
-      "tree": {
-        "sha": "8b553369b74cde513b824f4e0a61407fcbdcd987",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/8b553369b74cde513b824f4e0a61407fcbdcd987"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-    "html_url": "https://github.com/crawl/crawl/commit/5810ea11cc8d25f82317bb29715a5bc1e2584cc5",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5810ea11cc8d25f82317bb29715a5bc1e2584cc5/comments",
-    "author": {
-      "login": "SentientSupper",
-      "id": 146337911,
-      "node_id": "U_kgDOCLjwdw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SentientSupper",
-      "html_url": "https://github.com/SentientSupper",
-      "followers_url": "https://api.github.com/users/SentientSupper/followers",
-      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
-      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
-      "repos_url": "https://api.github.com/users/SentientSupper/repos",
-      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-        "html_url": "https://github.com/crawl/crawl/commit/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4"
-      }
-    ]
-  },
-  {
-    "sha": "903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-    "node_id": "C_kwDOAV-JftoAKDkwM2VhMGY5YjBiNDBlZTYwZWM2ZmRiMjVlMTc1NmIyOTYwZGZlZDQ",
-    "commit": {
-      "author": {
-        "name": "Aliscans",
-        "email": "crawl@thimk.info",
-        "date": "2024-03-17T16:44:27Z"
-      },
-      "committer": {
-        "name": "Nicholas Feinberg",
-        "email": "pleasingfung@gmail.com",
-        "date": "2024-03-17T22:36:02Z"
-      },
-      "message": "Correct how the display_char option handles gems and gold.\n\nDCHAR_ITEM_GOLD and DCHAR_ITEM_GEM were in a different order in\ndchar_names[] (used by the \"display_char\" option) to the one in\ndungeon_char_type, meaning that the option had unexpected effects.\n\nFix this, and add item_gem to the docs for this option.",
-      "tree": {
-        "sha": "aeeba3f4d23b7b0518cb35506167b6b8c24d7c6c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/aeeba3f4d23b7b0518cb35506167b6b8c24d7c6c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-    "html_url": "https://github.com/crawl/crawl/commit/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/903ea0f9b0b40ee60ec6fdb25e1756b2960dfed4/comments",
-    "author": null,
-    "committer": {
-      "login": "PleasingFungus",
-      "id": 1192475,
-      "node_id": "MDQ6VXNlcjExOTI0NzU=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1192475?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/PleasingFungus",
-      "html_url": "https://github.com/PleasingFungus",
-      "followers_url": "https://api.github.com/users/PleasingFungus/followers",
-      "following_url": "https://api.github.com/users/PleasingFungus/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PleasingFungus/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PleasingFungus/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PleasingFungus/subscriptions",
-      "organizations_url": "https://api.github.com/users/PleasingFungus/orgs",
-      "repos_url": "https://api.github.com/users/PleasingFungus/repos",
-      "events_url": "https://api.github.com/users/PleasingFungus/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PleasingFungus/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "2cddf732a967105a6b570d6d6ac5417e8400652c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/2cddf732a967105a6b570d6d6ac5417e8400652c",
-        "html_url": "https://github.com/crawl/crawl/commit/2cddf732a967105a6b570d6d6ac5417e8400652c"
-      }
-    ]
-  },
-  {
-    "sha": "2cddf732a967105a6b570d6d6ac5417e8400652c",
-    "node_id": "C_kwDOAV-JftoAKDJjZGRmNzMyYTk2NzEwNWE2YjU3MGQ2ZDZhYzU0MTdlODQwMDY1MmM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-03-17T22:34:31Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-03-17T22:34:31Z"
-      },
-      "message": "Fix a crash with ending constriction after level transit\n\nIf the constricted actor no longer existed, it would try to dereference\na null pointer. There's already checks deeper down to prevent the mid of\nan nonexistant actor from doing things.",
-      "tree": {
-        "sha": "e42ad1bcedc25a86527a45529546df4aa568e0cc",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e42ad1bcedc25a86527a45529546df4aa568e0cc"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2cddf732a967105a6b570d6d6ac5417e8400652c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/2cddf732a967105a6b570d6d6ac5417e8400652c",
-    "html_url": "https://github.com/crawl/crawl/commit/2cddf732a967105a6b570d6d6ac5417e8400652c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2cddf732a967105a6b570d6d6ac5417e8400652c/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "6b6a0ea73c861b9cea2e558127cb866c388e7007",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/6b6a0ea73c861b9cea2e558127cb866c388e7007",
-        "html_url": "https://github.com/crawl/crawl/commit/6b6a0ea73c861b9cea2e558127cb866c388e7007"
       }
     ]
   }

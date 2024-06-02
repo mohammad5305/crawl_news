@@ -1,5 +1,163 @@
 [
   {
+    "sha": "251a44db696fcdf1957b07c7ddb2d035943c99b7",
+    "node_id": "C_kwDOAV-JftoAKDI1MWE0NGRiNjk2ZmNkZjE5NTdiMDdjN2RkYjJkMDM1OTQzYzk5Yjc",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-06-02T12:04:41Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-06-02T12:04:41Z"
+      },
+      "message": "Don't give XP for killing hellfire mortars",
+      "tree": {
+        "sha": "9e4dbdb54555f458a1097c03c2a2ef49aaf4b053",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/9e4dbdb54555f458a1097c03c2a2ef49aaf4b053"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/251a44db696fcdf1957b07c7ddb2d035943c99b7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/251a44db696fcdf1957b07c7ddb2d035943c99b7",
+    "html_url": "https://github.com/crawl/crawl/commit/251a44db696fcdf1957b07c7ddb2d035943c99b7",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/251a44db696fcdf1957b07c7ddb2d035943c99b7/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c7fbda70996bb7116445d7ab640fe7b8f873861c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c7fbda70996bb7116445d7ab640fe7b8f873861c",
+        "html_url": "https://github.com/crawl/crawl/commit/c7fbda70996bb7116445d7ab640fe7b8f873861c"
+      }
+    ]
+  },
+  {
+    "sha": "c7fbda70996bb7116445d7ab640fe7b8f873861c",
+    "node_id": "C_kwDOAV-JftoAKGM3ZmJkYTcwOTk2YmI3MTE2NDQ1ZDdhYjY0MGZlN2I4Zjg3Mzg2MWM",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-06-02T12:04:27Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-06-02T12:04:27Z"
+      },
+      "message": "Try to avoid an infinite handle_monsters loop with Hellfire Mortar\n\nIn some circumstances, it was possible for the mortar to be unable to move,\nyet not die either, in which case it never consumed energy on its turn and\nwould cause an infinite handle_monsters() loop.\n\nWhile some of the individual causes of this warrant being addressed\ndirectly, for now put in general protection so that these should not crash\n(but simply have the mortar pass its turn harmlessly and expire at the end\nof the lava effect at the latest).",
+      "tree": {
+        "sha": "f0e85307d02dd226fe7a8007dbfff6a6e534845e",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f0e85307d02dd226fe7a8007dbfff6a6e534845e"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c7fbda70996bb7116445d7ab640fe7b8f873861c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c7fbda70996bb7116445d7ab640fe7b8f873861c",
+    "html_url": "https://github.com/crawl/crawl/commit/c7fbda70996bb7116445d7ab640fe7b8f873861c",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c7fbda70996bb7116445d7ab640fe7b8f873861c/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "432df90de29bd9dc03a972d5782e32c57b631509",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/432df90de29bd9dc03a972d5782e32c57b631509",
+        "html_url": "https://github.com/crawl/crawl/commit/432df90de29bd9dc03a972d5782e32c57b631509"
+      }
+    ]
+  },
+  {
     "sha": "432df90de29bd9dc03a972d5782e32c57b631509",
     "node_id": "C_kwDOAV-JftoAKDQzMmRmOTBkZTI5YmQ5ZGMwM2E5NzJkNTc4MmUzMmM1N2I2MzE1MDk",
     "commit": {
@@ -7700,164 +7858,6 @@
         "sha": "8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
         "url": "https://api.github.com/repos/crawl/crawl/commits/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
         "html_url": "https://github.com/crawl/crawl/commit/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101"
-      }
-    ]
-  },
-  {
-    "sha": "8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
-    "node_id": "C_kwDOAV-JftoAKDhlZmIzMGQ1MTUzYzFlNmZhMGU0YWNlN2QyZjI3MzBiYjk4NTIxMDE",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-05-20T00:16:11Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-05-20T00:16:11Z"
-      },
-      "message": "Fiddle with the changelog's future (various)\n\nDeep Elves getting an innate faster mp regen mutation has been discussed\nmultiple times over 0.32's development, but hasn't actually been\nimplemented yet. Sorry for the confusion.",
-      "tree": {
-        "sha": "01929d55d8db4282cfb99792b96397a81fcff870",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/01929d55d8db4282cfb99792b96397a81fcff870"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
-    "html_url": "https://github.com/crawl/crawl/commit/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8efb30d5153c1e6fa0e4ace7d2f2730bb9852101/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d1fd03315b74441f71f352f38bb620ffeb7817ff",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d1fd03315b74441f71f352f38bb620ffeb7817ff",
-        "html_url": "https://github.com/crawl/crawl/commit/d1fd03315b74441f71f352f38bb620ffeb7817ff"
-      }
-    ]
-  },
-  {
-    "sha": "d1fd03315b74441f71f352f38bb620ffeb7817ff",
-    "node_id": "C_kwDOAV-JftoAKGQxZmQwMzMxNWI3NDQ0MWY3MWYzNTJmMzhiYjYyMGZmZWI3ODE3ZmY",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-05-19T23:51:13Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-05-19T23:51:30Z"
-      },
-      "message": "Nudge around some listings and documentation\n\nMove Arachne and Wiglaf's sections in uniques.des to the right alphabetical\nand section positions, mention how we finally have a lava spell and a\nlittle more clarity for Air Magic's restrictions in spells.txt.",
-      "tree": {
-        "sha": "bdb4700d534e588226417044aaba9273a37dcd25",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/bdb4700d534e588226417044aaba9273a37dcd25"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d1fd03315b74441f71f352f38bb620ffeb7817ff",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d1fd03315b74441f71f352f38bb620ffeb7817ff",
-    "html_url": "https://github.com/crawl/crawl/commit/d1fd03315b74441f71f352f38bb620ffeb7817ff",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d1fd03315b74441f71f352f38bb620ffeb7817ff/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "9412f0fc870e10c082482b7077af4619a7653508",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/9412f0fc870e10c082482b7077af4619a7653508",
-        "html_url": "https://github.com/crawl/crawl/commit/9412f0fc870e10c082482b7077af4619a7653508"
       }
     ]
   }

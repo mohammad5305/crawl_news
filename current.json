@@ -1,5 +1,163 @@
 [
   {
+    "sha": "df7db63c151637a7d29a2f93725d40e9f5ffb22d",
+    "node_id": "C_kwDOAV-JftoAKGRmN2RiNjNjMTUxNjM3YTdkMjlhMmY5MzcyNWQ0MGU5ZjVmZmIyMmQ",
+    "commit": {
+      "author": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2024-07-09T05:19:24Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2024-07-09T05:19:24Z"
+      },
+      "message": "Remove another reference to ears.",
+      "tree": {
+        "sha": "c7d74fe4beec59b59404640d91807756e423b182",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c7d74fe4beec59b59404640d91807756e423b182"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/df7db63c151637a7d29a2f93725d40e9f5ffb22d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/df7db63c151637a7d29a2f93725d40e9f5ffb22d",
+    "html_url": "https://github.com/crawl/crawl/commit/df7db63c151637a7d29a2f93725d40e9f5ffb22d",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/df7db63c151637a7d29a2f93725d40e9f5ffb22d/comments",
+    "author": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3855256e49585b294576957bbbc96baf54afc7c9",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/3855256e49585b294576957bbbc96baf54afc7c9",
+        "html_url": "https://github.com/crawl/crawl/commit/3855256e49585b294576957bbbc96baf54afc7c9"
+      }
+    ]
+  },
+  {
+    "sha": "3855256e49585b294576957bbbc96baf54afc7c9",
+    "node_id": "C_kwDOAV-JftoAKDM4NTUyNTZlNDk1ODViMjk0NTc2OTU3YmJiYzk2YmFmNTRhZmM3Yzk",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-07-07T18:33:29Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-07-09T00:08:50Z"
+      },
+      "message": "Fix an obscure crash with tgw_kikubaaqudgha\n\nThis vault used lua to place a miasma cloud, killing a caged human and\n'raising' them as a zombie. A script called upon the human dying deleted\nthe cloud they were standing in, but due to a change introduced in c0b93f29f480c8b389dd038c0c571e0ef521d79d\nit was now possible for them to die before _actor_apply_cloud was finished\nlooking at that very cloud which it still maintained a reference to,\nresulting in undefined behavior.\n\nDespite what the lua comment says, the presence of the cloud does not\nactually prevent placing a zombie there (perhaps it did when the comment\nwas written 13 years ago), so let's just not delete it.",
+      "tree": {
+        "sha": "285bd5475afddceba6576027983a69d85edeb187",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/285bd5475afddceba6576027983a69d85edeb187"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3855256e49585b294576957bbbc96baf54afc7c9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/3855256e49585b294576957bbbc96baf54afc7c9",
+    "html_url": "https://github.com/crawl/crawl/commit/3855256e49585b294576957bbbc96baf54afc7c9",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3855256e49585b294576957bbbc96baf54afc7c9/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "281234c535975fadfb843a3f3d24a07101446678",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/281234c535975fadfb843a3f3d24a07101446678",
+        "html_url": "https://github.com/crawl/crawl/commit/281234c535975fadfb843a3f3d24a07101446678"
+      }
+    ]
+  },
+  {
     "sha": "281234c535975fadfb843a3f3d24a07101446678",
     "node_id": "C_kwDOAV-JftoAKDI4MTIzNGM1MzU5NzVmYWRmYjg0M2EzZjNkMjRhMDcxMDE0NDY2Nzg",
     "commit": {
@@ -7738,164 +7896,6 @@
         "sha": "fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
         "url": "https://api.github.com/repos/crawl/crawl/commits/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
         "html_url": "https://github.com/crawl/crawl/commit/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977"
-      }
-    ]
-  },
-  {
-    "sha": "fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
-    "node_id": "C_kwDOAV-JftoAKGZhZGQ4MmJjNGY1Yjg2M2VlN2Q1ZThhZGJkYWU0Yzc1MGZjM2Y5Nzc",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-06-30T16:56:43Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-06-30T19:32:21Z"
-      },
-      "message": "Don't crash when shadow-throwing a large rock\n\nThe game wasn't considering them throwable by player shadows, which led to\nother issues with code that assumed they could.\n\nFixes #3899",
-      "tree": {
-        "sha": "67c3716d7f73f06d5b7b809a0e452a63f79ec0a7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/67c3716d7f73f06d5b7b809a0e452a63f79ec0a7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
-    "html_url": "https://github.com/crawl/crawl/commit/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fadd82bc4f5b863ee7d5e8adbdae4c750fc3f977/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-        "html_url": "https://github.com/crawl/crawl/commit/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458"
-      }
-    ]
-  },
-  {
-    "sha": "0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-    "node_id": "C_kwDOAV-JftoAKDBkMzMwZmY1MzE5YmI2N2E4ZTRkZDIzZDNhMmFhMTVhMTNhMDI0NTg",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-06-30T04:51:26Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-06-30T05:05:21Z"
-      },
-      "message": "Update Kiku powers description (jlwoodwa).\n\nSince torment has been replaced with the sign of ruin.\n\nCloses #3898.",
-      "tree": {
-        "sha": "f8885a3fde5f9e631b7d3796956504a2d06e8d5c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f8885a3fde5f9e631b7d3796956504a2d06e8d5c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-    "html_url": "https://github.com/crawl/crawl/commit/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0d330ff5319bb67a8e4dd23d3a2aa15a13a02458/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "9325eb94ccfddf4c4a70a2204c7552876ed132ad",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/9325eb94ccfddf4c4a70a2204c7552876ed132ad",
-        "html_url": "https://github.com/crawl/crawl/commit/9325eb94ccfddf4c4a70a2204c7552876ed132ad"
       }
     ]
   }

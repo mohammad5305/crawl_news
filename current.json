@@ -1,5 +1,84 @@
 [
   {
+    "sha": "fa02dad217768b62d142e339f2926be0b0653075",
+    "node_id": "C_kwDOAV-JftoAKGZhMDJkYWQyMTc3NjhiNjJkMTQyZTMzOWYyOTI2YmUwYjA2NTMwNzU",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2024-08-23T00:46:12Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2024-08-23T23:01:28Z"
+      },
+      "message": "fix: Don't mark certain spells as self enchantment\n\nA number spells are marked as self enchantments despite not setting any\nkind of duration or enchantment on the caster itself. These are mostly\ndemon-related summon spells, a few conjurations that create monsters\n(e.g. Marshlight and Conjure Ball Lightning), as well as Phantom Mirror\nand Spawn Tentacles. For the non-summoning spells, having this flag\nleads to them not being considered as ranged spells. For Spawn\nTentacles, there's even an explicit check to override this! This commit\nremoves the self enchantment spell flag on the aforementioned spells. It\nalso removes checks in the monster casting code for some of these spells\nthat were only needed because of this flag.\n\nOne subtle aspect affected by this commit is a monster's second spell\ncast attempt. If a monster rolls a targeted spell for its action and is\nunable to find a target, a second casting attempt is made, and 50% of\nthe time this second check only considers self enchantment spells. So\nthis change effectively reduces the frequency monsters would cast these\nspells if they also have a spell that can somehow fail to target.\nHowever this frequency reduction is very small in practice for the\nmonsters affected by this change. For example, I have tested orc\nsorcerers who are in LOS but unable to target the player with bolt of\ndrain/paralyze, and they still readily cast Summon Demon. Monsters that\ndon't have targeted spells in addition to these spells will see no\nchange at all.\n\nNot including summons nor spells that make conjured monsters as ranged\nattacks doesn't make a lot of sense and should be revisited in a future\ncommit. In terms of player safety, many monster summoners create summons\nwith \"proper\" ranged attacks or superior terrain traversal compared to\nthe summoner. And conjured monsters certainly pose an acute threat to\nthe player at range. I want to make extra sure I understand all the\nimplications of designating summon spells as ranged attacks for\nmonsters, although I'm fairly sure there are no issues. For now, the\nonly change in this regard is removing an explicit exclusion for Conjure\nBall Lightning as a ranged spell. Lom Lobon is the only monster with\nthis spell and has Glaciate, another ranged spell, so this has no\nin-game effect.\n\nFinally, Repel Missiles and Berserker Rage are clearly self enchantments\nand so are given the self enchantment flag by this commit. For Berserker\nRage, this means that bear monsters will no longer be flagged as ranged\nmonsters.",
+      "tree": {
+        "sha": "6fb3fa1ffcd40a4f86e47c300555f6c3cc647ff1",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6fb3fa1ffcd40a4f86e47c300555f6c3cc647ff1"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fa02dad217768b62d142e339f2926be0b0653075",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/fa02dad217768b62d142e339f2926be0b0653075",
+    "html_url": "https://github.com/crawl/crawl/commit/fa02dad217768b62d142e339f2926be0b0653075",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fa02dad217768b62d142e339f2926be0b0653075/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b2e620de6bbeeb6dc92520376e4ae3a24cc57433",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b2e620de6bbeeb6dc92520376e4ae3a24cc57433",
+        "html_url": "https://github.com/crawl/crawl/commit/b2e620de6bbeeb6dc92520376e4ae3a24cc57433"
+      }
+    ]
+  },
+  {
     "sha": "b2e620de6bbeeb6dc92520376e4ae3a24cc57433",
     "node_id": "C_kwDOAV-JftoAKGIyZTYyMGRlNmJiZWViNmRjOTI1MjAzNzZlNGFlM2EyNGNjNTc0MzM",
     "commit": {
@@ -7798,85 +7877,6 @@
         "sha": "fe854bf2fb9d5c8defb8f8167791f753e18346e1",
         "url": "https://api.github.com/repos/crawl/crawl/commits/fe854bf2fb9d5c8defb8f8167791f753e18346e1",
         "html_url": "https://github.com/crawl/crawl/commit/fe854bf2fb9d5c8defb8f8167791f753e18346e1"
-      }
-    ]
-  },
-  {
-    "sha": "fe854bf2fb9d5c8defb8f8167791f753e18346e1",
-    "node_id": "C_kwDOAV-JftoAKGZlODU0YmYyZmI5ZDVjOGRlZmI4ZjgxNjc3OTFmNzUzZTE4MzQ2ZTE",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-08-10T16:18:58Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2024-08-10T16:18:58Z"
-      },
-      "message": "Remove now-inaccurate comment bit (ge0FF).",
-      "tree": {
-        "sha": "05b7c2d88142fbbe3f492c25ae937e183120a419",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/05b7c2d88142fbbe3f492c25ae937e183120a419"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fe854bf2fb9d5c8defb8f8167791f753e18346e1",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/fe854bf2fb9d5c8defb8f8167791f753e18346e1",
-    "html_url": "https://github.com/crawl/crawl/commit/fe854bf2fb9d5c8defb8f8167791f753e18346e1",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fe854bf2fb9d5c8defb8f8167791f753e18346e1/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b3f2be6f2865462e14507bee8210875ca55b1f7c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b3f2be6f2865462e14507bee8210875ca55b1f7c",
-        "html_url": "https://github.com/crawl/crawl/commit/b3f2be6f2865462e14507bee8210875ca55b1f7c"
       }
     ]
   }

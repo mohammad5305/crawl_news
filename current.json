@@ -1,5 +1,84 @@
 [
   {
+    "sha": "c1924735fe74a95d9dfe840bdafa454e615c9206",
+    "node_id": "C_kwDOAV-JftoAKGMxOTI0NzM1ZmU3NGE5NWQ5ZGZlODQwYmRhZmE0NTRlNjE1YzkyMDY",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-09-25T16:33:02Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-09-25T16:33:02Z"
+      },
+      "message": "Fix apises giving monsters permanent max HP every turn (RoGGa)\n\nThe apis aura, behind the scenes, was removing and re-adding the doubled\nvigor buff each turn. This theoretically would have no effect (dividing\ntheir doubled max HP by 2, then multiplying it by 2 again), but math in\nmonster::scale_hp intended to prevent monsters from *losing* max HP after\nberserking, due to rounding, was causing each monster in the aura to gain\n1 base max HP for every turn they were near the apis. This meant that by\nthe time the player found the apis, monsters nearby might have gained\nhundreds of additional max HP!\n\nThe solution in this commit is very quick and hacky. A better solution\nwould involve actually storing the monster's 'original' max HP in some\nfashion. But since there are multiple stacking ways to modify this, and\nsome care would be needed to make sure it did not introduce new bugs, I\nhave opted for the simplest, quickest solution for the moment, to put a\nstop to a bug that will easily kill players.",
+      "tree": {
+        "sha": "e81c5bc92ffc574b4c1f75d0082a21c659e4c3a2",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e81c5bc92ffc574b4c1f75d0082a21c659e4c3a2"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c1924735fe74a95d9dfe840bdafa454e615c9206",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c1924735fe74a95d9dfe840bdafa454e615c9206",
+    "html_url": "https://github.com/crawl/crawl/commit/c1924735fe74a95d9dfe840bdafa454e615c9206",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c1924735fe74a95d9dfe840bdafa454e615c9206/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "07630011bb0aca6474d02695411ad0f1cd1d1e3b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/07630011bb0aca6474d02695411ad0f1cd1d1e3b",
+        "html_url": "https://github.com/crawl/crawl/commit/07630011bb0aca6474d02695411ad0f1cd1d1e3b"
+      }
+    ]
+  },
+  {
     "sha": "07630011bb0aca6474d02695411ad0f1cd1d1e3b",
     "node_id": "C_kwDOAV-JftoAKDA3NjMwMDExYmIwYWNhNjQ3NGQwMjY5NTQxMWFkMGYxY2QxZDFlM2I",
     "commit": {
@@ -7784,66 +7863,6 @@
         "sha": "321b5f042a107ab9d4f62f1fee1abfc507ee015d",
         "url": "https://api.github.com/repos/crawl/crawl/commits/321b5f042a107ab9d4f62f1fee1abfc507ee015d",
         "html_url": "https://github.com/crawl/crawl/commit/321b5f042a107ab9d4f62f1fee1abfc507ee015d"
-      }
-    ]
-  },
-  {
-    "sha": "321b5f042a107ab9d4f62f1fee1abfc507ee015d",
-    "node_id": "C_kwDOAV-JftoAKDMyMWI1ZjA0MmExMDdhYjlkNGY2MmYxZmVlMWFiZmM1MDdlZTAxNWQ",
-    "commit": {
-      "author": {
-        "name": "Alejandro Ramirez",
-        "email": "alejandroid@apple.com",
-        "date": "2024-09-03T22:39:25Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-09-05T17:43:46Z"
-      },
-      "message": "Ensure only actual spells trigger SpellMotor (#4003)",
-      "tree": {
-        "sha": "b54194e870d2bbea270bf397cd53e76759f714a3",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b54194e870d2bbea270bf397cd53e76759f714a3"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/321b5f042a107ab9d4f62f1fee1abfc507ee015d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/321b5f042a107ab9d4f62f1fee1abfc507ee015d",
-    "html_url": "https://github.com/crawl/crawl/commit/321b5f042a107ab9d4f62f1fee1abfc507ee015d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/321b5f042a107ab9d4f62f1fee1abfc507ee015d/comments",
-    "author": null,
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "9fb28c6a05a23fae6d4efbd085741aef84283f7f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/9fb28c6a05a23fae6d4efbd085741aef84283f7f",
-        "html_url": "https://github.com/crawl/crawl/commit/9fb28c6a05a23fae6d4efbd085741aef84283f7f"
       }
     ]
   }

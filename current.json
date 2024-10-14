@@ -1,5 +1,84 @@
 [
   {
+    "sha": "0bf80241f61738d45f53e6ec1f28369529ea693e",
+    "node_id": "C_kwDOAV-JftoAKDBiZjgwMjQxZjYxNzM4ZDQ1ZjUzZTZlYzFmMjgzNjk1MjllYTY5M2U",
+    "commit": {
+      "author": {
+        "name": "mumra",
+        "email": "pete.hurst@gmail.com",
+        "date": "2024-10-14T06:50:02Z"
+      },
+      "committer": {
+        "name": "mumra",
+        "email": "pete.hurst@gmail.com",
+        "date": "2024-10-14T07:02:16Z"
+      },
+      "message": "Properly remove Animate Skeleton\n\nAnimate Skeleton was nominally removed in 613369f but the removal was\nsomewhat incomplete. The spell description was left in a number of\ntranslations (just removed in en), the spell tile still remained,\nthe spell data was still present and not made into an AXED_SPELL, the\nenum was not marked for TAG_MAJOR_VERSION deletion, and (consequently)\nit was not added to removed_spells.\n\nSo to avoid potential confusion and errors I have done the above. I\nalso added a fixup in tags.cc so very old Necromancer saves should now\nreceive Soul Splinter instead (which it was ultimately replaced with).",
+      "tree": {
+        "sha": "ac82bc4b37b435f494e835dec11022b8ccd9f08a",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ac82bc4b37b435f494e835dec11022b8ccd9f08a"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0bf80241f61738d45f53e6ec1f28369529ea693e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/0bf80241f61738d45f53e6ec1f28369529ea693e",
+    "html_url": "https://github.com/crawl/crawl/commit/0bf80241f61738d45f53e6ec1f28369529ea693e",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0bf80241f61738d45f53e6ec1f28369529ea693e/comments",
+    "author": {
+      "login": "chucksellick",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chucksellick",
+      "html_url": "https://github.com/chucksellick",
+      "followers_url": "https://api.github.com/users/chucksellick/followers",
+      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
+      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
+      "repos_url": "https://api.github.com/users/chucksellick/repos",
+      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "chucksellick",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chucksellick",
+      "html_url": "https://github.com/chucksellick",
+      "followers_url": "https://api.github.com/users/chucksellick/followers",
+      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
+      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
+      "repos_url": "https://api.github.com/users/chucksellick/repos",
+      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "06e22a58e0c3d03b7ad38bf1aa14327134583948",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/06e22a58e0c3d03b7ad38bf1aa14327134583948",
+        "html_url": "https://github.com/crawl/crawl/commit/06e22a58e0c3d03b7ad38bf1aa14327134583948"
+      }
+    ]
+  },
+  {
     "sha": "06e22a58e0c3d03b7ad38bf1aa14327134583948",
     "node_id": "C_kwDOAV-JftoAKDA2ZTIyYTU4ZTBjM2QwM2I3YWQzOGJmMWFhMTQzMjcxMzQ1ODM5NDg",
     "commit": {
@@ -7817,85 +7896,6 @@
         "sha": "07630011bb0aca6474d02695411ad0f1cd1d1e3b",
         "url": "https://api.github.com/repos/crawl/crawl/commits/07630011bb0aca6474d02695411ad0f1cd1d1e3b",
         "html_url": "https://github.com/crawl/crawl/commit/07630011bb0aca6474d02695411ad0f1cd1d1e3b"
-      }
-    ]
-  },
-  {
-    "sha": "07630011bb0aca6474d02695411ad0f1cd1d1e3b",
-    "node_id": "C_kwDOAV-JftoAKDA3NjMwMDExYmIwYWNhNjQ3NGQwMjY5NTQxMWFkMGYxY2QxZDFlM2I",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-09-25T04:22:00Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-09-25T04:22:00Z"
-      },
-      "message": "Silence a build warning",
-      "tree": {
-        "sha": "71352892faccf755d3bfdaa3701810543d39db94",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/71352892faccf755d3bfdaa3701810543d39db94"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/07630011bb0aca6474d02695411ad0f1cd1d1e3b",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/07630011bb0aca6474d02695411ad0f1cd1d1e3b",
-    "html_url": "https://github.com/crawl/crawl/commit/07630011bb0aca6474d02695411ad0f1cd1d1e3b",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/07630011bb0aca6474d02695411ad0f1cd1d1e3b/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "70dc07e95baaf8a79db51d061d408278ef6140e5",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/70dc07e95baaf8a79db51d061d408278ef6140e5",
-        "html_url": "https://github.com/crawl/crawl/commit/70dc07e95baaf8a79db51d061d408278ef6140e5"
       }
     ]
   }

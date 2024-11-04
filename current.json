@@ -1,5 +1,167 @@
 [
   {
+    "sha": "559140af292ec4ccf2768fa9ac739749238a1488",
+    "node_id": "C_kwDOAV-JftoAKDU1OTE0MGFmMjkyZWM0Y2NmMjc2OGZhOWFjNzM5NzQ5MjM4YTE0ODg",
+    "commit": {
+      "author": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2024-11-04T14:07:32Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2024-11-04T14:09:13Z"
+      },
+      "message": "Reword Brilliance's description.\n\nSo that it only refers to Yredelemnul by name, as is done elsewhere.",
+      "tree": {
+        "sha": "a177f6862e1a105a6d19ea8eeb08d159a45ad1c6",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a177f6862e1a105a6d19ea8eeb08d159a45ad1c6"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/559140af292ec4ccf2768fa9ac739749238a1488",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/559140af292ec4ccf2768fa9ac739749238a1488",
+    "html_url": "https://github.com/crawl/crawl/commit/559140af292ec4ccf2768fa9ac739749238a1488",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/559140af292ec4ccf2768fa9ac739749238a1488/comments",
+    "author": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2694494baf5d9483f23ce5319d510c769d0b4bb3",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2694494baf5d9483f23ce5319d510c769d0b4bb3",
+        "html_url": "https://github.com/crawl/crawl/commit/2694494baf5d9483f23ce5319d510c769d0b4bb3"
+      }
+    ]
+  },
+  {
+    "sha": "2694494baf5d9483f23ce5319d510c769d0b4bb3",
+    "node_id": "C_kwDOAV-JftoAKDI2OTQ0OTRiYWY1ZDk0ODNmMjNjZTUzMTlkNTEwYzc2OWQwYjRiYjM",
+    "commit": {
+      "author": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2024-11-04T12:03:42Z"
+      },
+      "committer": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2024-11-04T12:03:42Z"
+      },
+      "message": "fix: adjust conditions for activating skill training (dilly)\n\nCurrently, the activation of skill training has a few false positives\nand false negatives:\n* Artefact rings and amulets with +Blink/+Inv don't activate training\n  of Evocations.\n* Weapons and staves with evocable abilities enable training of\n  Evocations even if you can't use such items. E.g., carrying an\n  artefact GSC with +Blink does that even if you're a kobold or felid.\n* Artefact talismans with +Blink don't activate Evocations training.\n* An active talisman doesn't enable relevant skills unless you have it\n  in your inventory. So evoking a talisman from the ground doesn't\n  activate training of Shapeshifting.\n* Shattering a cursed item under Ash doesn't deactivate training of\n  corresponding skills.\n\nThis commit fixes that and refactors the relevant code a bit. Thanks\nto dilly for reporting this!",
+      "tree": {
+        "sha": "66ff02a2fed2486e5a8f97e9c7b44b63630d4320",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/66ff02a2fed2486e5a8f97e9c7b44b63630d4320"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2694494baf5d9483f23ce5319d510c769d0b4bb3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/2694494baf5d9483f23ce5319d510c769d0b4bb3",
+    "html_url": "https://github.com/crawl/crawl/commit/2694494baf5d9483f23ce5319d510c769d0b4bb3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2694494baf5d9483f23ce5319d510c769d0b4bb3/comments",
+    "author": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "381ce9d8e681b229d45f8ea19286ae702c2e4378",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/381ce9d8e681b229d45f8ea19286ae702c2e4378",
+        "html_url": "https://github.com/crawl/crawl/commit/381ce9d8e681b229d45f8ea19286ae702c2e4378"
+      }
+    ]
+  },
+  {
     "sha": "381ce9d8e681b229d45f8ea19286ae702c2e4378",
     "node_id": "C_kwDOAV-JftoAKDM4MWNlOWQ4ZTY4MWIyMjlkNDVmOGVhMTkyODZhZTcwMmMyZTQzNzg",
     "commit": {
@@ -7934,168 +8096,6 @@
         "sha": "cd4c005c594bc6a1a6047073e17995153e2e21a0",
         "url": "https://api.github.com/repos/crawl/crawl/commits/cd4c005c594bc6a1a6047073e17995153e2e21a0",
         "html_url": "https://github.com/crawl/crawl/commit/cd4c005c594bc6a1a6047073e17995153e2e21a0"
-      }
-    ]
-  },
-  {
-    "sha": "cd4c005c594bc6a1a6047073e17995153e2e21a0",
-    "node_id": "C_kwDOAV-JftoAKGNkNGMwMDVjNTk0YmM2YTFhNjA0NzA3M2UxNzk5NTE1M2UyZTIxYTA",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-03T03:42:44Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-03T03:42:48Z"
-      },
-      "message": "Fix players getting no XP for kills by their own ball lightning\n\nI'm not really satisfied with some of how kill attribution works for\nexploding monsters *in general*, but I think this should fix the most\nsignificant known issue for now. (Prisms still worked properly, even\nwithout this)",
-      "tree": {
-        "sha": "1ecd3b56b82ad04e218e86ec933a2b4e75c271cd",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1ecd3b56b82ad04e218e86ec933a2b4e75c271cd"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/cd4c005c594bc6a1a6047073e17995153e2e21a0",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/cd4c005c594bc6a1a6047073e17995153e2e21a0",
-    "html_url": "https://github.com/crawl/crawl/commit/cd4c005c594bc6a1a6047073e17995153e2e21a0",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/cd4c005c594bc6a1a6047073e17995153e2e21a0/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-        "html_url": "https://github.com/crawl/crawl/commit/56ef7711ba848038fc63c45d3d09ced84b94c9b8"
-      }
-    ]
-  },
-  {
-    "sha": "56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-    "node_id": "C_kwDOAV-JftoAKDU2ZWY3NzExYmE4NDgwMzhmYzYzYzQ1ZDNkMDljZWQ4NGI5NGM5Yjg",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-10-03T02:27:02Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2024-10-03T03:04:45Z"
-      },
-      "message": "More nekomata tweaks\n\n * Don't use the altered nekomata tile for Phantom Blitz unless the\n   caster-to-clone is a nekomata, just in case some sprint monster ends\n   up using the spell.\n\n * Tweak the nekomata experience value yet further up. Honestly, we could\n   probably do with adjusting threat display for lategame characters with\n   some sort of overriding threat flag- hell sentinels no longer being\n   listed as lethal at reaching XL 20 is a pretty direct demonstration\n   that the whole system is troubled at high experience levels.\n\n * Remove nekomata from the orb run, as they're overshadowing the random\n   Pan lords there and many people aren't examining a new monster to treat\n   it with the same respect a random Pan lord would deserve. (I'd rather\n   just keep the strongest Pan monsters out of the orb run entirely than\n   actually nerf down monsters meant to be highlights of a given extended\n   branch. If we continue to move in the direction of Hell-Pan roulette,\n   we can just seperate orb run lists from Pan entirely (since Pan\n   wouldn't exist in half the games) and it could mix in Hell enemies\n   without expecting either branches' strongest and most emblematic\n   monsters to appear on the orb run like shard shrikes or doom hounds.)",
-      "tree": {
-        "sha": "7cf64c43255588757018fc97b67f044b89518dac",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7cf64c43255588757018fc97b67f044b89518dac"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-    "html_url": "https://github.com/crawl/crawl/commit/56ef7711ba848038fc63c45d3d09ced84b94c9b8",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/56ef7711ba848038fc63c45d3d09ced84b94c9b8/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "30d083ede6f8c0217eb451d3946fcadcd6a8a54a",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/30d083ede6f8c0217eb451d3946fcadcd6a8a54a",
-        "html_url": "https://github.com/crawl/crawl/commit/30d083ede6f8c0217eb451d3946fcadcd6a8a54a"
       }
     ]
   }

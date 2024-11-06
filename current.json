@@ -1,5 +1,86 @@
 [
   {
+    "sha": "c96b193c278a3af823076183efb238e0d23f1b76",
+    "node_id": "C_kwDOAV-JftoAKGM5NmIxOTNjMjc4YTNhZjgyMzA3NjE4M2VmYjIzOGUwZDIzZjFiNzY",
+    "commit": {
+      "author": {
+        "name": "brandon s allbery kf8nh",
+        "email": "allbery.b@gmail.com",
+        "date": "2024-10-06T02:24:56Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2024-11-06T01:17:29Z"
+      },
+      "message": "work around crash in actor::knockback\n\nhttps://cbro.berotato.org/morgue/sjaakdevlaming/crash-sjaakdevlaming-20241006-014359.txt\n\nPassive retaliation killed the caster of a force lance before\nknockback could occur; since the caster's position was long gone\nby the time actor::knockback finally got called, there is no\nposition to knockback away from any more, so just return false.\n\n[Committer's notes: DracoOmega mentioned a preference for trying to\npreserve knockback direction here even if the knockback agent was\ndead, but as that commit hasn't yet happened, I'm merging this, since\nit should fix a recurring segfault.\n\nCloses #4077.]",
+      "tree": {
+        "sha": "f1b0337550731b998586fa40436859e3670efdec",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f1b0337550731b998586fa40436859e3670efdec"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c96b193c278a3af823076183efb238e0d23f1b76",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c96b193c278a3af823076183efb238e0d23f1b76",
+    "html_url": "https://github.com/crawl/crawl/commit/c96b193c278a3af823076183efb238e0d23f1b76",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c96b193c278a3af823076183efb238e0d23f1b76/comments",
+    "author": {
+      "login": "geekosaur",
+      "id": 2036384,
+      "node_id": "MDQ6VXNlcjIwMzYzODQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2036384?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/geekosaur",
+      "html_url": "https://github.com/geekosaur",
+      "followers_url": "https://api.github.com/users/geekosaur/followers",
+      "following_url": "https://api.github.com/users/geekosaur/following{/other_user}",
+      "gists_url": "https://api.github.com/users/geekosaur/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/geekosaur/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/geekosaur/subscriptions",
+      "organizations_url": "https://api.github.com/users/geekosaur/orgs",
+      "repos_url": "https://api.github.com/users/geekosaur/repos",
+      "events_url": "https://api.github.com/users/geekosaur/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/geekosaur/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "559140af292ec4ccf2768fa9ac739749238a1488",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/559140af292ec4ccf2768fa9ac739749238a1488",
+        "html_url": "https://github.com/crawl/crawl/commit/559140af292ec4ccf2768fa9ac739749238a1488"
+      }
+    ]
+  },
+  {
     "sha": "559140af292ec4ccf2768fa9ac739749238a1488",
     "node_id": "C_kwDOAV-JftoAKDU1OTE0MGFmMjkyZWM0Y2NmMjc2OGZhOWFjNzM5NzQ5MjM4YTE0ODg",
     "commit": {
@@ -8015,87 +8096,6 @@
         "sha": "6c114678ce93f10b1d4e69736a71c4922630efbd",
         "url": "https://api.github.com/repos/crawl/crawl/commits/6c114678ce93f10b1d4e69736a71c4922630efbd",
         "html_url": "https://github.com/crawl/crawl/commit/6c114678ce93f10b1d4e69736a71c4922630efbd"
-      }
-    ]
-  },
-  {
-    "sha": "6c114678ce93f10b1d4e69736a71c4922630efbd",
-    "node_id": "C_kwDOAV-JftoAKDZjMTE0Njc4Y2U5M2YxMGIxZDRlNjk3MzZhNzFjNDkyMjYzMGVmYmQ",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-03T05:45:21Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-03T05:45:21Z"
-      },
-      "message": "Fix multiple creatures having incorrectly brief durations (Shummie)\n\nWhen I changed summons to take aut durations instead of abjuration degree,\nI overlooked those effects which call mark_summoned() directly (rather than\nusing mgen_data::set_summoned()). This meant that anything created by\nseveral effects would spawn with a duration of less than 1 turn.\n\nThese included phantom mirror (both the item and the monster spell),\nphantom blitz, chaos clones, and the flayed ghost from Martyr's Knell.",
-      "tree": {
-        "sha": "bdc8d70099212aaed613e752d14638deb418179e",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/bdc8d70099212aaed613e752d14638deb418179e"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6c114678ce93f10b1d4e69736a71c4922630efbd",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/6c114678ce93f10b1d4e69736a71c4922630efbd",
-    "html_url": "https://github.com/crawl/crawl/commit/6c114678ce93f10b1d4e69736a71c4922630efbd",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6c114678ce93f10b1d4e69736a71c4922630efbd/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "cd4c005c594bc6a1a6047073e17995153e2e21a0",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/cd4c005c594bc6a1a6047073e17995153e2e21a0",
-        "html_url": "https://github.com/crawl/crawl/commit/cd4c005c594bc6a1a6047073e17995153e2e21a0"
       }
     ]
   }

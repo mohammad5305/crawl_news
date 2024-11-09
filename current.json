@@ -1,5 +1,86 @@
 [
   {
+    "sha": "f801aa8b2f4d7fc6510385ecc00aee12d295ffde",
+    "node_id": "C_kwDOAV-JftoAKGY4MDFhYThiMmY0ZDdmYzY1MTAzODVlY2MwMGFlZTEyZDI5NWZmZGU",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2024-11-09T04:39:34Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2024-11-09T08:04:32Z"
+      },
+      "message": "Fix mapstat/objstat initialization issues\n\nThis commit fixes a crash due to mapstat/objstat not resetting seen\nunrands between iterations. Once all 8 octopus king rings had been\ngenerated from previous iterations, the first iteration that attempted\nto generate another octopus king ring would cause a crash. Even if the\ncrash didn't happen, objstat wasn't generating unrands correctly across\niterations.\n\nTo fix this, I've made mapstat/objstat use a centralised\ndgn_reset_player_data(), which is a function formerly called\ndgn_flush_map_memory() that was used by lua tests. This function covered\nall resets mapstat/objstat was already doing as well as those it was\nmissing. It was missing one reset for item sets, which I've added. Use\nof dgn_reset_player_data() reduces the number of places where we have\nduplicate player data reset code from three to two; hopefully at some\npoint we can reduce this to one.\n\nAdditionally for mapstat/objstat, we call initial_dungeon_setup() to get\na more centralised and complete initialisation of dungeon setup that\nincludes setting up Ecumenical Temple maps. I've also rename the dlua\nfunction dgn.clear_data() to dgn.clear_persistant_data() for clarity and\nconsistency with another related dlua function.",
+      "tree": {
+        "sha": "824d7d16e40c6630a0043815ee3cb86304e2266a",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/824d7d16e40c6630a0043815ee3cb86304e2266a"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f801aa8b2f4d7fc6510385ecc00aee12d295ffde",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/f801aa8b2f4d7fc6510385ecc00aee12d295ffde",
+    "html_url": "https://github.com/crawl/crawl/commit/f801aa8b2f4d7fc6510385ecc00aee12d295ffde",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f801aa8b2f4d7fc6510385ecc00aee12d295ffde/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0d2c7b62eb726451dde01f5099ea63a9a3bec060",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/0d2c7b62eb726451dde01f5099ea63a9a3bec060",
+        "html_url": "https://github.com/crawl/crawl/commit/0d2c7b62eb726451dde01f5099ea63a9a3bec060"
+      }
+    ]
+  },
+  {
     "sha": "0d2c7b62eb726451dde01f5099ea63a9a3bec060",
     "node_id": "C_kwDOAV-JftoAKDBkMmM3YjYyZWI3MjY0NTFkZGUwMWY1MDk5ZWE2M2E5YTNiZWMwNjA",
     "commit": {
@@ -8015,87 +8096,6 @@
         "sha": "4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
         "url": "https://api.github.com/repos/crawl/crawl/commits/4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
         "html_url": "https://github.com/crawl/crawl/commit/4bb16c9eb9c745fafe7505a62a38000a714b3a8d"
-      }
-    ]
-  },
-  {
-    "sha": "4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
-    "node_id": "C_kwDOAV-JftoAKDRiYjE2YzllYjljNzQ1ZmFmZTc1MDVhNjJhMzgwMDBhNzE0YjNhOGQ",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-04T00:59:53Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-10-04T01:02:53Z"
-      },
-      "message": "Fix summons not looking like summons during timeout (Colgate, Darby)\n\nmonster::is_summoned() was looking for the presence of a summon timer to\ndetermine whether a monster was summoned, but this timer doesn't actually\nexist while they're in the process timing out. As a result of this, it was\npossible to get XP from hitting hostile summons and then letting them\nexpire. (If you actually killed them, they would still look like summons\nand grant no XP).\n\nWhile KILL_TIMEOUT probably never needs to give XP, it seems dangerous to\nallow summons to look - at any point - like they are not summons. Who knows\nwhat other things, now or in the future, might work improperly this way?\n\nI am *hoping* the new criteria for is_summoned() will properly encompass\neverything that should count and nothing which shouldn't, but I won't be\nentirely confident until we test it out. Fingers crossed!",
-      "tree": {
-        "sha": "6cd253c6004f671a288c6ef49a361e53c02e4332",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6cd253c6004f671a288c6ef49a361e53c02e4332"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
-    "html_url": "https://github.com/crawl/crawl/commit/4bb16c9eb9c745fafe7505a62a38000a714b3a8d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4bb16c9eb9c745fafe7505a62a38000a714b3a8d/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "bb4998b30b00a25e846266ad768e2bff0e9ab071",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/bb4998b30b00a25e846266ad768e2bff0e9ab071",
-        "html_url": "https://github.com/crawl/crawl/commit/bb4998b30b00a25e846266ad768e2bff0e9ab071"
       }
     ]
   }

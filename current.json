@@ -1,5 +1,87 @@
 [
   {
+    "sha": "008097b4cb438ba1d480b8f6a88f94df0e265dea",
+    "node_id": "C_kwDOAV-JftoAKDAwODA5N2I0Y2I0MzhiYTFkNDgwYjhmNmE4OGY5NGRmMGUyNjVkZWE",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-12-09T23:04:01Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2024-12-11T06:17:28Z"
+      },
+      "message": "Squash all ID flags into one, refactor heavily\n\nCrawl's identification game has grown more and more simple over the years,\nbut much of the *backend* for its old complexity remained in the code:\nthere were flags for individually identifying an item's type, plusses, and\neven each individual artprop of every artefact. At one point in time, these\nall served a purpose, but most of them are redundant or unnecessary now.\n\nThis replaces all existing ID flags with a single one, ISFLAG_IDENTIFIED,\nand refactors a ton of code to be simpler and more clear; items are now\neither fully identified or unidentified.\n\nMultiple completely unnused functions have been removed, a few more have\nbeen renamed for clarity, and identification checks for situations where\nun-ID'd items should be impossible (ie: checking the ID status of equipment\nthe player is currently wearing) are also removed. Old uses of\nset_ident_flags() and set_ident_type() are both folded into identify_item()\nas appropriate.\n\nget_item_known_info() is removed entirely. With item identification being\nbinary and all monster equipment being pre-identified, this felt like\noverkill for most current uses. Instead, we just hide unknown properties of\nitems in player-facing description, rather than making a copy of every item\nwith all unknown properties removed (in fact, most uses of this function\neffectively did so already.) ID checks were added to a few clue item\nfunctions, but the only place that required any special handling (as far as\nI noticed, at least) was calculating attack delay with an unidentified\nweapon with a speed or heavy brand, and that can be handled more simply.\n\nThe stanard way to check whether an item is identified is now\nitem_def::is_identified(), which checks not only the ISFLAG_IDENTIFIED on\nthe item itself, but whether the item *type* is known. (A less obvious\neffect of get_item_known_info was that the item copy could be *more*\nidentified than the original in many cases - in fact, this was seemingly\nhow the game showed items on the floor whose type was known, but which you\nhad not yet picked up, as identified - but that functionality is no longer\nneeded.)\n\nSince there are no longer multiple levels of identification, itemspec\nidentification syntax is changed somewhat. Instead of \"ident:all\" or\n\"ident:type\", there is just \"pre_id\". (I wanted to just use \"ident\"\noriginally, but this ran into issues with scrolls of IDENTification and\ntrIDENTs...)\n\nOne minor loss is that item_def::name can no longer be passed\nISFLAG_KNOWN_PLUSSES to hide printing of plusses on items, but on reviewing\nall current uses of this, approximately the only change I can see is that\nitem plusses will be used for the message about manifold assault being\nincompatible with your current weapon, and the name of armour echoes (which\nis arguably an improvement for them, now that they're not longer +0 all the\ntime). DESC_DBNAME no longer includes plusses by default (it never made\nsense there).\n\nGiven this was a complicated and far-reaching refactor, it is possible some\nadditional bugs remain, but I've verified a plethora of different\ninteractions, both in wizmode and actual gameplay, and they seem correct.\nFingers crossed.",
+      "tree": {
+        "sha": "02f47b3ca1d2c1dcaa9258023c85b89b740a144c",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/02f47b3ca1d2c1dcaa9258023c85b89b740a144c"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/008097b4cb438ba1d480b8f6a88f94df0e265dea",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/008097b4cb438ba1d480b8f6a88f94df0e265dea",
+    "html_url": "https://github.com/crawl/crawl/commit/008097b4cb438ba1d480b8f6a88f94df0e265dea",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/008097b4cb438ba1d480b8f6a88f94df0e265dea/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "146f489888e660afac3eec42d34ec0caaf20a0c7",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/146f489888e660afac3eec42d34ec0caaf20a0c7",
+        "html_url": "https://github.com/crawl/crawl/commit/146f489888e660afac3eec42d34ec0caaf20a0c7"
+      }
+    ]
+  },
+  {
     "sha": "146f489888e660afac3eec42d34ec0caaf20a0c7",
     "node_id": "C_kwDOAV-JftoAKDE0NmY0ODk4ODhlNjYwYWZhYzNlZWM0MmQzNGVjMGNhYWYyMGEwYzc",
     "commit": {
@@ -8094,88 +8176,6 @@
         "sha": "e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
         "url": "https://api.github.com/repos/crawl/crawl/commits/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
         "html_url": "https://github.com/crawl/crawl/commit/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2"
-      }
-    ]
-  },
-  {
-    "sha": "e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
-    "node_id": "C_kwDOAV-JftoAKGUzYzk0MmRlYzk2ZTFhNTdhNTI3M2NmZTVhZTJhMTczN2U1N2U1ZTI",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-11-21T02:17:05Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-11-21T02:17:29Z"
-      },
-      "message": "Fix Ru magic school sacrifices blocking the wrong schools (Lightli)\n\nSac Forgecraft blocked Translocations, Sac Translocations blocked Alchemy,\netc. (even though it removed levels of the appropriate skill.)",
-      "tree": {
-        "sha": "680b8574c009c4a1743ec84b5614cd6a17f583c9",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/680b8574c009c4a1743ec84b5614cd6a17f583c9"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
-    "html_url": "https://github.com/crawl/crawl/commit/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/e3c942dec96e1a57a5273cfe5ae2a1737e57e5e2/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "39329bb7ae62cc5adfdebea0513105a863ce9ff5",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/39329bb7ae62cc5adfdebea0513105a863ce9ff5",
-        "html_url": "https://github.com/crawl/crawl/commit/39329bb7ae62cc5adfdebea0513105a863ce9ff5"
       }
     ]
   }

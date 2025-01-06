@@ -1,5 +1,251 @@
 [
   {
+    "sha": "b60e247eb4dafc9d0a3a18b078440513962df170",
+    "node_id": "C_kwDOAV-JftoAKGI2MGUyNDdlYjRkYWZjOWQwYTNhMThiMDc4NDQwNTEzOTYyZGYxNzA",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-06T04:40:45Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-06T04:40:45Z"
+      },
+      "message": "Don't generate substantially more amulets than rings (various)\n\nBroken by 9283c13 accidentally inverting from one_chance_in_(4) while it\nwas rearranging the item type code.",
+      "tree": {
+        "sha": "115985f748ccfc20725cc086f95fbdd6553d6ba6",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/115985f748ccfc20725cc086f95fbdd6553d6ba6"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b60e247eb4dafc9d0a3a18b078440513962df170",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b60e247eb4dafc9d0a3a18b078440513962df170",
+    "html_url": "https://github.com/crawl/crawl/commit/b60e247eb4dafc9d0a3a18b078440513962df170",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b60e247eb4dafc9d0a3a18b078440513962df170/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5978acde034e9e1247c07d9454760a8d3a5455e1",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/5978acde034e9e1247c07d9454760a8d3a5455e1",
+        "html_url": "https://github.com/crawl/crawl/commit/5978acde034e9e1247c07d9454760a8d3a5455e1"
+      }
+    ]
+  },
+  {
+    "sha": "5978acde034e9e1247c07d9454760a8d3a5455e1",
+    "node_id": "C_kwDOAV-JftoAKDU5NzhhY2RlMDM0ZTllMTI0N2MwN2Q5NDU0NzYwYThkM2E1NDU1ZTE",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-05T20:26:18Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-05T20:47:22Z"
+      },
+      "message": "Exclude artefacts from drop_disables_autopickup (DemifiendCruithne)\n\nHere we follow from ac1af34cca and exclude artefacts from interacting\nwith the drop_disables_autopickup option, on the grounds that (like\nmissiles) artefacts aren't meaningfully distinguished using type-id.\n\nN.b. currently, we're using `is_artefact()` as a pseudo item id flag\nthroughout the code, mostly for descriptions. There may be more minor\nbugs lurking related to inconsistent handling of type id with\n(jewellery and magical staff) artefacts, because we're relying on\nmanually calling is_artefact() during checks related to type id, which\nseems really easy to forget about.\n\nResolves #4197 (again)",
+      "tree": {
+        "sha": "8e6234dd731ffb39f06d6c70fc8065b27cc96428",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/8e6234dd731ffb39f06d6c70fc8065b27cc96428"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5978acde034e9e1247c07d9454760a8d3a5455e1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/5978acde034e9e1247c07d9454760a8d3a5455e1",
+    "html_url": "https://github.com/crawl/crawl/commit/5978acde034e9e1247c07d9454760a8d3a5455e1",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5978acde034e9e1247c07d9454760a8d3a5455e1/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+        "html_url": "https://github.com/crawl/crawl/commit/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd"
+      }
+    ]
+  },
+  {
+    "sha": "2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+    "node_id": "C_kwDOAV-JftoAKDJkZmMyZDViYmNiZDEyNDU5MmJjYTczZWU2MDE3YzJkYTM2YWRjYmQ",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-05T20:04:14Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-05T20:04:14Z"
+      },
+      "message": "Revert \"Fix drop_disables_autopickup artefact interactions\"\n\nAs reported by DemifiendCruithne, the fix in 5a1d68acde didn't\nproperly handle picking up and dropping artefacts with previously\nunknown type-ids. The player could pick them up, drop them, and have\nautopickup disabled for, e.g., all jewellery.\n\nWe generally exclude artefacts from interacting with type-ids\nthroughout the code -- this is intentional, and 5a1d68acde was\nincorrect. I'm fixing this differently in a following commit.\n\nThis reverts commit 5a1d68acde340c43e86384e4ac4fb337e20daf5f.",
+      "tree": {
+        "sha": "6dca2c5f4f9a330ebb6fb327648b3e182a86ad98",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6dca2c5f4f9a330ebb6fb327648b3e182a86ad98"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+    "html_url": "https://github.com/crawl/crawl/commit/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2dfc2d5bbcbd124592bca73ee6017c2da36adcbd/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "64fd3f8b57e9d7a9573d5497c0ac57cdc1990c83",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/64fd3f8b57e9d7a9573d5497c0ac57cdc1990c83",
+        "html_url": "https://github.com/crawl/crawl/commit/64fd3f8b57e9d7a9573d5497c0ac57cdc1990c83"
+      }
+    ]
+  },
+  {
     "sha": "64fd3f8b57e9d7a9573d5497c0ac57cdc1990c83",
     "node_id": "C_kwDOAV-JftoAKDY0ZmQzZjhiNTdlOWQ3YTk1NzNkNTQ5N2MwYWM1N2NkYzE5OTBjODM",
     "commit": {
@@ -7875,252 +8121,6 @@
         "sha": "5a6c091abe491673e5797793a9963cba95f4e881",
         "url": "https://api.github.com/repos/crawl/crawl/commits/5a6c091abe491673e5797793a9963cba95f4e881",
         "html_url": "https://github.com/crawl/crawl/commit/5a6c091abe491673e5797793a9963cba95f4e881"
-      }
-    ]
-  },
-  {
-    "sha": "5a6c091abe491673e5797793a9963cba95f4e881",
-    "node_id": "C_kwDOAV-JftoAKDVhNmMwOTFhYmU0OTE2NzNlNTc5Nzc5M2E5OTYzY2JhOTVmNGU4ODE",
-    "commit": {
-      "author": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2024-12-06T20:13:20Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2024-12-06T20:13:20Z"
-      },
-      "message": "Fix the build on CAO\n\nApparently CAO's gcc 4.7 doesn't like that various calls to std::sort()\nhave lambdas with non-const arguments. We're not sure precisely why it's\ncomplaining, since this doesn't happen with non-ancient versions of gcc.\nUntil we can upgrade CAO's toolchain, this fix will allow CAO's crawl\nbuilds to complete.",
-      "tree": {
-        "sha": "9222d9c6549156c08452067e31e6cfc87ba4fd56",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/9222d9c6549156c08452067e31e6cfc87ba4fd56"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5a6c091abe491673e5797793a9963cba95f4e881",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5a6c091abe491673e5797793a9963cba95f4e881",
-    "html_url": "https://github.com/crawl/crawl/commit/5a6c091abe491673e5797793a9963cba95f4e881",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5a6c091abe491673e5797793a9963cba95f4e881/comments",
-    "author": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-        "html_url": "https://github.com/crawl/crawl/commit/f8f82a2dde9e028c2c93dc1f3d749131d0568028"
-      }
-    ]
-  },
-  {
-    "sha": "f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-    "node_id": "C_kwDOAV-JftoAKGY4ZjgyYTJkZGU5ZTAyOGMyYzkzZGMxZjNkNzQ5MTMxZDA1NjgwMjg",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-12-06T10:13:47Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-12-06T10:13:47Z"
-      },
-      "message": "Fix Searing Ray crashing when cast\n\nBroken by 1f3234b. I should have paid more attention to the 'else' below\nthat...\n\nFixes #4162",
-      "tree": {
-        "sha": "63ec04bda5d04eecd6fe9a08e79e9c30c346d194",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/63ec04bda5d04eecd6fe9a08e79e9c30c346d194"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-    "html_url": "https://github.com/crawl/crawl/commit/f8f82a2dde9e028c2c93dc1f3d749131d0568028",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f8f82a2dde9e028c2c93dc1f3d749131d0568028/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "8bf3021b3de65c27f11d66327eb0002c667f2450",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/8bf3021b3de65c27f11d66327eb0002c667f2450",
-        "html_url": "https://github.com/crawl/crawl/commit/8bf3021b3de65c27f11d66327eb0002c667f2450"
-      }
-    ]
-  },
-  {
-    "sha": "8bf3021b3de65c27f11d66327eb0002c667f2450",
-    "node_id": "C_kwDOAV-JftoAKDhiZjMwMjFiM2RlNjVjMjdmMTFkNjYzMjdlYjAwMDJjNjY3ZjI0NTA",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-12-06T02:54:28Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2024-12-06T02:54:28Z"
-      },
-      "message": "Revert \"Make banish animation (and similar) fill the webtiles viewport properly\"\n\nThis seems to be causing crashes with shift+X that I don't yet know the\ncause of, so I'm reverting for now in hope that the slow build servers\ndon't catch this.\n\nThis reverts commit 761acde7cbba57105fef83c912b375ac92b690cd.",
-      "tree": {
-        "sha": "c3e5791c3a05222e15d46bf19773826663374a53",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c3e5791c3a05222e15d46bf19773826663374a53"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8bf3021b3de65c27f11d66327eb0002c667f2450",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8bf3021b3de65c27f11d66327eb0002c667f2450",
-    "html_url": "https://github.com/crawl/crawl/commit/8bf3021b3de65c27f11d66327eb0002c667f2450",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8bf3021b3de65c27f11d66327eb0002c667f2450/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "ceed6161e0278f9cee03b4b53d097d8d2ac50f32",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/ceed6161e0278f9cee03b4b53d097d8d2ac50f32",
-        "html_url": "https://github.com/crawl/crawl/commit/ceed6161e0278f9cee03b4b53d097d8d2ac50f32"
       }
     ]
   }

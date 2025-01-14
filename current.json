@@ -1,5 +1,251 @@
 [
   {
+    "sha": "b604e0db52062c7fa8e39be10b705d07134a0941",
+    "node_id": "C_kwDOAV-JftoAKGI2MDRlMGRiNTIwNjJjN2ZhOGUzOWJlMTBiNzA1ZDA3MTM0YTA5NDE",
+    "commit": {
+      "author": {
+        "name": "Alex Beloi",
+        "email": "alexbeloi@users.noreply.github.com",
+        "date": "2025-01-14T11:05:38Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-14T11:07:59Z"
+      },
+      "message": "Update add_autopickup_func to use capitalized subtype\n\nThe autopickup function is matching against the return from l_item_do_subtype, which is a wrapper around equip_slot_name, which in 2dbd7c1f was changed so that the strings are capitalized.\r\n\r\nthanks to @lmplojin on discord for the pointer.",
+      "tree": {
+        "sha": "123af7b31315d53dad101c181c47d037c2e0a213",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/123af7b31315d53dad101c181c47d037c2e0a213"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b604e0db52062c7fa8e39be10b705d07134a0941",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b604e0db52062c7fa8e39be10b705d07134a0941",
+    "html_url": "https://github.com/crawl/crawl/commit/b604e0db52062c7fa8e39be10b705d07134a0941",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b604e0db52062c7fa8e39be10b705d07134a0941/comments",
+    "author": {
+      "login": "alexbeloi",
+      "id": 9807648,
+      "node_id": "MDQ6VXNlcjk4MDc2NDg=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9807648?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alexbeloi",
+      "html_url": "https://github.com/alexbeloi",
+      "followers_url": "https://api.github.com/users/alexbeloi/followers",
+      "following_url": "https://api.github.com/users/alexbeloi/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alexbeloi/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alexbeloi/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alexbeloi/subscriptions",
+      "organizations_url": "https://api.github.com/users/alexbeloi/orgs",
+      "repos_url": "https://api.github.com/users/alexbeloi/repos",
+      "events_url": "https://api.github.com/users/alexbeloi/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alexbeloi/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6518f178e11d6a352565f324b60d655d63dfe71f",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/6518f178e11d6a352565f324b60d655d63dfe71f",
+        "html_url": "https://github.com/crawl/crawl/commit/6518f178e11d6a352565f324b60d655d63dfe71f"
+      }
+    ]
+  },
+  {
+    "sha": "6518f178e11d6a352565f324b60d655d63dfe71f",
+    "node_id": "C_kwDOAV-JftoAKDY1MThmMTc4ZTExZDZhMzUyNTY1ZjMyNGI2MGQ2NTVkNjNkZmU3MWY",
+    "commit": {
+      "author": {
+        "name": "Cgettys",
+        "email": "3117273+Cgettys@users.noreply.github.com",
+        "date": "2025-01-14T09:25:57Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-14T10:14:01Z"
+      },
+      "message": "Fix: white splash screen when OpenGL 3+ unavailable (Ge0ff)\n\nI thought GL_TEXTURE_MIN_FILTER had the same value for both branches.\n\nI thought incorrectly.\n\nFix it in the simplest possible way for now.\nI'll clean this up more in a future PR.\n\nFixes bug introduced in #4217\n\nCo-authored-by: Implojin <implosionwow@gmail.com>",
+      "tree": {
+        "sha": "c7367fb210a3264dd2432a3d7a9ecbdafc558a4f",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c7367fb210a3264dd2432a3d7a9ecbdafc558a4f"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6518f178e11d6a352565f324b60d655d63dfe71f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6518f178e11d6a352565f324b60d655d63dfe71f",
+    "html_url": "https://github.com/crawl/crawl/commit/6518f178e11d6a352565f324b60d655d63dfe71f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6518f178e11d6a352565f324b60d655d63dfe71f/comments",
+    "author": {
+      "login": "Cgettys",
+      "id": 3117273,
+      "node_id": "MDQ6VXNlcjMxMTcyNzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3117273?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Cgettys",
+      "html_url": "https://github.com/Cgettys",
+      "followers_url": "https://api.github.com/users/Cgettys/followers",
+      "following_url": "https://api.github.com/users/Cgettys/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Cgettys/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Cgettys/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Cgettys/subscriptions",
+      "organizations_url": "https://api.github.com/users/Cgettys/orgs",
+      "repos_url": "https://api.github.com/users/Cgettys/repos",
+      "events_url": "https://api.github.com/users/Cgettys/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Cgettys/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "de7caedde691a036ba60630b1faff73fac2d3476",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/de7caedde691a036ba60630b1faff73fac2d3476",
+        "html_url": "https://github.com/crawl/crawl/commit/de7caedde691a036ba60630b1faff73fac2d3476"
+      }
+    ]
+  },
+  {
+    "sha": "de7caedde691a036ba60630b1faff73fac2d3476",
+    "node_id": "C_kwDOAV-JftoAKGRlN2NhZWRkZTY5MWEwMzZiYTYwNjMwYjFmYWZmNzNmYWMyZDM0NzY",
+    "commit": {
+      "author": {
+        "name": "Cgettys",
+        "email": "3117273+Cgettys@users.noreply.github.com",
+        "date": "2025-01-10T02:40:40Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-01-14T06:19:42Z"
+      },
+      "message": "Remove GLU dependency\n\nAvoid depending on deprecated GLU library by dynamically loading\nOpenGL 3+ function glGenerateMipmap where available.\nIf it's not available, Where it's not, we just render without mipmapping.\n\nNote that for a lot of resolution / rc setting / zoom level combos,\nwe don't mipmap anyway, and this PR doesn't change those cases at all.\n\nAlso note that OpenGL 3.0 was released in 2008.\nglGenerateMipmap is available even on decade old GPUs and iGPUs as a result.\nFor players running truly ancient GPUs and systems that supported GLU,\nbut not OpenGL 3, and who happened to have just the right setup for us to\nenable mipmapping, we will now render without it.\n\nIf anyone actually does turn out to be affected, they may be able to use\na version of llvmpipe that supports OpenGL 3+ as a software renderer.\nllvmpipe is available on Linux and Unix-like systems.\n\nAlso note we could turn on mipmapping on GLES targets according to\nhttps://registry.khronos.org/OpenGL-Refpages/es3.0/html/glGenerateMipmap.xhtml.\n\nThis may be quite useful for low resolution screens, like older android phones.\nBut I'll leave that for a future commit.",
+      "tree": {
+        "sha": "a2c2c40425f6ebbeceb429b4feb3b0c00440df7d",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a2c2c40425f6ebbeceb429b4feb3b0c00440df7d"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/de7caedde691a036ba60630b1faff73fac2d3476",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/de7caedde691a036ba60630b1faff73fac2d3476",
+    "html_url": "https://github.com/crawl/crawl/commit/de7caedde691a036ba60630b1faff73fac2d3476",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/de7caedde691a036ba60630b1faff73fac2d3476/comments",
+    "author": {
+      "login": "Cgettys",
+      "id": 3117273,
+      "node_id": "MDQ6VXNlcjMxMTcyNzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3117273?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Cgettys",
+      "html_url": "https://github.com/Cgettys",
+      "followers_url": "https://api.github.com/users/Cgettys/followers",
+      "following_url": "https://api.github.com/users/Cgettys/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Cgettys/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Cgettys/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Cgettys/subscriptions",
+      "organizations_url": "https://api.github.com/users/Cgettys/orgs",
+      "repos_url": "https://api.github.com/users/Cgettys/repos",
+      "events_url": "https://api.github.com/users/Cgettys/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Cgettys/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "535f1cdcc7a6e7f1018facc6763a9665046cc1fe",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/535f1cdcc7a6e7f1018facc6763a9665046cc1fe",
+        "html_url": "https://github.com/crawl/crawl/commit/535f1cdcc7a6e7f1018facc6763a9665046cc1fe"
+      }
+    ]
+  },
+  {
     "sha": "535f1cdcc7a6e7f1018facc6763a9665046cc1fe",
     "node_id": "C_kwDOAV-JftoAKDUzNWYxY2RjYzdhNmU3ZjEwMThmYWNjNjc2M2E5NjY1MDQ2Y2MxZmU",
     "commit": {
@@ -7950,232 +8196,6 @@
         "sha": "5a1d68acde340c43e86384e4ac4fb337e20daf5f",
         "url": "https://api.github.com/repos/crawl/crawl/commits/5a1d68acde340c43e86384e4ac4fb337e20daf5f",
         "html_url": "https://github.com/crawl/crawl/commit/5a1d68acde340c43e86384e4ac4fb337e20daf5f"
-      }
-    ]
-  },
-  {
-    "sha": "5a1d68acde340c43e86384e4ac4fb337e20daf5f",
-    "node_id": "C_kwDOAV-JftoAKDVhMWQ2OGFjZGUzNDBjNDNlODYzODRlNGFjNGZiMzM3ZTIwZGFmNWY",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-02T18:58:49Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-02T19:40:14Z"
-      },
-      "message": "Fix drop_disables_autopickup artefact interactions\n\nWe received a report that the drop_disables_autopickup rc setting was\nincorrectly disabling autopickup for some item base types if an\nartefact was dropped (jewellery and magical staves, notably).\n\nThis was happening because the item_type_known() signature that was\nbeing used excludes artefacts from checking subtype ids.\n\nHere we change the `\\` autopickup menu behavior to allow artefacts of\nthe affected base types to be autopickup toggled using their subtype,\nif known.\n\nFixes #4197",
-      "tree": {
-        "sha": "e99197244cb17d964430123850a7e3d6d0865528",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e99197244cb17d964430123850a7e3d6d0865528"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5a1d68acde340c43e86384e4ac4fb337e20daf5f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5a1d68acde340c43e86384e4ac4fb337e20daf5f",
-    "html_url": "https://github.com/crawl/crawl/commit/5a1d68acde340c43e86384e4ac4fb337e20daf5f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5a1d68acde340c43e86384e4ac4fb337e20daf5f/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "1816505622142b4f18fec5dfd61920b1694c580d",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/1816505622142b4f18fec5dfd61920b1694c580d",
-        "html_url": "https://github.com/crawl/crawl/commit/1816505622142b4f18fec5dfd61920b1694c580d"
-      }
-    ]
-  },
-  {
-    "sha": "1816505622142b4f18fec5dfd61920b1694c580d",
-    "node_id": "C_kwDOAV-JftoAKDE4MTY1MDU2MjIxNDJiNGYxOGZlYzVkZmQ2MTkyMGIxNjk0YzU4MGQ",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-02T11:40:59Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-02T11:41:11Z"
-      },
-      "message": "Update docs/develop/spells.txt for 0.33\n\nPrimarily aimed at highlighting repeated trends in Forgecraft spells for\nfuture possible development, but also clarifying a few other matters of\ncreation and broader phrasing as has been brought up by other new 0.32 and\n0.33 spells.",
-      "tree": {
-        "sha": "fb3ed63c373cfbaffc138bc9783ad02f6df64bf8",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/fb3ed63c373cfbaffc138bc9783ad02f6df64bf8"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/1816505622142b4f18fec5dfd61920b1694c580d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/1816505622142b4f18fec5dfd61920b1694c580d",
-    "html_url": "https://github.com/crawl/crawl/commit/1816505622142b4f18fec5dfd61920b1694c580d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/1816505622142b4f18fec5dfd61920b1694c580d/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "c0fec7c300aabafae6555315995a2d05180651eb",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/c0fec7c300aabafae6555315995a2d05180651eb",
-        "html_url": "https://github.com/crawl/crawl/commit/c0fec7c300aabafae6555315995a2d05180651eb"
-      }
-    ]
-  },
-  {
-    "sha": "c0fec7c300aabafae6555315995a2d05180651eb",
-    "node_id": "C_kwDOAV-JftoAKGMwZmVjN2MzMDBhYWJhZmFlNjU1NTMxNTk5NWEyZDA1MTgwNjUxZWI",
-    "commit": {
-      "author": {
-        "name": "Aliscans",
-        "email": "crawl@thimk.info",
-        "date": "2024-12-29T16:29:45Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2025-01-02T00:42:44Z"
-      },
-      "message": "Fix the way the scroller works when a menu grows.\n\nPreviously, if a player had a spell library containing every spell,\nsearching it for \"hat\" led to Shatter being selected. Searching for \"a\"\nafter this led to Shatter still being selected, but only the top of the\nspell list being displayed.\n\nThis happened because UIMenu::update_items() resized item_info but\ndidn't set the x, y, row or column fields, and\nUIMenu::get_item_region() relied on those being up to date.\n\nCall UIMenu::do_layout() to fix it.",
-      "tree": {
-        "sha": "a751e7a6f224fee94b45a452f77d8c682c1df542",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a751e7a6f224fee94b45a452f77d8c682c1df542"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c0fec7c300aabafae6555315995a2d05180651eb",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/c0fec7c300aabafae6555315995a2d05180651eb",
-    "html_url": "https://github.com/crawl/crawl/commit/c0fec7c300aabafae6555315995a2d05180651eb",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c0fec7c300aabafae6555315995a2d05180651eb/comments",
-    "author": null,
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "3f35e1a551a435a7824c570b237d0f8933f7317c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/3f35e1a551a435a7824c570b237d0f8933f7317c",
-        "html_url": "https://github.com/crawl/crawl/commit/3f35e1a551a435a7824c570b237d0f8933f7317c"
       }
     ]
   }

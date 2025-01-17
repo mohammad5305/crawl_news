@@ -1,5 +1,661 @@
 [
   {
+    "sha": "19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
+    "node_id": "C_kwDOAV-JftoAKDE5NTg4ZjQwNjJlZTBkMTNlNWU5NGM3ZWJiNjlkMTlkZWE1YWM3OGY",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T11:30:15Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T23:00:59Z"
+      },
+      "message": "Initial distribution of the new trap quartet\n\nAlongside the previous commits each placing traps naturally, this also\nhandles and tweaks a fair number of vaults and branches. Most worthy of\nnote:\n\n * The Zot:5 entrance traps have been reworked, removing the chance for\n   both corridors to be completely blocked off by traps. 25% of the time,\n   one corridor will be blocked off by at least one trap, while the other\n   will be traversible but have two of the newer traps lining the entrance\n   and exit. This is meant to still punish standing in the corridor as\n   a chokepoint or retreating repeatedly through it, but also allow\n   reasonably consistently moving through the path compared to the\n   teleport or dispersal options, plus add a little more variety compared\n   to before.\n\n * Tomb's traps have been diluted a little with tyrant's traps and\n   marginally less traps placed overall. If we get more traps in the\n   same buff / debuff veins as prior, then more probably should be\n   deployed in the branch- the power creep has been rather excessive\n   for the branch due to the binary nature of relying on torment.\n\n * Snake and Vaults both now have a slightly higher natural-spawns trap\n   count, now that they have weaker traps to work with: Snake gets a\n   flat +2 per floor, and Vaults gets +1. As has been mentioned in\n   previous trap addition commits, both of these branches need more to\n   stand out with on variety and fanciness levels compared to other\n   branches near them; there is also zero guarantee these traps will\n   end up anywhere near monsters or vaults anyway.\n\n * The two bailies with the worst kill statistics in the current stable\n   and trunk versions (bailey_axe_4 and bailey_polearm_nasty_gnolls)\n   both get tyrant's traps in them to both buff them and have a little bit\n   of an earlygame introduction to later trap mechanics.\n\n * A small number of abyssal rune vaults with the worst kill statistics in\n   current and trunk versions, as well as several underperforming Abyss\n   vaults that can appear outside of the Abyss, now have harlequin's traps\n   and devourer's traps, for both connecting more flavour together and\n   helping said vaults along.\n\n * To emphasize wizlabs having more prominent and fancy gimmicks,\n   Alistair's Party Mansion now gets harlequin traps, and Yara's Duelist\n   Academy gets archmage's traps, both far away from their given layout's\n   original bosses.\n\nFor the most part, these flavour-focused traps either should rely on\ndirect connections to gods, spells, or unrands appropriate to a branch\n(e.g. archmage's traps for Vehumet vaults with several branch-sourced\nspellcasters), or the branch placements already established in the\nrandom_trap_for_place() function. The main exceptions are late D (where\nthere still should be some caution in throwing around too many of\nthese), Zot, and Ziggurats.",
+      "tree": {
+        "sha": "dca9f30ceaba3ace234f3df72a510b63b0b24491",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/dca9f30ceaba3ace234f3df72a510b63b0b24491"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
+    "html_url": "https://github.com/crawl/crawl/commit/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b98e54cbaef797c762a56390d68614fb92517f1b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b98e54cbaef797c762a56390d68614fb92517f1b",
+        "html_url": "https://github.com/crawl/crawl/commit/b98e54cbaef797c762a56390d68614fb92517f1b"
+      }
+    ]
+  },
+  {
+    "sha": "b98e54cbaef797c762a56390d68614fb92517f1b",
+    "node_id": "C_kwDOAV-JftoAKGI5OGU1NGNiYWVmNzk3Yzc2MmE1NjM5MGQ2ODYxNGZiOTI1MTdmMWI",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-15T10:15:19Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T23:00:59Z"
+      },
+      "message": "New trap: devourer's trap, corroding players\n\nThis trap is a very-delayed follow-up to b65a573 producing the very strange\nflavour of monsters praying to Lugonu to corrode their foes, while the\nAbyss contains minimal corrosion and Lugonu contains zero corrosion\nabilities. As such, this trap contains the most obviously divergent\nflavour of any of the traps: the description mentions the stomaches of\nunseen extradimensional beasts, akin to the tentacles of a tainted\notherworld like Malign Gateway creates (and keeping some space open for the\nfinishing of PR #3775).\n\nThis rather abstract trap corrodes the player (with normal rCorr\nchecks) 2/3 times it's stepped on. While a couple of branches\nsuccessfully deploy corrosive effects (entropy weavers in Spider, Slime,\nDis), the effect is relatively rare enough it can spare a bit more\nbroader usage. It's not the most exciting effect (neither using a new\nbuff like harlequin's traps nor combining player debuffs and buffs like\ntyrant's traps and archmage's traps), but the capacity to use more traps\nin branches and vaults overall benefits from simple traps that still\nmeaningfully affect combat.\n\nThis trap rarely spawns naturally in Slime, Pandemonium, and will be\nplaced in a number of Abyss vaults. Slime wants for more variety (even if\ncorrosion is pretty common already) and further obfuscates the origins\nof Jiyva's invasion (hi, starry gem), the Abyss has its aforementioned\nconnection to corrupters, and Pandemonium is connected to the Abyss\nas well as also being in need of more differentiating variety in its\ninfinite length.\n\nThe tile was composited from CC0 spell icons by 7Soul1 and Denzi's old\nWarp Weapon spell icon.",
+      "tree": {
+        "sha": "426cd44e954517b26f9b2c17449e440a0c3c4bb5",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/426cd44e954517b26f9b2c17449e440a0c3c4bb5"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b98e54cbaef797c762a56390d68614fb92517f1b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b98e54cbaef797c762a56390d68614fb92517f1b",
+    "html_url": "https://github.com/crawl/crawl/commit/b98e54cbaef797c762a56390d68614fb92517f1b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b98e54cbaef797c762a56390d68614fb92517f1b/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+        "html_url": "https://github.com/crawl/crawl/commit/4b739738c5417bfed8e3af1683f842eaa4bfcddc"
+      }
+    ]
+  },
+  {
+    "sha": "4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+    "node_id": "C_kwDOAV-JftoAKDRiNzM5NzM4YzU0MTdiZmVkOGUzYWYxNjgzZjg0MmVhYTRiZmNkZGM",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-14T12:14:07Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T23:00:48Z"
+      },
+      "message": "New trap: harlequin's trap, granting AF_CHAOS to monsters\n\nWith the reworks to chaos starting from 196b491 onwards, chaos effects\nare safe enough to deploy in broader circumstances. With a multitude of\nrenewed and flavourful chaotic gods to lean on these days, a trap that\ncan be used in their vaults and which isn't reliant on weapon wielding\ncan reasonably distribute this in a novel fashion compared to the limted\nways chaos is currently deployed.\n\nThese harlequin's traps only have effects if monsters are in sight, and\ngrant 20 to 28 turns of a new chaos-wreathed status to two or three\nhighest-HD non-holy monsters in sight of the trap without the status\n(or innate chaotic attacks). This works somewhat like the Ignis wrath\nflame-wreathed status in replacing the attack flavour of a monster's\nfirst attack, except with AF_CHAOTIC instead of AF_FIRE, and no damage\nor speed buffs. (It thus stacks with monster melee weapons, but not\nranged weapons). It should provide an interesting variation of the\ncommon use of Might throughout the game in letting monsters try to\napply debuffs or harder-to-resist damage in melee, and also provide a\nmore novel rare sight amongst the various other trap mechanics added\nin this commit batch.\n\nThis trap rarely spawns naturally in the Depths, Zot, and Pandemonium.\nZot has some of the strongest chaotic monsters in the game (proteans /\nklowns / orbs of fire / Tiamat), Pandemonium has its lords, and Depths\nis close to both while benefitting from a little more explicit\nconnective tissue in its own burgeoning fae flavour. The performance\nflavour for chaos hopefully will also help lead a little more into the\nsudden appearance of klowns before their appearance in Zot, while\nreasonably still feeling somewhat traditional in fantasy thematics; Xom\ncertainly would approve, anyway.\n\nThe hopefully-eye-catchingly animated tile was composited from CC0 spell\nicons by 7Soul1 and the old deck item tiles by ontoclasm.",
+      "tree": {
+        "sha": "a214cf915bcab9e86d7ac0c1a6eda907f4f4a335",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a214cf915bcab9e86d7ac0c1a6eda907f4f4a335"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+    "html_url": "https://github.com/crawl/crawl/commit/4b739738c5417bfed8e3af1683f842eaa4bfcddc",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4b739738c5417bfed8e3af1683f842eaa4bfcddc/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "81da2222505c5182360ed0eaaf7182e5df0746e6",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/81da2222505c5182360ed0eaaf7182e5df0746e6",
+        "html_url": "https://github.com/crawl/crawl/commit/81da2222505c5182360ed0eaaf7182e5df0746e6"
+      }
+    ]
+  },
+  {
+    "sha": "81da2222505c5182360ed0eaaf7182e5df0746e6",
+    "node_id": "C_kwDOAV-JftoAKDgxZGEyMjIyNTA1YzUxODIzNjBlZDBlYWFmNzE4MmU1ZGYwNzQ2ZTY",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-13T07:48:12Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T23:00:47Z"
+      },
+      "message": "New trap: archmage's trap, draining player mp + granting brilliance\n\nThe natural follow-up to a melee-focused trap is a magic-focused trap.\nThese mystic traps steal from the player's magic (by draining 33% of one's\ncurrent mp) to grant Brilliance to two or three strongest hostile\nspellcasters without Brilliance in the trap's sight (i.e. 20-28 turns of\ncasting spells more often with higher effective HD). Draining mp affects\nboth spellcasters and a large number of invocations, while brilliance for\nthe right monsters should be reasonably dangerous.\n\n(This doesn't preclude the usage of mp drain on Zot traps, as it is\nonly a portion of one's mp reliably versus Zot traps draining all of\none's mp on a rare basis.)\n\nThis trap spawns in Snake, Elf, and Depths naturally. Snake continues to\nneed more differentiation as a Lair branch, it heavily suits the flavour\nof Elf and helps the branch a little more past its large vault dependence,\nand Depths is one of the most magical branches in the game between the\nfae, the magic giants and flighty animals, and literal walking spellbooks\neven before all the various other wizards in it, helping more with the V\nversus Depths split.\n\nThe tile was composited from CC0 spell icons by 7Soul1.\n\nnerf archmage traps",
+      "tree": {
+        "sha": "67be75b682e3929094b511bcca0c863344997ec5",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/67be75b682e3929094b511bcca0c863344997ec5"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/81da2222505c5182360ed0eaaf7182e5df0746e6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/81da2222505c5182360ed0eaaf7182e5df0746e6",
+    "html_url": "https://github.com/crawl/crawl/commit/81da2222505c5182360ed0eaaf7182e5df0746e6",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/81da2222505c5182360ed0eaaf7182e5df0746e6/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+        "html_url": "https://github.com/crawl/crawl/commit/bcc7e3493b417682cc21fcc0cd53eaaa617bda91"
+      }
+    ]
+  },
+  {
+    "sha": "bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+    "node_id": "C_kwDOAV-JftoAKGJjYzdlMzQ5M2I0MTc2ODJjYzIxZmNjMGNkNTNlYWFhNjE3YmRhOTE",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-13T01:15:34Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2025-01-16T23:00:30Z"
+      },
+      "message": "New trap: tyrant's trap, weakening players + mighting monsters\n\nWith the steady removal of mechanical / direct damage traps, there have\nbeen strange consequences as well as large amounts of design space both\nopened up by the lack of weaker trap types. The orb chamber's double-trap\narrangement can lead to fiddly, tedious tactics at what is meant to be the\nclimax of the game, Tomb has continued to creep more steadily upwards in\nthreat due to its extreme reliance on torment, and vaults can't establish\na place as fortified without jumping straight to alarm and net traps at\nminimum (incidentally losing most of the original Ossuary gimmick).\n\nAs such, I'm starting up a set of weaker traps, aimed both at helping out\nthese cases and providing more flexible + tangible flavour for both vaults\nand given branches than The Power of Zot or translocations or infinite\nnet machines. They will still follow the same current paradigm as Zot and\nalarm traps, where players and hostiles alike walking onto a trap hurls an\neffect at the player, to help keep the nature of traps straightforward\nenough to easily learn.\n\nTyrant's traps are for militaristic contexts. Whenever the player or a\nhostile monster steps on the trap, it will steal from the player's melee\ncapabilities (by inflicting 10-14 turns of Weak, capped at 50) in order to\nempower two or three highest-hd monsters in sight (by granting 20-28 turns\nof Might). If there are no monsters in sight, the Weak is still applied.\n(While this and other upcoming traps could mildly annoying to rest off if\nthere aren't any further monsters in sight, with pre-revealed traps it's\nrare to need to activate traps to explore a floor, and when it does block\noff a path it's nowhere near the annoyance dispersal and teleport traps\ncan invoke in the same capacity, so it should be a net reduction in\nannoyance.) This swing should hopefully force melee-centric characters\nto switch tactics, while still being relevant for other characters as\nMight has shown to work throughout the game.\n\nThese traps rarely spawn naturally in Orc, Snake, and Vaults. Orc could\ndo with more unique components beyond the orcs regularly used elsewhere,\nSnake struggles in terms of variety and distinction versus the other Lair\nbranches (plus it contains both status effects already), and V needs\nmore thematic aspects to help establish it as an organized branch\nversus the Depths shortly after it. Each of these traps will come with a\nslight decrease for shafts (which are now mostly helpful for players in\nthe actually visible form) and dispersal traps (which are roughly\ncomparable in helping monsters and hurting the player on a short-term\nbasis).\n\n(The messaging is kind of weird- I'm not super happy with my options, but\n\"constitution\" reads as max hp drain and \"power\" is used regularly for mp.\nWith no actual statdrain in the game anymore as of de20453, hopefully\npeople will notice the Weak status being gained instead of expecting\nactual lost \"strength\".)\n\nThe tile was composited from CC0 level block scraps by Surt and Bloax's\noriginal tentacled monstrosity tile.",
+      "tree": {
+        "sha": "838542930a99a7c9123d3ce6dfd621bb8a38b428",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/838542930a99a7c9123d3ce6dfd621bb8a38b428"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+    "html_url": "https://github.com/crawl/crawl/commit/bcc7e3493b417682cc21fcc0cd53eaaa617bda91",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/bcc7e3493b417682cc21fcc0cd53eaaa617bda91/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "64b092adc61cf12de668d21cd71d4673bcf25090",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/64b092adc61cf12de668d21cd71d4673bcf25090",
+        "html_url": "https://github.com/crawl/crawl/commit/64b092adc61cf12de668d21cd71d4673bcf25090"
+      }
+    ]
+  },
+  {
+    "sha": "64b092adc61cf12de668d21cd71d4673bcf25090",
+    "node_id": "C_kwDOAV-JftoAKDY0YjA5MmFkYzYxY2YxMmRlNjY4ZDIxY2Q3MWQ0NjczYmNmMjUwOTA",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-01-16T14:48:25Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-01-16T14:48:25Z"
+      },
+      "message": "Fix Justicar's Regalia having the wrong word in its inscription (Ge0FF)\n\n(I had originally debated between the two, but evidently forgot to change\none when I changed the other.)",
+      "tree": {
+        "sha": "6c1dfd52ebb8dceb63965d48a5503f795731473a",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6c1dfd52ebb8dceb63965d48a5503f795731473a"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/64b092adc61cf12de668d21cd71d4673bcf25090",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/64b092adc61cf12de668d21cd71d4673bcf25090",
+    "html_url": "https://github.com/crawl/crawl/commit/64b092adc61cf12de668d21cd71d4673bcf25090",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/64b092adc61cf12de668d21cd71d4673bcf25090/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c71af56701c95c39fd4812d1f528eb8e1af8b895",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c71af56701c95c39fd4812d1f528eb8e1af8b895",
+        "html_url": "https://github.com/crawl/crawl/commit/c71af56701c95c39fd4812d1f528eb8e1af8b895"
+      }
+    ]
+  },
+  {
+    "sha": "c71af56701c95c39fd4812d1f528eb8e1af8b895",
+    "node_id": "C_kwDOAV-JftoAKGM3MWFmNTY3MDFjOTVjMzlmZDQ4MTJkMWY1MjhlYjhlMWFmOGI4OTU",
+    "commit": {
+      "author": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-01-16T13:00:41Z"
+      },
+      "committer": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-01-16T13:00:41Z"
+      },
+      "message": "fix: pluralize \"Oni\" as \"Oni\"",
+      "tree": {
+        "sha": "87e3238c54bbd5f066478c52fe50e8bd78c31cef",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/87e3238c54bbd5f066478c52fe50e8bd78c31cef"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c71af56701c95c39fd4812d1f528eb8e1af8b895",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c71af56701c95c39fd4812d1f528eb8e1af8b895",
+    "html_url": "https://github.com/crawl/crawl/commit/c71af56701c95c39fd4812d1f528eb8e1af8b895",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c71af56701c95c39fd4812d1f528eb8e1af8b895/comments",
+    "author": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+        "html_url": "https://github.com/crawl/crawl/commit/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3"
+      }
+    ]
+  },
+  {
+    "sha": "0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+    "node_id": "C_kwDOAV-JftoAKDBlMzkxNGIwZGUyMGFiMTk4M2Y5MDg1M2RlYzJkMmU2ZWJjNmFiZDM",
+    "commit": {
+      "author": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-01-16T12:36:17Z"
+      },
+      "committer": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-01-16T12:36:17Z"
+      },
+      "message": "fix: don't show moonshine potions on the action panel\n\nsince even Oni can't drink that.",
+      "tree": {
+        "sha": "d66dffec8e31251662048ecd2cef4d261ff22583",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d66dffec8e31251662048ecd2cef4d261ff22583"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+    "html_url": "https://github.com/crawl/crawl/commit/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0e3914b0de20ab1983f90853dec2d2e6ebc6abd3/comments",
+    "author": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8ce5bd8831663b70752fb6fd8b52614763e957fd",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/8ce5bd8831663b70752fb6fd8b52614763e957fd",
+        "html_url": "https://github.com/crawl/crawl/commit/8ce5bd8831663b70752fb6fd8b52614763e957fd"
+      }
+    ]
+  },
+  {
     "sha": "8ce5bd8831663b70752fb6fd8b52614763e957fd",
     "node_id": "C_kwDOAV-JftoAKDhjZTViZDg4MzE2NjNiNzA3NTJmYjZmZDhiNTI2MTQ3NjNlOTU3ZmQ",
     "commit": {
@@ -7540,662 +8196,6 @@
         "sha": "d81fdbf3278d5b270438aa23f854748d148131fc",
         "url": "https://api.github.com/repos/crawl/crawl/commits/d81fdbf3278d5b270438aa23f854748d148131fc",
         "html_url": "https://github.com/crawl/crawl/commit/d81fdbf3278d5b270438aa23f854748d148131fc"
-      }
-    ]
-  },
-  {
-    "sha": "d81fdbf3278d5b270438aa23f854748d148131fc",
-    "node_id": "C_kwDOAV-JftoAKGQ4MWZkYmYzMjc4ZDViMjcwNDM4YWEyM2Y4NTQ3NDhkMTQ4MTMxZmM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-01-08T21:55:59Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-01-08T22:02:57Z"
-      },
-      "message": "Don't default ?blinking targeting at monsters (Lici)",
-      "tree": {
-        "sha": "ad23a6955c63797eb146f589f7184f930b555f45",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ad23a6955c63797eb146f589f7184f930b555f45"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d81fdbf3278d5b270438aa23f854748d148131fc",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d81fdbf3278d5b270438aa23f854748d148131fc",
-    "html_url": "https://github.com/crawl/crawl/commit/d81fdbf3278d5b270438aa23f854748d148131fc",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d81fdbf3278d5b270438aa23f854748d148131fc/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-        "html_url": "https://github.com/crawl/crawl/commit/20429fc42b2a5a37cc0eaaa2b125aca687bc9387"
-      }
-    ]
-  },
-  {
-    "sha": "20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-    "node_id": "C_kwDOAV-JftoAKDIwNDI5ZmM0MmIyYTVhMzdjYzBlYWFhMmIxMjVhY2E2ODdiYzkzODc",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-08T16:25:22Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-08T16:25:22Z"
-      },
-      "message": "Add Ahyangyi to the CREDITS\n\nFor b9af4457a1. Thanks for the fix!",
-      "tree": {
-        "sha": "b4dfbbf218be71d4236833d9140650425d8de253",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b4dfbbf218be71d4236833d9140650425d8de253"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-    "html_url": "https://github.com/crawl/crawl/commit/20429fc42b2a5a37cc0eaaa2b125aca687bc9387",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/20429fc42b2a5a37cc0eaaa2b125aca687bc9387/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-        "html_url": "https://github.com/crawl/crawl/commit/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5"
-      }
-    ]
-  },
-  {
-    "sha": "b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-    "node_id": "C_kwDOAV-JftoAKGI5YWY0NDU3YTE4YzVkMjdmZmY3NDg0ZGRkOGQ3ZTZhOTRhYWE3YTU",
-    "commit": {
-      "author": {
-        "name": "Yi Yang @ Anteros",
-        "email": "ahyangyi@gmail.com",
-        "date": "2025-01-05T09:43:15Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-08T16:20:41Z"
-      },
-      "message": "Let beam targeter to take whether it's harmless into account.\n\nThe situation I was trying to fix is to stop Mephitic Cloud targeter from trying to avoid the Qazlal-worshipping player. The harmlessness check is already there, but not called by the beam targeter.\n\n`bolt::harmless_to_player()` was private. However, it makes sense for the beam targeter to call this, and making it public would be the straightforward way to do this.",
-      "tree": {
-        "sha": "a799d3f54809a2c9d51f7994c98adaf0abe4b5f9",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a799d3f54809a2c9d51f7994c98adaf0abe4b5f9"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-    "html_url": "https://github.com/crawl/crawl/commit/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b9af4457a18c5d27fff7484ddd8d7e6a94aaa7a5/comments",
-    "author": {
-      "login": "ahyangyi",
-      "id": 700956,
-      "node_id": "MDQ6VXNlcjcwMDk1Ng==",
-      "avatar_url": "https://avatars.githubusercontent.com/u/700956?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ahyangyi",
-      "html_url": "https://github.com/ahyangyi",
-      "followers_url": "https://api.github.com/users/ahyangyi/followers",
-      "following_url": "https://api.github.com/users/ahyangyi/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ahyangyi/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ahyangyi/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ahyangyi/subscriptions",
-      "organizations_url": "https://api.github.com/users/ahyangyi/orgs",
-      "repos_url": "https://api.github.com/users/ahyangyi/repos",
-      "events_url": "https://api.github.com/users/ahyangyi/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ahyangyi/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "206cbdca849283a143d63f89153b28301495f878",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/206cbdca849283a143d63f89153b28301495f878",
-        "html_url": "https://github.com/crawl/crawl/commit/206cbdca849283a143d63f89153b28301495f878"
-      }
-    ]
-  },
-  {
-    "sha": "206cbdca849283a143d63f89153b28301495f878",
-    "node_id": "C_kwDOAV-JftoAKDIwNmNiZGNhODQ5MjgzYTE0M2Q2M2Y4OTE1M2IyODMwMTQ5NWY4Nzg",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-08T02:21:53Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-08T02:22:03Z"
-      },
-      "message": "Change screen colours during paralysis and petrification\n\nWhen a player falls asleep, the screen darkens, matching their eyelids\nclosing. From a mechanical perspective, this is weird, as paralysis and\npetrification are more common and frequently longer than being set asleep\nand often immediately waking up again from being hit. From a flavour\nperspective, fantasy petrification turning one's eyes to stone is often\nnot the greatest for vision either. Of the other statuses, petrification\nin particular is weirdly inconsistent and easy to be abruptly confused\nabout due to the double-petrification rules, and could use a bit of an\naide.\n\nThis colours the screen lightgrey while one is petrified, matching one's\nnewly stony eyes. To fit alongside this, the screen turns blue while one\nis paralysed, which somewhat matches the hexes colours and doesn't overlap\nwith Corrupting Pulse flashes or force_more flashes. Since both statuses\ndon't allow player interaction anyway, it shouldn't obfuscate too much\nunderneath. (I suspect quite a few people who don't read commit messages\nor changelogs will be confused and alarms by the screen changing colours,\nbut in these particular cases it's fortunately completely correct that\nsomething bad has in fact occurred, so it shouldn't be too much trouble).",
-      "tree": {
-        "sha": "095bb04d714082f6b6886d6f1ca8bdadd7217431",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/095bb04d714082f6b6886d6f1ca8bdadd7217431"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/206cbdca849283a143d63f89153b28301495f878",
-      "comment_count": 2,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/206cbdca849283a143d63f89153b28301495f878",
-    "html_url": "https://github.com/crawl/crawl/commit/206cbdca849283a143d63f89153b28301495f878",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/206cbdca849283a143d63f89153b28301495f878/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-        "html_url": "https://github.com/crawl/crawl/commit/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1"
-      }
-    ]
-  },
-  {
-    "sha": "f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-    "node_id": "C_kwDOAV-JftoAKGYyYjJlYzliYWUwYTY3ODgzNjQ5YWI4YjlhOWExZGIzNzdmZjY2YjE",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-08T02:18:33Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-08T02:22:03Z"
-      },
-      "message": "Make fungus form and tree form sleep immune\n\nThis grants parity with monster motile plants also being sleep immune.\nThis should only really come up for lignifying in front of sleepcaps (or\nfor very strange anti-satyr tactics), but it raises less questions\noverall.\n\n(Possibly fungus and tree form should both get a proper holiness change,\nbut this would come with some headaches of getting oklobs to fire through\ntransformed Fedhas worshippers, which I'm deferring for now.)",
-      "tree": {
-        "sha": "0517d3ee3e03009c26fc1d8f465bffabc3547103",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0517d3ee3e03009c26fc1d8f465bffabc3547103"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-    "html_url": "https://github.com/crawl/crawl/commit/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f2b2ec9bae0a67883649ab8b9a9a1db377ff66b1/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-        "html_url": "https://github.com/crawl/crawl/commit/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c"
-      }
-    ]
-  },
-  {
-    "sha": "5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-    "node_id": "C_kwDOAV-JftoAKDViY2M4YTIxMzI0OGVjOTM5MmI0ZDBhNjIxY2I1YzRmYWI3MDZjM2M",
-    "commit": {
-      "author": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2025-01-07T01:30:28Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2025-01-07T01:30:28Z"
-      },
-      "message": "Tweak Victory placement\n\nInstead of probably wasting a player's superb_item loot half the time,\nput Victory on top of the guaranteed down hatch in the central monster\nchamber. Since Dig for Victory as popularised in Nethack is supposed to\ninvolve going down a level (in fact multiple levels) to reach Victory,\nthe hatch is arguably the most appropriate place for this toga!",
-      "tree": {
-        "sha": "637f323114385eb3c41dcbf5e6b6305885a62590",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/637f323114385eb3c41dcbf5e6b6305885a62590"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-    "html_url": "https://github.com/crawl/crawl/commit/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5bcc8a213248ec9392b4d0a621cb5c4fab706c3c/comments",
-    "author": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d80f97202f38b265ef55f0391dec8a9d875ca151",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d80f97202f38b265ef55f0391dec8a9d875ca151",
-        "html_url": "https://github.com/crawl/crawl/commit/d80f97202f38b265ef55f0391dec8a9d875ca151"
-      }
-    ]
-  },
-  {
-    "sha": "d80f97202f38b265ef55f0391dec8a9d875ca151",
-    "node_id": "C_kwDOAV-JftoAKGQ4MGY5NzIwMmYzOGIyNjVlZjU1ZjAzOTFkZWM4YTlkODc1Y2ExNTE",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-07T00:28:56Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-01-07T00:58:48Z"
-      },
-      "message": "Dig for Victory!\n\nHere we add Victory to gammafunk_dig_for_victory at a 50% chance.\nDoing this entirely for entertainment value, but it should have the\nside effect of making Victory less vanishingly rare; we can tweak\ngeneration here if desired.\n\nUnclear whether players will equip Victory if it generates during\nlategame -- we'll see what happens.",
-      "tree": {
-        "sha": "4352f01d75eadb0b90005ebdba99f232eea26bf3",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4352f01d75eadb0b90005ebdba99f232eea26bf3"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d80f97202f38b265ef55f0391dec8a9d875ca151",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d80f97202f38b265ef55f0391dec8a9d875ca151",
-    "html_url": "https://github.com/crawl/crawl/commit/d80f97202f38b265ef55f0391dec8a9d875ca151",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d80f97202f38b265ef55f0391dec8a9d875ca151/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b60e247eb4dafc9d0a3a18b078440513962df170",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b60e247eb4dafc9d0a3a18b078440513962df170",
-        "html_url": "https://github.com/crawl/crawl/commit/b60e247eb4dafc9d0a3a18b078440513962df170"
-      }
-    ]
-  },
-  {
-    "sha": "b60e247eb4dafc9d0a3a18b078440513962df170",
-    "node_id": "C_kwDOAV-JftoAKGI2MGUyNDdlYjRkYWZjOWQwYTNhMThiMDc4NDQwNTEzOTYyZGYxNzA",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-06T04:40:45Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-06T04:40:45Z"
-      },
-      "message": "Don't generate substantially more amulets than rings (various)\n\nBroken by 9283c13 accidentally inverting from one_chance_in_(4) while it\nwas rearranging the item type code.",
-      "tree": {
-        "sha": "115985f748ccfc20725cc086f95fbdd6553d6ba6",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/115985f748ccfc20725cc086f95fbdd6553d6ba6"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b60e247eb4dafc9d0a3a18b078440513962df170",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b60e247eb4dafc9d0a3a18b078440513962df170",
-    "html_url": "https://github.com/crawl/crawl/commit/b60e247eb4dafc9d0a3a18b078440513962df170",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b60e247eb4dafc9d0a3a18b078440513962df170/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5978acde034e9e1247c07d9454760a8d3a5455e1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5978acde034e9e1247c07d9454760a8d3a5455e1",
-        "html_url": "https://github.com/crawl/crawl/commit/5978acde034e9e1247c07d9454760a8d3a5455e1"
       }
     ]
   }

@@ -1,5 +1,87 @@
 [
   {
+    "sha": "9c2e5f8391b80c815bd258afd8bbe43fc9fca050",
+    "node_id": "C_kwDOAV-JftoAKDljMmU1ZjgzOTFiODBjODE1YmQyNThhZmQ4YmJlNDNmYzlmY2EwNTA",
+    "commit": {
+      "author": {
+        "name": "mumra",
+        "email": "pete.hurst@gmail.com",
+        "date": "2025-02-11T02:30:47Z"
+      },
+      "committer": {
+        "name": "mumra",
+        "email": "pete.hurst@gmail.com",
+        "date": "2025-02-11T02:30:47Z"
+      },
+      "message": "Fix teleport closets and connectivity in numerous vaults\n\nThis is a first pass using scripts/placement.lua to track down closets\nand other connectivity problems in vaults.\n\nInitially began after a report by Darby on Discord regarding\nwad_woods_river_04 and turned into a rabbit hole once I discovered\nthe script.\n\nThis first batch covered only about 1/5th of the vaults, but this script\nshould probably be added to CI once everything is passing.\n\nIn most cases these were very simple mistakes in the vault definition,\nin some other cases involving more convoluted substitutions a reasonable\nfix was harder to find. In several instances vaults simply had to be\nadded to the list of exceptions in placement.lua, for reasons explained\nthere (perhaps a new tag should be added to the vault definitions\ninstead, but for now the list is not too bad.)",
+      "tree": {
+        "sha": "431ec0ec91d1ff21e9b1aec0656ea56857ec24f3",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/431ec0ec91d1ff21e9b1aec0656ea56857ec24f3"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/9c2e5f8391b80c815bd258afd8bbe43fc9fca050",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/9c2e5f8391b80c815bd258afd8bbe43fc9fca050",
+    "html_url": "https://github.com/crawl/crawl/commit/9c2e5f8391b80c815bd258afd8bbe43fc9fca050",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/9c2e5f8391b80c815bd258afd8bbe43fc9fca050/comments",
+    "author": {
+      "login": "chucksellick",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chucksellick",
+      "html_url": "https://github.com/chucksellick",
+      "followers_url": "https://api.github.com/users/chucksellick/followers",
+      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
+      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
+      "repos_url": "https://api.github.com/users/chucksellick/repos",
+      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "chucksellick",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/chucksellick",
+      "html_url": "https://github.com/chucksellick",
+      "followers_url": "https://api.github.com/users/chucksellick/followers",
+      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
+      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
+      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
+      "repos_url": "https://api.github.com/users/chucksellick/repos",
+      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "30d10493aeb206bd5bb1df2db1042e9e533f407c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/30d10493aeb206bd5bb1df2db1042e9e533f407c",
+        "html_url": "https://github.com/crawl/crawl/commit/30d10493aeb206bd5bb1df2db1042e9e533f407c"
+      }
+    ]
+  },
+  {
     "sha": "30d10493aeb206bd5bb1df2db1042e9e533f407c",
     "node_id": "C_kwDOAV-JftoAKDMwZDEwNDkzYWViMjA2YmQ1YmIxZGYyZGIxMDQyZTllNTMzZjQwN2M",
     "commit": {
@@ -8074,88 +8156,6 @@
         "sha": "19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
         "url": "https://api.github.com/repos/crawl/crawl/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
         "html_url": "https://github.com/crawl/crawl/commit/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f"
-      }
-    ]
-  },
-  {
-    "sha": "19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
-    "node_id": "C_kwDOAV-JftoAKDE5NTg4ZjQwNjJlZTBkMTNlNWU5NGM3ZWJiNjlkMTlkZWE1YWM3OGY",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-16T11:30:15Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-01-16T23:00:59Z"
-      },
-      "message": "Initial distribution of the new trap quartet\n\nAlongside the previous commits each placing traps naturally, this also\nhandles and tweaks a fair number of vaults and branches. Most worthy of\nnote:\n\n * The Zot:5 entrance traps have been reworked, removing the chance for\n   both corridors to be completely blocked off by traps. 25% of the time,\n   one corridor will be blocked off by at least one trap, while the other\n   will be traversible but have two of the newer traps lining the entrance\n   and exit. This is meant to still punish standing in the corridor as\n   a chokepoint or retreating repeatedly through it, but also allow\n   reasonably consistently moving through the path compared to the\n   teleport or dispersal options, plus add a little more variety compared\n   to before.\n\n * Tomb's traps have been diluted a little with tyrant's traps and\n   marginally less traps placed overall. If we get more traps in the\n   same buff / debuff veins as prior, then more probably should be\n   deployed in the branch- the power creep has been rather excessive\n   for the branch due to the binary nature of relying on torment.\n\n * Snake and Vaults both now have a slightly higher natural-spawns trap\n   count, now that they have weaker traps to work with: Snake gets a\n   flat +2 per floor, and Vaults gets +1. As has been mentioned in\n   previous trap addition commits, both of these branches need more to\n   stand out with on variety and fanciness levels compared to other\n   branches near them; there is also zero guarantee these traps will\n   end up anywhere near monsters or vaults anyway.\n\n * The two bailies with the worst kill statistics in the current stable\n   and trunk versions (bailey_axe_4 and bailey_polearm_nasty_gnolls)\n   both get tyrant's traps in them to both buff them and have a little bit\n   of an earlygame introduction to later trap mechanics.\n\n * A small number of abyssal rune vaults with the worst kill statistics in\n   current and trunk versions, as well as several underperforming Abyss\n   vaults that can appear outside of the Abyss, now have harlequin's traps\n   and devourer's traps, for both connecting more flavour together and\n   helping said vaults along.\n\n * To emphasize wizlabs having more prominent and fancy gimmicks,\n   Alistair's Party Mansion now gets harlequin traps, and Yara's Duelist\n   Academy gets archmage's traps, both far away from their given layout's\n   original bosses.\n\nFor the most part, these flavour-focused traps either should rely on\ndirect connections to gods, spells, or unrands appropriate to a branch\n(e.g. archmage's traps for Vehumet vaults with several branch-sourced\nspellcasters), or the branch placements already established in the\nrandom_trap_for_place() function. The main exceptions are late D (where\nthere still should be some caution in throwing around too many of\nthese), Zot, and Ziggurats.",
-      "tree": {
-        "sha": "dca9f30ceaba3ace234f3df72a510b63b0b24491",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/dca9f30ceaba3ace234f3df72a510b63b0b24491"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
-    "html_url": "https://github.com/crawl/crawl/commit/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/19588f4062ee0d13e5e94c7ebb69d19dea5ac78f/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b98e54cbaef797c762a56390d68614fb92517f1b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b98e54cbaef797c762a56390d68614fb92517f1b",
-        "html_url": "https://github.com/crawl/crawl/commit/b98e54cbaef797c762a56390d68614fb92517f1b"
       }
     ]
   }

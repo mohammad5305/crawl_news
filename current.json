@@ -1,5 +1,87 @@
 [
   {
+    "sha": "bae9310beedc44c3ba3e3ce465b1dfbed74b7fa4",
+    "node_id": "C_kwDOAV-JftoAKGJhZTkzMTBiZWVkYzQ0YzNiYTNlM2NlNDY1YjFkZmJlZDc0YjdmYTQ",
+    "commit": {
+      "author": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-03-19T14:19:48Z"
+      },
+      "committer": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-03-19T14:19:48Z"
+      },
+      "message": "fix: make Poisonous Vapours targeter ignore rPois enemies, again\n\nCurrently, the spell becomes active on the quiver and in the z? menu\neven if there are only poison-resistant/immune enemies in range. The\ntargeter correctly highlights enemies without rPois, but refuses to\nhighlight poison-vulnerable targets, like killer bees. Also, there is no\nmessage when aiming at a monster that can't be affected. Finally, when\ncycling through possible targets, the targeter doesn't skip\npoison-resistant monsters.\n\nSo, as a remake of 3f6d0115, this commit brings back a custom targeter\nand a usefulness check for the spell. But since current Poisonous\nVapours is different than the pre-b5f9efb4 implementation, the new check\nin `spell_no_hostile_in_range()` is slightly different too.",
+      "tree": {
+        "sha": "0fb74e93a4c0d2871cc5c0f379f5b91ac559b6c8",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0fb74e93a4c0d2871cc5c0f379f5b91ac559b6c8"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/bae9310beedc44c3ba3e3ce465b1dfbed74b7fa4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/bae9310beedc44c3ba3e3ce465b1dfbed74b7fa4",
+    "html_url": "https://github.com/crawl/crawl/commit/bae9310beedc44c3ba3e3ce465b1dfbed74b7fa4",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/bae9310beedc44c3ba3e3ce465b1dfbed74b7fa4/comments",
+    "author": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3039f5625e2737a943446c705f98b7e821fa3e9f",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/3039f5625e2737a943446c705f98b7e821fa3e9f",
+        "html_url": "https://github.com/crawl/crawl/commit/3039f5625e2737a943446c705f98b7e821fa3e9f"
+      }
+    ]
+  },
+  {
     "sha": "3039f5625e2737a943446c705f98b7e821fa3e9f",
     "node_id": "C_kwDOAV-JftoAKDMwMzlmNTYyNWUyNzM3YTk0MzQ0NmM3MDVmOThiN2U4MjFmYTNlOWY",
     "commit": {
@@ -8094,88 +8176,6 @@
         "sha": "b461eca50d9910d04e637a0f62d80d1b80342d58",
         "url": "https://api.github.com/repos/crawl/crawl/commits/b461eca50d9910d04e637a0f62d80d1b80342d58",
         "html_url": "https://github.com/crawl/crawl/commit/b461eca50d9910d04e637a0f62d80d1b80342d58"
-      }
-    ]
-  },
-  {
-    "sha": "b461eca50d9910d04e637a0f62d80d1b80342d58",
-    "node_id": "C_kwDOAV-JftoAKGI0NjFlY2E1MGQ5OTEwZDA0ZTYzN2EwZjYyZDgwZDFiODAzNDJkNTg",
-    "commit": {
-      "author": {
-        "name": "NormalPerson7",
-        "email": "cmrn.stphnsn@hotmail.com",
-        "date": "2025-02-19T20:31:08Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-02-25T16:53:34Z"
-      },
-      "message": "Don't let Blorkula cheat banishment (#4205)\n\nPreviously, Blorkula would split into vampire bats when banished, and\nif they reformed, trying to banish them again would cause a crash.\n\nResolves #4205.",
-      "tree": {
-        "sha": "a976a285134808f5606329f195483da66e4e652a",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a976a285134808f5606329f195483da66e4e652a"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b461eca50d9910d04e637a0f62d80d1b80342d58",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b461eca50d9910d04e637a0f62d80d1b80342d58",
-    "html_url": "https://github.com/crawl/crawl/commit/b461eca50d9910d04e637a0f62d80d1b80342d58",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b461eca50d9910d04e637a0f62d80d1b80342d58/comments",
-    "author": {
-      "login": "NormalPerson7",
-      "id": 37064413,
-      "node_id": "MDQ6VXNlcjM3MDY0NDEz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37064413?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/NormalPerson7",
-      "html_url": "https://github.com/NormalPerson7",
-      "followers_url": "https://api.github.com/users/NormalPerson7/followers",
-      "following_url": "https://api.github.com/users/NormalPerson7/following{/other_user}",
-      "gists_url": "https://api.github.com/users/NormalPerson7/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/NormalPerson7/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/NormalPerson7/subscriptions",
-      "organizations_url": "https://api.github.com/users/NormalPerson7/orgs",
-      "repos_url": "https://api.github.com/users/NormalPerson7/repos",
-      "events_url": "https://api.github.com/users/NormalPerson7/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/NormalPerson7/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "6df694a5e70c82ee72faa32b83523fc88496f958",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/6df694a5e70c82ee72faa32b83523fc88496f958",
-        "html_url": "https://github.com/crawl/crawl/commit/6df694a5e70c82ee72faa32b83523fc88496f958"
       }
     ]
   }

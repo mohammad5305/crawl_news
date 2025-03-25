@@ -1,5 +1,87 @@
 [
   {
+    "sha": "c6c205540b0b8df9e3eab3e1a5588185ad25b699",
+    "node_id": "C_kwDOAV-JftoAKGM2YzIwNTU0MGIwYjhkZjllM2VhYjNlMWE1NTg4MTg1YWQyNWI2OTk",
+    "commit": {
+      "author": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-03-25T13:34:04Z"
+      },
+      "committer": {
+        "name": "Nikolai Lavsky",
+        "email": "3328424+nlavsky@users.noreply.github.com",
+        "date": "2025-03-25T13:34:04Z"
+      },
+      "message": "fix: an issue with subprocess and signal modules in Python 3.12\n\nLaunching the server gives the following error on some Python 3.12s:\n\"AttributeError: module 'subprocess' has no attribute 'signal'.\"\n\nPreviously, the subprocess module imported `signal`, so it was possible\nto use `subprocess.signal`. But this `import` was removed from the\nmodule in [1] in January. This caused some bugs, and the commit was\nreverted [2] on Feb 16, half a month later. Some distributions, for\nexample Arch Linux, provide Python 3.12 with the commit [1], but\nwithout [2] (yet), hence the error.\n\nTo fix this, import the signal module directly instead of relying on\n`subprocess` to provide it, as was suggested in #4353. Also, the\nsubprocess module is not used for anything else in `process_handler.py`,\nso it should be safe to remove.\n\nThis addresses the second part of #4353 and allows to run the server on\nPython 3.12. Other supported versions of Python shouldn't be affected by\nthis change at all. Supporting 3.13 requires replacing the deprecated\ncrypt module, which should be done by someone more familiar with the\nauthentication code.\n\n[1] https://github.com/python/cpython/commit/f65aa0d1\n[2] https://github.com/python/cpython/commit/042b4924",
+      "tree": {
+        "sha": "e088c86216ad29df7d2b17a8f57ea71643987bf7",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e088c86216ad29df7d2b17a8f57ea71643987bf7"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c6c205540b0b8df9e3eab3e1a5588185ad25b699",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c6c205540b0b8df9e3eab3e1a5588185ad25b699",
+    "html_url": "https://github.com/crawl/crawl/commit/c6c205540b0b8df9e3eab3e1a5588185ad25b699",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c6c205540b0b8df9e3eab3e1a5588185ad25b699/comments",
+    "author": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "nlavsky",
+      "id": 3328424,
+      "node_id": "MDQ6VXNlcjMzMjg0MjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3328424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nlavsky",
+      "html_url": "https://github.com/nlavsky",
+      "followers_url": "https://api.github.com/users/nlavsky/followers",
+      "following_url": "https://api.github.com/users/nlavsky/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nlavsky/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nlavsky/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nlavsky/subscriptions",
+      "organizations_url": "https://api.github.com/users/nlavsky/orgs",
+      "repos_url": "https://api.github.com/users/nlavsky/repos",
+      "events_url": "https://api.github.com/users/nlavsky/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nlavsky/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "46e4344c466cb3eb713abd72ac5d4035649d9f7b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/46e4344c466cb3eb713abd72ac5d4035649d9f7b",
+        "html_url": "https://github.com/crawl/crawl/commit/46e4344c466cb3eb713abd72ac5d4035649d9f7b"
+      }
+    ]
+  },
+  {
     "sha": "46e4344c466cb3eb713abd72ac5d4035649d9f7b",
     "node_id": "C_kwDOAV-JftoAKDQ2ZTQzNDRjNDY2Y2IzZWI3MTNhYmQ3MmFjNWQ0MDM1NjQ5ZDlmN2I",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
         "url": "https://api.github.com/repos/crawl/crawl/commits/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
         "html_url": "https://github.com/crawl/crawl/commit/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0"
-      }
-    ]
-  },
-  {
-    "sha": "dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
-    "node_id": "C_kwDOAV-JftoAKGRkMWVmOTZhYzdkNTdlYWM5MzFiZmEyNTcwNGY0YTRmM2UyMDI0YzA",
-    "commit": {
-      "author": {
-        "name": "Peter McLarnan",
-        "email": "croikle@gmail.com",
-        "date": "2025-03-02T23:44:14Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-03-03T02:38:07Z"
-      },
-      "message": "Fix imp _suck_up_adj2_ syntax\n\nImp speech _suck_up_adj2_ displays an error because of a missing\r\n`then`. Restore correct syntax.",
-      "tree": {
-        "sha": "b9e29c33ef94484a72df3a17e78c7bca7456fcef",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b9e29c33ef94484a72df3a17e78c7bca7456fcef"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
-    "html_url": "https://github.com/crawl/crawl/commit/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/dd1ef96ac7d57eac931bfa25704f4a4f3e2024c0/comments",
-    "author": {
-      "login": "croikle",
-      "id": 1219337,
-      "node_id": "MDQ6VXNlcjEyMTkzMzc=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1219337?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/croikle",
-      "html_url": "https://github.com/croikle",
-      "followers_url": "https://api.github.com/users/croikle/followers",
-      "following_url": "https://api.github.com/users/croikle/following{/other_user}",
-      "gists_url": "https://api.github.com/users/croikle/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/croikle/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/croikle/subscriptions",
-      "organizations_url": "https://api.github.com/users/croikle/orgs",
-      "repos_url": "https://api.github.com/users/croikle/repos",
-      "events_url": "https://api.github.com/users/croikle/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/croikle/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "170f05ed26f9dea9904f2f6e293013d20083ce3d",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/170f05ed26f9dea9904f2f6e293013d20083ce3d",
-        "html_url": "https://github.com/crawl/crawl/commit/170f05ed26f9dea9904f2f6e293013d20083ce3d"
       }
     ]
   }

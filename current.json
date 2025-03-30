@@ -1,5 +1,251 @@
 [
   {
+    "sha": "d2c03782b806590b3dcf049a5b075e1190b9ebe3",
+    "node_id": "C_kwDOAV-JftoAKGQyYzAzNzgyYjgwNjU5MGIzZGNmMDQ5YTViMDc1ZTExOTBiOWViZTM",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-03-30T17:53:07Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-03-30T17:53:33Z"
+      },
+      "message": "Fix a DES typo (AutarchDCSS)\n\nFixes #4414.",
+      "tree": {
+        "sha": "cf76fdf803f5e74a3c96b465c877a3695490e973",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/cf76fdf803f5e74a3c96b465c877a3695490e973"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d2c03782b806590b3dcf049a5b075e1190b9ebe3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/d2c03782b806590b3dcf049a5b075e1190b9ebe3",
+    "html_url": "https://github.com/crawl/crawl/commit/d2c03782b806590b3dcf049a5b075e1190b9ebe3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d2c03782b806590b3dcf049a5b075e1190b9ebe3/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+        "html_url": "https://github.com/crawl/crawl/commit/7451b4b13742b6a920223fb1e154fcd5c4c839d0"
+      }
+    ]
+  },
+  {
+    "sha": "7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+    "node_id": "C_kwDOAV-JftoAKDc0NTFiNGIxMzc0MmI2YTkyMDIyM2ZiMWUxNTRmY2Q1YzRjODM5ZDA",
+    "commit": {
+      "author": {
+        "name": "WizardIke",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-03-30T17:16:08Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-03-30T17:16:08Z"
+      },
+      "message": "Fix closing doors with the mouse (#4276)\n\nControl left mouse clicking an open door would result in an unknown\ncommand message instead of attacking in the direction of the door. The\nreason for this is that the game would try to close an open door if you\ncontrol left clicked it and couldn't see a monster on it, but generate\nthe command to do so incorrectly. This is a bad idea as control left\nclicking is almost always used to attack invisible monsters. This change\nmoves closing doors to shift left clicking and fixes the generation of\nthe command.\n\nFixes #3801",
+      "tree": {
+        "sha": "52f51bf590a9e8801633fcda5449934add2b6b27",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/52f51bf590a9e8801633fcda5449934add2b6b27"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJn6XxYCRC1aQ7uu5UhlAAA/WoQADTq6eobcNZ5Nrv+kuVJFf+5\nE9v9YyPB7R4liFlWgxw7kWvLe2fzhzfFPwf5HpL5Szma14udZ0U2lYbA6T59bjZB\ntvz8nn819GXCVRRj0YIfZ8OEaEzQJZJlhduSiWDiCgHUGjTnOuc4aQMOUjn3OvaT\n27gTWXuZa0zT8HB2KAinV2ZGHQr+hAJJQ1e+cs7k4riM2L9cztaNTdRZ91vLTBSm\nCskZsfhE+V0gJk5MUxsvVfOY3omC9VhpWZnevxWAZ3TxlRcDxNAz35AJB9dB5ASY\nnK5SS4S5+AsEeXKH0GJSDRQdu8NufWnV83KYhX9NoKxE8xgxSR7DDrB158iu6HNo\nQygYVeGD51C9yd8/oou4B8uw9sLnk4IIZcATlLHQ2DAL/hMEQERmGGSa0cZKl3dt\nEG5W54bDLy14AEKpMWobXjXr9j4sBHsrqEXe7ETYTU2oWyI7uQ1nPPVgXwz8LQ5i\nlv6YwCFmriTttZ5drCyZ74PC8J49BvVG1eOwu0xIq8mW6Jt7pJ+dN16mXljJPL5u\nYKk2/gZahqg4UUJ+Ad/VhybbRA+YMEmM2Lm31W45KmHCY8SIVL+VLY66OKKLPpzU\npuDnDU5IMFQVjAM+wZawh9VW7hPcZJOfw4uF2TzyKBm4g1zcCmh/iqtxzwqEpMK6\n4uMcFF0KOV+YzM31fwZY\n=8AkY\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 52f51bf590a9e8801633fcda5449934add2b6b27\nparent 8bb8084e21a127c808dfc96374804720d4c079af\nauthor WizardIke <ikec4@yahoo.com> 1743354968 +1300\ncommitter GitHub <noreply@github.com> 1743354968 -0500\n\nFix closing doors with the mouse (#4276)\n\nControl left mouse clicking an open door would result in an unknown\ncommand message instead of attacking in the direction of the door. The\nreason for this is that the game would try to close an open door if you\ncontrol left clicked it and couldn't see a monster on it, but generate\nthe command to do so incorrectly. This is a bad idea as control left\nclicking is almost always used to attack invisible monsters. This change\nmoves closing doors to shift left clicking and fixes the generation of\nthe command.\n\nFixes #3801",
+        "verified_at": "2025-03-30T17:16:44Z"
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+    "html_url": "https://github.com/crawl/crawl/commit/7451b4b13742b6a920223fb1e154fcd5c4c839d0",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7451b4b13742b6a920223fb1e154fcd5c4c839d0/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8bb8084e21a127c808dfc96374804720d4c079af",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/8bb8084e21a127c808dfc96374804720d4c079af",
+        "html_url": "https://github.com/crawl/crawl/commit/8bb8084e21a127c808dfc96374804720d4c079af"
+      }
+    ]
+  },
+  {
+    "sha": "8bb8084e21a127c808dfc96374804720d4c079af",
+    "node_id": "C_kwDOAV-JftoAKDhiYjgwODRlMjFhMTI3YzgwOGRmYzk2Mzc0ODA0NzIwZDRjMDc5YWY",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-03-30T16:44:58Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-03-30T16:44:58Z"
+      },
+      "message": "Warn the player when firing Mule could trigger a trap (CarefulOdds)\n\nSimilar logic already existed for Bombard, but not for Mule.",
+      "tree": {
+        "sha": "d16f22619323dedbb55a8b53bde858f2c3bca885",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d16f22619323dedbb55a8b53bde858f2c3bca885"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8bb8084e21a127c808dfc96374804720d4c079af",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/8bb8084e21a127c808dfc96374804720d4c079af",
+    "html_url": "https://github.com/crawl/crawl/commit/8bb8084e21a127c808dfc96374804720d4c079af",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8bb8084e21a127c808dfc96374804720d4c079af/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cefcf6c28bce15a474a62a0ddf3a77f78e6e7a03",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/cefcf6c28bce15a474a62a0ddf3a77f78e6e7a03",
+        "html_url": "https://github.com/crawl/crawl/commit/cefcf6c28bce15a474a62a0ddf3a77f78e6e7a03"
+      }
+    ]
+  },
+  {
     "sha": "cefcf6c28bce15a474a62a0ddf3a77f78e6e7a03",
     "node_id": "C_kwDOAV-JftoAKGNlZmNmNmMyOGJjZTE1YTQ3NGE2MmEwZGRmM2E3N2Y3OGU2ZTdhMDM",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
         "url": "https://api.github.com/repos/crawl/crawl/commits/dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
         "html_url": "https://github.com/crawl/crawl/commit/dfc5a943e829d9e4341b3c69f9724242b11e2b7d"
-      }
-    ]
-  },
-  {
-    "sha": "dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
-    "node_id": "C_kwDOAV-JftoAKGRmYzVhOTQzZTgyOWQ5ZTQzNDFiM2M2OWY5NzI0MjQyYjExZTJiN2Q",
-    "commit": {
-      "author": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2025-03-10T15:31:23Z"
-      },
-      "committer": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2025-03-10T15:31:23Z"
-      },
-      "message": "Move some unrand props to artps.\n\nUse the existing randart props for salamander hide and amulet of air.\nI didn't change elemental staff - might make the text too long?",
-      "tree": {
-        "sha": "6c8bb45d26b55896223258f19995e93bc6faa61e",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6c8bb45d26b55896223258f19995e93bc6faa61e"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
-    "html_url": "https://github.com/crawl/crawl/commit/dfc5a943e829d9e4341b3c69f9724242b11e2b7d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/dfc5a943e829d9e4341b3c69f9724242b11e2b7d/comments",
-    "author": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5af9d733ea011447a796d996874c11979f93b10c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5af9d733ea011447a796d996874c11979f93b10c",
-        "html_url": "https://github.com/crawl/crawl/commit/5af9d733ea011447a796d996874c11979f93b10c"
-      }
-    ]
-  },
-  {
-    "sha": "5af9d733ea011447a796d996874c11979f93b10c",
-    "node_id": "C_kwDOAV-JftoAKDVhZjlkNzMzZWEwMTE0NDdhNzk2ZDk5Njg3NGMxMTk3OWY5M2IxMGM",
-    "commit": {
-      "author": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2025-03-10T04:52:41Z"
-      },
-      "committer": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2025-03-10T04:52:41Z"
-      },
-      "message": "checkwhite",
-      "tree": {
-        "sha": "3fe69563ae2c507ffaf7f71fa600d1636d5d6266",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3fe69563ae2c507ffaf7f71fa600d1636d5d6266"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5af9d733ea011447a796d996874c11979f93b10c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5af9d733ea011447a796d996874c11979f93b10c",
-    "html_url": "https://github.com/crawl/crawl/commit/5af9d733ea011447a796d996874c11979f93b10c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5af9d733ea011447a796d996874c11979f93b10c/comments",
-    "author": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "34610d1a4b6b215d44ff31599f41c877849298a0",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/34610d1a4b6b215d44ff31599f41c877849298a0",
-        "html_url": "https://github.com/crawl/crawl/commit/34610d1a4b6b215d44ff31599f41c877849298a0"
-      }
-    ]
-  },
-  {
-    "sha": "34610d1a4b6b215d44ff31599f41c877849298a0",
-    "node_id": "C_kwDOAV-JftoAKDM0NjEwZDFhNGI2YjIxNWQ0NGZmMzE1OTlmNDFjODc3ODQ5Mjk4YTA",
-    "commit": {
-      "author": {
-        "name": "SentientSupper",
-        "email": "146337911+SentientSupper@users.noreply.github.com",
-        "date": "2025-03-10T04:52:16Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2025-03-10T04:52:16Z"
-      },
-      "message": "Allow aux attacks to receive lash bonuses (#3695)\n\nWJC's lash claims to work on melee attacks and doesn't specifically\nmention not benefiting aux attacks.\n\nCloses #3298\n\n---------\n\nCo-authored-by: Hellmonk <nldehaan91@gmail.com>",
-      "tree": {
-        "sha": "db4b0a242e10ed2069f13f61509a216fd222787d",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/db4b0a242e10ed2069f13f61509a216fd222787d"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/34610d1a4b6b215d44ff31599f41c877849298a0",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJnznAACRC1aQ7uu5UhlAAAnPsQADptQno7bdQ32CH2MBQhPjrJ\nxbyV1AXcR6NOvXCGEU6m8YD95WtkvdQs0/KaIT3god8Lhem3ODGpuKG8u4A7GWue\nQcwymPuRo51olVC2Q6Dx5GK5UYwu7xvcuLjswTNlqkPMxRdYyszHMlmuUtLLUc1Y\ng7NcWSbipUS/V0HOOgmkiojUfTXGJURGNm8L98Wr/4c1bG1p9KnNaBv+Qz8dHIAb\n2QHXYg4ZQ3QY2mjR2LMNi8syNWo+9FPgUEs/lNLtZ8yE8zXx0fNV4Y6rQrVOkVBb\nvA6cXCRJV8hhUoHTSQNkMdPZdAtLftt2el6y4o+gJK3n2g2UyhpYAKTav1niKoiu\nOAx9RxG0o6273q8qp0jCLouGVwltyE08y1ooP1aS3fsatppyguAfeD/5sTARUz9C\n17zTUUbwICaYbNSvyvaGpJO+qzHyoxFhiXAYi9ww8K2lJxNs4KAnWr0pbtvD3730\nH8NXAkodNgq8eY4udTtM8nalGf8yg5OPm1C5UiOp4UA57k5dhKZwSsPE+qgAP0bF\nVzz/oxDFTZDmEEnNAhCiq+ThMCcaMHBzuU+/J16iLvWpG0fuA+qukvaK5YGrPswv\nYDPwAQXq/8rHFUXMdJILWskUzQPHNgPHD37FK/MaZ8VA8QZ7vte/GWo14KssK4LL\nv2+Q8H7VlEZZv9h4VljB\n=lqJR\n-----END PGP SIGNATURE-----\n",
-        "payload": "tree db4b0a242e10ed2069f13f61509a216fd222787d\nparent 13e890bdef73d2ded83e43af4a0ab99fb82a48e8\nauthor SentientSupper <146337911+SentientSupper@users.noreply.github.com> 1741582336 +0800\ncommitter GitHub <noreply@github.com> 1741582336 -0500\n\nAllow aux attacks to receive lash bonuses (#3695)\n\nWJC's lash claims to work on melee attacks and doesn't specifically\nmention not benefiting aux attacks.\n\nCloses #3298\n\n---------\n\nCo-authored-by: Hellmonk <nldehaan91@gmail.com>",
-        "verified_at": "2025-03-10T04:55:00Z"
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/34610d1a4b6b215d44ff31599f41c877849298a0",
-    "html_url": "https://github.com/crawl/crawl/commit/34610d1a4b6b215d44ff31599f41c877849298a0",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/34610d1a4b6b215d44ff31599f41c877849298a0/comments",
-    "author": {
-      "login": "SentientSupper",
-      "id": 146337911,
-      "node_id": "U_kgDOCLjwdw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146337911?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SentientSupper",
-      "html_url": "https://github.com/SentientSupper",
-      "followers_url": "https://api.github.com/users/SentientSupper/followers",
-      "following_url": "https://api.github.com/users/SentientSupper/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SentientSupper/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SentientSupper/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SentientSupper/subscriptions",
-      "organizations_url": "https://api.github.com/users/SentientSupper/orgs",
-      "repos_url": "https://api.github.com/users/SentientSupper/repos",
-      "events_url": "https://api.github.com/users/SentientSupper/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SentientSupper/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "13e890bdef73d2ded83e43af4a0ab99fb82a48e8",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/13e890bdef73d2ded83e43af4a0ab99fb82a48e8",
-        "html_url": "https://github.com/crawl/crawl/commit/13e890bdef73d2ded83e43af4a0ab99fb82a48e8"
       }
     ]
   }

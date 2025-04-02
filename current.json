@@ -1,5 +1,169 @@
 [
   {
+    "sha": "8b514e5c9413be88e003e10de77938d95f853406",
+    "node_id": "C_kwDOAV-JftoAKDhiNTE0ZTVjOTQxM2JlODhlMDAzZTEwZGU3NzkzOGQ5NWY4NTM0MDY",
+    "commit": {
+      "author": {
+        "name": "WizardIke",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-04-02T15:53:55Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-04-02T15:53:55Z"
+      },
+      "message": "Fix a crash when zooming local tiles (sulla) (#4424)\n\nWhen zooming in local tiles we call `do_layout` to calculate the new\nsize of the view buffer (as well as other things). however, we need to\ncall `redraw_screen` to actually resize the view buffer before next\nrendering or the game will crash. We were calling `mprf` before\n`redraw_screen` which can lead to a force more which can sometimes\nresult in rendering.\n\nThis change maybe should be applied to earlier versions to, as in at\nleast version 0.32 zooming in map view mode causes force mores by\ndefault.",
+      "tree": {
+        "sha": "6f1e15bedd94e8285170f9bf931379c138d86a1a",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6f1e15bedd94e8285170f9bf931379c138d86a1a"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8b514e5c9413be88e003e10de77938d95f853406",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJn7V2TCRC1aQ7uu5UhlAAAeg8QAFtQYi6+I5CDiS5BtO8ZAD74\nGdhlyX//4hS11Ky+hf3Iy+Y323TDhMYffm4KYJNkXyI4RfcDBsSlqUpzfNXH24i3\nBXZMbHvSNGLN0Nq2y6rKHZBk4deZNmO6X/A0dOFRRRGIEwYytwdYDFmnaBOXvHKV\nT4++e2TheTx7yWtV1wVJsge2rFbGYRQ9S5/RbjVOkN65LvEbvURqALAECP0so7ol\n3faGTUpRUUf2pbBoXQrUuXpSvkG2ZY9eOVJDL4KqY+Yto8bmo5rUcxeKwqnPwPzc\n7V/fNGJFb2YqnZXYDrIl8KNURABUugYemxL+2cbKzoRMkz9CD3+PwScivZJkaKU3\nOtMDlI/yTctPv4L5WvqZfu7bQzMJAjYNXe05PPTQ/K/90rEefxq+uv8UW/U48frp\nNVBZXw2rKCfymm/jSjXF9IPztVurVUSIS8dZ4vocf3VjWxnv/WnRm+5FAtb7aLsX\nQmVxX1Z6umCyjBJX7CCsZamcoqYSZranr/vBb+RScKOivxZsCBDur2EMDovLYa53\nYhrWNqv4IIPw7SSfa8fhtX2SgARul3y+jm7UaFu7gHsQ1kHCoSLMuUrgY2bLNlpg\nJ3kdSO9bv69x1BUKTAZdMK+VZLlDarN1UdFIOqmflsHKGl+vM1D6FoKl+ki2UFHJ\nalT9tdieOyskWlGogyDO\n=fH57\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 6f1e15bedd94e8285170f9bf931379c138d86a1a\nparent 8ee07ae269b704803f642887f63963845df02374\nauthor WizardIke <ikec4@yahoo.com> 1743609235 +1300\ncommitter GitHub <noreply@github.com> 1743609235 -0500\n\nFix a crash when zooming local tiles (sulla) (#4424)\n\nWhen zooming in local tiles we call `do_layout` to calculate the new\nsize of the view buffer (as well as other things). however, we need to\ncall `redraw_screen` to actually resize the view buffer before next\nrendering or the game will crash. We were calling `mprf` before\n`redraw_screen` which can lead to a force more which can sometimes\nresult in rendering.\n\nThis change maybe should be applied to earlier versions to, as in at\nleast version 0.32 zooming in map view mode causes force mores by\ndefault.",
+        "verified_at": "2025-04-02T15:56:48Z"
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/8b514e5c9413be88e003e10de77938d95f853406",
+    "html_url": "https://github.com/crawl/crawl/commit/8b514e5c9413be88e003e10de77938d95f853406",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8b514e5c9413be88e003e10de77938d95f853406/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8ee07ae269b704803f642887f63963845df02374",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/8ee07ae269b704803f642887f63963845df02374",
+        "html_url": "https://github.com/crawl/crawl/commit/8ee07ae269b704803f642887f63963845df02374"
+      }
+    ]
+  },
+  {
+    "sha": "8ee07ae269b704803f642887f63963845df02374",
+    "node_id": "C_kwDOAV-JftoAKDhlZTA3YWUyNjliNzA0ODAzZjY0Mjg4N2Y2Mzk2Mzg0NWRmMDIzNzQ",
+    "commit": {
+      "author": {
+        "name": "WizardIke",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-04-02T15:47:01Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-04-02T15:47:01Z"
+      },
+      "message": "Fix erroneous warning when firing at enemy in front of friendly (dilly) (#4431)\n\nThe beam would stop at the enemies, so the warning was incorrect. This\nwas broken in commit 1564750",
+      "tree": {
+        "sha": "23b720324d07ca65092ce3684358c12481ad8ac8",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/23b720324d07ca65092ce3684358c12481ad8ac8"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8ee07ae269b704803f642887f63963845df02374",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJn7Vv1CRC1aQ7uu5UhlAAAAHYQAJa4XuKWXooFozMLQNLKGy8y\nHDXKzVbElLyQAP+FGXORntUM29hZnIUx4KWqa4LgNpfyAUY2NENwfePXnA8yy6qS\no/m+OkikB7eq0Ki+xOIWSZbGLgRQ3RgJA1rd+rspMw5EE1yBQo8TMkDJ9uvmFMk5\nEwWB+qWJTElU1bwqx53zOAzjA7G6eLcnVl1RW4wkReSf+2MtPgjqJAbPVD/D60fC\niGWmKBxpq3pksTOeQ/wFEoiE1TGHa8HsPmfqY06zegxiyI+ONwJtjCePfRinMKus\nZrGvN40dP2yZLY9atRTFbfdnsq/oUb69B5f/7YXMXhdjNl44j03tzd/7Z+zkq7lz\n1Zhj3F7oApOTIZv0xRNml51SgSmuLISAkNxnWaYD66fv2B5yKtSHk9OsHSgT0BXh\nc3dXQZkndwj3iamzvNJxEMuE9dFdJ5Rt93ORYyVLe1kFVQhbOEQoLtTtIXD1PCif\nPChUin/RTlt6E6utvXj9oylCpKQztQEGBoar0QE9M3bQh92dBg5YrqV1S9J1mQGT\nIAD3/MyvclBf74LIrCbs2R6BcerOJ7I5dyfHj7cCF0z5j/NyFhpor8PVrBTp+C3L\nUzH/zHRIKyYl2ahipj8Hkbz0XSj+j+HPxPQqST5lTxLsS5hGRtHkdrMLRtBJUFdC\nqFXtC+7Jn1XblOop3+vA\n=ip4l\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 23b720324d07ca65092ce3684358c12481ad8ac8\nparent bf953fe936e909a3a48f0b3a8c2dd557e3be78c6\nauthor WizardIke <ikec4@yahoo.com> 1743608821 +1300\ncommitter GitHub <noreply@github.com> 1743608821 -0500\n\nFix erroneous warning when firing at enemy in front of friendly (dilly) (#4431)\n\nThe beam would stop at the enemies, so the warning was incorrect. This\nwas broken in commit 1564750",
+        "verified_at": "2025-04-02T15:48:52Z"
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/8ee07ae269b704803f642887f63963845df02374",
+    "html_url": "https://github.com/crawl/crawl/commit/8ee07ae269b704803f642887f63963845df02374",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8ee07ae269b704803f642887f63963845df02374/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bf953fe936e909a3a48f0b3a8c2dd557e3be78c6",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/bf953fe936e909a3a48f0b3a8c2dd557e3be78c6",
+        "html_url": "https://github.com/crawl/crawl/commit/bf953fe936e909a3a48f0b3a8c2dd557e3be78c6"
+      }
+    ]
+  },
+  {
     "sha": "bf953fe936e909a3a48f0b3a8c2dd557e3be78c6",
     "node_id": "C_kwDOAV-JftoAKGJmOTUzZmU5MzZlOTA5YTNhNDhmMGIzYThjMmRkNTU3ZTNiZTc4YzY",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "c82cddcf98c8c5babd5e1532275f844b125747e1",
         "url": "https://api.github.com/repos/crawl/crawl/commits/c82cddcf98c8c5babd5e1532275f844b125747e1",
         "html_url": "https://github.com/crawl/crawl/commit/c82cddcf98c8c5babd5e1532275f844b125747e1"
-      }
-    ]
-  },
-  {
-    "sha": "c82cddcf98c8c5babd5e1532275f844b125747e1",
-    "node_id": "C_kwDOAV-JftoAKGM4MmNkZGNmOThjOGM1YmFiZDVlMTUzMjI3NWY4NDRiMTI1NzQ3ZTE",
-    "commit": {
-      "author": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2025-03-15T23:07:01Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2025-03-16T02:08:27Z"
-      },
-      "message": "Fix the autofight_nomove_fires option (vvokhom)\n\nWhen set to true, this lua option allows autofight-without-move to use\nthe quiver if an appropriate action is available. It was broken in the\ncase when the corresponding option for normal autofight was true.\nResolves #3169.",
-      "tree": {
-        "sha": "f956f5de85a9b6606d54387d7aa3e57e86398a18",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f956f5de85a9b6606d54387d7aa3e57e86398a18"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c82cddcf98c8c5babd5e1532275f844b125747e1",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/c82cddcf98c8c5babd5e1532275f844b125747e1",
-    "html_url": "https://github.com/crawl/crawl/commit/c82cddcf98c8c5babd5e1532275f844b125747e1",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c82cddcf98c8c5babd5e1532275f844b125747e1/comments",
-    "author": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "03d16f74bf79f5692c4e5a0d425557520df84b4b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/03d16f74bf79f5692c4e5a0d425557520df84b4b",
-        "html_url": "https://github.com/crawl/crawl/commit/03d16f74bf79f5692c4e5a0d425557520df84b4b"
-      }
-    ]
-  },
-  {
-    "sha": "03d16f74bf79f5692c4e5a0d425557520df84b4b",
-    "node_id": "C_kwDOAV-JftoAKDAzZDE2Zjc0YmY3OWY1NjkyYzRlNWEwZDQyNTU1NzUyMGRmODRiNGI",
-    "commit": {
-      "author": {
-        "name": "mumra",
-        "email": "pete.hurst@gmail.com",
-        "date": "2025-03-16T00:02:31Z"
-      },
-      "committer": {
-        "name": "mumra",
-        "email": "pete.hurst@gmail.com",
-        "date": "2025-03-16T00:07:08Z"
-      },
-      "message": "Add a comment to explain inconsistent naming of a chaos enum\n\nOne might argue there's no reason why anything associated with chaos\n*should* be inconsistent, but just to avoid any well-meaning contributer\ntrying to \"fix\" this inconsistency in the future it seemed a good idea\nto spell out why it's this way.",
-      "tree": {
-        "sha": "7162d344fa4ecc135b9b56a2190668a4b34100f9",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7162d344fa4ecc135b9b56a2190668a4b34100f9"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/03d16f74bf79f5692c4e5a0d425557520df84b4b",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/03d16f74bf79f5692c4e5a0d425557520df84b4b",
-    "html_url": "https://github.com/crawl/crawl/commit/03d16f74bf79f5692c4e5a0d425557520df84b4b",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/03d16f74bf79f5692c4e5a0d425557520df84b4b/comments",
-    "author": {
-      "login": "chucksellick",
-      "id": 1188786,
-      "node_id": "MDQ6VXNlcjExODg3ODY=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/chucksellick",
-      "html_url": "https://github.com/chucksellick",
-      "followers_url": "https://api.github.com/users/chucksellick/followers",
-      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
-      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
-      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
-      "repos_url": "https://api.github.com/users/chucksellick/repos",
-      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "chucksellick",
-      "id": 1188786,
-      "node_id": "MDQ6VXNlcjExODg3ODY=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/chucksellick",
-      "html_url": "https://github.com/chucksellick",
-      "followers_url": "https://api.github.com/users/chucksellick/followers",
-      "following_url": "https://api.github.com/users/chucksellick/following{/other_user}",
-      "gists_url": "https://api.github.com/users/chucksellick/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/chucksellick/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/chucksellick/subscriptions",
-      "organizations_url": "https://api.github.com/users/chucksellick/orgs",
-      "repos_url": "https://api.github.com/users/chucksellick/repos",
-      "events_url": "https://api.github.com/users/chucksellick/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/chucksellick/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "ce43c158f70c307937792168f4b87ba42e49aee6",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/ce43c158f70c307937792168f4b87ba42e49aee6",
-        "html_url": "https://github.com/crawl/crawl/commit/ce43c158f70c307937792168f4b87ba42e49aee6"
       }
     ]
   }

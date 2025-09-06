@@ -1,5 +1,169 @@
 [
   {
+    "sha": "868e30f2ff752fe4d16e24a53670f5fb22e43383",
+    "node_id": "C_kwDOAV-JftoAKDg2OGUzMGYyZmY3NTJmZTRkMTZlMjRhNTM2NzBmNWZiMjJlNDMzODM",
+    "commit": {
+      "author": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2025-09-05T21:24:58Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2025-09-05T21:24:58Z"
+      },
+      "message": "Fix erroneous item entry.",
+      "tree": {
+        "sha": "7565c4dbf878adcc9251996c0d2a4fdf3262120d",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7565c4dbf878adcc9251996c0d2a4fdf3262120d"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/868e30f2ff752fe4d16e24a53670f5fb22e43383",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/868e30f2ff752fe4d16e24a53670f5fb22e43383",
+    "html_url": "https://github.com/crawl/crawl/commit/868e30f2ff752fe4d16e24a53670f5fb22e43383",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/868e30f2ff752fe4d16e24a53670f5fb22e43383/comments",
+    "author": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b00f08be4958f0a029595a2eb49003a5b00260c9",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b00f08be4958f0a029595a2eb49003a5b00260c9",
+        "html_url": "https://github.com/crawl/crawl/commit/b00f08be4958f0a029595a2eb49003a5b00260c9"
+      }
+    ]
+  },
+  {
+    "sha": "b00f08be4958f0a029595a2eb49003a5b00260c9",
+    "node_id": "C_kwDOAV-JftoAKGIwMGYwOGJlNDk1OGYwYTAyOTU5NWEyZWI0OTAwM2E1YjAwMjYwYzk",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-09-05T20:30:48Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-09-05T20:37:15Z"
+      },
+      "message": "Remove undefined equipment behavior when transiting monsters (Xolotl)\n\nIn general, monster inventories are not stored inside the monster\nthemselves, but in env.items and the monster just stores references to\nindicies in that array that correspond to their equipment.\n\nWhen monsters are transited from one floor to another, their old inventory\nis copied and new links set up when they are placed. *However*, determining\nwhere to put them has to check if the monster is flying, which has to check\ntheir equipment, *which isn't set up yet, and is thus pointing to random\nitems on the new floor*. In most cases, this is invisible, since most items\nare either empty or have no relevant properties, but in theory a monster\n*could* incorrectly think it was flying if one of its links pointed to a\nflight item on the new floor.\n\nOr, as led to this being discovered, could crash if the monster thought it\nwas wearing an artefact spellbook.\n\nI believe this bug has probably existed approximatetly forever, but just\nbeen very hard to trigger in a relevant way.",
+      "tree": {
+        "sha": "2eb73fdec04b495ec8e82fef735a33ff3298e1c1",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2eb73fdec04b495ec8e82fef735a33ff3298e1c1"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b00f08be4958f0a029595a2eb49003a5b00260c9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b00f08be4958f0a029595a2eb49003a5b00260c9",
+    "html_url": "https://github.com/crawl/crawl/commit/b00f08be4958f0a029595a2eb49003a5b00260c9",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b00f08be4958f0a029595a2eb49003a5b00260c9/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b0061d6f5ede9f021f3e4033cef2f2973991c378",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b0061d6f5ede9f021f3e4033cef2f2973991c378",
+        "html_url": "https://github.com/crawl/crawl/commit/b0061d6f5ede9f021f3e4033cef2f2973991c378"
+      }
+    ]
+  },
+  {
     "sha": "b0061d6f5ede9f021f3e4033cef2f2973991c378",
     "node_id": "C_kwDOAV-JftoAKGIwMDYxZDZmNWVkZTlmMDIxZjNlNDAzM2NlZjJmMjk3Mzk5MWMzNzg",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
         "url": "https://api.github.com/repos/crawl/crawl/commits/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
         "html_url": "https://github.com/crawl/crawl/commit/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86"
-      }
-    ]
-  },
-  {
-    "sha": "5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
-    "node_id": "C_kwDOAV-JftoAKDViYTE3OWJmNGEzMDA5NTljZjhlM2ZkZGRkM2M4ZjI2NGU5ZGFkODY",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-08-19T01:24:23Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-08-19T01:24:23Z"
-      },
-      "message": "Fix capitalisation.",
-      "tree": {
-        "sha": "c4f3420bd2ed6670c5bd942d26d79cc4208f8b4c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c4f3420bd2ed6670c5bd942d26d79cc4208f8b4c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
-    "html_url": "https://github.com/crawl/crawl/commit/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5ba179bf4a300959cf8e3fdddd3c8f264e9dad86/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "fceee19c30622e6317a36a4f578fa65b7d67b97c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/fceee19c30622e6317a36a4f578fa65b7d67b97c",
-        "html_url": "https://github.com/crawl/crawl/commit/fceee19c30622e6317a36a4f578fa65b7d67b97c"
-      }
-    ]
-  },
-  {
-    "sha": "fceee19c30622e6317a36a4f578fa65b7d67b97c",
-    "node_id": "C_kwDOAV-JftoAKGZjZWVlMTljMzA2MjJlNjMxN2EzNmE0ZjU3OGZhNjViN2Q2N2I5N2M",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-08-18T02:57:09Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2025-08-18T02:57:09Z"
-      },
-      "message": "Assign the proper altar total to a Temple (Oneirical, Darby)\n\nThere are 22 B glyphs, but one is replaced with a staircase, so there are\n21 altars placed in total for altar distribution assessment purposes.",
-      "tree": {
-        "sha": "ba66c2effea7c682290d4e0b16113bc57b1490ec",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ba66c2effea7c682290d4e0b16113bc57b1490ec"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fceee19c30622e6317a36a4f578fa65b7d67b97c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/fceee19c30622e6317a36a4f578fa65b7d67b97c",
-    "html_url": "https://github.com/crawl/crawl/commit/fceee19c30622e6317a36a4f578fa65b7d67b97c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fceee19c30622e6317a36a4f578fa65b7d67b97c/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "32fe679a33eff99b42fd025b79d29e400cd92296",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/32fe679a33eff99b42fd025b79d29e400cd92296",
-        "html_url": "https://github.com/crawl/crawl/commit/32fe679a33eff99b42fd025b79d29e400cd92296"
       }
     ]
   }

@@ -1,5 +1,87 @@
 [
   {
+    "sha": "6ef1f922e4fa996e0e1905021bc1121df1360ed1",
+    "node_id": "C_kwDOAV-JftoAKDZlZjFmOTIyZTRmYTk5NmUwZTE5MDUwMjFiYzExMjFkZjEzNjBlZDE",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-09-25T00:40:28Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2025-09-25T03:01:19Z"
+      },
+      "message": "Disable animations during fsim\n\nWhile there were no screen redraws during fsim, a lot of animation code\nwould still include full delays, greatly slowing down fsim for a variety\nof artefacts that could produce spell-like effects from attacking. In fact,\nthis behavior was so non-linear with the number of simulations performed\nthat I suspect it might have something to do with overlays stacking up\nenormously with no screen refresh to clear them. So instead, let's not do\nthat.\n\nAs an example, this commit reduces the length of time it takes my computer\nto produce a full fsim chart with Arc Blade to ~3 seconds from a previous\n**23 minutes!**",
+      "tree": {
+        "sha": "7a71db43dcf3159e59c4ad6e18f51dda9f8d56e0",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7a71db43dcf3159e59c4ad6e18f51dda9f8d56e0"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6ef1f922e4fa996e0e1905021bc1121df1360ed1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6ef1f922e4fa996e0e1905021bc1121df1360ed1",
+    "html_url": "https://github.com/crawl/crawl/commit/6ef1f922e4fa996e0e1905021bc1121df1360ed1",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6ef1f922e4fa996e0e1905021bc1121df1360ed1/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "acf2245dedca4ca5ac467423563e543ae7bbcfda",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/acf2245dedca4ca5ac467423563e543ae7bbcfda",
+        "html_url": "https://github.com/crawl/crawl/commit/acf2245dedca4ca5ac467423563e543ae7bbcfda"
+      }
+    ]
+  },
+  {
     "sha": "acf2245dedca4ca5ac467423563e543ae7bbcfda",
     "node_id": "C_kwDOAV-JftoAKGFjZjIyNDVkZWRjYTRjYTVhYzQ2NzQyMzU2M2U1NDNhZTdiYmNmZGE",
     "commit": {
@@ -8094,88 +8176,6 @@
         "sha": "0f61ba0e5027587953e7aecb082ce288b314160d",
         "url": "https://api.github.com/repos/crawl/crawl/commits/0f61ba0e5027587953e7aecb082ce288b314160d",
         "html_url": "https://github.com/crawl/crawl/commit/0f61ba0e5027587953e7aecb082ce288b314160d"
-      }
-    ]
-  },
-  {
-    "sha": "0f61ba0e5027587953e7aecb082ce288b314160d",
-    "node_id": "C_kwDOAV-JftoAKDBmNjFiYTBlNTAyNzU4Nzk1M2U3YWVjYjA4MmNlMjg4YjMxNDE2MGQ",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-09-09T18:32:45Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-09-09T18:32:45Z"
-      },
-      "message": "Let autofight move towards warded enemies (various)\n\nAutofight understood that it was impossible to damage warded enemies while\nat range and would not consider attacking them. This is desireable for\nranged combat (so that it will shoot other things instead), but more\nawkward for melee characters or when there is only one enemy in sight.\n\nNow autofight should move towards a warded enemy if there are no other\nvalid targets the player can currently damage.\n\n(This will be even more important in the near future when warded enemies\nwill exist beyond one bane and one wizlab.)",
-      "tree": {
-        "sha": "fdc297662dcf5abf3f03c2e4e2552d85cb5e36d6",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/fdc297662dcf5abf3f03c2e4e2552d85cb5e36d6"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0f61ba0e5027587953e7aecb082ce288b314160d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0f61ba0e5027587953e7aecb082ce288b314160d",
-    "html_url": "https://github.com/crawl/crawl/commit/0f61ba0e5027587953e7aecb082ce288b314160d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0f61ba0e5027587953e7aecb082ce288b314160d/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f63fd7415af58047ccc8b821803f1f7a0f2374b0",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f63fd7415af58047ccc8b821803f1f7a0f2374b0",
-        "html_url": "https://github.com/crawl/crawl/commit/f63fd7415af58047ccc8b821803f1f7a0f2374b0"
       }
     ]
   }

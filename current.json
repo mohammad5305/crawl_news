@@ -1,5 +1,87 @@
 [
   {
+    "sha": "a4a9301aaf6bfd4bf21473c960377fe3ecf3d981",
+    "node_id": "C_kwDOAV-JftoAKGE0YTkzMDFhYWY2YmZkNGJmMjE0NzNjOTYwMzc3ZmUzZWNmM2Q5ODE",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-09-28T23:09:17Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-09-28T23:26:09Z"
+      },
+      "message": "Fix many teleport closets in wad_woods\n\nAs reported in #4811, the wad_woods series of vaults was able to drop the\nplayer into various teleport closets and islands. It looks to me like\nthis was primarily caused by these vaults having multiple disjoint\npockets of space abutting the edge of the vaultdefs: As best as I can\ntell, level connectivity here was only guaranteeing one path into these\nvaults in the absence of `@` glyphs, so when they were emplaced, these\nlittle pockets on the edges of the vaults could turn into closets if the\nvaults were placed overlapping something solid.\n\nThere were 10 closets and 2 islands (thanks to gammafunk for noticing the\nislands) here that I've patched; I'm no grand vaultsmythe, so this series\nof vaults may yet want another pass.\n\nwad_woods_tower     (2 closets)\nwad_woods_01        (1 closet)\nwad_woods_04        (3 closets)\nwad_woods_river_01  (split island)\nwad_woods_river_03  (split island)\nwad_woods_road_01   (1 closet)\nwad_woods_minihive  (3 closets, including the central hive!)\n\nminihive now has no_tele_into in its central hive, and I've also made\nsome stylistic adjustments to woods_04 and woods_06 with the intent of\nreducing some of their autoexplore pain points -- it seemed quite\nunfriendly to force the player to bash their way through quite that many\nplants and bushes.\n\nIdeally I'd like to make this entire series of vaults more autoexplore\nfriendly, but I'm done poking at this for now. Maybe later!\n\nFixes #4811.",
+      "tree": {
+        "sha": "4f41b1589bed6014e407018ac2216c1dd7a53064",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4f41b1589bed6014e407018ac2216c1dd7a53064"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a4a9301aaf6bfd4bf21473c960377fe3ecf3d981",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a4a9301aaf6bfd4bf21473c960377fe3ecf3d981",
+    "html_url": "https://github.com/crawl/crawl/commit/a4a9301aaf6bfd4bf21473c960377fe3ecf3d981",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a4a9301aaf6bfd4bf21473c960377fe3ecf3d981/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ba8827eb1e3e12f73ec0faf1db3c1019aced5ae1",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/ba8827eb1e3e12f73ec0faf1db3c1019aced5ae1",
+        "html_url": "https://github.com/crawl/crawl/commit/ba8827eb1e3e12f73ec0faf1db3c1019aced5ae1"
+      }
+    ]
+  },
+  {
     "sha": "ba8827eb1e3e12f73ec0faf1db3c1019aced5ae1",
     "node_id": "C_kwDOAV-JftoAKGJhODgyN2ViMWUzZTEyZjczZWMwZmFmMWRiM2MxMDE5YWNlZDVhZTE",
     "commit": {
@@ -8094,88 +8176,6 @@
         "sha": "ab639c6bf4886a6b3ab183a66d261e08378150c2",
         "url": "https://api.github.com/repos/crawl/crawl/commits/ab639c6bf4886a6b3ab183a66d261e08378150c2",
         "html_url": "https://github.com/crawl/crawl/commit/ab639c6bf4886a6b3ab183a66d261e08378150c2"
-      }
-    ]
-  },
-  {
-    "sha": "ab639c6bf4886a6b3ab183a66d261e08378150c2",
-    "node_id": "C_kwDOAV-JftoAKGFiNjM5YzZiZjQ4ODZhNmIzYWIxODNhNjZkMjYxZTA4Mzc4MTUwYzI",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-09-14T17:43:17Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-09-14T20:25:54Z"
-      },
-      "message": "Update contrib process docs for 2025\n\nHere we remove several defunct doku wiki, mantis, and sourceforge (!)\nlinks, and try to update these docs to more accurately reflect the\nprocess in $current_decade.\n\nI've removed specific tiles developer names as points of contact from\ntiles_creation.txt, because individual availability fluctuates over time\nand these docs are doomed to bitrot.",
-      "tree": {
-        "sha": "5619ec16133c2686a6fc0409907f08af60d27532",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/5619ec16133c2686a6fc0409907f08af60d27532"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/ab639c6bf4886a6b3ab183a66d261e08378150c2",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/ab639c6bf4886a6b3ab183a66d261e08378150c2",
-    "html_url": "https://github.com/crawl/crawl/commit/ab639c6bf4886a6b3ab183a66d261e08378150c2",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/ab639c6bf4886a6b3ab183a66d261e08378150c2/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "46b039178484dc3c07f1ae125995f52d4606bd9d",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/46b039178484dc3c07f1ae125995f52d4606bd9d",
-        "html_url": "https://github.com/crawl/crawl/commit/46b039178484dc3c07f1ae125995f52d4606bd9d"
       }
     ]
   }

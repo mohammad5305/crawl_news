@@ -1,5 +1,251 @@
 [
   {
+    "sha": "3133c6b059f29e849f09bfcddd78a526bb995c93",
+    "node_id": "C_kwDOAV-JftoAKDMxMzNjNmIwNTlmMjllODQ5ZjA5YmZjZGRkNzhhNTI2YmI5OTVjOTM",
+    "commit": {
+      "author": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2025-10-22T16:19:01Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2025-10-22T16:21:58Z"
+      },
+      "message": "Add another Xom esteem name to artefacts.",
+      "tree": {
+        "sha": "8fc974661d50e720cd0311e1d9c163f317b99c78",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/8fc974661d50e720cd0311e1d9c163f317b99c78"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3133c6b059f29e849f09bfcddd78a526bb995c93",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/3133c6b059f29e849f09bfcddd78a526bb995c93",
+    "html_url": "https://github.com/crawl/crawl/commit/3133c6b059f29e849f09bfcddd78a526bb995c93",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3133c6b059f29e849f09bfcddd78a526bb995c93/comments",
+    "author": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+        "html_url": "https://github.com/crawl/crawl/commit/43e0034f2077af95ea1ac6d5089e2caae6cb0a38"
+      }
+    ]
+  },
+  {
+    "sha": "43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+    "node_id": "C_kwDOAV-JftoAKDQzZTAwMzRmMjA3N2FmOTVlYTFhYzZkNTA4OWUyY2FhZTZjYjBhMzg",
+    "commit": {
+      "author": {
+        "name": "mumra",
+        "email": "pete.hurst@gmail.com",
+        "date": "2025-10-22T09:55:06Z"
+      },
+      "committer": {
+        "name": "Peter Hurst",
+        "email": "pete.hurst@gmail.com",
+        "date": "2025-10-22T10:17:54Z"
+      },
+      "message": "Add a cachebusting key to lobby static assets\n\nAdding a version string to all the lobby assets ensures that, if the\nserver rebuilds and there is an update to client scripts, players will\ndefinitely get the update when they reload the browser, and not get\na locally-cached copy of the file.\n\nThis enables use of more aggressive caching strategies, longer cache\ntimes, in-memory caching with nginx/Apache, or even pushing static\nassets over to CDN, if server admins wish to configure thing way,\nwithout worrying about the client browser potentially serving stale\nassets.\n\nIt would be even better to either a) keep a separate version number for\nthe lobby client or b) compute a hash key to use for this cachebusting\nstring, so that assets can be reused from cache when they haven't\nchanged (which is usually the case) but given the small size of these\nassets (compared to e.g. the game client and tiles images) it seems like\na lot of work and complexity for a small gain. It's much more important\nto ensure that players at least don't have a stale client.\n\n(For the styles and the require.js include, static_url at least ensures\na stable hash; but for the other scripts loaded by require, I have to\npass a key into config, so it can't be computed per asset like these\nones.)",
+      "tree": {
+        "sha": "a592c785e1a2d14d2ec8a98eef6373a12e9af153",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a592c785e1a2d14d2ec8a98eef6373a12e9af153"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+    "html_url": "https://github.com/crawl/crawl/commit/43e0034f2077af95ea1ac6d5089e2caae6cb0a38",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/43e0034f2077af95ea1ac6d5089e2caae6cb0a38/comments",
+    "author": {
+      "login": "randomdevpete",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/randomdevpete",
+      "html_url": "https://github.com/randomdevpete",
+      "followers_url": "https://api.github.com/users/randomdevpete/followers",
+      "following_url": "https://api.github.com/users/randomdevpete/following{/other_user}",
+      "gists_url": "https://api.github.com/users/randomdevpete/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/randomdevpete/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/randomdevpete/subscriptions",
+      "organizations_url": "https://api.github.com/users/randomdevpete/orgs",
+      "repos_url": "https://api.github.com/users/randomdevpete/repos",
+      "events_url": "https://api.github.com/users/randomdevpete/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/randomdevpete/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "randomdevpete",
+      "id": 1188786,
+      "node_id": "MDQ6VXNlcjExODg3ODY=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188786?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/randomdevpete",
+      "html_url": "https://github.com/randomdevpete",
+      "followers_url": "https://api.github.com/users/randomdevpete/followers",
+      "following_url": "https://api.github.com/users/randomdevpete/following{/other_user}",
+      "gists_url": "https://api.github.com/users/randomdevpete/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/randomdevpete/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/randomdevpete/subscriptions",
+      "organizations_url": "https://api.github.com/users/randomdevpete/orgs",
+      "repos_url": "https://api.github.com/users/randomdevpete/repos",
+      "events_url": "https://api.github.com/users/randomdevpete/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/randomdevpete/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+        "html_url": "https://github.com/crawl/crawl/commit/ea061f7a3d4860ddb70061254e506de2e81cc5b3"
+      }
+    ]
+  },
+  {
+    "sha": "ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+    "node_id": "C_kwDOAV-JftoAKGVhMDYxZjdhM2Q0ODYwZGRiNzAwNjEyNTRlNTA2ZGUyZTgxY2M1YjM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-10-22T07:02:29Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-10-22T07:47:06Z"
+      },
+      "message": "Fix some mark of the celebrant related crashes\n\nIf a lurking horror tormented you and it activated the blood arrows from\nmark of the celebrant and a blood arrow killed the lurking horror the\ngame would then crash when the now dead lurking horror tried to kill\nitself (which they do after using torment). You would also get a similar\ncrash from hoarfrost cannons using their last shot against you etc. To\nfix this make firing the blood arrows a final effect similar to how we\nhandle other sources of retaliation damage.\n\nfixes #4562",
+      "tree": {
+        "sha": "542214e880fee4e5feb2452b5bc4126f5a4355ff",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/542214e880fee4e5feb2452b5bc4126f5a4355ff"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+    "html_url": "https://github.com/crawl/crawl/commit/ea061f7a3d4860ddb70061254e506de2e81cc5b3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/ea061f7a3d4860ddb70061254e506de2e81cc5b3/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dad79eb2a5f2188198da3b17d3e6f9ccde421731",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/dad79eb2a5f2188198da3b17d3e6f9ccde421731",
+        "html_url": "https://github.com/crawl/crawl/commit/dad79eb2a5f2188198da3b17d3e6f9ccde421731"
+      }
+    ]
+  },
+  {
     "sha": "dad79eb2a5f2188198da3b17d3e6f9ccde421731",
     "node_id": "C_kwDOAV-JftoAKGRhZDc5ZWIyYTVmMjE4ODE5OGRhM2IxN2QzZTZmOWNjZGU0MjE3MzE",
     "commit": {
@@ -7910,252 +8156,6 @@
         "sha": "2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
         "url": "https://api.github.com/repos/crawl/crawl/commits/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
         "html_url": "https://github.com/crawl/crawl/commit/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f"
-      }
-    ]
-  },
-  {
-    "sha": "2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
-    "node_id": "C_kwDOAV-JftoAKDJmZGI3ZTFlMmE2MTM1YmJjODE5MWY5OWU0NWY3ZjQ1MDQ0ZTk4OGY",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-02T00:32:42Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-02T00:36:33Z"
-      },
-      "message": "Make lua item.equip_type return a string (Aliscans)\n\nPreviously, this field returned a number corresponding to the item's\ninternal equipment slot, which wasn't a terribly useful format for\nend-user scripts. Instead, we now return the lowercase string of the\nitem's equipment slot; e.g. \"weapon\", \"body armour\", \"gizmo\", etc.\n\nOrdinarily I'd be cautious about changing the return signature of an\napi call like this, but searches for uses of this both internally and\nin qw turned up nothing, and at least one github user seemed to have no\nidea this existed (#4686), so I think we're okay just changing this to\nbe more obviously-useful.\n\nIf you're a user and this breaks your rcfile (who are you?!?!), you\nsimply need to do a string comparison now.",
-      "tree": {
-        "sha": "5054f988d377f02c9fd133a0c0c371d7afb95237",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/5054f988d377f02c9fd133a0c0c371d7afb95237"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
-    "html_url": "https://github.com/crawl/crawl/commit/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2fdb7e1e2a6135bbc8191f99e45f7f45044e988f/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-        "html_url": "https://github.com/crawl/crawl/commit/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5"
-      }
-    ]
-  },
-  {
-    "sha": "8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-    "node_id": "C_kwDOAV-JftoAKDhkOWJlZWM5MWM3MDljZTE3NzdlNWU3YWM2Nzg0ZTI1MThmYjdjYzU",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-01T23:01:55Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-01T23:06:50Z"
-      },
-      "message": "Fix clua api item.is_redundant documentation\n\nWhen generating the clua api, this string is used to generate the api\nentry name for the function, so previously our api docs had two separate\nentries for item.description (and none for item.is_redundant).",
-      "tree": {
-        "sha": "e834ae77c02d93432a6b9b95a2aa69945fe87a1e",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e834ae77c02d93432a6b9b95a2aa69945fe87a1e"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-    "html_url": "https://github.com/crawl/crawl/commit/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8d9beec91c709ce1777e5e7ac6784e2518fb7cc5/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "a3333b5090e1b592852bf8f16dd72393b8c27637",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/a3333b5090e1b592852bf8f16dd72393b8c27637",
-        "html_url": "https://github.com/crawl/crawl/commit/a3333b5090e1b592852bf8f16dd72393b8c27637"
-      }
-    ]
-  },
-  {
-    "sha": "a3333b5090e1b592852bf8f16dd72393b8c27637",
-    "node_id": "C_kwDOAV-JftoAKGEzMzMzYjUwOTBlMWI1OTI4NTJiZjhmMTZkZDcyMzkzYjhjMjc2Mzc",
-    "commit": {
-      "author": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-01T22:54:50Z"
-      },
-      "committer": {
-        "name": "Implojin",
-        "email": "implosionwow@gmail.com",
-        "date": "2025-10-01T23:06:50Z"
-      },
-      "message": "Fix lua item.name description type by number (Aliscans)\n\nAs reported in #4686, lua_isstring was always returning true for\nnumbers here. To quote the Lua 5.1 manual:\n\n\"Returns 1 if the value at the given acceptable index is a string or a\nnumber (which is always convertible to a string), and 0 otherwise.\"\n\nInstead we compare with lua_type, which seems to be the intended way to\ndo this (and which we already use in l-debug).\n\nFixing this may reveal other underlying bugs, as these desc-by-number\nchecks have apparently just always been broken, but I'd rather fix those\nup as we find them, as we were *trying* to use this in objstat, among\nother places.",
-      "tree": {
-        "sha": "3a4955a497b24ed4e98113d9730849746afdb469",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3a4955a497b24ed4e98113d9730849746afdb469"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a3333b5090e1b592852bf8f16dd72393b8c27637",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/a3333b5090e1b592852bf8f16dd72393b8c27637",
-    "html_url": "https://github.com/crawl/crawl/commit/a3333b5090e1b592852bf8f16dd72393b8c27637",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a3333b5090e1b592852bf8f16dd72393b8c27637/comments",
-    "author": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Implojin",
-      "id": 22609817,
-      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Implojin",
-      "html_url": "https://github.com/Implojin",
-      "followers_url": "https://api.github.com/users/Implojin/followers",
-      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
-      "organizations_url": "https://api.github.com/users/Implojin/orgs",
-      "repos_url": "https://api.github.com/users/Implojin/repos",
-      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Implojin/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "7dd2cff76d89b082162ff705d3e5bfbcedcbdb50",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/7dd2cff76d89b082162ff705d3e5bfbcedcbdb50",
-        "html_url": "https://github.com/crawl/crawl/commit/7dd2cff76d89b082162ff705d3e5bfbcedcbdb50"
       }
     ]
   }

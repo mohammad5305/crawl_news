@@ -1,5 +1,333 @@
 [
   {
+    "sha": "467a078616aa0362203b9054bf4f05c633b47b29",
+    "node_id": "C_kwDOAV-JftoAKDQ2N2EwNzg2MTZhYTAzNjIyMDNiOTA1NGJmNGYwNWM2MzNiNDdiMjk",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T16:06:13Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T16:06:13Z"
+      },
+      "message": "Remove an extraneous semicolon (gammafunk)",
+      "tree": {
+        "sha": "0829b35a87bf40be9207f0f4271238032179743b",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0829b35a87bf40be9207f0f4271238032179743b"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/467a078616aa0362203b9054bf4f05c633b47b29",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/467a078616aa0362203b9054bf4f05c633b47b29",
+    "html_url": "https://github.com/crawl/crawl/commit/467a078616aa0362203b9054bf4f05c633b47b29",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/467a078616aa0362203b9054bf4f05c633b47b29/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1034eacce1deaff3a4899ee59f351776ef48f5c6",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/1034eacce1deaff3a4899ee59f351776ef48f5c6",
+        "html_url": "https://github.com/crawl/crawl/commit/1034eacce1deaff3a4899ee59f351776ef48f5c6"
+      }
+    ]
+  },
+  {
+    "sha": "1034eacce1deaff3a4899ee59f351776ef48f5c6",
+    "node_id": "C_kwDOAV-JftoAKDEwMzRlYWNjZTFkZWFmZjNhNDg5OWVlNTlmMzUxNzc2ZWY0OGY1YzY",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T12:27:50Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T13:23:45Z"
+      },
+      "message": "Remove a netted monster blink check\n\nSince 2e68b5db91 (2014), monsters with SPELL_BLINK have had a 1/15 chance\nto cast blink instead of their other spells if caught in a net/web. This\nhad minimal impact on monster behavior, so here we simplify it out.\n\n(These mons will still try to cast blink while netted, but using their\notherwise-normal weighting.)\n\nI did consider approaching this from the opposite direction, and instead\n*increasing* the chance while expanding these escape spells to include\nthings beyond blink, but the end result of that would have been that\nplayers with nets would need to be much more aware of the specifics of the\nspellsets their net targets. This expected UX of incentivizing players\nto press xv before huckin' nets seems like it would make for worse\ngameplay, so I'm not doing that.",
+      "tree": {
+        "sha": "1877473b6d31424c8170729b49b8fe077251e897",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1877473b6d31424c8170729b49b8fe077251e897"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/1034eacce1deaff3a4899ee59f351776ef48f5c6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/1034eacce1deaff3a4899ee59f351776ef48f5c6",
+    "html_url": "https://github.com/crawl/crawl/commit/1034eacce1deaff3a4899ee59f351776ef48f5c6",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/1034eacce1deaff3a4899ee59f351776ef48f5c6/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6529974544088616bd7296425fbce322730893b0",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/6529974544088616bd7296425fbce322730893b0",
+        "html_url": "https://github.com/crawl/crawl/commit/6529974544088616bd7296425fbce322730893b0"
+      }
+    ]
+  },
+  {
+    "sha": "6529974544088616bd7296425fbce322730893b0",
+    "node_id": "C_kwDOAV-JftoAKDY1Mjk5NzQ1NDQwODg2MTZiZDcyOTY0MjVmYmNlMzIyNzMwODkzYjA",
+    "commit": {
+      "author": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T09:50:35Z"
+      },
+      "committer": {
+        "name": "Implojin",
+        "email": "implosionwow@gmail.com",
+        "date": "2025-11-06T09:50:38Z"
+      },
+      "message": "Remove actor ground_level methods\n\nThese were added in db74bba88a (2011) to support clinging, which was\nremoved in 53d2a09ee0 (2019), and have since stuck around as rump methods\nthat needlessly duplicated airborne.",
+      "tree": {
+        "sha": "a7cbbb11dfbba974d13e306aab472a3ce2ac5b32",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a7cbbb11dfbba974d13e306aab472a3ce2ac5b32"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6529974544088616bd7296425fbce322730893b0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6529974544088616bd7296425fbce322730893b0",
+    "html_url": "https://github.com/crawl/crawl/commit/6529974544088616bd7296425fbce322730893b0",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6529974544088616bd7296425fbce322730893b0/comments",
+    "author": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Implojin",
+      "id": 22609817,
+      "node_id": "MDQ6VXNlcjIyNjA5ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22609817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Implojin",
+      "html_url": "https://github.com/Implojin",
+      "followers_url": "https://api.github.com/users/Implojin/followers",
+      "following_url": "https://api.github.com/users/Implojin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Implojin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Implojin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Implojin/subscriptions",
+      "organizations_url": "https://api.github.com/users/Implojin/orgs",
+      "repos_url": "https://api.github.com/users/Implojin/repos",
+      "events_url": "https://api.github.com/users/Implojin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Implojin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+        "html_url": "https://github.com/crawl/crawl/commit/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c"
+      }
+    ]
+  },
+  {
+    "sha": "6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+    "node_id": "C_kwDOAV-JftoAKDZhNGRiOTkwOTcwYmYxYTljNGQzYjFjNDU0N2IxMmQ3NzZlM2RiOGM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-11-06T08:01:49Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-11-06T08:01:49Z"
+      },
+      "message": "Skip setting useless skills in fsim (pooka109)\n\ndefence fsim by default estimates the damage you would take with various\nlevels of armour skill. However, some races can't train armour and\ntrying to set its level results in a crash. To fix this, don't try to\nset the level of useless skills as they won't have any effect anyway.\n\nFixes #4875",
+      "tree": {
+        "sha": "38c251fc1ca01dbefeed91675aea927616429f49",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/38c251fc1ca01dbefeed91675aea927616429f49"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+    "html_url": "https://github.com/crawl/crawl/commit/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6a4db990970bf1a9c4d3b1c4547b12d776e3db8c/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b63a3c07f793d958632ef87232907045e95f5ad4",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b63a3c07f793d958632ef87232907045e95f5ad4",
+        "html_url": "https://github.com/crawl/crawl/commit/b63a3c07f793d958632ef87232907045e95f5ad4"
+      }
+    ]
+  },
+  {
     "sha": "b63a3c07f793d958632ef87232907045e95f5ad4",
     "node_id": "C_kwDOAV-JftoAKGI2M2EzYzA3Zjc5M2Q5NTg2MzJlZjg3MjMyOTA3MDQ1ZTk1ZjVhZDQ",
     "commit": {
@@ -7873,334 +8201,6 @@
         "sha": "17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
         "url": "https://api.github.com/repos/crawl/crawl/commits/17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
         "html_url": "https://github.com/crawl/crawl/commit/17b9c6f5efe2716b1a16ad077a0ed246f2858f09"
-      }
-    ]
-  },
-  {
-    "sha": "17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
-    "node_id": "C_kwDOAV-JftoAKDE3YjljNmY1ZWZlMjcxNmIxYTE2YWQwNzdhMGVkMjQ2ZjI4NThmMDk",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-24T09:20:25Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-24T09:57:17Z"
-      },
-      "message": "Do a better job of excluding an entire large door\n\nIf you have seen all the squares that make up a large door and you\nexclude one square of the door the exclusion will spread to the rest of\nthe door. However, if you have only seen part of a large door and you\nexclude it, the parts that you hadn't seen will remain unexcluded when\nyou see them. Instead, spread exclusions on large doors to new squares\nthat make up the door when you seen them.",
-      "tree": {
-        "sha": "dd4f9eaf1090d0f5d93d416cfe32a6c61a21f461",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/dd4f9eaf1090d0f5d93d416cfe32a6c61a21f461"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
-    "html_url": "https://github.com/crawl/crawl/commit/17b9c6f5efe2716b1a16ad077a0ed246f2858f09",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/17b9c6f5efe2716b1a16ad077a0ed246f2858f09/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-        "html_url": "https://github.com/crawl/crawl/commit/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf"
-      }
-    ]
-  },
-  {
-    "sha": "5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-    "node_id": "C_kwDOAV-JftoAKDVmOWI5MGNkMGI1YzY3ZmZjODVhZjBkNmUxYTJlMjkzYjFjN2NhY2Y",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-10-24T00:24:32Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-10-24T00:25:22Z"
-      },
-      "message": "Fix being able to freeze time on other floors by peeking at them (Darby)\n\neb2233f344 made it so that peeking at an adjacent floor, and then returning\nto your current one, would save the *current* turn as the last time the\nplayer was on that floor. This meant that if the player peeked immediately\nbefore reentering the floor, the game would treat it as if almost no time\nhad passed, no matter how much time had actually passed.\n\nThis had a plethora of applications, like being able to freeze portal\ntimers, preserve poison on monsters when looping around to a different\nstaircase, negate all monster HP regen, or ensure that monsters chasing\nwhere you last left the floor would have barely moved from their original\nlocations.",
-      "tree": {
-        "sha": "4f7d1a29b92b94f257d8caa43735c60392d70a30",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4f7d1a29b92b94f257d8caa43735c60392d70a30"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-    "html_url": "https://github.com/crawl/crawl/commit/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5f9b90cd0b5c67ffc85af0d6e1a2e293b1c7cacf/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-        "html_url": "https://github.com/crawl/crawl/commit/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a"
-      }
-    ]
-  },
-  {
-    "sha": "34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-    "node_id": "C_kwDOAV-JftoAKDM0ZjNlYzM1NzFhYTE2NTMxYmRhZjNiMmU5M2U3YmEyMDhlYzUxMGE",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-23T19:57:35Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-23T20:05:48Z"
-      },
-      "message": "Fix webtiles not redrawing when showing a prompt\n\nWhen showing a prompt in the message panel such as the one from using a\nfaded altar, webtiles wouldn't redraw resulting in you not seeing the\nprompt until after you had answered it.",
-      "tree": {
-        "sha": "202eb363df3aec7bee55c6ea2c7c60fde51eff6e",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/202eb363df3aec7bee55c6ea2c7c60fde51eff6e"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-    "html_url": "https://github.com/crawl/crawl/commit/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/34f3ec3571aa16531bdaf3b2e93e7ba208ec510a/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "7d1d168b820ed48fe0ea894ca7768725fb032e63",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/7d1d168b820ed48fe0ea894ca7768725fb032e63",
-        "html_url": "https://github.com/crawl/crawl/commit/7d1d168b820ed48fe0ea894ca7768725fb032e63"
-      }
-    ]
-  },
-  {
-    "sha": "7d1d168b820ed48fe0ea894ca7768725fb032e63",
-    "node_id": "C_kwDOAV-JftoAKDdkMWQxNjhiODIwZWQ0OGZlMGVhODk0Y2E3NzY4NzI1ZmIwMzJlNjM",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-23T13:14:38Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2025-10-23T13:25:15Z"
-      },
-      "message": "Fix the skills menu not redrawing in webtiles\n\nMaking changes to the skills menu such as enabling or disabling a skill\nwouldn't show until you reopened the menu.",
-      "tree": {
-        "sha": "f29e6aee9f350b5c08bea62da2f1b67ffd8be13f",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f29e6aee9f350b5c08bea62da2f1b67ffd8be13f"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7d1d168b820ed48fe0ea894ca7768725fb032e63",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/7d1d168b820ed48fe0ea894ca7768725fb032e63",
-    "html_url": "https://github.com/crawl/crawl/commit/7d1d168b820ed48fe0ea894ca7768725fb032e63",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7d1d168b820ed48fe0ea894ca7768725fb032e63/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "43d75eb032ea8f541d626128d98292c72e8e2019",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/43d75eb032ea8f541d626128d98292c72e8e2019",
-        "html_url": "https://github.com/crawl/crawl/commit/43d75eb032ea8f541d626128d98292c72e8e2019"
       }
     ]
   }

@@ -1,5 +1,87 @@
 [
   {
+    "sha": "982c9fe40d30926536b2586dcc1f9aeed30560d3",
+    "node_id": "C_kwDOAV-JftoAKDk4MmM5ZmU0MGQzMDkyNjUzNmIyNTg2ZGNjMWY5YWVlZDMwNTYwZDM",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-11-14T06:35:45Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-11-14T06:35:45Z"
+      },
+      "message": "Don't discard Lua stack output in crash logs\n\nThe crash log handling tried to write the clua and dlua stacks to the\ncrash log, but accidentally wrote the output the stderr, where it\ngenerally wouldn't be seen. Write this output directly to the crash log,\nas this code intended.",
+      "tree": {
+        "sha": "80838df06034e49648bac0bc61f7b22da3b950f3",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/80838df06034e49648bac0bc61f7b22da3b950f3"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/982c9fe40d30926536b2586dcc1f9aeed30560d3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/982c9fe40d30926536b2586dcc1f9aeed30560d3",
+    "html_url": "https://github.com/crawl/crawl/commit/982c9fe40d30926536b2586dcc1f9aeed30560d3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/982c9fe40d30926536b2586dcc1f9aeed30560d3/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f20446e8b00c45efbf330a32434ef46e33656bad",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/f20446e8b00c45efbf330a32434ef46e33656bad",
+        "html_url": "https://github.com/crawl/crawl/commit/f20446e8b00c45efbf330a32434ef46e33656bad"
+      }
+    ]
+  },
+  {
     "sha": "f20446e8b00c45efbf330a32434ef46e33656bad",
     "node_id": "C_kwDOAV-JftoAKGYyMDQ0NmU4YjAwYzQ1ZWZiZjMzMGEzMjQzNGVmNDZlMzM2NTZiYWQ",
     "commit": {
@@ -8119,88 +8201,6 @@
         "sha": "4c144b85d400776adca4021b1632cf9f04d63c7b",
         "url": "https://api.github.com/repos/crawl/crawl/commits/4c144b85d400776adca4021b1632cf9f04d63c7b",
         "html_url": "https://github.com/crawl/crawl/commit/4c144b85d400776adca4021b1632cf9f04d63c7b"
-      }
-    ]
-  },
-  {
-    "sha": "4c144b85d400776adca4021b1632cf9f04d63c7b",
-    "node_id": "C_kwDOAV-JftoAKDRjMTQ0Yjg1ZDQwMDc3NmFkY2E0MDIxYjE2MzJjZjlmMDRkNjNjN2I",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-11-04T23:08:06Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2025-11-04T23:10:09Z"
-      },
-      "message": "Use you.can_smell() in yet another book desc.",
-      "tree": {
-        "sha": "1422ef6123ffef73c8c36ee4ccd6f95cb9c99ac7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1422ef6123ffef73c8c36ee4ccd6f95cb9c99ac7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4c144b85d400776adca4021b1632cf9f04d63c7b",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/4c144b85d400776adca4021b1632cf9f04d63c7b",
-    "html_url": "https://github.com/crawl/crawl/commit/4c144b85d400776adca4021b1632cf9f04d63c7b",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4c144b85d400776adca4021b1632cf9f04d63c7b/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "49d8bdc29454b838208f5ed6fee93add26f26bb0",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/49d8bdc29454b838208f5ed6fee93add26f26bb0",
-        "html_url": "https://github.com/crawl/crawl/commit/49d8bdc29454b838208f5ed6fee93add26f26bb0"
       }
     ]
   }

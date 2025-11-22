@@ -1,5 +1,87 @@
 [
   {
+    "sha": "6dfb6d66814f0a2e7c77e52dfdb9fe1aad516676",
+    "node_id": "C_kwDOAV-JftoAKDZkZmI2ZDY2ODE0ZjBhMmU3Yzc3ZTUyZGZkYjlmZTFhYWQ1MTY2NzY",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-11-19T10:08:18Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-11-22T07:03:28Z"
+      },
+      "message": "Simplify and fix how colours are applied to features\n\nWe had multiple ways of applying colours to grid features. The first way\nwas to update the floor and rock wall flavours of the square when\nchanging the grid colour of the square. This only works for floor and\nrock wall features but we want the grid colour to affect other features\nsuch as stone walls. This brings us to the second way used, which was\nto use take into account the grid colour of a feature in\n`apply_variations` and change its tile accordingly. However, we only did\nthis for a hardcoded list of tiles which was very hard to tell if it\nincluded all tiles that weren't handled in another way. Neither of\nthese ways handled animated colours (although the second way could with\na small modification), instead, animated colours were handled when\npicking the tile for a feature but only for a hardcoded list of grid\nfeatures. This was also done before adding the tile to our tile cache\nand as the cache doesn't usualy get invalidated for out of view tiles\nthis resulted in the colours of out of view tiles not usually animating.\nIt also happens before we change the tiles used by features based on the\nbranch and we need to apply the colour after this which resulted in very\nhacky code to handle this.\n\nInstead, expand the code in `apply_variations` to handle animated\ncolours and always try to apply the colour to the tile instead of only\nif the tile is on a hardcoded list.",
+      "tree": {
+        "sha": "1226b8538f1322224791a85a3496db75465875ab",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1226b8538f1322224791a85a3496db75465875ab"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6dfb6d66814f0a2e7c77e52dfdb9fe1aad516676",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6dfb6d66814f0a2e7c77e52dfdb9fe1aad516676",
+    "html_url": "https://github.com/crawl/crawl/commit/6dfb6d66814f0a2e7c77e52dfdb9fe1aad516676",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6dfb6d66814f0a2e7c77e52dfdb9fe1aad516676/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d5f18745454b4420c7fa30d790d121d54ef01f6e",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/d5f18745454b4420c7fa30d790d121d54ef01f6e",
+        "html_url": "https://github.com/crawl/crawl/commit/d5f18745454b4420c7fa30d790d121d54ef01f6e"
+      }
+    ]
+  },
+  {
     "sha": "d5f18745454b4420c7fa30d790d121d54ef01f6e",
     "node_id": "C_kwDOAV-JftoAKGQ1ZjE4NzQ1NDU0YjQ0MjBjN2ZhMzBkNzkwZDEyMWQ1NGVmMDFmNmU",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
         "url": "https://api.github.com/repos/crawl/crawl/commits/63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
         "html_url": "https://github.com/crawl/crawl/commit/63e3b956f0a09ec1a1a62d9491b288f62af30cf5"
-      }
-    ]
-  },
-  {
-    "sha": "63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
-    "node_id": "C_kwDOAV-JftoAKDYzZTNiOTU2ZjBhMDllYzFhMWE2MmQ5NDkxYjI4OGY2MmFmMzBjZjU",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-10-25T18:59:02Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-11-14T20:09:47Z"
-      },
-      "message": "Don't assert when casting Conjure Living Spells in the moncast test\n\nI am not sure entirely why this stated to crash now, but I suspect it was\nthat moncast was previously not bothering to cast it at all. However, this\nseems like a harmless fallback behavior for the spell in any case.",
-      "tree": {
-        "sha": "be60f3832b467e3dce2594b69721ab221b2a1c44",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/be60f3832b467e3dce2594b69721ab221b2a1c44"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
-    "html_url": "https://github.com/crawl/crawl/commit/63e3b956f0a09ec1a1a62d9491b288f62af30cf5",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/63e3b956f0a09ec1a1a62d9491b288f62af30cf5/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "2b82f4f208c85bee83f1747d79fcff7c289c2a95",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/2b82f4f208c85bee83f1747d79fcff7c289c2a95",
-        "html_url": "https://github.com/crawl/crawl/commit/2b82f4f208c85bee83f1747d79fcff7c289c2a95"
       }
     ]
   }

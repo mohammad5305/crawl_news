@@ -1,5 +1,251 @@
 [
   {
+    "sha": "7991ae87474f7d20d56fbe399ef561534a682ce7",
+    "node_id": "C_kwDOAV-JftoAKDc5OTFhZTg3NDc0ZjdkMjBkNTZmYmUzOTllZjU2MTUzNGE2ODJjZTc",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T05:14:41Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T05:14:41Z"
+      },
+      "message": "Fix a vault that placed shafts at branch ends\n\nThe vault grunt_qazlal_sundering didn't have any conditioning on level\nbranch depth for its shaft placements.",
+      "tree": {
+        "sha": "8f8a8574c3f8cb5925599b18b2faf15265ca5993",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/8f8a8574c3f8cb5925599b18b2faf15265ca5993"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7991ae87474f7d20d56fbe399ef561534a682ce7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/7991ae87474f7d20d56fbe399ef561534a682ce7",
+    "html_url": "https://github.com/crawl/crawl/commit/7991ae87474f7d20d56fbe399ef561534a682ce7",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7991ae87474f7d20d56fbe399ef561534a682ce7/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "14726095691d0599cc0f1f99f3733f71cec6a3b5",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/14726095691d0599cc0f1f99f3733f71cec6a3b5",
+        "html_url": "https://github.com/crawl/crawl/commit/14726095691d0599cc0f1f99f3733f71cec6a3b5"
+      }
+    ]
+  },
+  {
+    "sha": "14726095691d0599cc0f1f99f3733f71cec6a3b5",
+    "node_id": "C_kwDOAV-JftoAKDE0NzI2MDk1NjkxZDA1OTljYzBmMWY5OWYzNzMzZjcxY2VjNmEzYjU",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T03:51:25Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T04:37:05Z"
+      },
+      "message": "Properly use seeds for objstat and mapstat\n\nCurrently these modes load seed 0 and just keep using the RNG\nindefinitely across iterations. This is fine in terms of randomness, but\nit means these runs can't be recreated exactly without rerunning exactly\nthe same number of iterations. When diagnosing map placement errors,\nit's helpful to be able to recreate a specific seed.\n\nThis commit has objstat and mapstat properly initialize the 0 seed into\na random one and picks a new seed each iteration. Also, for any Lua\nerrors reported to stderr, we also report the current seed. Finally, we\nalso respect setting a specific seed via the command line. In this case,\nwe only allow running one iteration. This could be a useful way to\ncatalog the items/maps in a specific game seed using these modes.",
+      "tree": {
+        "sha": "bb09c8c5b3a089a9faca6319fe6d21b627a7a399",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/bb09c8c5b3a089a9faca6319fe6d21b627a7a399"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/14726095691d0599cc0f1f99f3733f71cec6a3b5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/14726095691d0599cc0f1f99f3733f71cec6a3b5",
+    "html_url": "https://github.com/crawl/crawl/commit/14726095691d0599cc0f1f99f3733f71cec6a3b5",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/14726095691d0599cc0f1f99f3733f71cec6a3b5/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "677bbfce326aa68a973e67cf46ae2ae7f4487392",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/677bbfce326aa68a973e67cf46ae2ae7f4487392",
+        "html_url": "https://github.com/crawl/crawl/commit/677bbfce326aa68a973e67cf46ae2ae7f4487392"
+      }
+    ]
+  },
+  {
+    "sha": "677bbfce326aa68a973e67cf46ae2ae7f4487392",
+    "node_id": "C_kwDOAV-JftoAKDY3N2JiZmNlMzI2YWE2OGE5NzNlNjdjZjQ2YWUyYWU3ZjQ0ODczOTI",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T03:49:17Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2025-12-25T03:49:17Z"
+      },
+      "message": "Remove two unused method definitions",
+      "tree": {
+        "sha": "1a6fc37c320de26bbf947cbcf9d6cce8833bc991",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1a6fc37c320de26bbf947cbcf9d6cce8833bc991"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/677bbfce326aa68a973e67cf46ae2ae7f4487392",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/677bbfce326aa68a973e67cf46ae2ae7f4487392",
+    "html_url": "https://github.com/crawl/crawl/commit/677bbfce326aa68a973e67cf46ae2ae7f4487392",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/677bbfce326aa68a973e67cf46ae2ae7f4487392/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "15974c44edb5ae1abeafe8d4ffc6fd4efd5df69b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/15974c44edb5ae1abeafe8d4ffc6fd4efd5df69b",
+        "html_url": "https://github.com/crawl/crawl/commit/15974c44edb5ae1abeafe8d4ffc6fd4efd5df69b"
+      }
+    ]
+  },
+  {
     "sha": "15974c44edb5ae1abeafe8d4ffc6fd4efd5df69b",
     "node_id": "C_kwDOAV-JftoAKDE1OTc0YzQ0ZWRiNWFlMWFiZWFmZThkNGZmYzZmZDRlZmQ1ZGY2OWI",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "b87bca3325f894992dd42ef186f425ed465a6552",
         "url": "https://api.github.com/repos/crawl/crawl/commits/b87bca3325f894992dd42ef186f425ed465a6552",
         "html_url": "https://github.com/crawl/crawl/commit/b87bca3325f894992dd42ef186f425ed465a6552"
-      }
-    ]
-  },
-  {
-    "sha": "b87bca3325f894992dd42ef186f425ed465a6552",
-    "node_id": "C_kwDOAV-JftoAKGI4N2JjYTMzMjVmODk0OTkyZGQ0MmVmMTg2ZjQyNWVkNDY1YTY1NTI",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-14T02:39:28Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-17T19:45:01Z"
-      },
-      "message": "New Slime monster: Creeping plasmodium\n\nThese are motile slime mold colonies that can replicate themselves along\nwalls in a unique manner and inflict large scale AoE acid damage if allowed\nto grow out of control.\n\nCreeping Plasmodium are wall-only monsters that create Caustic Sporangium -\nball-lightning-esque monsters that detonate with a 7x7 acid explosion.\nUniquely, any wall tiles engulfed by this explosion will also spawn a\nNascent Plasmodium (as long as they are two tiles away from any existing\nsporangium). These are lesser wall-bound monsters that cast acid ball -\nless dangerous than their parents and unable to replicate, but still\ncontributing more and more ranged acid damage. They will all die when the\noriginal plasmodium dies, but do not otherwise expire with time!\n\nNot only do I feel that the monster design flavorfully captures the\nuncontrollable spread of slime, but it also asks unique positioning on the\npart of the player, since maneuvering the explosions to avoid walls can be\nvery important unless you're about to close in for the kill.\n\nThey are comparatively rare monsters in the branch and specifically do not\nspawn naturally on Slime:5.\n\n------------------------\n\nThe plasmodium vault distribution and tiles were done by regret-index.\n * The plasmodium tiles combine Ontoclasm's current Lair rock wall tiles\n   and old ballistomycete spore trail tiles with CC0 scales by\n   ARoachIFoundOnMyPillow.\n * The sporangium tile tweaks a spell icon by 7Soul1, and the launching\n   spell icon adjusts the ballistomycete sporulation icon by aidanholm.\n * Vault distribution is very sparse, barring more tiles to help Slime\n   vaults stand out at all versus the rest of the level.",
-      "tree": {
-        "sha": "ee5517779df9a3964e997540f4e253840b0a9ed5",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ee5517779df9a3964e997540f4e253840b0a9ed5"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b87bca3325f894992dd42ef186f425ed465a6552",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b87bca3325f894992dd42ef186f425ed465a6552",
-    "html_url": "https://github.com/crawl/crawl/commit/b87bca3325f894992dd42ef186f425ed465a6552",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b87bca3325f894992dd42ef186f425ed465a6552/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "3a651692f0001b62531240f42cf6756642de0d8f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/3a651692f0001b62531240f42cf6756642de0d8f",
-        "html_url": "https://github.com/crawl/crawl/commit/3a651692f0001b62531240f42cf6756642de0d8f"
-      }
-    ]
-  },
-  {
-    "sha": "3a651692f0001b62531240f42cf6756642de0d8f",
-    "node_id": "C_kwDOAV-JftoAKDNhNjUxNjkyZjAwMDFiNjI1MzEyNDBmNDJjZjY3NTY2NDJkZTBkOGY",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-13T15:59:18Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-17T19:45:01Z"
-      },
-      "message": "New Slime monster: Slymdra (regret-index)\n\nCombining the head mechanics famous on hydras (but used nowhere else) with\na variant of slime creature merging behaviors, these are terrifying melee\nmonsters for Slime.\n\nThey have acid-branded melee attacks and start with 4-5 heads, but can\npassively absorb adjacent slime creatures to grow an additional head for\neach one (and gain a bunch of HP in the process). Unlike normal slime\ncreatures, their constituant slimes will not passively split off from them\nagain while in combat, but if left wandering for a little while, will\ngradually separate (meaning that fleeing from one that gets out of control\ncan still allow it to shrink back down again). Polymorphing one also spits\nout any additional slime creatures it has absorbed.\n\nHead mechanics operate almost identically to hydra; bladed weapons chop\nheads and make new ones grow while flaming weapons can remove heads\naltogether. Any new heads made this way will produce only unrewarding\nslime creatures if separated (so no infinite slime creature farming).\n\nThey spawn with a small slime creature band (and the branch itself is full\nof them), so attempting to position such that they absorb as few as\npossible may be important - their corrosion inflicting melee obviously\nscales non-linearly with how rapidly they can attack you!\n\n-----------------------------\n\nSlymdra vault distribution and tiles were done by regret-index.\n * The slymdra tiles combine ontoclasm's Hydra Form tile with roctavian's\n   old soul eater and brown ooze tiles.\n * Vault distribution is limited to a slim number of Slime vaults looking\n   for specific monsters, one Zot vault, variable Sprints, and Ziggurats.\n   In the last of these, they replace scaling rockslime placement on Slime\n   floors and scale additional heads with completed Zigs.",
-      "tree": {
-        "sha": "c84de436f3e937d69aa82cb66565db7419c79e2d",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c84de436f3e937d69aa82cb66565db7419c79e2d"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3a651692f0001b62531240f42cf6756642de0d8f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/3a651692f0001b62531240f42cf6756642de0d8f",
-    "html_url": "https://github.com/crawl/crawl/commit/3a651692f0001b62531240f42cf6756642de0d8f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3a651692f0001b62531240f42cf6756642de0d8f/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-        "html_url": "https://github.com/crawl/crawl/commit/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c"
-      }
-    ]
-  },
-  {
-    "sha": "f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-    "node_id": "C_kwDOAV-JftoAKGY0Y2VlMWY1YjM5MmMxYjE5N2E1NzM3NTZiZjBjYzdmMTlkYmRlMGM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-13T15:57:52Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-17T19:30:14Z"
-      },
-      "message": "Don't merge unrewarding slime creatures with normal ones\n\nThey would just eat up the XP of the normal ones and never give it back\nagain.",
-      "tree": {
-        "sha": "6d8224fae217abfeeb728ad7e72db024eef2a289",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6d8224fae217abfeeb728ad7e72db024eef2a289"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-    "html_url": "https://github.com/crawl/crawl/commit/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f4cee1f5b392c1b197a573756bf0cc7f19dbde0c/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5ca347d15b898bdf09d4c784ec35e16e637095b3",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5ca347d15b898bdf09d4c784ec35e16e637095b3",
-        "html_url": "https://github.com/crawl/crawl/commit/5ca347d15b898bdf09d4c784ec35e16e637095b3"
       }
     ]
   }

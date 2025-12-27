@@ -1,5 +1,169 @@
 [
   {
+    "sha": "4e02dda68dbc26e0419d4a97f2d88e73f0a920bd",
+    "node_id": "C_kwDOAV-JftoAKDRlMDJkZGE2OGRiYzI2ZTA0MTlkNGE5N2YyZDg4ZTczZjBhOTIwYmQ",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-12-27T03:54:48Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-12-27T03:54:48Z"
+      },
+      "message": "Fix killed monsters raised as thralls but getting xp tracking\n\nWhen a monster is raised as a thrall we go through seperate code path to\nhandle its death which although it was giving you xp, it wasn't tracking\nwhere that xp came from.",
+      "tree": {
+        "sha": "b4f1fdb1933c1e9745d28e11e775f01e644e6c96",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b4f1fdb1933c1e9745d28e11e775f01e644e6c96"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4e02dda68dbc26e0419d4a97f2d88e73f0a920bd",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/4e02dda68dbc26e0419d4a97f2d88e73f0a920bd",
+    "html_url": "https://github.com/crawl/crawl/commit/4e02dda68dbc26e0419d4a97f2d88e73f0a920bd",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4e02dda68dbc26e0419d4a97f2d88e73f0a920bd/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c2962e84704cd2917b170e6a753fe425dd8a8153",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c2962e84704cd2917b170e6a753fe425dd8a8153",
+        "html_url": "https://github.com/crawl/crawl/commit/c2962e84704cd2917b170e6a753fe425dd8a8153"
+      }
+    ]
+  },
+  {
+    "sha": "c2962e84704cd2917b170e6a753fe425dd8a8153",
+    "node_id": "C_kwDOAV-JftoAKGMyOTYyZTg0NzA0Y2QyOTE3YjE3MGU2YTc1M2ZlNDI1ZGQ4YTgxNTM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-12-27T01:35:06Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-12-27T01:35:06Z"
+      },
+      "message": "Fix exploding mounted monsters sometimes crashing\n\nWhen a mounted monster takes damage, sometimes the rider or the mount\ndies leaving the other alive. We handle this by changing the type of the\nmonster to be the type of the part that survived and then killing a new\nmonster of the type of the part that died at the same position.\nUnfortunately this means that if the code for killing a monster clears\nthe monster grid at the position of the monster it will leave the living\nmonster not on the monster grid which can lead to crashes. The monster\non death explosion code was clearing the monster grid as this used to\nbe needed to prevent the explosion from hitting the dead monster but can\nbe removed now that explosions are fineffs.",
+      "tree": {
+        "sha": "0d17da7ed820b536b4662168d16fce4d538b8aaa",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0d17da7ed820b536b4662168d16fce4d538b8aaa"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c2962e84704cd2917b170e6a753fe425dd8a8153",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c2962e84704cd2917b170e6a753fe425dd8a8153",
+    "html_url": "https://github.com/crawl/crawl/commit/c2962e84704cd2917b170e6a753fe425dd8a8153",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c2962e84704cd2917b170e6a753fe425dd8a8153/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7991ae87474f7d20d56fbe399ef561534a682ce7",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/7991ae87474f7d20d56fbe399ef561534a682ce7",
+        "html_url": "https://github.com/crawl/crawl/commit/7991ae87474f7d20d56fbe399ef561534a682ce7"
+      }
+    ]
+  },
+  {
     "sha": "7991ae87474f7d20d56fbe399ef561534a682ce7",
     "node_id": "C_kwDOAV-JftoAKDc5OTFhZTg3NDc0ZjdkMjBkNTZmYmUzOTllZjU2MTUzNGE2ODJjZTc",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
         "url": "https://api.github.com/repos/crawl/crawl/commits/fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
         "html_url": "https://github.com/crawl/crawl/commit/fef9f759a31b1ccb0b0e76a8ac77917bba22860d"
-      }
-    ]
-  },
-  {
-    "sha": "fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
-    "node_id": "C_kwDOAV-JftoAKGZlZjlmNzU5YTMxYjFjY2IwYjBlNzZhOGFjNzc5MTdiYmEyMjg2MGQ",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-16T15:50:23Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-17T19:45:01Z"
-      },
-      "message": "Make Slime stairs slimy, and tweak layout\n\nSlime is a branch almost exclusively dived through quickly. The lack of any\nloot in the branch, combined with the disconnected layout frequently\nplacing down stairs in view of up stairs while giving little reason to\nexplore any other bubbles, meant that time spent anywhere but Slime:5 was\noften very brief. Now that the monster pool has been greatly expanded, it\nseems appropriate to ask players venturing here to engage with it a little\nmore.\n\nAt the same time, Slime had grown to be widely viewed as the 'easy' 3rd\nrune option, and one goal of this batch of commits is to make that less\ntrue - not necessarily to make it the 'hard' 3rd rune, but to bring it\ncloser to perceived parity with Vaults:5.\n\nTo that end (as well as to create a little more uniqueness in the branch),\nstairs in Slime are now slimy: they can be taken downward but not travelled\nback up again until The Royal Jelly is defeated (unless the player worships\nJiyva themselves). This is functionally a little different than hatches,\nsince alpha-striking TRJ and then fleeing *does* allow the player to leave\nand regroup, and the path back up again is known, but otherwise makes each\nnew floor an isolated challenge at first.\n\nIn addition, the level generator no longer produces disconnected floors\n(though it still uses layout_caves), hatches and shafts cannot generate,\ndown stairs are now allowed to spawn adjacent to slimy walls (up stairs\nstill cannot), and down stairs will always be placed at least 12 tiles away\nfrom any up stair. All together, while the zone should still be\ndive-friendly, one should no longer be able to trivially skip past most of\nit so quickly, and levels before Slime:5 should matter more.",
-      "tree": {
-        "sha": "4f0900604cd368830dce892d175c1932800c5a81",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4f0900604cd368830dce892d175c1932800c5a81"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
-    "html_url": "https://github.com/crawl/crawl/commit/fef9f759a31b1ccb0b0e76a8ac77917bba22860d",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/fef9f759a31b1ccb0b0e76a8ac77917bba22860d/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "575c82e167a4d805581c6c3f0763d499fe4150c9",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/575c82e167a4d805581c6c3f0763d499fe4150c9",
-        "html_url": "https://github.com/crawl/crawl/commit/575c82e167a4d805581c6c3f0763d499fe4150c9"
-      }
-    ]
-  },
-  {
-    "sha": "575c82e167a4d805581c6c3f0763d499fe4150c9",
-    "node_id": "C_kwDOAV-JftoAKDU3NWM4MmUxNjdhNGQ4MDU1ODFjNmMzZjA3NjNkNDk5ZmU0MTUwYzk",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-15T19:02:02Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-17T19:45:01Z"
-      },
-      "message": "New Slime monster: Star Jelly (and consequent Void Ooze tweaks)\n\nStar jellies (inspired by the real phenomenon) are mid-tier slime monsters\nwho unleash a trio of shooting stars (as from an orb of stardust) when\nsufficiently damaged (on a long cooldown). To keep from it being frequently\ncorrect to ignore them (since they are most immediately dangerous to the\nplayer upon being damaged), they also have antimagic melee. This may also\nhelp mildly counterbalance the fact that the shooting stars are most\ndangerous if unleashed in melee.\n\nIn exchange, void oozes trade their own antimagic melee (which almost never\ndid anything in practice, due to its incredibly low base damage) for a new\nAF_DIM that applies Diminished Spells to the target (and ignores AC).\n\nUnlike the other new slime monsters, these are now a possible Royal Jelly\nspawn as well, where their shooting star effect may provide some\ninteresting complications to traditional ?immo strats.\n\n(I've also slightly lowered the max pursuit distance on shooting stars. I\nsuspect this will not have a very meaningful effect on the orb of stardust,\nbut should make it a little more possible to flee from them as a player.)\n\n--------------------------\n\nThe star jelly vault distribution and tiles were done by regret-index.\n * The star jelly tiles combine rejected slime creature tiles by\n   roctavian with Denzi's original jelly tile.\n * Vault distribution still is limited to Slime, one Depths vault, a\n   few Sprints, and Ziggurats, where they replace scaling azure jelly\n   placement in Slime floors to threaten mass conjurations spam.\n   They also join Jiyva's wrath pool, to match the other TRJ spawns.",
-      "tree": {
-        "sha": "980de2338e4cf9e9647327856f9567446ef7bdbc",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/980de2338e4cf9e9647327856f9567446ef7bdbc"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/575c82e167a4d805581c6c3f0763d499fe4150c9",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/575c82e167a4d805581c6c3f0763d499fe4150c9",
-    "html_url": "https://github.com/crawl/crawl/commit/575c82e167a4d805581c6c3f0763d499fe4150c9",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/575c82e167a4d805581c6c3f0763d499fe4150c9/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b87bca3325f894992dd42ef186f425ed465a6552",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b87bca3325f894992dd42ef186f425ed465a6552",
-        "html_url": "https://github.com/crawl/crawl/commit/b87bca3325f894992dd42ef186f425ed465a6552"
       }
     ]
   }

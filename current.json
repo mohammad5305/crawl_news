@@ -1,5 +1,87 @@
 [
   {
+    "sha": "c46cf172155382cf9f9403c60c054abcee0f1ad9",
+    "node_id": "C_kwDOAV-JftoAKGM0NmNmMTcyMTU1MzgyY2Y5Zjk0MDNjNjBjMDU0YWJjZWUwZjFhZDk",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-14T16:17:12Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-14T16:17:38Z"
+      },
+      "message": "Fix getting eternally trapped in the Abyss.\n\nSince 1e4f93a, any time the player transitioned to a floor of the Abyss,\nthe depth they were sent to was based upon their XL. However, this also\nhappened to include *returning* to the Abyss from a use of Okawaru's Duel\nability. If a player Duelled a monster while inside the Abyss, then\nreturned to a different floor of the Abyss than the one they'd started the\nduel on (which is possible, due to random roll), this wouldn't pop the old\nAbyss floor from the level stack. Meaning that if the player exited the\nAbyss, they would instead reenter whatever floor they started the duel on.\n\nThis changes Abyss default depth code to only apply specifically to taking\nDNGN_ENTER_ABYSS and DNGN_EXIT_THROUGH_ABYSS, which hopefully covers all\ncases it *should* apply. And also adds some 'rescue' code to pop erroneous\nAbyss entries from the level stack when attempting to exit.\n\nThis fixes #5025",
+      "tree": {
+        "sha": "0928680dd7fd155a71af02981d9a4566efb8a909",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0928680dd7fd155a71af02981d9a4566efb8a909"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c46cf172155382cf9f9403c60c054abcee0f1ad9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c46cf172155382cf9f9403c60c054abcee0f1ad9",
+    "html_url": "https://github.com/crawl/crawl/commit/c46cf172155382cf9f9403c60c054abcee0f1ad9",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c46cf172155382cf9f9403c60c054abcee0f1ad9/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2e14fdc65b532f286d5fbb4fab6c2972d57f0ff1",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2e14fdc65b532f286d5fbb4fab6c2972d57f0ff1",
+        "html_url": "https://github.com/crawl/crawl/commit/2e14fdc65b532f286d5fbb4fab6c2972d57f0ff1"
+      }
+    ]
+  },
+  {
     "sha": "2e14fdc65b532f286d5fbb4fab6c2972d57f0ff1",
     "node_id": "C_kwDOAV-JftoAKDJlMTRmZGM2NWI1MzJmMjg2ZDVmYmI0ZmFiNmMyOTcyZDU3ZjBmZjE",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "15d368e0313bcb79ba29433db9fb36be51760787",
         "url": "https://api.github.com/repos/crawl/crawl/commits/15d368e0313bcb79ba29433db9fb36be51760787",
         "html_url": "https://github.com/crawl/crawl/commit/15d368e0313bcb79ba29433db9fb36be51760787"
-      }
-    ]
-  },
-  {
-    "sha": "15d368e0313bcb79ba29433db9fb36be51760787",
-    "node_id": "C_kwDOAV-JftoAKDE1ZDM2OGUwMzEzYmNiNzliYTI5NDMzZGI5ZmIzNmJlNTE3NjA3ODc",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2025-12-20T20:26:32Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2025-12-22T06:07:21Z"
-      },
-      "message": "Fix preview of talisman attributes between integer skill levels.\n\nBetween integer values of shapeshifting, these were wrong - e.g.\nshowing -10% HP until hitting minimum shapeshifting, when in fact\nthings are much more continuous than that.",
-      "tree": {
-        "sha": "b91c1e01621653d24c2ee53ba735b60e64794f3f",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b91c1e01621653d24c2ee53ba735b60e64794f3f"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/15d368e0313bcb79ba29433db9fb36be51760787",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/15d368e0313bcb79ba29433db9fb36be51760787",
-    "html_url": "https://github.com/crawl/crawl/commit/15d368e0313bcb79ba29433db9fb36be51760787",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/15d368e0313bcb79ba29433db9fb36be51760787/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "162c21ee312f6ca7d7b01f79dee0ef183f4eb1d4",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/162c21ee312f6ca7d7b01f79dee0ef183f4eb1d4",
-        "html_url": "https://github.com/crawl/crawl/commit/162c21ee312f6ca7d7b01f79dee0ef183f4eb1d4"
       }
     ]
   }

@@ -1,5 +1,497 @@
 [
   {
+    "sha": "69c9decb0d1a21e3e1394c07f4c5ec30c52f323b",
+    "node_id": "C_kwDOAV-JftoAKDY5YzlkZWNiMGQxYTIxZTNlMTM5NGMwN2Y0YzVlYzMwYzUyZjMyM2I",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T04:00:40Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T04:00:40Z"
+      },
+      "message": "Fix crumbled stairs not redrawing properly in descent mode\n\nWe were using `force_show_update_at` followed by `view_update_at` to\nredraw a square after crumbling its staircase. The call to\n`force_show_update_at` isn't needed any more as staircase peaking will\nhave marked the square is known causing `view_update_at` to call it for\nus. `view_update_at` will update the map knowledge for the square,\nhowever, we have already updated the map knowledge of what feature is\npresent and do not wish to update the player's knowledge of monsters and\nclouds etc. `view_update_at` also shouldn't be called for squares out of\nsight and will trigger player in LOS events for the square as well as\nsometimes incorrectly updating the map knowledge. It also only redraws\nthe foreground layer in local tiles and the old staircase and new floor\nthat has replaced it are both drawn in the background layer. Instead use\n`redraw_view_at` to redraw the square.",
+      "tree": {
+        "sha": "fe4ae67e1e8813827882400fdfc8c2998eb07d24",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/fe4ae67e1e8813827882400fdfc8c2998eb07d24"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/69c9decb0d1a21e3e1394c07f4c5ec30c52f323b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/69c9decb0d1a21e3e1394c07f4c5ec30c52f323b",
+    "html_url": "https://github.com/crawl/crawl/commit/69c9decb0d1a21e3e1394c07f4c5ec30c52f323b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/69c9decb0d1a21e3e1394c07f4c5ec30c52f323b/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+        "html_url": "https://github.com/crawl/crawl/commit/82f025b3bab76bccd62ae8bf64a8b37e12a150d5"
+      }
+    ]
+  },
+  {
+    "sha": "82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+    "node_id": "C_kwDOAV-JftoAKDgyZjAyNWIzYmFiNzZiY2NkNjJhZThiZjY0YThiMzdlMTJhMTUwZDU",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T03:13:11Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T03:13:11Z"
+      },
+      "message": "Fix krakens not being immune to drowning\n\nThis was broken when the habitat of krakens was changed from HT_WATER\n(with special cases to keep them in deep water) to HT_DEEP_WATER.",
+      "tree": {
+        "sha": "d3713680dbefaac2837d395f3a509a824bfd76a0",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d3713680dbefaac2837d395f3a509a824bfd76a0"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+    "html_url": "https://github.com/crawl/crawl/commit/82f025b3bab76bccd62ae8bf64a8b37e12a150d5",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/82f025b3bab76bccd62ae8bf64a8b37e12a150d5/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "745d98891817b4cfe118e4db4ca63876a5a48228",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/745d98891817b4cfe118e4db4ca63876a5a48228",
+        "html_url": "https://github.com/crawl/crawl/commit/745d98891817b4cfe118e4db4ca63876a5a48228"
+      }
+    ]
+  },
+  {
+    "sha": "745d98891817b4cfe118e4db4ca63876a5a48228",
+    "node_id": "C_kwDOAV-JftoAKDc0NWQ5ODg5MTgxN2I0Y2ZlMTE4ZTRkYjRjYTYzODc2YTVhNDgyMjg",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T02:41:19Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T02:41:19Z"
+      },
+      "message": "Fix up stairs not always crumbling in descent mode\n\nWhen you went down a staircase in descent mode and covered the up\nstaircase with temporary terrain (such as by casting noxius bog), the up\nstaircase wouldn't be destroyed and would reappear when the temporary\nterrain expired.",
+      "tree": {
+        "sha": "0d35a62c3e7309d5aac20ea3e539b276e32745c8",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0d35a62c3e7309d5aac20ea3e539b276e32745c8"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/745d98891817b4cfe118e4db4ca63876a5a48228",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/745d98891817b4cfe118e4db4ca63876a5a48228",
+    "html_url": "https://github.com/crawl/crawl/commit/745d98891817b4cfe118e4db4ca63876a5a48228",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/745d98891817b4cfe118e4db4ca63876a5a48228/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c078dd7f9235818c3e37c0b6abc44bafdede7935",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c078dd7f9235818c3e37c0b6abc44bafdede7935",
+        "html_url": "https://github.com/crawl/crawl/commit/c078dd7f9235818c3e37c0b6abc44bafdede7935"
+      }
+    ]
+  },
+  {
+    "sha": "c078dd7f9235818c3e37c0b6abc44bafdede7935",
+    "node_id": "C_kwDOAV-JftoAKGMwNzhkZDdmOTIzNTgxOGMzZTM3YzBiNmFiYzQ0YmFmZGVkZTc5MzU",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T02:04:03Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-21T02:11:33Z"
+      },
+      "message": "Fix shops not always closing when leaving Gozag\n\nIf a Gozag created shop is covered with temporary terrain such as the\nlava from hell fire mortar when you abandon Gozag, the temporary terrain\nwill be changed into a closed shop but will be changed back into an open\nshop when the temporary terrain expires. Instead, don't change the\ntemporary terrain but rather when it reverts back make sure it reverts\nto a closed shop.",
+      "tree": {
+        "sha": "65bc435ec4598aaf924d21928d0c5fa41def584f",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/65bc435ec4598aaf924d21928d0c5fa41def584f"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c078dd7f9235818c3e37c0b6abc44bafdede7935",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c078dd7f9235818c3e37c0b6abc44bafdede7935",
+    "html_url": "https://github.com/crawl/crawl/commit/c078dd7f9235818c3e37c0b6abc44bafdede7935",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c078dd7f9235818c3e37c0b6abc44bafdede7935/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "71c15dacbfdfcac604090e60e933398dcfee09b4",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/71c15dacbfdfcac604090e60e933398dcfee09b4",
+        "html_url": "https://github.com/crawl/crawl/commit/71c15dacbfdfcac604090e60e933398dcfee09b4"
+      }
+    ]
+  },
+  {
+    "sha": "71c15dacbfdfcac604090e60e933398dcfee09b4",
+    "node_id": "C_kwDOAV-JftoAKDcxYzE1ZGFjYmZkZmNhYzYwNDA5MGU2MGU5MzMzOThkY2ZlZTA5YjQ",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-20T18:23:08Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-20T18:23:20Z"
+      },
+      "message": "Fix fortress crab's interaction with +MP artefacts (Lici)\n\nThe player's max MP wasn't properly updating when entering/leaving fortress crab\nform while wearing artefact body armour with +MP on it.",
+      "tree": {
+        "sha": "317eb4aff6fb5663504126a4670821747497d5be",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/317eb4aff6fb5663504126a4670821747497d5be"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/71c15dacbfdfcac604090e60e933398dcfee09b4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/71c15dacbfdfcac604090e60e933398dcfee09b4",
+    "html_url": "https://github.com/crawl/crawl/commit/71c15dacbfdfcac604090e60e933398dcfee09b4",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/71c15dacbfdfcac604090e60e933398dcfee09b4/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+        "html_url": "https://github.com/crawl/crawl/commit/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32"
+      }
+    ]
+  },
+  {
+    "sha": "2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+    "node_id": "C_kwDOAV-JftoAKDJmN2JjODIwM2RkYzYzMDFmMDZhNGMxMjU5MGQyZGM5MWEzOGZhMzI",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-20T16:39:18Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-01-20T18:23:20Z"
+      },
+      "message": "Allow fortress crab to double intrinsic properties of dragon armour (Lici)\n\nResists from dragon armour were internally handled in a way that was\nneither an ego nor an artprop, and thus didn't get affected by fortress\ncrab. Now, we automatically map (most of) those intrinsics to the\nartprop cache and do not check them in any other way. This slightly\nsimplifies some code and allows them to interact properly with fortress\ncrab.\n\n(Regen from troll leather is still handled somewhat differently - as all\nregen items are - and steam resist has no artprop equivalent. Though this\nlatter case also doesn't matter here, since doubling it wouldn't do\nanything, anyway.)\n\nIn future, this sort of procedure could also be extended to intrinsic\nresists from enhancer staves or even jewellery.",
+      "tree": {
+        "sha": "34d9fdcdaa3be6ca371e95a9f42d735bcecbbae3",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/34d9fdcdaa3be6ca371e95a9f42d735bcecbbae3"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+    "html_url": "https://github.com/crawl/crawl/commit/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2f7bc8203ddc6301f06a4c12590d2dc91a38fa32/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9dbc3aad5d38cb95f69e73d8ba772b0c13453261",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/9dbc3aad5d38cb95f69e73d8ba772b0c13453261",
+        "html_url": "https://github.com/crawl/crawl/commit/9dbc3aad5d38cb95f69e73d8ba772b0c13453261"
+      }
+    ]
+  },
+  {
     "sha": "9dbc3aad5d38cb95f69e73d8ba772b0c13453261",
     "node_id": "C_kwDOAV-JftoAKDlkYmMzYWFkNWQzOGNiOTVmNjllNzNkOGJhNzcyYjBjMTM0NTMyNjE",
     "commit": {
@@ -7704,498 +8196,6 @@
         "sha": "99aa80d3ceb1adf2020713558e12c64807833eb0",
         "url": "https://api.github.com/repos/crawl/crawl/commits/99aa80d3ceb1adf2020713558e12c64807833eb0",
         "html_url": "https://github.com/crawl/crawl/commit/99aa80d3ceb1adf2020713558e12c64807833eb0"
-      }
-    ]
-  },
-  {
-    "sha": "99aa80d3ceb1adf2020713558e12c64807833eb0",
-    "node_id": "C_kwDOAV-JftoAKDk5YWE4MGQzY2ViMWFkZjIwMjA3MTM1NThlMTJjNjQ4MDc4MzNlYjA",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T02:06:33Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T02:06:33Z"
-      },
-      "message": "Make default Abyss depth depend on skill_cost_level instead of XL\n\nThis makes it species-agnostic (ie: formicids don't end up tossed into a\ndeeper Abyss floor than a draconian who is equally far into the game) and\nalso avoids an issue where Ru's Sac Experience preventing a character from\nreaching XL 27 would mean they would never get Abyssal loitering penalties.",
-      "tree": {
-        "sha": "2e41c1a4cb6c8de29e129784f817c35295f27688",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2e41c1a4cb6c8de29e129784f817c35295f27688"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/99aa80d3ceb1adf2020713558e12c64807833eb0",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/99aa80d3ceb1adf2020713558e12c64807833eb0",
-    "html_url": "https://github.com/crawl/crawl/commit/99aa80d3ceb1adf2020713558e12c64807833eb0",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/99aa80d3ceb1adf2020713558e12c64807833eb0/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "964c6d7466ea06d09261ba4b6e68e705db494f68",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/964c6d7466ea06d09261ba4b6e68e705db494f68",
-        "html_url": "https://github.com/crawl/crawl/commit/964c6d7466ea06d09261ba4b6e68e705db494f68"
-      }
-    ]
-  },
-  {
-    "sha": "964c6d7466ea06d09261ba4b6e68e705db494f68",
-    "node_id": "C_kwDOAV-JftoAKDk2NGM2ZDc0NjZlYTA2ZDA5MjYxYmE0YjZlNjhlNzA1ZGI0OTRmNjg",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T01:38:33Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T01:38:33Z"
-      },
-      "message": "Fix exiting Pan through the Abyss not using the correct depth (Hammock)",
-      "tree": {
-        "sha": "e7a1ad70f9fc64f77b4a4da26da06010cdaac914",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e7a1ad70f9fc64f77b4a4da26da06010cdaac914"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/964c6d7466ea06d09261ba4b6e68e705db494f68",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/964c6d7466ea06d09261ba4b6e68e705db494f68",
-    "html_url": "https://github.com/crawl/crawl/commit/964c6d7466ea06d09261ba4b6e68e705db494f68",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/964c6d7466ea06d09261ba4b6e68e705db494f68/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-        "html_url": "https://github.com/crawl/crawl/commit/75d9d1cd66b25a57ba0630dd4ee9406fba79c458"
-      }
-    ]
-  },
-  {
-    "sha": "75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-    "node_id": "C_kwDOAV-JftoAKDc1ZDlkMWNkNjZiMjVhNTdiYTA2MzBkZDRlZTk0MDZmYmE3OWM0NTg",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T01:36:21Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T01:36:21Z"
-      },
-      "message": "Don't crash on throwing missiles into lava",
-      "tree": {
-        "sha": "3ac8073f78fdbea10d309a81c9300b326f1982f6",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3ac8073f78fdbea10d309a81c9300b326f1982f6"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-    "html_url": "https://github.com/crawl/crawl/commit/75d9d1cd66b25a57ba0630dd4ee9406fba79c458",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/75d9d1cd66b25a57ba0630dd4ee9406fba79c458/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-        "html_url": "https://github.com/crawl/crawl/commit/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c"
-      }
-    ]
-  },
-  {
-    "sha": "e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-    "node_id": "C_kwDOAV-JftoAKGU4OGE3NGRmZGYwYWQyZDFiYWY2ZTg5YTUwNGRjMTkxZTIyY2UzMWM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T14:38:38Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T14:38:38Z"
-      },
-      "message": "Fix Dithmenos shadow shoot triggering off darts and throwing nets\n\nAccidentally broken by 9780205.",
-      "tree": {
-        "sha": "847e5201d41e9fb4ee50966aa66496cdaeaa8684",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/847e5201d41e9fb4ee50966aa66496cdaeaa8684"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-    "html_url": "https://github.com/crawl/crawl/commit/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/e88a74dfdf0ad2d1baf6e89a504dc191e22ce31c/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "c547702c78ae565cae1a9a063faa28905ca3992a",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/c547702c78ae565cae1a9a063faa28905ca3992a",
-        "html_url": "https://github.com/crawl/crawl/commit/c547702c78ae565cae1a9a063faa28905ca3992a"
-      }
-    ]
-  },
-  {
-    "sha": "c547702c78ae565cae1a9a063faa28905ca3992a",
-    "node_id": "C_kwDOAV-JftoAKGM1NDc3MDJjNzhhZTU2NWNhZTFhOWEwNjNmYWEyODkwNWNhMzk5MmE",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T11:38:26Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T11:39:42Z"
-      },
-      "message": "Fix Ru-redirected ranged attacks\n\nIf an attack was redirected to the attacker, there would be a crash in\nray.regress(). But even if there wasn't, they still wouldn't be able to\nactually hit anything this way.",
-      "tree": {
-        "sha": "3b2b483a55e154288e0d164378914845f158d6ce",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3b2b483a55e154288e0d164378914845f158d6ce"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c547702c78ae565cae1a9a063faa28905ca3992a",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/c547702c78ae565cae1a9a063faa28905ca3992a",
-    "html_url": "https://github.com/crawl/crawl/commit/c547702c78ae565cae1a9a063faa28905ca3992a",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c547702c78ae565cae1a9a063faa28905ca3992a/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-        "html_url": "https://github.com/crawl/crawl/commit/0913d0b2e5a238440bc3d6133e305489fb2bc8e7"
-      }
-    ]
-  },
-  {
-    "sha": "0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-    "node_id": "C_kwDOAV-JftoAKDA5MTNkMGIyZTVhMjM4NDQwYmMzZDYxMzNlMzA1NDg5ZmIyYmM4ZTc",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T11:34:23Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-07T11:39:37Z"
-      },
-      "message": "Fix aborted ranged attacks in melee automatically bashing instead\n\nIf the player was prompted for a ranged attack made by moving, and chose\nto cancel, they would automatically bash with the launcher instead.\n\nInstead, actually cancel.",
-      "tree": {
-        "sha": "93e252f4da5751e678b0e11633423213c2c84d28",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/93e252f4da5751e678b0e11633423213c2c84d28"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-    "html_url": "https://github.com/crawl/crawl/commit/0913d0b2e5a238440bc3d6133e305489fb2bc8e7",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0913d0b2e5a238440bc3d6133e305489fb2bc8e7/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "a87427224589c075f58471d63949178f1943fc35",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/a87427224589c075f58471d63949178f1943fc35",
-        "html_url": "https://github.com/crawl/crawl/commit/a87427224589c075f58471d63949178f1943fc35"
       }
     ]
   }

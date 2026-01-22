@@ -1,5 +1,251 @@
 [
   {
+    "sha": "3eaa6fa3b2810a2fa4f165577bae8a4deb4b8801",
+    "node_id": "C_kwDOAV-JftoAKDNlYWE2ZmEzYjI4MTBhMmZhNGYxNjU1NzdiYWU4YTRkZWI0Yjg4MDE",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T10:48:59Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T10:48:59Z"
+      },
+      "message": "Fix recreating a automapped level leaving blank tiles\n\nThis was due to call to `tile_new_level` in `wizard_recreate_level`\nsetting all the tiles in the tile cache to TILE_DNGN_UNSEEN after the\ncall to `load_level`. However, this call to `tile_new_level` isn't even\nneeded anymore as commit ef9621c added a call to it to `load_level`\n(Technically the functions were `TileNewLevel` and `load` back then).\nThe call to `tile_new_level` in `load_level` happens before automapping\nthe level so it doesn't cause this problem.",
+      "tree": {
+        "sha": "358167f29a8562e195dd325a8b6e4bc76ec5cd66",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/358167f29a8562e195dd325a8b6e4bc76ec5cd66"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3eaa6fa3b2810a2fa4f165577bae8a4deb4b8801",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/3eaa6fa3b2810a2fa4f165577bae8a4deb4b8801",
+    "html_url": "https://github.com/crawl/crawl/commit/3eaa6fa3b2810a2fa4f165577bae8a4deb4b8801",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3eaa6fa3b2810a2fa4f165577bae8a4deb4b8801/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+        "html_url": "https://github.com/crawl/crawl/commit/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e"
+      }
+    ]
+  },
+  {
+    "sha": "f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+    "node_id": "C_kwDOAV-JftoAKGY4ZjM0MDM0NmRkYmM5Y2I3M2M1NjlmM2I0N2E2NzIwZGRjOWExM2U",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T10:10:55Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T10:10:55Z"
+      },
+      "message": "Fix wizmode traveling to automapped level leaving blank tiles\n\nWhen wizmode traveling to a automapped level (such as nocropolis) that\nyou hadn't previously visited, all out of view tiles would appear\ncompletely blank until you saw them or reloaded the game. This was\ncaused by a call to `tile_new_level` after the call to `load_level`\nin `_wizard_go_to_level` setting all the tiles in the tile cache to\nTILE_DNGN_UNSEEN. This call to `tile_new_level` isn't even needed\nanymore as commit ef9621c added a call to it to `load_level`\n(Technically the functions were `TileNewLevel` and `load` back then).\nThe call to `tile_new_level` in `load_level` happens before automapping\nthe level so it doesn't cause this problem.",
+      "tree": {
+        "sha": "eac02fbf526292f0cb37311856cbd5abecf8f2bb",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/eac02fbf526292f0cb37311856cbd5abecf8f2bb"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+    "html_url": "https://github.com/crawl/crawl/commit/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f8f340346ddbc9cb73c569f3b47a6720ddc9a13e/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "13841c757a80809bc43e52cc2dbd9b2f7d331402",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/13841c757a80809bc43e52cc2dbd9b2f7d331402",
+        "html_url": "https://github.com/crawl/crawl/commit/13841c757a80809bc43e52cc2dbd9b2f7d331402"
+      }
+    ]
+  },
+  {
+    "sha": "13841c757a80809bc43e52cc2dbd9b2f7d331402",
+    "node_id": "C_kwDOAV-JftoAKDEzODQxYzc1N2E4MDgwOWJjNDNlNTJjYzJkYmQ5YjJmN2QzMzE0MDI",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T06:47:03Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-01-22T07:24:08Z"
+      },
+      "message": "Fix some vaults not getting the colour tile they specified\n\nIf a vault specified a floor or rock wall tile name with no colour e.g.\nfloor_rough it would get that tile in the colour used by console for\nfloors or rock walls. If it specified a tile with a colour e.g.\nfloor_rough_blue it would get the tile in the colour specified. This\nlet us use the console colour for tiles with animated colours as these\ncan't be specified directly (e.g. there is no floor_rough_etc_random for\na random animated colour) while still letting tiles use a different\ncolour from console when it looks better.\n\nHowever, some coloured tiles are just aliases for the non-coloured\nversion e.g. floor_rough_red is an alias for floor_rough so if a vault\nspecified a floor as having the tile floor_rough_red it would actually\nget the tile floor_rough in whatever colour console used for floors.\n\nTo fix this, only apply animated console colours to floor and rock wall\ntiles. This is actually what we did prier to commit 6dfb6d6 but it was\nlost in the rework.",
+      "tree": {
+        "sha": "113a3465543cb68b13d67bba78c2734c9fe4b8ee",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/113a3465543cb68b13d67bba78c2734c9fe4b8ee"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/13841c757a80809bc43e52cc2dbd9b2f7d331402",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/13841c757a80809bc43e52cc2dbd9b2f7d331402",
+    "html_url": "https://github.com/crawl/crawl/commit/13841c757a80809bc43e52cc2dbd9b2f7d331402",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/13841c757a80809bc43e52cc2dbd9b2f7d331402/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ea69564c00c61793fb3a5da3476320ba06eb4b74",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/ea69564c00c61793fb3a5da3476320ba06eb4b74",
+        "html_url": "https://github.com/crawl/crawl/commit/ea69564c00c61793fb3a5da3476320ba06eb4b74"
+      }
+    ]
+  },
+  {
     "sha": "ea69564c00c61793fb3a5da3476320ba06eb4b74",
     "node_id": "C_kwDOAV-JftoAKGVhNjk1NjRjMDBjNjE3OTNmYjNhNWRhMzQ3NjMyMGJhMDZlYjRiNzQ",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
         "url": "https://api.github.com/repos/crawl/crawl/commits/5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
         "html_url": "https://github.com/crawl/crawl/commit/5d53f75e5c9c0bd837d154c203d44a3a35a78a74"
-      }
-    ]
-  },
-  {
-    "sha": "5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
-    "node_id": "C_kwDOAV-JftoAKDVkNTNmNzVlNWM5YzBiZDgzN2QxNTRjMjAzZDQ0YTNhMzVhNzhhNzQ",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-01-09T08:29:38Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-01-09T08:52:57Z"
-      },
-      "message": "Fix corruption sometimes not recolouring stone and metal walls\n\nSome branches were using coloured tiles for their stone or metal walls.\nFor example, Zot 2 was using TILE_DNGN_STONE_WALL_BLUE as the tile for\nits stone walls. However, such tiles have no colour variations and thus\ncan't be coloured based on the grid colour of the square. Instead, use\nthe non-coloured version of the tile and when colouring based on grid\ncolour use a default colour based on the location and feature type if\nno grid colour is set.",
-      "tree": {
-        "sha": "222523c0ea2857fe7b4f82fc9e301f2aad57d113",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/222523c0ea2857fe7b4f82fc9e301f2aad57d113"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
-    "html_url": "https://github.com/crawl/crawl/commit/5d53f75e5c9c0bd837d154c203d44a3a35a78a74",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5d53f75e5c9c0bd837d154c203d44a3a35a78a74/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-        "html_url": "https://github.com/crawl/crawl/commit/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87"
-      }
-    ]
-  },
-  {
-    "sha": "7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-    "node_id": "C_kwDOAV-JftoAKDdjOTk4NTNmZmQyOWZkY2U1YjIyZmExZjZjZmQyYWE5NDAyNDBiODc",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-09T07:14:14Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-09T07:14:14Z"
-      },
-      "message": "Nudge colossal amoeba stats downward a little\n\nI've been surprised at how overrepresented these have been as killers in\nnew Slime. It's not entirely clear to me how much is their raw danger level\nand how much is people not yet handling their swarm mechanic with the\nproper respect (even though you'd think marrowcuda would have taught that\nalready....).\n\nBut they were never intended to be quite so top-end a threat, so I'm\nlowering some of their numbers anyway. We'll see if more is warranted over\ntime.",
-      "tree": {
-        "sha": "0fe8bd8d3dc231f5006bea7e0fc290737f450efc",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0fe8bd8d3dc231f5006bea7e0fc290737f450efc"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-    "html_url": "https://github.com/crawl/crawl/commit/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7c99853ffd29fdce5b22fa1f6cfd2aa940240b87/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-        "html_url": "https://github.com/crawl/crawl/commit/39a3438d4a987fe895d9dc46d78836b6ee41de7e"
-      }
-    ]
-  },
-  {
-    "sha": "39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-    "node_id": "C_kwDOAV-JftoAKDM5YTM0MzhkNGE5ODdmZTg5NWQ5ZGM0NmQ3ODgzNmI2ZWU0MWRlN2U",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-09T02:33:34Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-09T07:10:18Z"
-      },
-      "message": "Make Slimy stairs regenerative\n\nWhile a lot of players report that new Slime is more fun than it was prior\nto its various changes, it is possible its difficulty is also tuned\nslightly too high. This is an attempt to make it feel a little safer in a\nnovel way.\n\nWhen the player takes a slimy stair down, they now become coated in\nregenerative ooze that greatly increases their HP/MP regeneration for a\nshort while (4% of your maximum per turn, for 17-21 turns). This makes\ntaking stairs a safer emergency option when injured, while also defraying\nsome of the danger if one arrives into a particularly horrible situation.\n\nThis should hopefully make the stair behavior feel a little more 'fair',\nwhile preserving some of its unique gameplay dynamics.",
-      "tree": {
-        "sha": "687c672a2a79ebe6e711f9a77716cb4751af96e7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/687c672a2a79ebe6e711f9a77716cb4751af96e7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-    "html_url": "https://github.com/crawl/crawl/commit/39a3438d4a987fe895d9dc46d78836b6ee41de7e",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/39a3438d4a987fe895d9dc46d78836b6ee41de7e/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "2c5a25a675fed5313edd8570b4cf32d04c8975ce",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/2c5a25a675fed5313edd8570b4cf32d04c8975ce",
-        "html_url": "https://github.com/crawl/crawl/commit/2c5a25a675fed5313edd8570b4cf32d04c8975ce"
       }
     ]
   }

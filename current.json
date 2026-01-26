@@ -1,5 +1,251 @@
 [
   {
+    "sha": "5877fddc77ad08ee2ccc13ec90c5a48b6f141fb4",
+    "node_id": "C_kwDOAV-JftoAKDU4NzdmZGRjNzdhZDA4ZWUyY2NjMTNlYzkwYzVhNDhiNmYxNDFmYjQ",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-01-26T03:17:32Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-01-26T03:41:47Z"
+      },
+      "message": "Reset lua state properly for objstat/mapstat\n\nSimilar to d744bac7, we now reset lua states and subsequently reload the\nnecessary data after each iteration. This fixes a problem where large\nobjstat jobs (e.g. 1000 iterations of generating all of the Dungeon\nbranch) eventually error repeatedly in zonify layout code. The precise\nreason for this hasn't been fully debugged, but it seems to be related\nto available lua memory. For now, it's wise to follow the same close ->\nreinitialize procedure as we do for the main game loop in each\nobjstat/mapstat iteration.\n\nTesting has shown that this reset doesn't significantly impact objstat\nperformance. In the future, when I rework game loop lua reinitializaiton\nto more carefully reset and load only the necessary data, we can revisit\nneeded to close and reopen the lua state for all game modes.",
+      "tree": {
+        "sha": "c0248b8217d7c9763c3f67210c374ab4df42a69c",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c0248b8217d7c9763c3f67210c374ab4df42a69c"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5877fddc77ad08ee2ccc13ec90c5a48b6f141fb4",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/5877fddc77ad08ee2ccc13ec90c5a48b6f141fb4",
+    "html_url": "https://github.com/crawl/crawl/commit/5877fddc77ad08ee2ccc13ec90c5a48b6f141fb4",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5877fddc77ad08ee2ccc13ec90c5a48b6f141fb4/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+        "html_url": "https://github.com/crawl/crawl/commit/e1d2b83f61f62d7936308bf84c7dc3a1702f0389"
+      }
+    ]
+  },
+  {
+    "sha": "e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+    "node_id": "C_kwDOAV-JftoAKGUxZDJiODNmNjFmNjJkNzkzNjMwOGJmODRjN2RjM2ExNzAyZjAzODk",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-01-25T22:21:29Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-01-25T22:21:29Z"
+      },
+      "message": "Adjust morphogenic ooze slimification accumulation\n\nWhile the original af_slimify timing was roughly based off of bat cloud\ndrowinsess numbers, clouds are much more consistent at applying their\neffects than attack brands are in combat. It's very plausible to be killed\nby a morphogenic ooze band well before one actually gets slimified in the\nfirst place, due to each turn where an ooze fails to hit allows one to\nwork off the effect build-up without really bothering with any\ncounterplay, since each hit only applies 35-45 aut of a status that needs\nto reach 100 to activate that also goes down 10 each turn. Rather than\nmaking them apply the status in one or two hits entirely, I am doubling\nthe status application and threshold numbers both, which thus halves the\nrate the status wears off mid-fight. As rare monsters with a singular\ngimmick far less instantly lethal than other summoning or conjurations\nmechanics added to the branch this version, we might as well test a\nversion of the monster with a functional version of the gimmick first.\n\n(This commit also adjusts the colour schema of DUR_SLIMIFYING to reduce\nthe ambiguity of going across multiple shades of magenta. No save-compat\ncode has been included with this commit, as there is rather little benefit\nin tactically converting an older save mid-fight to try and prevent\nslimification against exactly one encounter. I am also fixing a notable\nbug where one could cancel jelly form immediately after actually getting\nit, which I hope hasn't been distorting the testing of the monster\nentirely....)",
+      "tree": {
+        "sha": "c11e5712c996526630b32559f7e402c2413389c7",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c11e5712c996526630b32559f7e402c2413389c7"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+    "html_url": "https://github.com/crawl/crawl/commit/e1d2b83f61f62d7936308bf84c7dc3a1702f0389",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/e1d2b83f61f62d7936308bf84c7dc3a1702f0389/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c88066364f5068e801482ff7eec1b9f78fd12095",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c88066364f5068e801482ff7eec1b9f78fd12095",
+        "html_url": "https://github.com/crawl/crawl/commit/c88066364f5068e801482ff7eec1b9f78fd12095"
+      }
+    ]
+  },
+  {
+    "sha": "c88066364f5068e801482ff7eec1b9f78fd12095",
+    "node_id": "C_kwDOAV-JftoAKGM4ODA2NjM2NGY1MDY4ZTgwMTQ4MmZmN2VlYzFiOWY3OGZkMTIwOTU",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-01-25T22:01:12Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-01-25T22:01:12Z"
+      },
+      "message": "Yet further small tiles adjustments\n\n * Azure jellies and colossal amoeba have had their colours and brightness\n   adjusted away from each other, to help with those with poor eyesight\n   and poor pixel miscaling confusing the two very different blue jellies\n   in Slime.\n\n * Antimagic Gaze no longer accidentally uses the Draining Gaze tile\n   animation flash, as was introduced in 6213b69.\n\n * The Draining Gaze animation flash from eyes of draining now lasts\n   very slightly longer when it targets players, and now also lasts\n   increasingly longer the more the player is drained overall.\n\n * Fannar and player doll broad axes have had their palettes simplified.\n\n * Rapier and broad axe randarts now have unique player doll tiles,\n   based off of roctavian's good_item rapiers and broad axe doll tiles.",
+      "tree": {
+        "sha": "ce877bfe6071b49d96418d4432178cc755da4763",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ce877bfe6071b49d96418d4432178cc755da4763"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/c88066364f5068e801482ff7eec1b9f78fd12095",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/c88066364f5068e801482ff7eec1b9f78fd12095",
+    "html_url": "https://github.com/crawl/crawl/commit/c88066364f5068e801482ff7eec1b9f78fd12095",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/c88066364f5068e801482ff7eec1b9f78fd12095/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c69c41b5cdbd464c3288e958d9875121da642cdd",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c69c41b5cdbd464c3288e958d9875121da642cdd",
+        "html_url": "https://github.com/crawl/crawl/commit/c69c41b5cdbd464c3288e958d9875121da642cdd"
+      }
+    ]
+  },
+  {
     "sha": "c69c41b5cdbd464c3288e958d9875121da642cdd",
     "node_id": "C_kwDOAV-JftoAKGM2OWM0MWI1Y2RiZDQ2NGMzMjg4ZTk1OGQ5ODc1MTIxZGE2NDJjZGQ",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "e9d7159132f6f63572c621963efc67859b4903e6",
         "url": "https://api.github.com/repos/crawl/crawl/commits/e9d7159132f6f63572c621963efc67859b4903e6",
         "html_url": "https://github.com/crawl/crawl/commit/e9d7159132f6f63572c621963efc67859b4903e6"
-      }
-    ]
-  },
-  {
-    "sha": "e9d7159132f6f63572c621963efc67859b4903e6",
-    "node_id": "C_kwDOAV-JftoAKGU5ZDcxNTkxMzJmNmY2MzU3MmM2MjE5NjNlZmM2Nzg1OWI0OTAzZTY",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T12:20:01Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-15T15:11:36Z"
-      },
-      "message": "Raise skill required to reach mindelay with quick blades to 20\n\nQuick blades more dramatically outclass the other weapons of their type\nthan is true for any other weapon category. Moreover, they do this by\nenough that the 'weaker in direct combat, but with stealth/stabbing\ncapabilities' which otherwise distinguishes short blades can get lost: with\na quick blade, a suitable character can be just as strong in a straight-up\nfight as with any long blade (perhaps even moreso).\n\nIt seems reasonable to ask a little more investment for this\narchetype-blurring power (especially since their low base damage also means\nthat short blade skill contributes almost nothing to non-stabbing damage\nbeyond mindelay). (And who knows; this might make any other weapon even\nslightly competitive on vine stalkers...)",
-      "tree": {
-        "sha": "de1afb513c046c05d9dc4498f9a41b19fc0632e2",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/de1afb513c046c05d9dc4498f9a41b19fc0632e2"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/e9d7159132f6f63572c621963efc67859b4903e6",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/e9d7159132f6f63572c621963efc67859b4903e6",
-    "html_url": "https://github.com/crawl/crawl/commit/e9d7159132f6f63572c621963efc67859b4903e6",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/e9d7159132f6f63572c621963efc67859b4903e6/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-        "html_url": "https://github.com/crawl/crawl/commit/88b0e15926eaa2e1cf28735c786c9228cdf513ec"
-      }
-    ]
-  },
-  {
-    "sha": "88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-    "node_id": "C_kwDOAV-JftoAKDg4YjBlMTU5MjZlYWEyZTFjZjI4NzM1Yzc4NmM5MjI4Y2RmNTEzZWM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T11:25:36Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-15T15:11:36Z"
-      },
-      "message": "Increase base shop price of orbs",
-      "tree": {
-        "sha": "0fbbafd13dd4b2804b8fc2550353c4b81512f7b5",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0fbbafd13dd4b2804b8fc2550353c4b81512f7b5"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-    "html_url": "https://github.com/crawl/crawl/commit/88b0e15926eaa2e1cf28735c786c9228cdf513ec",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/88b0e15926eaa2e1cf28735c786c9228cdf513ec/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "488a47978c01bd0e301fe2ddf9218da123dde3f8",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/488a47978c01bd0e301fe2ddf9218da123dde3f8",
-        "html_url": "https://github.com/crawl/crawl/commit/488a47978c01bd0e301fe2ddf9218da123dde3f8"
-      }
-    ]
-  },
-  {
-    "sha": "488a47978c01bd0e301fe2ddf9218da123dde3f8",
-    "node_id": "C_kwDOAV-JftoAKDQ4OGE0Nzk3OGMwMWJkMGUzMDFmZTJkZGY5MjE4ZGExMjNkZGUzZjg",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-08T11:15:28Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-15T15:11:36Z"
-      },
-      "message": "Make parchment cost non-linear with respect to spell level\n\nHigh level spells didn't really cost very much compared to how much value\nthey offered to characters interested in buying them (or how much a\nhigh-value item of some other type might cost).\n\nThis makes low-level spells slightly cheaper than previously, while higher\nlevel spells are much more expensive. (Books don't get nearly so much of a\nprice increase; their rarity makes it okay for them to be a 'bargain' in\nsome cases, and they often contain spells the player isn't likely to want\nanyway.)",
-      "tree": {
-        "sha": "0feedff9b916aaf27f8ed1173f7f71b27e9bb4b6",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0feedff9b916aaf27f8ed1173f7f71b27e9bb4b6"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/488a47978c01bd0e301fe2ddf9218da123dde3f8",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/488a47978c01bd0e301fe2ddf9218da123dde3f8",
-    "html_url": "https://github.com/crawl/crawl/commit/488a47978c01bd0e301fe2ddf9218da123dde3f8",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/488a47978c01bd0e301fe2ddf9218da123dde3f8/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "632d4e4742aeb597b489740853bb9a5616f21700",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/632d4e4742aeb597b489740853bb9a5616f21700",
-        "html_url": "https://github.com/crawl/crawl/commit/632d4e4742aeb597b489740853bb9a5616f21700"
       }
     ]
   }

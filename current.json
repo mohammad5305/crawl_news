@@ -1,5 +1,87 @@
 [
   {
+    "sha": "75df0cf6de0d237618aedd125dfe64240b997535",
+    "node_id": "C_kwDOAV-JftoAKDc1ZGYwY2Y2ZGUwZDIzNzYxOGFlZGQxMjVkZmU2NDI0MGI5OTc1MzU",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-02-02T08:38:36Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-02-02T08:38:36Z"
+      },
+      "message": "Fix a crash when bound soul Mara clones die\n\nIf you used Yred's bind soul ability on Mara and then stabbed him to\ndeath in vampire form, he would form a bound soul and then when one of\nthis bound soul's summoned copies died it would try and rise as a\nvampire thrall which would crash. This was because the bound soul still\nhad the VAMPIRIC_THRALL_KEY property from when Mara was stabbed to\ndeath which meant that its clones also had this prperty and would try to\nrise as thralls when they died. However, we were accidendally killing\nthem when ending their ENCH_SUMMON_TIMER enchantment when ending all\ntheir enchantments as part of making them into thralls.",
+      "tree": {
+        "sha": "77841ecd0e1fc76d95e9fd642811d039ae670847",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/77841ecd0e1fc76d95e9fd642811d039ae670847"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/75df0cf6de0d237618aedd125dfe64240b997535",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/75df0cf6de0d237618aedd125dfe64240b997535",
+    "html_url": "https://github.com/crawl/crawl/commit/75df0cf6de0d237618aedd125dfe64240b997535",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/75df0cf6de0d237618aedd125dfe64240b997535/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+        "html_url": "https://github.com/crawl/crawl/commit/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0"
+      }
+    ]
+  },
+  {
     "sha": "7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
     "node_id": "C_kwDOAV-JftoAKDdlY2ZmZGY1ZTg5NjIzYWNlYmMwZjNkN2MwYjFmOTQ3MzRiMDMwZTA",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "6183c0be11a8ea86b3ba847230c736e474e01eff",
         "url": "https://api.github.com/repos/crawl/crawl/commits/6183c0be11a8ea86b3ba847230c736e474e01eff",
         "html_url": "https://github.com/crawl/crawl/commit/6183c0be11a8ea86b3ba847230c736e474e01eff"
-      }
-    ]
-  },
-  {
-    "sha": "6183c0be11a8ea86b3ba847230c736e474e01eff",
-    "node_id": "C_kwDOAV-JftoAKDYxODNjMGJlMTFhOGVhODZiM2JhODQ3MjMwYzczNmU0NzRlMDFlZmY",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-01-17T10:33:18Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-19T08:00:24Z"
-      },
-      "message": "Fix a bolt of flesh redirection crash\n\nWhen firing a Zykzyl bolt of flesh with Ru redirection or Dith's\nMarionette, we would sometimes crash. This is because the tracer beam\nfor the attack is aimed at the Zykzyl itself, and the beam sets\nstop_at_allies. This causes us to attempt to regress a ray with no\nposition or direction, which does not work.\n\nWe fix this by not regressing self-aimed rays when stop_at_allies is\nset.",
-      "tree": {
-        "sha": "65b44d37f9d0105f1c5c32b9861cfe3528416e58",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/65b44d37f9d0105f1c5c32b9861cfe3528416e58"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6183c0be11a8ea86b3ba847230c736e474e01eff",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/6183c0be11a8ea86b3ba847230c736e474e01eff",
-    "html_url": "https://github.com/crawl/crawl/commit/6183c0be11a8ea86b3ba847230c736e474e01eff",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6183c0be11a8ea86b3ba847230c736e474e01eff/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b2f1d3183edf7cbd917a1b35b88689b788a888db",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b2f1d3183edf7cbd917a1b35b88689b788a888db",
-        "html_url": "https://github.com/crawl/crawl/commit/b2f1d3183edf7cbd917a1b35b88689b788a888db"
       }
     ]
   }

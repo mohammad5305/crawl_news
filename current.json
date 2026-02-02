@@ -1,5 +1,87 @@
 [
   {
+    "sha": "7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+    "node_id": "C_kwDOAV-JftoAKDdlY2ZmZGY1ZTg5NjIzYWNlYmMwZjNkN2MwYjFmOTQ3MzRiMDMwZTA",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-02-02T00:22:57Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-02-02T01:10:01Z"
+      },
+      "message": "Fix a crash when sealing a mutli square door\n\nIf there were two non-hostile monsters in the same door and the first\n(first in the order we iterate over the door squares) monster could be\npushed to positions A and B but the second monster could only be pushed\nto position B, when checking if it was posible to push all the monsters\nfrom the door, we would move the first monster to position A as that was\nthe first position it could be moved to and then we would move the\nsecond monster to position B as that was the first position it could be\nmoved to that hadn't already had a monster moved to it and thus we would\ndetermine that it was posible to move all monster. However, when\nactually moving the monsters, we would check whether moving the first\nmonster to position A or B would give the highest tension and in the\ncrashing case we would move it to position B, we would then try to move\nthe second monster and this would trigger an assert as there was no\nlonger a position to move it to (position B had already been taken by\nthe first monster).\n\nInstead, check every combination of movement to see if there is a valid\nway to push the monsters and also to see which way results in the\nhighest tension.",
+      "tree": {
+        "sha": "746263d08c1f45433a0905ace677ae7d1e47e617",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/746263d08c1f45433a0905ace677ae7d1e47e617"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+    "html_url": "https://github.com/crawl/crawl/commit/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7ecffdf5e89623acebc0f3d7c0b1f94734b030e0/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2ad184ce963ef059a8800a9b1f753cf524e8e98d",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2ad184ce963ef059a8800a9b1f753cf524e8e98d",
+        "html_url": "https://github.com/crawl/crawl/commit/2ad184ce963ef059a8800a9b1f753cf524e8e98d"
+      }
+    ]
+  },
+  {
     "sha": "2ad184ce963ef059a8800a9b1f753cf524e8e98d",
     "node_id": "C_kwDOAV-JftoAKDJhZDE4NGNlOTYzZWYwNTlhODgwMGE5YjFmNzUzY2Y1MjRlOGU5OGQ",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "b2f1d3183edf7cbd917a1b35b88689b788a888db",
         "url": "https://api.github.com/repos/crawl/crawl/commits/b2f1d3183edf7cbd917a1b35b88689b788a888db",
         "html_url": "https://github.com/crawl/crawl/commit/b2f1d3183edf7cbd917a1b35b88689b788a888db"
-      }
-    ]
-  },
-  {
-    "sha": "b2f1d3183edf7cbd917a1b35b88689b788a888db",
-    "node_id": "C_kwDOAV-JftoAKGIyZjFkMzE4M2VkZjdjYmQ5MTdhMWIzNWI4ODY4OWI3ODhhODg4ZGI",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-01-16T18:45:11Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-01-19T07:58:40Z"
-      },
-      "message": "Quickset skill target to maximum skill on talismans\n\nAllow (s) to set a skill target to the max skill, if we are above the\nmin skill",
-      "tree": {
-        "sha": "f9183cf16b60fa95ac50e8517313815bb9f79769",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f9183cf16b60fa95ac50e8517313815bb9f79769"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b2f1d3183edf7cbd917a1b35b88689b788a888db",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b2f1d3183edf7cbd917a1b35b88689b788a888db",
-    "html_url": "https://github.com/crawl/crawl/commit/b2f1d3183edf7cbd917a1b35b88689b788a888db",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b2f1d3183edf7cbd917a1b35b88689b788a888db/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "5558ef20dacf0944cc9bc4f12b5d41a82660f59c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/5558ef20dacf0944cc9bc4f12b5d41a82660f59c",
-        "html_url": "https://github.com/crawl/crawl/commit/5558ef20dacf0944cc9bc4f12b5d41a82660f59c"
       }
     ]
   }

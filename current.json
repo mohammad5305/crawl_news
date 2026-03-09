@@ -1,5 +1,251 @@
 [
   {
+    "sha": "4bbd2b0a691cfde7c809143dc5f05a691aa4ef6f",
+    "node_id": "C_kwDOAV-JftoAKDRiYmQyYjBhNjkxY2ZkZTdjODA5MTQzZGM1ZjA1YTY5MWFhNGVmNmY",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T08:03:18Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T08:05:33Z"
+      },
+      "message": "Refactor checking if final effects are mergeable\n\nCheck if the final effects are of the same type in the base class rather\nthan in every derived class. This should be less error prone when added\na new final effect.",
+      "tree": {
+        "sha": "0265fdfca77e6ea7f944ba8e2514199283bbc018",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0265fdfca77e6ea7f944ba8e2514199283bbc018"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4bbd2b0a691cfde7c809143dc5f05a691aa4ef6f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/4bbd2b0a691cfde7c809143dc5f05a691aa4ef6f",
+    "html_url": "https://github.com/crawl/crawl/commit/4bbd2b0a691cfde7c809143dc5f05a691aa4ef6f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4bbd2b0a691cfde7c809143dc5f05a691aa4ef6f/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9b451084e2f1551df996faadd8f74d7617b9d33b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/9b451084e2f1551df996faadd8f74d7617b9d33b",
+        "html_url": "https://github.com/crawl/crawl/commit/9b451084e2f1551df996faadd8f74d7617b9d33b"
+      }
+    ]
+  },
+  {
+    "sha": "9b451084e2f1551df996faadd8f74d7617b9d33b",
+    "node_id": "C_kwDOAV-JftoAKDliNDUxMDg0ZTJmMTU1MWRmOTk2ZmFhZGQ4Zjc0ZDc2MTdiOWQzM2I",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T06:26:12Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T06:26:12Z"
+      },
+      "message": "Fix merging not taking the right amount of energy for slimes\n\nAfter slime creatures merge, you should be able to walk 1 space away\nfrom the resulting slime creature without it following you (At least if\nyou have normal move speed and the slime isn't hasted). However, our\nimplementation of this had the following problems\n\n1. It was assuming that monsters take their turns in order of mindex\n   (there was even a helpful commit saying this), however, this hasn't\n   been true in a very long time. This was resulting in it not removing\n   enough action energy for the player to move away from the merged\n   slime when it thought it had had all its turns but it hadn't and\n   removing more action energy than intended in the opposite situation.\n\n2. The check to see if the merged slime was already low enough in energy\n   was broken in commit d1e63fa and would result in a slime that was\n   already low enough in energy actually gaining enough energy that the\n   player couldn't walk away.\n\n3. We were only removing 1 extra turn worth of action energy from the\n   merged slime creature if we thought it hadn't had its turn yet,\n   however, if the player's previous turn was slow it could have enough\n   energy for multiple turns resulting in us not removing enough energy\n   to let the player walk away.\n\nTo fix all these problems, set the merged slime's action energy to be\nexactly enough for the player to move away with a normal move speed if\nthe slime isn't hasted.",
+      "tree": {
+        "sha": "40b2b529bf457648cd301c64d27dce7beb8fed83",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/40b2b529bf457648cd301c64d27dce7beb8fed83"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/9b451084e2f1551df996faadd8f74d7617b9d33b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/9b451084e2f1551df996faadd8f74d7617b9d33b",
+    "html_url": "https://github.com/crawl/crawl/commit/9b451084e2f1551df996faadd8f74d7617b9d33b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/9b451084e2f1551df996faadd8f74d7617b9d33b/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+        "html_url": "https://github.com/crawl/crawl/commit/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55"
+      }
+    ]
+  },
+  {
+    "sha": "7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+    "node_id": "C_kwDOAV-JftoAKDdmNTJlZTM2ZGUyYjM5YTk0Y2Q3OWI2YmI2ZmViODM1OWZiYWVlNTU",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T00:02:53Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-03-09T00:02:53Z"
+      },
+      "message": "Fix monster clockwork bee's action sometimes being delayed\n\nIn handle_monsters we iterate over all monsters calling\n_pre_monster_move on each monster. If one of these monsters has finished\nwinding up its clockwork bee, this will add the newly created bee to the\nmonster array that we are iterating over. If the bee gets added before\nwhere we currently are in the iteration order it won't be added to the\nqueue of monsters to take actions and its first action will be delayed\nto next turn, however, if the bee is added after our current iteration\nposition it will be added to queue of monsters to take actions and will\ntake its first action this turn.\n\nWe can fix this be calling queue_monster_for_action on the bee when we\ncreate it so that the bee always takes its first action this turn (this\nwill sometimes result in the bee being added to the queue twice, but\nthis is harmless).",
+      "tree": {
+        "sha": "7c9bad21de04f1048d495e3c181893582fb19d10",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7c9bad21de04f1048d495e3c181893582fb19d10"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+    "html_url": "https://github.com/crawl/crawl/commit/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7f52ee36de2b39a94cd79b6bb6feb8359fbaee55/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "117663b8c56cc0ec2560fa3e6d18c0efa5a6b34c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/117663b8c56cc0ec2560fa3e6d18c0efa5a6b34c",
+        "html_url": "https://github.com/crawl/crawl/commit/117663b8c56cc0ec2560fa3e6d18c0efa5a6b34c"
+      }
+    ]
+  },
+  {
     "sha": "117663b8c56cc0ec2560fa3e6d18c0efa5a6b34c",
     "node_id": "C_kwDOAV-JftoAKDExNzY2M2I4YzU2Y2MwZWMyNTYwZmEzZTZkMThjMGVmYTVhNmIzNGM",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
         "url": "https://api.github.com/repos/crawl/crawl/commits/277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
         "html_url": "https://github.com/crawl/crawl/commit/277963f2b94b6bf37c5195957e1a9ddfff2f10d5"
-      }
-    ]
-  },
-  {
-    "sha": "277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
-    "node_id": "C_kwDOAV-JftoAKDI3Nzk2M2YyYjk0YjZiZjM3YzUxOTU5NTdlMWE5ZGRmZmYyZjEwZDU",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-05T20:35:49Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-22T20:00:17Z"
-      },
-      "message": "Generalize Royal Jelly spawning behavior when instakilled\n\nMCC and Grand Finale both had special code to ensure TRJ still spawned\njellies when instakilled by this (since no damage was dealt). Rimeblight\ndid not (allowing the player to skip 20% of the total spawns) and the\nrecent removal of INSTANT_DEATH would also allow Finisher and Throatcutter\nto skip this.\n\nInstead of needing to handle it everywhere TRJ might die, handle it in\nmonster_die() itself - spawning jellies for real kills if any HP still\nremains.\n\n(Also slightly tweak messaging for when this happens.)",
-      "tree": {
-        "sha": "067b1e8fa956f087ee6e2e21e77551ff0a966e31",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/067b1e8fa956f087ee6e2e21e77551ff0a966e31"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
-    "html_url": "https://github.com/crawl/crawl/commit/277963f2b94b6bf37c5195957e1a9ddfff2f10d5",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/277963f2b94b6bf37c5195957e1a9ddfff2f10d5/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "0f24d9341427f904f81212fa2d7a24054b020029",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/0f24d9341427f904f81212fa2d7a24054b020029",
-        "html_url": "https://github.com/crawl/crawl/commit/0f24d9341427f904f81212fa2d7a24054b020029"
-      }
-    ]
-  },
-  {
-    "sha": "0f24d9341427f904f81212fa2d7a24054b020029",
-    "node_id": "C_kwDOAV-JftoAKDBmMjRkOTM0MTQyN2Y5MDRmODEyMTJmYTJkN2EyNDA1NGIwMjAwMjk",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-05T21:20:18Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-22T20:00:17Z"
-      },
-      "message": "Remove the see_source argument of ouch()\n\nUsed only to control whether to reveal the name of the damage source when\ntaking notes about becoming injured (so that invisible monsters would just\nbe noted as 'something'). It turned out to be redundant with the way the\nsource's name was determined in the first place - which would result in\n'something' even when see_source was true, but the player couldn't actually\nsee it. (This was probably actually a good thing, since many places called\nit with a value of true even when the source was unseen, which would\notherwise be an information leak.)\n\nAlso, don't construct a scorefile entry every single time the player is\ninjured, just to check if a note *should* be taken about it. Instead only\ndo so if the player's HP is low enough (the default is 5%, so 'extremely\nrarely')",
-      "tree": {
-        "sha": "580c341e8c10ade4ba251ca50f67d5fd2a74c7cd",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/580c341e8c10ade4ba251ca50f67d5fd2a74c7cd"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0f24d9341427f904f81212fa2d7a24054b020029",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0f24d9341427f904f81212fa2d7a24054b020029",
-    "html_url": "https://github.com/crawl/crawl/commit/0f24d9341427f904f81212fa2d7a24054b020029",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0f24d9341427f904f81212fa2d7a24054b020029/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-        "html_url": "https://github.com/crawl/crawl/commit/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39"
-      }
-    ]
-  },
-  {
-    "sha": "dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-    "node_id": "C_kwDOAV-JftoAKGRjYjJiMjk1YzRlNjhiMzgzMWQwMzdkNzNmNjNmM2M2ZDNkNThiMzk",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-05T19:26:58Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-22T20:00:17Z"
-      },
-      "message": "Remove INSTANT_DEATH and split player death code out of ouch()\n\nNon-damage-based deaths (and 'deaths' such as winning the game) were\nhandled by calling ouch() with damage = INSTANT_DEATH. But since that isn't\n'real' damage, a lot of other code needed to exclude it from regular damage\nmodifiers.\n\nInstead, pull player death code out of ouch() into a new player_die() and\ncall this directly for non-damage-related deaths.\n\nThe few uses of INSTANT_DEATH for monsters now also call monster_die()\ndirectly instead. This has a few minor effects: instakills from Finisher,\nThroatcutter, or chopping off the last head of a hydra, no longer transmit\ndamage with Pain Bond, Injury Mirror, or Anguish equal to the monster's\nremaining HP, nor give Usk piety, cause certain on-damage effects like\nshock serpent retaliation.",
-      "tree": {
-        "sha": "2c4b47f6f99342f871fcf0a2f098558efe451960",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2c4b47f6f99342f871fcf0a2f098558efe451960"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-    "html_url": "https://github.com/crawl/crawl/commit/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/dcb2b295c4e68b3831d037d73f63f3c6d3d58b39/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "191e884c2c9ad5cf8d58052c28615f069eab51a9",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/191e884c2c9ad5cf8d58052c28615f069eab51a9",
-        "html_url": "https://github.com/crawl/crawl/commit/191e884c2c9ad5cf8d58052c28615f069eab51a9"
       }
     ]
   }

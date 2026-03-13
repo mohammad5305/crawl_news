@@ -1,5 +1,87 @@
 [
   {
+    "sha": "b759490ca20f4b13d2bde4aff72c9c81d175dad1",
+    "node_id": "C_kwDOAV-JftoAKGI3NTk0OTBjYTIwZjRiMTNkMmJkZTRhZmY3MmM5YzgxZDE3NWRhZDE",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-03-13T13:24:21Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-03-13T13:30:08Z"
+      },
+      "message": "Revert \"Fix monster extra action from torchlight being sometimes being delayed\"\n\nThe approach used for automatically queuing monsters for action when they\ngained sufficient energy was applying even to monsters outside of\nenv.mons[] (for instance, when the interlevel follower list was\nunmarshalled). This meant that if an unmarshalled monster had sufficient\naction energy, it could end up being used in handle_monsters() despite the\nfact that the memory pointed to might not be valid anymore.\n\n(A practical way to cause this in a real game is to have a fast monster\nfall down a shaft, which can put it in the follower list while still having\naction energy. It will get unmarshalled at game load, causing undefined\nbehavior to happen the next time the player acts.)\n\nWhile the general idea is good in principle, I am reverting for now until\nit can be implemented more safely (since multiple people's saves are\nunloadable in the meantime).\n\nThis reverts bce5b7a",
+      "tree": {
+        "sha": "62ac068035236fdf22b3f91c241a66a85afc5546",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/62ac068035236fdf22b3f91c241a66a85afc5546"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
+    "html_url": "https://github.com/crawl/crawl/commit/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e17ad08588ab80e56f40733f6ce45add34d53731",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/e17ad08588ab80e56f40733f6ce45add34d53731",
+        "html_url": "https://github.com/crawl/crawl/commit/e17ad08588ab80e56f40733f6ce45add34d53731"
+      }
+    ]
+  },
+  {
     "sha": "e17ad08588ab80e56f40733f6ce45add34d53731",
     "node_id": "C_kwDOAV-JftoAKGUxN2FkMDg1ODhhYjgwZTU2ZjQwNzMzZjZjZTQ1YWRkMzRkNTM3MzE",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "962f0170da6d6bc741900612de82ee667b626233",
         "url": "https://api.github.com/repos/crawl/crawl/commits/962f0170da6d6bc741900612de82ee667b626233",
         "html_url": "https://github.com/crawl/crawl/commit/962f0170da6d6bc741900612de82ee667b626233"
-      }
-    ]
-  },
-  {
-    "sha": "962f0170da6d6bc741900612de82ee667b626233",
-    "node_id": "C_kwDOAV-JftoAKDk2MmYwMTcwZGE2ZDZiYzc0MTkwMDYxMmRlODJlZTY2N2I2MjYyMzM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-09T20:44:39Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-02-22T20:10:12Z"
-      },
-      "message": "Implement the East Wind (caster)\n\nThis wind (granted by the player's highest skill being a magic school)\ncauses the player to recover a small percentage of their max MP whenever\nthey make a rampage movement and also apply a new Exposed debuff to all\nenemies within 2 spaces of themselves (both those who were already there\nand any that approach to that distance before the player's next turn, to\nmake the range feel more intuitive).\n\nMonsters who are Exposed take 35% increased damage against non-attack\nsources of damage (except poison), have -30 willpower, and the accuracy\nall beams against them is significantly increased.\n\nIn addition, player with this wind will have their Stampede state\nsustained by spellcasting (so even if they pause a rampage to cast spells,\nthey can resume trample enemies on their next move rather than getting\n'stuck').\n\nOverall, this aims to encourage casters to actually get in close to\nenemies (rather than just ping-pong back and forth between things at a\ndistance, which was often preferable for armataurs when possible), giving\nthem significantly better burst damage when they do so, and then allowing\nthem to push through enemies afterward to refill and gain space at the\nsame time. It even synergizes with wands and a number of different god\npowers (it's 'non-attack damage' rather than 'spell damage' specifically),\nwhich I think could be interesting - dive into crowds to unleash Deal Four\nDestruction or Upheaval with more damage per piety than otherwise\npossible.)\n\n-----------------\n\nExposed status icon made by regret-index, using a CC0 weapon icon by Shade.",
-      "tree": {
-        "sha": "80b51b4cfa96d398d59c9193f8695419bc476b99",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/80b51b4cfa96d398d59c9193f8695419bc476b99"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/962f0170da6d6bc741900612de82ee667b626233",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/962f0170da6d6bc741900612de82ee667b626233",
-    "html_url": "https://github.com/crawl/crawl/commit/962f0170da6d6bc741900612de82ee667b626233",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/962f0170da6d6bc741900612de82ee667b626233/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "080e5f9f322d29a8157137c027fbc149a078d640",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/080e5f9f322d29a8157137c027fbc149a078d640",
-        "html_url": "https://github.com/crawl/crawl/commit/080e5f9f322d29a8157137c027fbc149a078d640"
       }
     ]
   }

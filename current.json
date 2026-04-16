@@ -1,5 +1,251 @@
 [
   {
+    "sha": "6208fce01160350e7621a00483614e87f0bd7d33",
+    "node_id": "C_kwDOAV-JftoAKDYyMDhmY2UwMTE2MDM1MGU3NjIxYTAwNDgzNjE0ZTg3ZjBiZDdkMzM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T12:53:24Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T12:53:24Z"
+      },
+      "message": "Fix unforgetting the map losing terrain knowledge\n\nIf you forget the map and then read a scroll of revelation, this can\nresult in magic mapped squares in the map knowledge that are more up to\ndate than the same squares in the forgotten map. However, when\nunforgetting the map, we would replace the map knowledge for these\nsquares with that from the forgotten map.",
+      "tree": {
+        "sha": "331573445d53ffff34a7cdf2fff784d1ad8bbaab",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/331573445d53ffff34a7cdf2fff784d1ad8bbaab"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6208fce01160350e7621a00483614e87f0bd7d33",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6208fce01160350e7621a00483614e87f0bd7d33",
+    "html_url": "https://github.com/crawl/crawl/commit/6208fce01160350e7621a00483614e87f0bd7d33",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6208fce01160350e7621a00483614e87f0bd7d33/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9593cc5487d67e5d7352a4fca996053fc8fe457c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/9593cc5487d67e5d7352a4fca996053fc8fe457c",
+        "html_url": "https://github.com/crawl/crawl/commit/9593cc5487d67e5d7352a4fca996053fc8fe457c"
+      }
+    ]
+  },
+  {
+    "sha": "9593cc5487d67e5d7352a4fca996053fc8fe457c",
+    "node_id": "C_kwDOAV-JftoAKDk1OTNjYzU0ODdkNjdlNWQ3MzUyYTRmY2E5OTYwNTNmYzhmZTQ1N2M",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T12:13:04Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T12:13:04Z"
+      },
+      "message": "Fix revelation giving less information with map forgotten\n\nIf you read revelation with the map forgotten you wouldn't learn the\ncolours of changed terrain that you had previously seen, but if you were\nto unforget the map before reading revalation you would learn the new\ncolour of this terrain. Instead always learn the new colour of terrain\nthat you have previously seen.",
+      "tree": {
+        "sha": "f4eb9a64ddae8193f58997945071429b37237d68",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f4eb9a64ddae8193f58997945071429b37237d68"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/9593cc5487d67e5d7352a4fca996053fc8fe457c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/9593cc5487d67e5d7352a4fca996053fc8fe457c",
+    "html_url": "https://github.com/crawl/crawl/commit/9593cc5487d67e5d7352a4fca996053fc8fe457c",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/9593cc5487d67e5d7352a4fca996053fc8fe457c/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+        "html_url": "https://github.com/crawl/crawl/commit/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb"
+      }
+    ]
+  },
+  {
+    "sha": "5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+    "node_id": "C_kwDOAV-JftoAKDVhMDk3ZWQ1YjdiOGJlMmFhNzM4YTdiNTQ1Y2FmNWVlNWVlODkyZWI",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T11:20:02Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-16T11:28:21Z"
+      },
+      "message": "Fix revelation updating seen squares not redrawing\n\nIf you read relevation and it updated an out of sight square you had\nalready seen, the square wouldn't be redrawn until you reloaded the\ngame.",
+      "tree": {
+        "sha": "b4716449e47276504253583926cd14f670b4f686",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b4716449e47276504253583926cd14f670b4f686"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+    "html_url": "https://github.com/crawl/crawl/commit/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5a097ed5b7b8be2aa738a7b545caf5ee5ee892eb/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a7f40f37fe9dd2e0a7555aaef06e013890dc78ea",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/a7f40f37fe9dd2e0a7555aaef06e013890dc78ea",
+        "html_url": "https://github.com/crawl/crawl/commit/a7f40f37fe9dd2e0a7555aaef06e013890dc78ea"
+      }
+    ]
+  },
+  {
     "sha": "a7f40f37fe9dd2e0a7555aaef06e013890dc78ea",
     "node_id": "C_kwDOAV-JftoAKGE3ZjQwZjM3ZmU5ZGQyZTBhNzU1NWFhZWYwNmUwMTM4OTBkYzc4ZWE",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "1e003389bad7af3e94a0cde13016146f3b2de9d9",
         "url": "https://api.github.com/repos/crawl/crawl/commits/1e003389bad7af3e94a0cde13016146f3b2de9d9",
         "html_url": "https://github.com/crawl/crawl/commit/1e003389bad7af3e94a0cde13016146f3b2de9d9"
-      }
-    ]
-  },
-  {
-    "sha": "1e003389bad7af3e94a0cde13016146f3b2de9d9",
-    "node_id": "C_kwDOAV-JftoAKDFlMDAzMzg5YmFkN2FmM2U5NGEwY2RlMTMwMTYxNDZmM2IyZGU5ZDk",
-    "commit": {
-      "author": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2026-03-15T03:21:21Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2026-03-15T03:21:21Z"
-      },
-      "message": "Update trunk changelogs for 0.34 releases",
-      "tree": {
-        "sha": "997a69e7156c533dd137afd413ff727b984878fd",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/997a69e7156c533dd137afd413ff727b984878fd"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/1e003389bad7af3e94a0cde13016146f3b2de9d9",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/1e003389bad7af3e94a0cde13016146f3b2de9d9",
-    "html_url": "https://github.com/crawl/crawl/commit/1e003389bad7af3e94a0cde13016146f3b2de9d9",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/1e003389bad7af3e94a0cde13016146f3b2de9d9/comments",
-    "author": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-        "html_url": "https://github.com/crawl/crawl/commit/bdb83034df4ad834c57cedf923ab8f3d2d92e30b"
-      }
-    ]
-  },
-  {
-    "sha": "bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-    "node_id": "C_kwDOAV-JftoAKGJkYjgzMDM0ZGY0YWQ4MzRjNTdjZWRmOTIzYWI4ZjNkMmQ5MmUzMGI",
-    "commit": {
-      "author": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2026-03-10T13:59:09Z"
-      },
-      "committer": {
-        "name": "gammafunk",
-        "email": "gammafunk@gmail.com",
-        "date": "2026-03-15T00:08:01Z"
-      },
-      "message": "Fixes and new functions for clua cell views\n\nIn 83290745, view.cell_see_cell() was simplified to directly check the\ngrid using the caching global LOS function cell_see_cell(). This is an\ninformation leak, because it can check arbitrary grid positions (using\nplayer-relative coordinates). This commit reworks this function to be\nsimilar to the approach of its initial implementation in 306dcfe, which\nuses only player map knowledge. It also adds\nview.cell_see_cell_no_trans(), view.cell_see_cell_solid(), and\nview.cell_see_cell_solid_see(), so clua has all necessary LOS checking\nfunctions for arbitrary map squares.\n\nIt would be possible to implement these functions with the current\ncaching globallos cell_see_cell() function by expanding losfield_t to\ntwo bytes and adding new LOS types. However this would slightly increase\ncrawl's memory consumption in all games for something that will only be\nused in complicated clua scripting, hence I'm using the non-caching\napproach.\n\nNote: There may still be an information leak in these functions due to\nuse of map_bounds() with grid coordinates. This could allow clua to\ncheck for map boundaries before the player knows this. However this is a\nvery minor leak, and I'd want to do some more investigating as to a\nproper solution before reworking this aspect.",
-      "tree": {
-        "sha": "e1511cfba09757cd08ab39771e2f5f9c2672a35b",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e1511cfba09757cd08ab39771e2f5f9c2672a35b"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-    "html_url": "https://github.com/crawl/crawl/commit/bdb83034df4ad834c57cedf923ab8f3d2d92e30b",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/bdb83034df4ad834c57cedf923ab8f3d2d92e30b/comments",
-    "author": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "gammafunk",
-      "id": 6548464,
-      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/gammafunk",
-      "html_url": "https://github.com/gammafunk",
-      "followers_url": "https://api.github.com/users/gammafunk/followers",
-      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
-      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
-      "repos_url": "https://api.github.com/users/gammafunk/repos",
-      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-        "html_url": "https://github.com/crawl/crawl/commit/b759490ca20f4b13d2bde4aff72c9c81d175dad1"
-      }
-    ]
-  },
-  {
-    "sha": "b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-    "node_id": "C_kwDOAV-JftoAKGI3NTk0OTBjYTIwZjRiMTNkMmJkZTRhZmY3MmM5YzgxZDE3NWRhZDE",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-13T13:24:21Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-13T13:30:08Z"
-      },
-      "message": "Revert \"Fix monster extra action from torchlight being sometimes being delayed\"\n\nThe approach used for automatically queuing monsters for action when they\ngained sufficient energy was applying even to monsters outside of\nenv.mons[] (for instance, when the interlevel follower list was\nunmarshalled). This meant that if an unmarshalled monster had sufficient\naction energy, it could end up being used in handle_monsters() despite the\nfact that the memory pointed to might not be valid anymore.\n\n(A practical way to cause this in a real game is to have a fast monster\nfall down a shaft, which can put it in the follower list while still having\naction energy. It will get unmarshalled at game load, causing undefined\nbehavior to happen the next time the player acts.)\n\nWhile the general idea is good in principle, I am reverting for now until\nit can be implemented more safely (since multiple people's saves are\nunloadable in the meantime).\n\nThis reverts bce5b7a",
-      "tree": {
-        "sha": "62ac068035236fdf22b3f91c241a66a85afc5546",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/62ac068035236fdf22b3f91c241a66a85afc5546"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-    "html_url": "https://github.com/crawl/crawl/commit/b759490ca20f4b13d2bde4aff72c9c81d175dad1",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b759490ca20f4b13d2bde4aff72c9c81d175dad1/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "e17ad08588ab80e56f40733f6ce45add34d53731",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/e17ad08588ab80e56f40733f6ce45add34d53731",
-        "html_url": "https://github.com/crawl/crawl/commit/e17ad08588ab80e56f40733f6ce45add34d53731"
       }
     ]
   }

@@ -1,5 +1,169 @@
 [
   {
+    "sha": "287807233436df280ed97f31ba3b48f7ffebedb7",
+    "node_id": "C_kwDOAV-JftoAKDI4NzgwNzIzMzQzNmRmMjgwZWQ5N2YzMWJhM2I0OGY3ZmZlYmVkYjc",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-23T03:42:37Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-23T03:42:37Z"
+      },
+      "message": "Fix RTILE not respecting tile variant weights\n\nWhen RTILE was used to define vault rock wall tiles, it picked its tile\nvariations completely at random, ignoring the weight values defined for\nthem. If the level containing these tiles was reloading, the variations\nwould be rechoosen in a way that respected weights often resulting in\ndifferent tile variations being used.",
+      "tree": {
+        "sha": "e5ad059381e04e48b078b9590f9496c61497e2ae",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e5ad059381e04e48b078b9590f9496c61497e2ae"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/287807233436df280ed97f31ba3b48f7ffebedb7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/287807233436df280ed97f31ba3b48f7ffebedb7",
+    "html_url": "https://github.com/crawl/crawl/commit/287807233436df280ed97f31ba3b48f7ffebedb7",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/287807233436df280ed97f31ba3b48f7ffebedb7/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+        "html_url": "https://github.com/crawl/crawl/commit/2ccebcafee383c5a585bbd620becca6dc0b6cb3e"
+      }
+    ]
+  },
+  {
+    "sha": "2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+    "node_id": "C_kwDOAV-JftoAKDJjY2ViY2FmZWUzODNjNWE1ODViYmQ2MjBiZWNjYTZkYzBiNmNiM2U",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-23T01:45:05Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-04-23T01:45:05Z"
+      },
+      "message": "Fix tile variation duplicate detection\n\nIt shouldn't be possible to for example specify that the randart version\nof the BROAD_AXE tile is BROAD_AXE_MAGIC as well as specify that it is\nBROAD_AXE_RANDART. However, our duplicate tile variation detection was\nfailing to detect this which resulted in the tile applied to randart\nbroad axes being dependent on the implementation std::sort.",
+      "tree": {
+        "sha": "42a2125231fcef75f93914741112635dc77c513b",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/42a2125231fcef75f93914741112635dc77c513b"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+    "html_url": "https://github.com/crawl/crawl/commit/2ccebcafee383c5a585bbd620becca6dc0b6cb3e",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2ccebcafee383c5a585bbd620becca6dc0b6cb3e/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a3442ab72342427785c0939ac2aa527eaa525d39",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/a3442ab72342427785c0939ac2aa527eaa525d39",
+        "html_url": "https://github.com/crawl/crawl/commit/a3442ab72342427785c0939ac2aa527eaa525d39"
+      }
+    ]
+  },
+  {
     "sha": "a3442ab72342427785c0939ac2aa527eaa525d39",
     "node_id": "C_kwDOAV-JftoAKGEzNDQyYWI3MjM0MjQyNzc4NWMwOTM5YWMyYWE1MjdlYWE1MjVkMzk",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "9261420e9b7a3246420c534c70f4b09402a670ab",
         "url": "https://api.github.com/repos/crawl/crawl/commits/9261420e9b7a3246420c534c70f4b09402a670ab",
         "html_url": "https://github.com/crawl/crawl/commit/9261420e9b7a3246420c534c70f4b09402a670ab"
-      }
-    ]
-  },
-  {
-    "sha": "9261420e9b7a3246420c534c70f4b09402a670ab",
-    "node_id": "C_kwDOAV-JftoAKDkyNjE0MjBlOWI3YTMyNDY0MjBjNTM0YzcwZjRiMDk0MDJhNjcwYWI",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-03-15T09:33:49Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-03-15T10:11:08Z"
-      },
-      "message": "Fix lava from hellfire mortar not lasting long enough (CrawlOdds)\n\nIn a turn, the duration remaining for temporary terrain is decreased by\nhow long the player's action took and then the monsters act. This means\nthat the temporary lava from hellfire mortar needs to last longer than\nit takes the mortar to reach the end of the lava or the lava will\ndisappear just before the mortar acts. The lava disappearing under the\nmortar will result in any traps under the lava reappearing and being\ntriggered by the mortar. To fix this, only start the lava's duration\nticking down after the mortar goes away.\n\nFixes #5128",
-      "tree": {
-        "sha": "7d88ea1c61f1687854a45956b73548c820ee0656",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/7d88ea1c61f1687854a45956b73548c820ee0656"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/9261420e9b7a3246420c534c70f4b09402a670ab",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/9261420e9b7a3246420c534c70f4b09402a670ab",
-    "html_url": "https://github.com/crawl/crawl/commit/9261420e9b7a3246420c534c70f4b09402a670ab",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/9261420e9b7a3246420c534c70f4b09402a670ab/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "537aefdc694a020a04543c72c31465aa7db11ed6",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/537aefdc694a020a04543c72c31465aa7db11ed6",
-        "html_url": "https://github.com/crawl/crawl/commit/537aefdc694a020a04543c72c31465aa7db11ed6"
-      }
-    ]
-  },
-  {
-    "sha": "537aefdc694a020a04543c72c31465aa7db11ed6",
-    "node_id": "C_kwDOAV-JftoAKDUzN2FlZmRjNjk0YTAyMGEwNDU0M2M3MmMzMTQ2NWFhN2RiMTFlZDY",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-15T06:29:37Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-15T06:30:42Z"
-      },
-      "message": "Fix rare crashes involving Nobody/apostles being killed by polar vortex\n\nIf these monsters were killed by the damage from polar vortex while also\nbeing held aloft on top of lethal terrain, timeout_enchantments() would\nremove their flight and cause them to die in the *middle* of being revived,\nresulting in a crash.\n\nThis (mildly hacky) change allows for specifically skipping the 'drown'\nphase of removing ENCH_FLIGHT. Nobody blinks to safety afterward anyway,\nand Beogh will specifically move apostles out of harm's way, if needed.\n\n(This solution is not completely perfect, but the scenarios that still\nresult in a crash seem much more implausible and basicallly involve no\nhabitable terrain nearby at all.)",
-      "tree": {
-        "sha": "136d06264dc5ee736f160feeecafe742c7b5416f",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/136d06264dc5ee736f160feeecafe742c7b5416f"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/537aefdc694a020a04543c72c31465aa7db11ed6",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/537aefdc694a020a04543c72c31465aa7db11ed6",
-    "html_url": "https://github.com/crawl/crawl/commit/537aefdc694a020a04543c72c31465aa7db11ed6",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/537aefdc694a020a04543c72c31465aa7db11ed6/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "3c4c6043650241447851dd20f27aa545412ec63a",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/3c4c6043650241447851dd20f27aa545412ec63a",
-        "html_url": "https://github.com/crawl/crawl/commit/3c4c6043650241447851dd20f27aa545412ec63a"
       }
     ]
   }

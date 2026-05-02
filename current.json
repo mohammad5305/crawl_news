@@ -1,5 +1,251 @@
 [
   {
+    "sha": "02af3d50c8ca72feb466625fcf3f7fdd5e477b9d",
+    "node_id": "C_kwDOAV-JftoAKDAyYWYzZDUwYzhjYTcyZmViNDY2NjI1ZmNmM2Y3ZmRkNWU0NzdiOWQ",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-02T16:51:28Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-02T16:51:28Z"
+      },
+      "message": "Improve vault itemspec error handling, fix found errors (DracoOmega)\n\nCrawl's item specification and definition error handling has had\nextremely significant errors in it since 0.16. The way it parses items in\na list will silently pass by incorrect entries as long as there is another\nvalid item further in that list (since the error message it would report\ngets replaced by the next work not having any errors). While failing\nsilently and gracefully allows vaults with some working definitions to\nstill place the working part of an item list, it's very noticeably against\nthe policy of Crawl not loading from other significant vault errors, and\nit is exceedingly bad policy to completely hide failing item entries from\nanybody working on Crawl for relatively indefinite periods of development.\n\nThis commit, with some assistance from DracoOmega, makes Crawl print\nerrors instead of loading whenever it actually parses that an incorrect\nitem has been passed to vault creation in a vault. I have also thus\ngone through and fixed every incorrect item specification Crawl reports:\nfor the most part, this only fixes minor errors, but most notably it\nreintroduces small chances of getting multiple ally scrolls in each Trove\npost-rework and also catches the ziggurat potion of mutation syntax error\nintroduced in c79536f.\n\n(Our limited means of error handling means that, unfortunately, we can't\nhave Crawl cleanly present every vault's syntax errors at once. It also\nmeans we can't really try to, say, have Crawl report these issues to users\nand then load in other valid item specifications or other vaults entirely\nwithout stopping play dead. Further adjustments here may be beneficial,\nbut for now, this falling into the same means of handling as other .des\nsyntax errors is fairly more consistent and helps catch more actual\nerrors.)",
+      "tree": {
+        "sha": "acbf990af22d09893bd893eddfe5387e730ec2f9",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/acbf990af22d09893bd893eddfe5387e730ec2f9"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/02af3d50c8ca72feb466625fcf3f7fdd5e477b9d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/02af3d50c8ca72feb466625fcf3f7fdd5e477b9d",
+    "html_url": "https://github.com/crawl/crawl/commit/02af3d50c8ca72feb466625fcf3f7fdd5e477b9d",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/02af3d50c8ca72feb466625fcf3f7fdd5e477b9d/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2d096d4ccb7f05c2c937b693780d83771afa04ed",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/2d096d4ccb7f05c2c937b693780d83771afa04ed",
+        "html_url": "https://github.com/crawl/crawl/commit/2d096d4ccb7f05c2c937b693780d83771afa04ed"
+      }
+    ]
+  },
+  {
+    "sha": "2d096d4ccb7f05c2c937b693780d83771afa04ed",
+    "node_id": "C_kwDOAV-JftoAKDJkMDk2ZDRjY2I3ZjA1YzJjOTM3YjY5Mzc4MGQ4Mzc3MWFmYTA0ZWQ",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-01T12:17:52Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-01T12:17:52Z"
+      },
+      "message": "Tweak some descriptions\n\n * Metal walls no longer mention they're bluish-grey- quite a few vaults\n   recolour them as is, and the default metal wall tiles that the vast\n   majority of players have seen for the past decade are not blue in any\n   fashion.\n\n * Fungus in Gulch are now described as mauve instead of grey, which\n   should be usefully ambigious enough to match both types of fungus\n   tile colour there while being substantially more accurate than calling\n   them \"grey\".\n\n * Athame now are described as knives rather than daggers, to reduce the\n   chance of misinterpretting them as getting the dagger-exclusive extra\n   stabbing damage bonus, and as newer weapons people may otherwise\n   misinterpret.",
+      "tree": {
+        "sha": "3278fb2642c4c74e8f1134c8e3e2f51189901372",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3278fb2642c4c74e8f1134c8e3e2f51189901372"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/2d096d4ccb7f05c2c937b693780d83771afa04ed",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/2d096d4ccb7f05c2c937b693780d83771afa04ed",
+    "html_url": "https://github.com/crawl/crawl/commit/2d096d4ccb7f05c2c937b693780d83771afa04ed",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/2d096d4ccb7f05c2c937b693780d83771afa04ed/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5a90629c15addf32683a16c8a0e5614884e903b9",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/5a90629c15addf32683a16c8a0e5614884e903b9",
+        "html_url": "https://github.com/crawl/crawl/commit/5a90629c15addf32683a16c8a0e5614884e903b9"
+      }
+    ]
+  },
+  {
+    "sha": "5a90629c15addf32683a16c8a0e5614884e903b9",
+    "node_id": "C_kwDOAV-JftoAKDVhOTA2MjljMTVhZGRmMzI2ODNhMTZjOGEwZTU2MTQ4ODRlOTAzYjk",
+    "commit": {
+      "author": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-01T10:47:00Z"
+      },
+      "committer": {
+        "name": "regret-index",
+        "email": "cloudofregret@hotmail.com",
+        "date": "2026-05-01T10:47:00Z"
+      },
+      "message": "Give sewage sovereigns immunity to Porkalator (tekkud)\n\nThe odds of dragging a bound Kirke far enough to see this were\nincredulously unlikely to come up in a thousand games, but it is\nconsistent with the Porkalator immunity hell hogs already have, so it might\nas well exist.",
+      "tree": {
+        "sha": "78eb78409936a27b835d210a91efaf2cfe12b953",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/78eb78409936a27b835d210a91efaf2cfe12b953"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5a90629c15addf32683a16c8a0e5614884e903b9",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/5a90629c15addf32683a16c8a0e5614884e903b9",
+    "html_url": "https://github.com/crawl/crawl/commit/5a90629c15addf32683a16c8a0e5614884e903b9",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5a90629c15addf32683a16c8a0e5614884e903b9/comments",
+    "author": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "regret-index",
+      "id": 17419504,
+      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/regret-index",
+      "html_url": "https://github.com/regret-index",
+      "followers_url": "https://api.github.com/users/regret-index/followers",
+      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
+      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
+      "organizations_url": "https://api.github.com/users/regret-index/orgs",
+      "repos_url": "https://api.github.com/users/regret-index/repos",
+      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/regret-index/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b14e334c730fdf035bb291f3800f4597fa88c802",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b14e334c730fdf035bb291f3800f4597fa88c802",
+        "html_url": "https://github.com/crawl/crawl/commit/b14e334c730fdf035bb291f3800f4597fa88c802"
+      }
+    ]
+  },
+  {
     "sha": "b14e334c730fdf035bb291f3800f4597fa88c802",
     "node_id": "C_kwDOAV-JftoAKGIxNGUzMzRjNzMwZmRmMDM1YmIyOTFmMzgwMGY0NTk3ZmE4OGM4MDI",
     "commit": {
@@ -7950,252 +8196,6 @@
         "sha": "96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
         "url": "https://api.github.com/repos/crawl/crawl/commits/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
         "html_url": "https://github.com/crawl/crawl/commit/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e"
-      }
-    ]
-  },
-  {
-    "sha": "96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
-    "node_id": "C_kwDOAV-JftoAKDk2YmMyZGMxNmUyYjExZjgwYjA4ZDUzOWU2OGZiNmYxMjhiZmE3NmU",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-03-22T13:43:25Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-03-22T14:46:52Z"
-      },
-      "message": "Mini quick newer vaults(?) review\n\nWorthy of note:\n\n * When troves were reworked to be theme-first in 3911a2f, the armour\n   placements in each trove stopped using much of acquire armour, which\n   innately had a very high chance for nagas and footaurs to get bardings\n   (50% if they hadn't seen one yet, 25% after seeing each one). To\n   correct this, troves matching various barding egos (fire and cold\n   resistance in the Fire and Ice Troves, flying in the Air Trove, earth\n   enchancement in the Earth Trove, stealth in the Hexes Trove) now have\n   a ~25% chance per armour placement to place ego / randart bardings if\n   one is a naga or gale centaur (though not for Sphinx Form characters,\n   due to it being awkward to guess how long those characters want to even\n   stay in such anyway). Alongside the Abyss-themed trove already using\n   \"acquire armour\" itemspecs, this gives a ~23% chance for a naga or gale\n   centaur to get at least one barding from a Trove (compared to the\n   previous Trove chance of ~28% if one hasn't seen any bardings before\n   and a ~21% chance otherwise).\n\n   * (Bardings being an uncommon notable midgame power-spike as tangibly\n      different texture from other slot drops is a feature for the\n      barding-wearing species and not a bug, but Troves are in midgame\n      and come with a lot of other upsides and cost downsides as is.)\n\n * The Xom bazaar also now has a 10% chance to contain a barding randart\n   with a guaranteed downside of rF-, rC-, or Will-, because desperate\n   players caring about an offering of  mixed upsides and downsides is a\n   decent joke in-and-of-itself. (It probably doesn't mean a lot in the\n   long course of a run, since Xom's random acquirements can roll bardings\n   reasonably decently anyway, but anything more for people to pick and\n   choose in the Xom bazaar is good texture.)\n\n * cheibrodos_lair_end_hotspot no longer has a slim chance for a\n   mountainshell anymore, as the runed door made getting close too easy,\n   and a more appropriate Lair end vault using the monster is slated for\n   later in this version after another new Lair monster is added.\n\n * gammafunk_necropolis_ghost_cemetery no longer can place four or five\n   ghosts pre-Lair, and has better rewards for the difficulty of a\n   guaranteed two player ghosts at minimum.",
-      "tree": {
-        "sha": "07c414ed37afd06ff19b12d12e89f6a071eefda0",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/07c414ed37afd06ff19b12d12e89f6a071eefda0"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
-    "html_url": "https://github.com/crawl/crawl/commit/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/96bc2dc16e2b11f80b08d539e68fb6f128bfa76e/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-        "html_url": "https://github.com/crawl/crawl/commit/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f"
-      }
-    ]
-  },
-  {
-    "sha": "70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-    "node_id": "C_kwDOAV-JftoAKDcwYTEzNGI3OWM3Y2ZjNTk3OGQzYjVmZDEwZTZmZjdlNzIyYjJkMWY",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-03-21T23:35:33Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-03-22T13:43:34Z"
-      },
-      "message": "Various tile replacements and edits, coldish undeadish edition\n\n * I've made new splinterfrost barricades tiles, compositing their\n   previous use of DracoOmega's edits of ontoclasm's edits of Bloax's\n   metal wall tiles with a CC0 icon by 7Soul1. This makes them look\n   less like modified normal walls and much closer to the spell icon's\n   emphasis of icy spiked sandwiched between metal, which even beyond\n   the visual distinction helps emphasize they're not true walls for\n   many other mechanical purposes.\n\n * After working on a future derived undead type for miscast reworks and\n   Hell-Pan Roulette variety additions using spectral monster tiles, I\n   have converted them back into the original type to help with quite a\n   few missing spectral tiles, alongside a new texturing style so they\n   come off as more of \"ghostly shimmers\" than the current \"flat one-not\n   monochromatic silhouette\". (This also comes with a fair bit of bespoke\n   choices even beyond the current other derived undead tiles, in part\n   due the number of monster types that can't be normally zombified or\n   skeletalized, and doesn't affect any of the orcs from Vanquished\n   Vanguard due to orc tier being lost in this conversion otherwise.)\n\n   Each of the current-extant ones uses the original spectral monster tile\n   set ontoclasm made, while the additional ones mix them with other parts:\n   * Scorpion spectres: Ontoclasm's ant spectre and lizard spectres.\n   * Turtle spectres: Jpeg's ancient snapping turtle.\n   * Constricting snake spectres: Roctavian's edit of ontoclasm's anaconda.\n   * Bird spectres: Roctavian's original caustic shrike + zombie harpy\n                    edit of ontoclasm's harpy tile.\n   * Elephant spectres: Poor_Yurik's original elephant tile.\n   * Winged quadruped spectres: Ontoclasm's quadruped and dragon spectres.\n   * Iron dragon spectres: Ontoclasm's spectral dragon tile.\n   * Quicksilver dragon spectres: Ontoclasm's black mamba + spectral\n                                  dragon tiles.\n   * Goblin spectres: Poor_Yurik's old goblin tile + ontoclasm's\n                      generic small spectral tile.\n   * Spriggan spectres: Poor_Yurik's old spriggan tiles.\n   * Elf spectres: Sastreii's elf zombie tile + Denzi's old deep elf\n                   annihilator tile.\n   * Tengu spectres: roctavian's edits of totaku's original tengu tile\n                     + ontoclasm's current generic small spectral tile.\n   * Draconian spectres: Mitsuhiro Itakura's old draconian tiles.\n   * Two-headed spectres: Ontoclasm's generic large and small spectres.\n   * Elemental giant spectres: ontoclasm's generic large spectre +\n                               roctavian's salamander flamebrand +\n                               Co's old fire giant.\n   * Juggernaut spectres: Ontoclasm's juggernaut and generic\n                          large spectre tiles.\n   * Winged humanoid spectres: Roctavian's original caustic shrike +\n                               ontoclasm's bee and generic small spectres.\n   * Holy winged humanoid spectres: ontoclasm's bat and generic\n                                    small spectre tiles.\n   * Minor demon spectres: Curio's ancient iron imp and ontoclasm's\n                           generic small spectral tile.\n   * Common demon spectres: roctavian's blue devil + Denzi's old smoke\n                            demon and hairy devil + Ontoclasm's hydra\n                            and generic small spectres.\n   * Greater demon spectres: roctavian's unused balrug tile + ontoclasm's\n                             generic large and small spectres.\n   * Orb spectres: Sastreii's orb zombie and simulacrum.\n   * Unseen horror / orb guardian spectres: Sastreii's X-shaped simulacrum.\n\n * A stray pixel on roctavian's current bog body tile has been fixed.",
-      "tree": {
-        "sha": "b5e92ff79e2f455e9bc809476e3c9d769efe35e8",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b5e92ff79e2f455e9bc809476e3c9d769efe35e8"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-    "html_url": "https://github.com/crawl/crawl/commit/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/70a134b79c7cfc5978d3b5fd10e6ff7e722b2d1f/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-        "html_url": "https://github.com/crawl/crawl/commit/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8"
-      }
-    ]
-  },
-  {
-    "sha": "8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-    "node_id": "C_kwDOAV-JftoAKDhlNDNhMDRkZDVhZDFlZGJkMzU3ZWNhMTgwNGUwMWNjYWNhYTBiZDg",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-22T13:18:08Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-03-22T13:28:43Z"
-      },
-      "message": "Don't revert lava beneath an active hellfire mortar (WizardIke)\n\nThis is entirely cosmetic now (and only possible to encounter with very\nspecific positioning), but it looks slightly odd, so seems reasonable to\navoid.",
-      "tree": {
-        "sha": "0ea93359c3e67758bd360d25f1766f04a573bbc3",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0ea93359c3e67758bd360d25f1766f04a573bbc3"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-    "html_url": "https://github.com/crawl/crawl/commit/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8e43a04dd5ad1edbd357eca1804e01ccacaa0bd8/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "86716cf63ea004f573491c0fb985c6eb7eb5b761",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/86716cf63ea004f573491c0fb985c6eb7eb5b761",
-        "html_url": "https://github.com/crawl/crawl/commit/86716cf63ea004f573491c0fb985c6eb7eb5b761"
       }
     ]
   }

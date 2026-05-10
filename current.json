@@ -1,5 +1,333 @@
 [
   {
+    "sha": "eceda783005fc1fdd6e7edde5d382cbb036938d2",
+    "node_id": "C_kwDOAV-JftoAKGVjZWRhNzgzMDA1ZmMxZmRkNmU3ZWRkZTVkMzgyY2JiMDM2OTM4ZDI",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T11:49:42Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T11:49:42Z"
+      },
+      "message": "Fix more cases of spells aiming at targets they can't hit\n\nIf you tried casting a spell with no tageter at a monster you can't hit\nor at a spot near one, going back into the spell targeter would default\nto aiming at the monster you can't hit.",
+      "tree": {
+        "sha": "3c5fad218b46989ebde79a409c80196b930b4881",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3c5fad218b46989ebde79a409c80196b930b4881"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/eceda783005fc1fdd6e7edde5d382cbb036938d2",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/eceda783005fc1fdd6e7edde5d382cbb036938d2",
+    "html_url": "https://github.com/crawl/crawl/commit/eceda783005fc1fdd6e7edde5d382cbb036938d2",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/eceda783005fc1fdd6e7edde5d382cbb036938d2/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+        "html_url": "https://github.com/crawl/crawl/commit/695dbf0b99eb1530d2dc211a3dd351cdeaab4912"
+      }
+    ]
+  },
+  {
+    "sha": "695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+    "node_id": "C_kwDOAV-JftoAKDY5NWRiZjBiOTllYjE1MzBkMmRjMjExYTNkZDM1MWNkZWFhYjQ5MTI",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-05-04T12:43:40Z"
+      },
+      "committer": {
+        "name": "WizardIke",
+        "email": "ike299792458@gmail.com",
+        "date": "2026-05-10T11:23:05Z"
+      },
+      "message": "Fix some spells aiming at monsters they can't hit\n\nFollowing b0ab3d4, spells with no targeter (e.g. haunt) would sometimes\naim at monsters they can't hit, because we now consider targets even if\nthey are blocked by transparent obstructions.",
+      "tree": {
+        "sha": "e50c9d936cb38eebfd7d3a5973652065f74f08d4",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/e50c9d936cb38eebfd7d3a5973652065f74f08d4"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+    "html_url": "https://github.com/crawl/crawl/commit/695dbf0b99eb1530d2dc211a3dd351cdeaab4912",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/695dbf0b99eb1530d2dc211a3dd351cdeaab4912/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+        "html_url": "https://github.com/crawl/crawl/commit/04d9541819b313e1ef17ea28ee5f0635b9e0eba5"
+      }
+    ]
+  },
+  {
+    "sha": "04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+    "node_id": "C_kwDOAV-JftoAKDA0ZDk1NDE4MTliMzEzZTFlZjE3ZWEyOGVlNWYwNjM1YjllMGViYTU",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T09:52:40Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T09:52:40Z"
+      },
+      "message": "Fix due_index_antique_fridge placing a \"long blade\" (Ogregutan)\n\nIt was presumably meant to place a \"long sword\" as a \"long blade\" isn't\na valid item.",
+      "tree": {
+        "sha": "854e99000c6cf2e45697f3b4b1fb2e9850d5a326",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/854e99000c6cf2e45697f3b4b1fb2e9850d5a326"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+    "html_url": "https://github.com/crawl/crawl/commit/04d9541819b313e1ef17ea28ee5f0635b9e0eba5",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/04d9541819b313e1ef17ea28ee5f0635b9e0eba5/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "86413970cf05d46365fca23b68b1c3deff9e558c",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/86413970cf05d46365fca23b68b1c3deff9e558c",
+        "html_url": "https://github.com/crawl/crawl/commit/86413970cf05d46365fca23b68b1c3deff9e558c"
+      }
+    ]
+  },
+  {
+    "sha": "86413970cf05d46365fca23b68b1c3deff9e558c",
+    "node_id": "C_kwDOAV-JftoAKDg2NDEzOTcwY2YwNWQ0NjM2NWZjYTIzYjY4YjFjM2RlZmY5ZTU1OGM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T09:05:54Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-10T09:05:54Z"
+      },
+      "message": "Fix monsters dying to barbs sometimes crashing\n\nIf a monster died from barbs when it moved. It would have its position\nset to (0, 0). We would then calculate its old position based on its\ncurrent position and how it had moved (e.g. if it had moved right one\nsquare we would calculate its old position as (-1, 0)). We would then\npass this old position to monster::check_redraw which would crash if it\nwas out of the map bounds. Instead, only run the movement effects after\ncalling monster::check_redraw so that the monster doesn't die to barb\ndamage until after it has been redrawn.",
+      "tree": {
+        "sha": "9b6b558530fab4390232f79be7ef5e8d90263ede",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/9b6b558530fab4390232f79be7ef5e8d90263ede"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/86413970cf05d46365fca23b68b1c3deff9e558c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/86413970cf05d46365fca23b68b1c3deff9e558c",
+    "html_url": "https://github.com/crawl/crawl/commit/86413970cf05d46365fca23b68b1c3deff9e558c",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/86413970cf05d46365fca23b68b1c3deff9e558c/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f9a08967ab40f7ede48ef2f096a27da0c60ec5d5",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/f9a08967ab40f7ede48ef2f096a27da0c60ec5d5",
+        "html_url": "https://github.com/crawl/crawl/commit/f9a08967ab40f7ede48ef2f096a27da0c60ec5d5"
+      }
+    ]
+  },
+  {
     "sha": "f9a08967ab40f7ede48ef2f096a27da0c60ec5d5",
     "node_id": "C_kwDOAV-JftoAKGY5YTA4OTY3YWI0MGY3ZWRlNDhlZjJmMDk2YTI3ZGEwYzYwZWM1ZDU",
     "commit": {
@@ -7868,334 +8196,6 @@
         "sha": "030a0ecb6a5a1333a59931a1048235c31b7d83dd",
         "url": "https://api.github.com/repos/crawl/crawl/commits/030a0ecb6a5a1333a59931a1048235c31b7d83dd",
         "html_url": "https://github.com/crawl/crawl/commit/030a0ecb6a5a1333a59931a1048235c31b7d83dd"
-      }
-    ]
-  },
-  {
-    "sha": "030a0ecb6a5a1333a59931a1048235c31b7d83dd",
-    "node_id": "C_kwDOAV-JftoAKDAzMGEwZWNiNmE1YTEzMzNhNTk5MzFhMTA0ODIzNWMzMWI3ZDgzZGQ",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-04-08T05:04:26Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-04-08T05:04:26Z"
-      },
-      "message": "Fix a crash when returning to a level with vengeance targets (kegye)\n\nIf you left a level with vengeance targets and then gained enough piety\nto end vengeance and then returned to the level it was possible for\nvengeance target monsters to die before the daction to clean up old\nvengeance targets was run which resulting in a crash. This could happen\nin at least the following two situations. First, if the vengeance\ntargets were Mara clones they would die from timing out when you entered\nthe level which happened before running dactions. Second, if the\nvengeance targets were Pikel's lemures and you had killed Pikel off the\nlevel while still under vengeance. This would cause the daction to kill\noff Pikel's lemures to run before the daction to clean up vengeance\ntargets as dactions run in the order that they are added to the daction\nqueue.\n\nTo fix this, don't count a monster as a vengeance target unless its\nvengeance target enchantment was added by the current vengeance (we\nstore which number vengeance the enchantment was added by in its degree\nfield already).\n\nFixes #5187",
-      "tree": {
-        "sha": "4c3b2a69ae445d28309f9b851ee1d48ccd85ba0d",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4c3b2a69ae445d28309f9b851ee1d48ccd85ba0d"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/030a0ecb6a5a1333a59931a1048235c31b7d83dd",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/030a0ecb6a5a1333a59931a1048235c31b7d83dd",
-    "html_url": "https://github.com/crawl/crawl/commit/030a0ecb6a5a1333a59931a1048235c31b7d83dd",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/030a0ecb6a5a1333a59931a1048235c31b7d83dd/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-        "html_url": "https://github.com/crawl/crawl/commit/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b"
-      }
-    ]
-  },
-  {
-    "sha": "7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-    "node_id": "C_kwDOAV-JftoAKDdjYTlhM2ViNWIxY2ZlZTI0NzJjMDhjMGNmZjY2ZDAxYzMyMjAxNmI",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-04-07T12:08:13Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2026-04-07T12:08:13Z"
-      },
-      "message": "Fix a spurious \"rune reappears\" message (#5179)\n\nWhen the abyss map recentred itself around the player, we were detecting\nthis as the rune moving, and messaging the player even though nothing\nhad actually changed.",
-      "tree": {
-        "sha": "2fe07c7525c2e4a1075761ad754641829d9a7b71",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2fe07c7525c2e4a1075761ad754641829d9a7b71"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJp1POtCRC1aQ7uu5UhlAAA0Y8QAJ/y8PoZc2wSJUZTAp4mQ6I3\nIPkeNXpd8coFQqynzwZOID8popZP/Pc+xrfERWWttzOVCq9cABfYjINkPuhufXvd\nrmKue4AtI69Ka0uhrju5+LBdRUumDTNo7jR+ZcGiBpwwu4Ou1k1HARv1+dNNNjxt\n192tUsS5fVTYyYI/JR8wAffk6zeiaJVFs7SGYlN9gtMIYoA1ywt5y+phwVFSgSHn\nlx+76RDaMo9kh1RClinkA9vC1MakHbN/KKnnBQuyXTGe3iUwyc6MNApLxWjVPfyj\nakOGvKfFqOAqczI7NpzmhheBh6OHAcG2DJBwBibwI/JNZOn5A3NW+Ju38L8QOyXm\nnfzFvR6AX+4FqsksgVfk+LYB0mZYdRR1gY3C5ksn7HfPTB2BuOrJ11FYvLUfzWMh\nZ8GqfAewVAUXFAE6tXNbFmMWAOBbfkw5vbGBoVzj2e+9w+ETva5Gk9MDWLIGAC+0\ncX3f7wFnDcCHUCGVdgNj+iZ6DgwsZN6eXByhmOG1ClWnR2TXUxJXJ0sWk4Onh/Jd\nWt01F0/Vu85/BcScJDcCvyltikcxJWwLhZF0Zqt8GFn6GAp1MOxNWvQJrLTZ0VCi\nFnROH+GeFGcUHeb7iqxfzImcFSWljUzt5SiLvE+mTRqu35qYKv7dHN5obIPm8HMg\nl59yJc4S50B9QjVY+Cq8\n=MjOe\n-----END PGP SIGNATURE-----\n",
-        "payload": "tree 2fe07c7525c2e4a1075761ad754641829d9a7b71\nparent 8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec\nauthor CrawlOdds <crawlodds@gmail.com> 1775563693 +0100\ncommitter GitHub <noreply@github.com> 1775563693 +1200\n\nFix a spurious \"rune reappears\" message (#5179)\n\nWhen the abyss map recentred itself around the player, we were detecting\nthis as the rune moving, and messaging the player even though nothing\nhad actually changed.",
-        "verified_at": "2026-04-07T12:08:14Z"
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-    "html_url": "https://github.com/crawl/crawl/commit/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7ca9a3eb5b1cfee2472c08c0cff66d01c322016b/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-        "html_url": "https://github.com/crawl/crawl/commit/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec"
-      }
-    ]
-  },
-  {
-    "sha": "8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-    "node_id": "C_kwDOAV-JftoAKDhjODc4YTZjNWZiNWIxN2Q2MjZjZjRmYzBjZGQ2NTBiOTZkZTkwZWM",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-04-06T22:22:59Z"
-      },
-      "committer": {
-        "name": "GitHub",
-        "email": "noreply@github.com",
-        "date": "2026-04-06T22:22:59Z"
-      },
-      "message": "Warn for riding crocodiles into traps (#4924)\n\nThe crocodiles were sometimes *too* surprising.",
-      "tree": {
-        "sha": "232f70b080c9ee61082c57ac8c0d653b225288e7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/232f70b080c9ee61082c57ac8c0d653b225288e7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-      "comment_count": 0,
-      "verification": {
-        "verified": true,
-        "reason": "valid",
-        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJp1DJDCRC1aQ7uu5UhlAAAFlAQAEb8/u+e35lmC8Ndc6g9ysAv\ns4XHaSuAmDyUdN5jwfwwVvf6APC1p2Jq31u5tRt88HRpBN6C9JHEbkxXlWNUQ4e1\nCDKzNu4j7xPseGKdJt0SqETPb+2UlO+T0RyCVUyQCy/hsUg9+uZd0vjE84NANYR+\nF2aUq/U8fl0Y6bOWu1Icn6VsSGVX+LDf5wJ4f0E07jYBpMRg62LHVZPaKxW3Ahbg\nu3rxj2FItDAe7i/SqsVY+09bPE023Fuiy67LiIaT1XPsDvFYgBlLYRGi7L1DIdy9\nuHNkk8DJ1vSADUUSp3WlLGfie4j0exvwW0r1uRWAug1nFFYyRWBBTRr1Yxe3MfEq\nZHD8q3gFybnMB3H9zwoq1EJdMWxo8Tu/txEVxP8KVeb6m2u6KkHQKlP7aZ/Wmoot\nB+lkf6AuAxFWELzrQH9WngGT4eOWWUReak1glUZsPGNhFC9HNXT6DGukkYcyOdmg\nAh/CCkWOlJH0n6ihKpORph1XFXshpy+f6ihs7Lk1aRXi2pAht07jrpsD01V0TG3M\noVXa7EklTaspWYC90liNEfNjOik4TLzFk5UEJIl1QKIf2NIuxjP6WJDsxEsLytMh\n5n5w11EDPUGNNUIAUzzAd0qqReT7RaiHQ3l3S8CmMPCDVll0WdSlHZaUmjxqvgby\n3sbdi1e2rHlipKoA7VUM\n=9HAG\n-----END PGP SIGNATURE-----\n",
-        "payload": "tree 232f70b080c9ee61082c57ac8c0d653b225288e7\nparent f9e06672e492112214d3eb06629e27c47ed457ff\nauthor CrawlOdds <crawlodds@gmail.com> 1775514179 +0100\ncommitter GitHub <noreply@github.com> 1775514179 +1200\n\nWarn for riding crocodiles into traps (#4924)\n\nThe crocodiles were sometimes *too* surprising.",
-        "verified_at": "2026-04-06T22:23:00Z"
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-    "html_url": "https://github.com/crawl/crawl/commit/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/8c878a6c5fb5b17d626cf4fc0cdd650b96de90ec/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "web-flow",
-      "id": 19864447,
-      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/web-flow",
-      "html_url": "https://github.com/web-flow",
-      "followers_url": "https://api.github.com/users/web-flow/followers",
-      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
-      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
-      "organizations_url": "https://api.github.com/users/web-flow/orgs",
-      "repos_url": "https://api.github.com/users/web-flow/repos",
-      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/web-flow/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f9e06672e492112214d3eb06629e27c47ed457ff",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f9e06672e492112214d3eb06629e27c47ed457ff",
-        "html_url": "https://github.com/crawl/crawl/commit/f9e06672e492112214d3eb06629e27c47ed457ff"
-      }
-    ]
-  },
-  {
-    "sha": "f9e06672e492112214d3eb06629e27c47ed457ff",
-    "node_id": "C_kwDOAV-JftoAKGY5ZTA2NjcyZTQ5MjExMjIxNGQzZWIwNjYyOWUyN2M0N2VkNDU3ZmY",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-04-03T19:33:33Z"
-      },
-      "committer": {
-        "name": "WizardIke",
-        "email": "ike299792458@gmail.com",
-        "date": "2026-04-04T21:43:47Z"
-      },
-      "message": "Fix a zero division error in describing monster hits\n\nWhen our EV was between 0 and 1, we were dividing by 0.\n\nThis displayed hit chances like 0% and -MAX_INT%.",
-      "tree": {
-        "sha": "0053f343ba22f9f257097b2874fec093ae9cfa11",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/0053f343ba22f9f257097b2874fec093ae9cfa11"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f9e06672e492112214d3eb06629e27c47ed457ff",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/f9e06672e492112214d3eb06629e27c47ed457ff",
-    "html_url": "https://github.com/crawl/crawl/commit/f9e06672e492112214d3eb06629e27c47ed457ff",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f9e06672e492112214d3eb06629e27c47ed457ff/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "859e8e3ba0ee06dbb1f0c94883075464fe6de16b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/859e8e3ba0ee06dbb1f0c94883075464fe6de16b",
-        "html_url": "https://github.com/crawl/crawl/commit/859e8e3ba0ee06dbb1f0c94883075464fe6de16b"
       }
     ]
   }

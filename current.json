@@ -1,5 +1,87 @@
 [
   {
+    "sha": "092a1457826e80967c40a55b3df2515380666bb7",
+    "node_id": "C_kwDOAV-JftoAKDA5MmExNDU3ODI2ZTgwOTY3YzQwYTU1YjNkZjI1MTUzODA2NjZiYjc",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-19T11:05:11Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-05-19T11:05:11Z"
+      },
+      "message": "Fix floors under features sometimes not using LFLOORTILE (regret-⸸nde※)\n\nWhen a vault placed a feature with a custom tile but didn't set a custom\ntile for the floor under the feature, the floor under the feature would\nuse the default tile for floors in the branch even if the vault had its\nown default floor tile using LFLOORTILE. This is because the default\nfloor tile would be set to the one for the branch and then we would\napply custom tiles to features which called tile_init_flavour to choose\nthe tile varient but had the unintended side effect of setting the floor\ntile to the default floor tile if it hadn't been set yet, we would then\nset the default floor tile to the one defined by the vault using\nLFLOORTILE and then we would call tile_init_flavour for every square to\nset its floor tile to the default floor tile if it hadn't been set yet.\n\nTo fix this, we can remove the call to tile_init_flavour from where we\napply custom tiles to features as the tile varient will be choosen when\nwe call tile_init_flavour on every square anyway.",
+      "tree": {
+        "sha": "a3d4be8a0c2bcfe9d3f961534faaa532d6253a9d",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a3d4be8a0c2bcfe9d3f961534faaa532d6253a9d"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/092a1457826e80967c40a55b3df2515380666bb7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/092a1457826e80967c40a55b3df2515380666bb7",
+    "html_url": "https://github.com/crawl/crawl/commit/092a1457826e80967c40a55b3df2515380666bb7",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/092a1457826e80967c40a55b3df2515380666bb7/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7bcd43b1a142e457447b75315f010cc71562e1f5",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/7bcd43b1a142e457447b75315f010cc71562e1f5",
+        "html_url": "https://github.com/crawl/crawl/commit/7bcd43b1a142e457447b75315f010cc71562e1f5"
+      }
+    ]
+  },
+  {
     "sha": "7bcd43b1a142e457447b75315f010cc71562e1f5",
     "node_id": "C_kwDOAV-JftoAKDdiY2Q0M2IxYTE0MmU0NTc0NDdiNzUzMTVmMDEwY2M3MTU2MmUxZjU",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "b0ab3d485ac2a7af580034166c0d59d54c820397",
         "url": "https://api.github.com/repos/crawl/crawl/commits/b0ab3d485ac2a7af580034166c0d59d54c820397",
         "html_url": "https://github.com/crawl/crawl/commit/b0ab3d485ac2a7af580034166c0d59d54c820397"
-      }
-    ]
-  },
-  {
-    "sha": "b0ab3d485ac2a7af580034166c0d59d54c820397",
-    "node_id": "C_kwDOAV-JftoAKGIwYWIzZDQ4NWFjMmE3YWY1ODAwMzQxNjZjMGQ1OWQ1NGM4MjAzOTc",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-03-11T19:33:57Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-04-13T02:52:04Z"
-      },
-      "message": "Allow autoaiming explosions at targets we can't hit directly\n\nWhen targets can be hit by an explosion, but not by a direct shot, we\nwere marking spells as useless and not autoaiming. This fixes this by\nchanging some visibility checks to use default visibility.",
-      "tree": {
-        "sha": "04c5378bd454976e8cc7d3234d8af142f39d0759",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/04c5378bd454976e8cc7d3234d8af142f39d0759"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b0ab3d485ac2a7af580034166c0d59d54c820397",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/b0ab3d485ac2a7af580034166c0d59d54c820397",
-    "html_url": "https://github.com/crawl/crawl/commit/b0ab3d485ac2a7af580034166c0d59d54c820397",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b0ab3d485ac2a7af580034166c0d59d54c820397/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f34de8fe481039af76533236cbbc403388b4751f",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f34de8fe481039af76533236cbbc403388b4751f",
-        "html_url": "https://github.com/crawl/crawl/commit/f34de8fe481039af76533236cbbc403388b4751f"
       }
     ]
   }

@@ -1,5 +1,87 @@
 [
   {
+    "sha": "24dab868eb259a9e5b96274d2186af6053e12871",
+    "node_id": "C_kwDOAV-JftoAKDI0ZGFiODY4ZWIyNTlhOWU1Yjk2Mjc0ZDIxODZhZjYwNTNlMTI4NzE",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-06-26T07:48:38Z"
+      },
+      "committer": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2026-06-26T08:00:28Z"
+      },
+      "message": "Fix some effects being endianness dependent\n\nSome calls to hash32 were passed an array of uint32_t. However, because\nhash32 works an an array of bytes, the different byte ordering of\nuint32_t between big and small endian platforms would result in it\nreturning a different value. This mainly only affected graphics such as\nthe tile used by a ghost or which tile variation was used by a dungeon\nfeature or the description of a random pandemonium lord. However, it did\naffect the seed stability of the \"sense surroundings\" mutation, although\nit is unclear to me if this mutation having seed stability is even\nintensional.",
+      "tree": {
+        "sha": "b540c9940ec6951fdaef4434f57f408e0edd898b",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b540c9940ec6951fdaef4434f57f408e0edd898b"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/24dab868eb259a9e5b96274d2186af6053e12871",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/24dab868eb259a9e5b96274d2186af6053e12871",
+    "html_url": "https://github.com/crawl/crawl/commit/24dab868eb259a9e5b96274d2186af6053e12871",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/24dab868eb259a9e5b96274d2186af6053e12871/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
+        "html_url": "https://github.com/crawl/crawl/commit/353cd707cdd14fe6ed0420f0cbca6e7785522ed2"
+      }
+    ]
+  },
+  {
     "sha": "353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
     "node_id": "C_kwDOAV-JftoAKDM1M2NkNzA3Y2RkMTRmZTZlZDA0MjBmMGNiY2E2ZTc3ODU1MjJlZDI",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "a6541e14b864c3dad419fc4ff66e5272a58e910c",
         "url": "https://api.github.com/repos/crawl/crawl/commits/a6541e14b864c3dad419fc4ff66e5272a58e910c",
         "html_url": "https://github.com/crawl/crawl/commit/a6541e14b864c3dad419fc4ff66e5272a58e910c"
-      }
-    ]
-  },
-  {
-    "sha": "a6541e14b864c3dad419fc4ff66e5272a58e910c",
-    "node_id": "C_kwDOAV-JftoAKGE2NTQxZTE0Yjg2NGMzZGFkNDE5ZmM0ZmY2NmU1MjcyYTU4ZTkxMGM",
-    "commit": {
-      "author": {
-        "name": "Neil Moore",
-        "email": "neil@cs.uky.edu",
-        "date": "2026-06-08T03:12:26Z"
-      },
-      "committer": {
-        "name": "Neil Moore",
-        "email": "neil@cs.uky.edu",
-        "date": "2026-06-08T03:12:26Z"
-      },
-      "message": "Add some quotes about insects\n\n[skip ci]",
-      "tree": {
-        "sha": "a698f884a3c8a59afe2a66c71cc9ef37e7e79654",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a698f884a3c8a59afe2a66c71cc9ef37e7e79654"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a6541e14b864c3dad419fc4ff66e5272a58e910c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/a6541e14b864c3dad419fc4ff66e5272a58e910c",
-    "html_url": "https://github.com/crawl/crawl/commit/a6541e14b864c3dad419fc4ff66e5272a58e910c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a6541e14b864c3dad419fc4ff66e5272a58e910c/comments",
-    "author": {
-      "login": "neilmoore",
-      "id": 1135840,
-      "node_id": "MDQ6VXNlcjExMzU4NDA=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1135840?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/neilmoore",
-      "html_url": "https://github.com/neilmoore",
-      "followers_url": "https://api.github.com/users/neilmoore/followers",
-      "following_url": "https://api.github.com/users/neilmoore/following{/other_user}",
-      "gists_url": "https://api.github.com/users/neilmoore/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/neilmoore/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/neilmoore/subscriptions",
-      "organizations_url": "https://api.github.com/users/neilmoore/orgs",
-      "repos_url": "https://api.github.com/users/neilmoore/repos",
-      "events_url": "https://api.github.com/users/neilmoore/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/neilmoore/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "neilmoore",
-      "id": 1135840,
-      "node_id": "MDQ6VXNlcjExMzU4NDA=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1135840?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/neilmoore",
-      "html_url": "https://github.com/neilmoore",
-      "followers_url": "https://api.github.com/users/neilmoore/followers",
-      "following_url": "https://api.github.com/users/neilmoore/following{/other_user}",
-      "gists_url": "https://api.github.com/users/neilmoore/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/neilmoore/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/neilmoore/subscriptions",
-      "organizations_url": "https://api.github.com/users/neilmoore/orgs",
-      "repos_url": "https://api.github.com/users/neilmoore/repos",
-      "events_url": "https://api.github.com/users/neilmoore/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/neilmoore/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "b61ad445cce7daa074a4c24fd53c5bf48e66b8f1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/b61ad445cce7daa074a4c24fd53c5bf48e66b8f1",
-        "html_url": "https://github.com/crawl/crawl/commit/b61ad445cce7daa074a4c24fd53c5bf48e66b8f1"
       }
     ]
   }

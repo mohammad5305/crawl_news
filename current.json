@@ -1,5 +1,415 @@
 [
   {
+    "sha": "f2e42f2ff016e5bb8c8df57ab89a5fdb953ec535",
+    "node_id": "C_kwDOAV-JftoAKGYyZTQyZjJmZjAxNmU1YmI4YzhkZjU3YWI4OWE1ZmRiOTUzZWM1MzU",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T14:06:24Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T14:46:29Z"
+      },
+      "message": "Make forced removal of items cascade.\n\nIn various situations we force the removal of items, or simulate such\nremoval. This was not cascading through the effects of slots those items\nprovided. We fix this.\n\nThis means that:\n* Ash will block mutations that shatter curses via slots (e.g. horns 3\n  is blocked if the crown of vainglory has a cursed ring on it)\n* Wizmode species changes remove transitively unavailable items.\n* Form and item removals and their previews/warnings include the effect\n  of transitively removed items (in the somewhat rare case that these\n  are being removed rather than melded - melding was already working\n  transitively).\n* Loading an inconsistent player transitively cleans up their slots.",
+      "tree": {
+        "sha": "bb43e900bbc915e2342f0d0e9a9ced6b2349a787",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/bb43e900bbc915e2342f0d0e9a9ced6b2349a787"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f2e42f2ff016e5bb8c8df57ab89a5fdb953ec535",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/f2e42f2ff016e5bb8c8df57ab89a5fdb953ec535",
+    "html_url": "https://github.com/crawl/crawl/commit/f2e42f2ff016e5bb8c8df57ab89a5fdb953ec535",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f2e42f2ff016e5bb8c8df57ab89a5fdb953ec535/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "f876266f551047928801d3b78fef565900af580d",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/f876266f551047928801d3b78fef565900af580d",
+        "html_url": "https://github.com/crawl/crawl/commit/f876266f551047928801d3b78fef565900af580d"
+      }
+    ]
+  },
+  {
+    "sha": "f876266f551047928801d3b78fef565900af580d",
+    "node_id": "C_kwDOAV-JftoAKGY4NzYyNjZmNTUxMDQ3OTI4ODAxZDNiNzhmZWY1NjU5MDBhZjU4MGQ",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T13:19:44Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T13:45:14Z"
+      },
+      "message": "Don't duplicate letters in quiver menu (bobkiller)\n\nIn focus mode, items were taking their letters from their inventory\nslots, but this causes duplication across categories. Instead, just show\nitems alphabetically (but continue to use the real hotkeys for spells\nand abilities)",
+      "tree": {
+        "sha": "160708df3f182417202652d308d089f3b64e72d1",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/160708df3f182417202652d308d089f3b64e72d1"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/f876266f551047928801d3b78fef565900af580d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/f876266f551047928801d3b78fef565900af580d",
+    "html_url": "https://github.com/crawl/crawl/commit/f876266f551047928801d3b78fef565900af580d",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/f876266f551047928801d3b78fef565900af580d/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "01e22e3a2227d87bd62139485e468791a32c70b7",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/01e22e3a2227d87bd62139485e468791a32c70b7",
+        "html_url": "https://github.com/crawl/crawl/commit/01e22e3a2227d87bd62139485e468791a32c70b7"
+      }
+    ]
+  },
+  {
+    "sha": "01e22e3a2227d87bd62139485e468791a32c70b7",
+    "node_id": "C_kwDOAV-JftoAKDAxZTIyZTNhMjIyN2Q4N2JkNjIxMzk0ODVlNDY4NzkxYTMyYzcwYjc",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T09:49:37Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T11:30:40Z"
+      },
+      "message": "Fix chain removal from mutation removal\n\nFixes #5324",
+      "tree": {
+        "sha": "a3b319b32fda45fce8dfaa5ef5b8316e93facaae",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a3b319b32fda45fce8dfaa5ef5b8316e93facaae"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/01e22e3a2227d87bd62139485e468791a32c70b7",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/01e22e3a2227d87bd62139485e468791a32c70b7",
+    "html_url": "https://github.com/crawl/crawl/commit/01e22e3a2227d87bd62139485e468791a32c70b7",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/01e22e3a2227d87bd62139485e468791a32c70b7/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6b413c78bc77f211166305fb7acefbd1de57f7bb",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/6b413c78bc77f211166305fb7acefbd1de57f7bb",
+        "html_url": "https://github.com/crawl/crawl/commit/6b413c78bc77f211166305fb7acefbd1de57f7bb"
+      }
+    ]
+  },
+  {
+    "sha": "6b413c78bc77f211166305fb7acefbd1de57f7bb",
+    "node_id": "C_kwDOAV-JftoAKDZiNDEzYzc4YmM3N2YyMTExNjYzMDVmYjdhY2VmYmQxZGU1N2Y3YmI",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T07:42:52Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T11:30:40Z"
+      },
+      "message": "Fix abandoning Ash\n\nWe were modifying a vector as we looped through it.\n\nAlso, add handling of chain removals.",
+      "tree": {
+        "sha": "1df7b6f8be902acd76af07634b52eea486ada86d",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1df7b6f8be902acd76af07634b52eea486ada86d"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6b413c78bc77f211166305fb7acefbd1de57f7bb",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/6b413c78bc77f211166305fb7acefbd1de57f7bb",
+    "html_url": "https://github.com/crawl/crawl/commit/6b413c78bc77f211166305fb7acefbd1de57f7bb",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6b413c78bc77f211166305fb7acefbd1de57f7bb/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "971df940f6020ad0751bc791497c18dd4a041c5f",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/971df940f6020ad0751bc791497c18dd4a041c5f",
+        "html_url": "https://github.com/crawl/crawl/commit/971df940f6020ad0751bc791497c18dd4a041c5f"
+      }
+    ]
+  },
+  {
+    "sha": "971df940f6020ad0751bc791497c18dd4a041c5f",
+    "node_id": "C_kwDOAV-JftoAKDk3MWRmOTQwZjYwMjBhZDA3NTFiYzc5MTQ5N2MxOGRkNGEwNDFjNWY",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T09:38:53Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-05T11:30:40Z"
+      },
+      "message": "Fix chain removal on complex item sets\n\nChain removal worked well for individual items, but for complex sets of\nitems it failed in various ways.\n- If multiple items granted the same slot type, we didn't reduce it\n  enough (e.g. Justicar->Macabre and Vainglory being melded did not meld\n  enough of 5 rings)\n- If an early item granted slots that weren't being used, later\n  item-granting slots would be skipped\n- If items in the removal list were also having slots reduced, we\n  removed them twice (e.g. when going into wisp form and melding\n  ring-granting items, we removed more rings than we had).",
+      "tree": {
+        "sha": "71600a9e85fdf2f5a3538a20a8f21a5f595afe98",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/71600a9e85fdf2f5a3538a20a8f21a5f595afe98"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/971df940f6020ad0751bc791497c18dd4a041c5f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/971df940f6020ad0751bc791497c18dd4a041c5f",
+    "html_url": "https://github.com/crawl/crawl/commit/971df940f6020ad0751bc791497c18dd4a041c5f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/971df940f6020ad0751bc791497c18dd4a041c5f/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "11c2ce62cdac6f9165e241d1f49007a0b67f7e11",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/11c2ce62cdac6f9165e241d1f49007a0b67f7e11",
+        "html_url": "https://github.com/crawl/crawl/commit/11c2ce62cdac6f9165e241d1f49007a0b67f7e11"
+      }
+    ]
+  },
+  {
     "sha": "11c2ce62cdac6f9165e241d1f49007a0b67f7e11",
     "node_id": "C_kwDOAV-JftoAKDExYzJjZTYyY2RhYzZmOTE2NWUyNDFkMWY0OTAwN2EwYjY3ZjdlMTE",
     "commit": {
@@ -7766,416 +8176,6 @@
         "sha": "236f66fc2aa986e3c5a8828d724fa913194a9416",
         "url": "https://api.github.com/repos/crawl/crawl/commits/236f66fc2aa986e3c5a8828d724fa913194a9416",
         "html_url": "https://github.com/crawl/crawl/commit/236f66fc2aa986e3c5a8828d724fa913194a9416"
-      }
-    ]
-  },
-  {
-    "sha": "236f66fc2aa986e3c5a8828d724fa913194a9416",
-    "node_id": "C_kwDOAV-JftoAKDIzNmY2NmZjMmFhOTg2ZTNjNWE4ODI4ZDcyNGZhOTEzMTk0YTk0MTY",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-26T13:20:21Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-26T13:34:41Z"
-      },
-      "message": "Suppress an out-of-LoS bolas message\n\nFixes #5300",
-      "tree": {
-        "sha": "8d2eeaf7f901e48af3eb4e1ae385fc3ba85a0e32",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/8d2eeaf7f901e48af3eb4e1ae385fc3ba85a0e32"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/236f66fc2aa986e3c5a8828d724fa913194a9416",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/236f66fc2aa986e3c5a8828d724fa913194a9416",
-    "html_url": "https://github.com/crawl/crawl/commit/236f66fc2aa986e3c5a8828d724fa913194a9416",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/236f66fc2aa986e3c5a8828d724fa913194a9416/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "24dab868eb259a9e5b96274d2186af6053e12871",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/24dab868eb259a9e5b96274d2186af6053e12871",
-        "html_url": "https://github.com/crawl/crawl/commit/24dab868eb259a9e5b96274d2186af6053e12871"
-      }
-    ]
-  },
-  {
-    "sha": "24dab868eb259a9e5b96274d2186af6053e12871",
-    "node_id": "C_kwDOAV-JftoAKDI0ZGFiODY4ZWIyNTlhOWU1Yjk2Mjc0ZDIxODZhZjYwNTNlMTI4NzE",
-    "commit": {
-      "author": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-06-26T07:48:38Z"
-      },
-      "committer": {
-        "name": "Isaac Clancy",
-        "email": "ikec4@yahoo.com",
-        "date": "2026-06-26T08:00:28Z"
-      },
-      "message": "Fix some effects being endianness dependent\n\nSome calls to hash32 were passed an array of uint32_t. However, because\nhash32 works an an array of bytes, the different byte ordering of\nuint32_t between big and small endian platforms would result in it\nreturning a different value. This mainly only affected graphics such as\nthe tile used by a ghost or which tile variation was used by a dungeon\nfeature or the description of a random pandemonium lord. However, it did\naffect the seed stability of the \"sense surroundings\" mutation, although\nit is unclear to me if this mutation having seed stability is even\nintensional.",
-      "tree": {
-        "sha": "b540c9940ec6951fdaef4434f57f408e0edd898b",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b540c9940ec6951fdaef4434f57f408e0edd898b"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/24dab868eb259a9e5b96274d2186af6053e12871",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/24dab868eb259a9e5b96274d2186af6053e12871",
-    "html_url": "https://github.com/crawl/crawl/commit/24dab868eb259a9e5b96274d2186af6053e12871",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/24dab868eb259a9e5b96274d2186af6053e12871/comments",
-    "author": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "WizardIke",
-      "id": 26264063,
-      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/WizardIke",
-      "html_url": "https://github.com/WizardIke",
-      "followers_url": "https://api.github.com/users/WizardIke/followers",
-      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
-      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
-      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
-      "repos_url": "https://api.github.com/users/WizardIke/repos",
-      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-        "html_url": "https://github.com/crawl/crawl/commit/353cd707cdd14fe6ed0420f0cbca6e7785522ed2"
-      }
-    ]
-  },
-  {
-    "sha": "353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-    "node_id": "C_kwDOAV-JftoAKDM1M2NkNzA3Y2RkMTRmZTZlZDA0MjBmMGNiY2E2ZTc3ODU1MjJlZDI",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-25T10:04:42Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-25T10:50:21Z"
-      },
-      "message": "Fix messages from portals after excursions\n\nWhen an excursion was triggered - which can happen in a number of ways\nincluding by viewing another floor - timed portal message were then\nbeing suppressed until the portal timed out.\n\nThis was happening because of a fix back in e27d229, which added a guard\nto fix a bug with too-early messages using the wrong player coordinates\nfor a portal message on re-entry. Messages were off when the marker was\ninitialised, and toggled on when entering the level. But excursions\ninitialise the marker without firing an entered_level event, leaving\nmessages toggled off.\n\nWe fix this by setting the toggle in init only for initial marker\ncreation, and thereafter toggling it on level entry and exit.\n\nFixes #5301",
-      "tree": {
-        "sha": "1d42161778487c0d744ea9f85b7ac0efd9c08eb8",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/1d42161778487c0d744ea9f85b7ac0efd9c08eb8"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-    "html_url": "https://github.com/crawl/crawl/commit/353cd707cdd14fe6ed0420f0cbca6e7785522ed2",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/353cd707cdd14fe6ed0420f0cbca6e7785522ed2/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-        "html_url": "https://github.com/crawl/crawl/commit/d0f1cbee8c623d10ee515a72a90afbcae24b39d3"
-      }
-    ]
-  },
-  {
-    "sha": "d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-    "node_id": "C_kwDOAV-JftoAKGQwZjFjYmVlOGM2MjNkMTBlZTUxNWE3MmE5MGFmYmNhZTI0YjM5ZDM",
-    "commit": {
-      "author": {
-        "name": "Davidescu Victor",
-        "email": "davidescuvictor2004@gmail.com",
-        "date": "2026-06-24T12:21:18Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-25T06:43:47Z"
-      },
-      "message": "Fix breaking large doors\n\nMonsters weren't breaking down doors if the player was adjacent to the\ndoor but not to the square the monster was opening, leading to infinite\ndoor wars.\n\nFixes #5309\n\nCommitter's note: cosmetic change to any_of, reworded commit.",
-      "tree": {
-        "sha": "673c7b5f3e66cb2ecb580bc43bd7ec5a9229b32d",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/673c7b5f3e66cb2ecb580bc43bd7ec5a9229b32d"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-    "html_url": "https://github.com/crawl/crawl/commit/d0f1cbee8c623d10ee515a72a90afbcae24b39d3",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d0f1cbee8c623d10ee515a72a90afbcae24b39d3/comments",
-    "author": {
-      "login": "Vjio",
-      "id": 132272277,
-      "node_id": "U_kgDOB-JQlQ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/132272277?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Vjio",
-      "html_url": "https://github.com/Vjio",
-      "followers_url": "https://api.github.com/users/Vjio/followers",
-      "following_url": "https://api.github.com/users/Vjio/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Vjio/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Vjio/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Vjio/subscriptions",
-      "organizations_url": "https://api.github.com/users/Vjio/orgs",
-      "repos_url": "https://api.github.com/users/Vjio/repos",
-      "events_url": "https://api.github.com/users/Vjio/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Vjio/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "6c56e8410ee36f528fe651cdc12f45fa3944be77",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/6c56e8410ee36f528fe651cdc12f45fa3944be77",
-        "html_url": "https://github.com/crawl/crawl/commit/6c56e8410ee36f528fe651cdc12f45fa3944be77"
-      }
-    ]
-  },
-  {
-    "sha": "6c56e8410ee36f528fe651cdc12f45fa3944be77",
-    "node_id": "C_kwDOAV-JftoAKDZjNTZlODQxMGVlMzZmNTI4ZmU2NTFjZGMxMmY0NWZhMzk0NGJlNzc",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-04-18T06:56:37Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-06-24T09:16:59Z"
-      },
-      "message": "Track tithing piety",
-      "tree": {
-        "sha": "3ded7bd955183ff0df876fb47f96fe6333650617",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3ded7bd955183ff0df876fb47f96fe6333650617"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6c56e8410ee36f528fe651cdc12f45fa3944be77",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/6c56e8410ee36f528fe651cdc12f45fa3944be77",
-    "html_url": "https://github.com/crawl/crawl/commit/6c56e8410ee36f528fe651cdc12f45fa3944be77",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6c56e8410ee36f528fe651cdc12f45fa3944be77/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "d0fdbe724a2be405387459bb92be3f5779290a99",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/d0fdbe724a2be405387459bb92be3f5779290a99",
-        "html_url": "https://github.com/crawl/crawl/commit/d0fdbe724a2be405387459bb92be3f5779290a99"
       }
     ]
   }

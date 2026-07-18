@@ -1,5 +1,87 @@
 [
   {
+    "sha": "0bed8fcdc9003ca7d52a86d84a0d2150671300a5",
+    "node_id": "C_kwDOAV-JftoAKDBiZWQ4ZmNkYzkwMDNjYTdkNTJhODZkODRhMGQyMTUwNjcxMzAwYTU",
+    "commit": {
+      "author": {
+        "name": "NormalPerson7",
+        "email": "cmrn.stphnsn@hotmail.com",
+        "date": "2024-03-30T22:12:19Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-17T19:47:09Z"
+      },
+      "message": "Fix two subtle issues with stats panel weapon colour in WebTiles\n\nTwo related issues existed, relating to the text colour of the displayed\nweapons in the stats panel (top-right corner) in WebTiles:\n  1. Due to these colours being set on the JS side, which only has\n     access to the inventory set of menu_colour options, the setting\n     menu_colour += stats:<colour>:<weapon description> was essentially\n     useless, as the inventory setting was always used.\n  2. The item colour for the stats-weapon panel was not updated when a\n     weapon was equipped, meaning it only displayed in the correct\n     (equipped, typically lightgreen) colour when reloading the game, or\n     when equipping the weapon directly from the ground.\nSince the expansion of quiver functionality, these issues have not\nexisted for the quiver slot, as the entire quiver description including\nthe colour is computed on the C++ side. Hence (particularly with\nlaunchers) you could end up with the same item in your weapon and quiver\nslots written in different colours.\n\nFix both issues by passing the weapon colour(s) directly from the C++\nside as a separate piece of information. Incorporate the old\nunarmed_attack_colour information into this.",
+      "tree": {
+        "sha": "a2d2e42ac8674a92ba7d360552ac03dced97e924",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a2d2e42ac8674a92ba7d360552ac03dced97e924"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0bed8fcdc9003ca7d52a86d84a0d2150671300a5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/0bed8fcdc9003ca7d52a86d84a0d2150671300a5",
+    "html_url": "https://github.com/crawl/crawl/commit/0bed8fcdc9003ca7d52a86d84a0d2150671300a5",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0bed8fcdc9003ca7d52a86d84a0d2150671300a5/comments",
+    "author": {
+      "login": "NormalPerson7",
+      "id": 37064413,
+      "node_id": "MDQ6VXNlcjM3MDY0NDEz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37064413?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/NormalPerson7",
+      "html_url": "https://github.com/NormalPerson7",
+      "followers_url": "https://api.github.com/users/NormalPerson7/followers",
+      "following_url": "https://api.github.com/users/NormalPerson7/following{/other_user}",
+      "gists_url": "https://api.github.com/users/NormalPerson7/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/NormalPerson7/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/NormalPerson7/subscriptions",
+      "organizations_url": "https://api.github.com/users/NormalPerson7/orgs",
+      "repos_url": "https://api.github.com/users/NormalPerson7/repos",
+      "events_url": "https://api.github.com/users/NormalPerson7/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/NormalPerson7/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0dae88635e986263bd20d4a63b1998db9f67d6dd",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/0dae88635e986263bd20d4a63b1998db9f67d6dd",
+        "html_url": "https://github.com/crawl/crawl/commit/0dae88635e986263bd20d4a63b1998db9f67d6dd"
+      }
+    ]
+  },
+  {
     "sha": "0dae88635e986263bd20d4a63b1998db9f67d6dd",
     "node_id": "C_kwDOAV-JftoAKDBkYWU4ODYzNWU5ODYyNjNiZDIwZDRhNjNiMTk5OGRiOWY2N2Q2ZGQ",
     "commit": {
@@ -8054,88 +8136,6 @@
         "sha": "de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
         "url": "https://api.github.com/repos/crawl/crawl/commits/de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
         "html_url": "https://github.com/crawl/crawl/commit/de7a839fa10ff7913b719c9c1d4902c8871f9ddc"
-      }
-    ]
-  },
-  {
-    "sha": "de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
-    "node_id": "C_kwDOAV-JftoAKGRlN2E4MzlmYTEwZmY3OTEzYjcxOWM5YzFkNDkwMmM4ODcxZjlkZGM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-06-24T14:55:21Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-07-02T01:48:50Z"
-      },
-      "message": "Make most random-target spells choose only between visible targets\n\nSome spells like Scorch or Permafrost Eruption, which select a random\ntarget from among eligible enemies, currently do not depend on the player's\nvision. This means that targeter UI may present a completely different list\nof possible targets than the real ones, when invisible foes are involved.\nBut also that they can unerringly track an invisible monster, no matter\nwhere it moves.\n\nGiven current plans to make positional fuzzing of monster invisibility a\nbit more relevant, I feel that these spells' ability to ignore all that is\na little too flattening. So as a general policy (agreed to by several other\ndevs), I am making all 'choose a random target' effects respect the\nplayer's own vision.\n\nNote: multiple spells and abilities already did this (eg: Fulsome Fusilade\nand Mark of Carnage summons), and MCC was additionally odd by requiring a\nvisible target to begin casting, but then being able to hit invisible\ntargets afterward.",
-      "tree": {
-        "sha": "d4a9f37c1d99c8ed3588b7ba44cb5da1d8d0ef7f",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d4a9f37c1d99c8ed3588b7ba44cb5da1d8d0ef7f"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
-    "html_url": "https://github.com/crawl/crawl/commit/de7a839fa10ff7913b719c9c1d4902c8871f9ddc",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/de7a839fa10ff7913b719c9c1d4902c8871f9ddc/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "01f08a5fe2f8b972f72e6c4b3898d91104ef0d51",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/01f08a5fe2f8b972f72e6c4b3898d91104ef0d51",
-        "html_url": "https://github.com/crawl/crawl/commit/01f08a5fe2f8b972f72e6c4b3898d91104ef0d51"
       }
     ]
   }

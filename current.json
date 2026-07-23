@@ -1,5 +1,87 @@
 [
   {
+    "sha": "170ea3cddb78aa1034402203e047f72479ad613b",
+    "node_id": "C_kwDOAV-JftoAKDE3MGVhM2NkZGI3OGFhMTAzNDQwMjIwM2UwNDdmNzI0NzlhZDYxM2I",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-22T22:04:15Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-23T07:19:26Z"
+      },
+      "message": "Stop infinite waits for ancestors healing (take 2)\n\nHep ancestors were sending an interrupt when reaching full HP, if\nvisible. If not visible, they never sent an interrupt, and we waited for\nthem indefinitely, triggering the buggy wait tripwire.\n\nNow we track whether we have seen our ancestor injured during a delay.\nIf we have, we then fire an interrupt when they are on the screen and\nfully healed.\n\nIn theory, they could still be initially injured, then wander off and\nthen  _never_ come back into LoS, and we'd wait indefinitely. But I\ncan't think how this would happen (at least without a \"departed this\nplane of existence\" message), and interrupting for any loss of ancestor\nvision would be annoying if we don't need it.\n\nFixes #1757 (probably - both examples there have Hep, and I can repro\nthat bug using this method)",
+      "tree": {
+        "sha": "00ff0973391e3af6f984fea8d946b29fbf52d4d8",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/00ff0973391e3af6f984fea8d946b29fbf52d4d8"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/170ea3cddb78aa1034402203e047f72479ad613b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/170ea3cddb78aa1034402203e047f72479ad613b",
+    "html_url": "https://github.com/crawl/crawl/commit/170ea3cddb78aa1034402203e047f72479ad613b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/170ea3cddb78aa1034402203e047f72479ad613b/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4e1d064212be426cf59c575db86a5ed022f3bc8a",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/4e1d064212be426cf59c575db86a5ed022f3bc8a",
+        "html_url": "https://github.com/crawl/crawl/commit/4e1d064212be426cf59c575db86a5ed022f3bc8a"
+      }
+    ]
+  },
+  {
     "sha": "4e1d064212be426cf59c575db86a5ed022f3bc8a",
     "node_id": "C_kwDOAV-JftoAKDRlMWQwNjQyMTJiZTQyNmNmNTljNTc1ZGI4NmE1ZWQwMjJmM2JjOGE",
     "commit": {
@@ -8034,88 +8116,6 @@
         "sha": "4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
         "url": "https://api.github.com/repos/crawl/crawl/commits/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
         "html_url": "https://github.com/crawl/crawl/commit/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba"
-      }
-    ]
-  },
-  {
-    "sha": "4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
-    "node_id": "C_kwDOAV-JftoAKDQ1MjNiN2NmMGUzNmQ4MzVkMzdiZWEwYjg3NGE3ZTBhMjI0Y2U2YmE",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-07-03T16:58:38Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-07-05T03:58:03Z"
-      },
-      "message": "Adjust Abyss rune placement behavior\n\nbe59399 intended to lower the rate at which players can find the Abyssal\nrune at depth 4 and 5, but accidentally (due to an off-by-one error) made\nthe chance of placing a rune any time the Abyss generated a new area 100%!\nWhoops.... (And also increased the rate on Abyss:3 by 50%, for good\nmeasure.)\n\nHowever, after more time has passed, I believe that even dialing it back to\nthe numbers I originally intended would still leave the chances of the\nplayer entering the Abyss virtually on top of the rune much too high.\n\nSo now, the player is required to explore a certain amount of the Abyss\nbefore the rune has any chance to place. This is based on the number of\ntimes the Abyss generates new areas, rather than tiles explored (the latter\ncan vary a *lot* with how open the map randomly is, and I don't want to\npenalize avoiding open areas).\n\nTeleport from ?tele scrolls will always move the player 'backwards' (ie:\nreduce the number of Abyss areas they count as having explored), though\nother forms of teleport (including the Abyss itself pulling you around)\nwill not. (This is to keep it from being unintuitively a good idea to\nimmediately burn a couple ?tele scrolls to skip most of the exploration).\n\nThe rate of generating the rune *after* minimal exploration is complete is\nstill meaningfully faster than it was in 0.33, for the record.",
-      "tree": {
-        "sha": "2e64a65257e3633ca42564d29083cf877de5d341",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2e64a65257e3633ca42564d29083cf877de5d341"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
-    "html_url": "https://github.com/crawl/crawl/commit/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4523b7cf0e36d835d37bea0b874a7e0a224ce6ba/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "ed5ad332d488b952e66db659bde005178161dc93",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/ed5ad332d488b952e66db659bde005178161dc93",
-        "html_url": "https://github.com/crawl/crawl/commit/ed5ad332d488b952e66db659bde005178161dc93"
       }
     ]
   }

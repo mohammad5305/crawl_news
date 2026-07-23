@@ -1,5 +1,169 @@
 [
   {
+    "sha": "4e1d064212be426cf59c575db86a5ed022f3bc8a",
+    "node_id": "C_kwDOAV-JftoAKDRlMWQwNjQyMTJiZTQyNmNmNTljNTc1ZGI4NmE1ZWQwMjJmM2JjOGE",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-22T21:00:09Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-22T21:00:09Z"
+      },
+      "message": "Revert \"Stop infinite waits for ancestors healing\"\n\nThis reverts commit b29fdba68a0e53c47d882153fbf58f24aa9b0891.\n\nThis would have interrupted all delays all the time, which isn't the right thing at all.",
+      "tree": {
+        "sha": "b42edf0ec5ee8613bce83478483b655625ff8dfb",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/b42edf0ec5ee8613bce83478483b655625ff8dfb"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/4e1d064212be426cf59c575db86a5ed022f3bc8a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/4e1d064212be426cf59c575db86a5ed022f3bc8a",
+    "html_url": "https://github.com/crawl/crawl/commit/4e1d064212be426cf59c575db86a5ed022f3bc8a",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/4e1d064212be426cf59c575db86a5ed022f3bc8a/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+        "html_url": "https://github.com/crawl/crawl/commit/b29fdba68a0e53c47d882153fbf58f24aa9b0891"
+      }
+    ]
+  },
+  {
+    "sha": "b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+    "node_id": "C_kwDOAV-JftoAKGIyOWZkYmE2OGEwZTUzYzQ3ZDg4MjE1M2ZiZjU4ZjI0YWE5YjA4OTE",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-22T20:39:51Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-07-22T20:57:56Z"
+      },
+      "message": "Stop infinite waits for ancestors healing\n\nHep ancestors were sending an interrupt when reaching full HP, if\nvisible. If not visible, they never sent an interrupt, and we waited for\nthem indefinitely, triggering the buggy wait tripwire. Now instead we\ncheck every turn, so when they wander back into LoS they interrupt us.\n\nIn theory, they could still _never_ come back into LoS, and we'd wait\nindefinitely. But I can't think how this would happen, and interrupting\nfor any loss of ancestor vision would be annoying if we don't need it.\n\nFixes #1757 (probably - both examples there have Hep, and I can repro\nthat bug using this method)",
+      "tree": {
+        "sha": "35487c81066941ffbd3b51ac3bf72024b86231be",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/35487c81066941ffbd3b51ac3bf72024b86231be"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+    "html_url": "https://github.com/crawl/crawl/commit/b29fdba68a0e53c47d882153fbf58f24aa9b0891",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/b29fdba68a0e53c47d882153fbf58f24aa9b0891/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "443fa8328d63a5d8eb119cb83b21592aad357c05",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/443fa8328d63a5d8eb119cb83b21592aad357c05",
+        "html_url": "https://github.com/crawl/crawl/commit/443fa8328d63a5d8eb119cb83b21592aad357c05"
+      }
+    ]
+  },
+  {
     "sha": "443fa8328d63a5d8eb119cb83b21592aad357c05",
     "node_id": "C_kwDOAV-JftoAKDQ0M2ZhODMyOGQ2M2E1ZDhlYjExOWNiODNiMjE1OTJhYWQzNTdjMDU",
     "commit": {
@@ -7952,170 +8116,6 @@
         "sha": "ed5ad332d488b952e66db659bde005178161dc93",
         "url": "https://api.github.com/repos/crawl/crawl/commits/ed5ad332d488b952e66db659bde005178161dc93",
         "html_url": "https://github.com/crawl/crawl/commit/ed5ad332d488b952e66db659bde005178161dc93"
-      }
-    ]
-  },
-  {
-    "sha": "ed5ad332d488b952e66db659bde005178161dc93",
-    "node_id": "C_kwDOAV-JftoAKGVkNWFkMzMyZDQ4OGI5NTJlNjZkYjY1OWJkZTAwNTE3ODE2MWRjOTM",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-07-01T17:56:16Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-07-05T03:58:03Z"
-      },
-      "message": "Move the Abyss entrance from Depths to D:13-15 in a new serial vault\n\nThis dungeon restructuring has quite the multitude of purposes:\n\n * The Abyss has always been a plausible third rune in a regular game\n   compared to the Hells and Pan, but the reliable entrances being placed\n   in Depths gives off the impression it's a comparable choice of place\n   thus meant for extended wins. While it's always been a nice part of\n   Depths's loose identity to have multiple entrances to multiple differing\n   differing unholy realms, it's going to continue to conspicuously stand\n   out versus the Hell-Pan roulette plans emphasizing the two of those\n   as more equal. Moving the Abyss to the floors one can also find the\n   Vaults entrance both makes it seem like a more viable third rune option,\n   reduces future jarring branch difficulty comparisons, and allows further\n   honing in on Depths have a more coherent flavour identity\n   after-the-fact.\n\n * The Abyss entry vaults themselves have been fairly unnoticeable outside\n   of the box of outclassed abominations and unseen horrors or some now\n   fairly lost Elf:3 deep elves, due to a historical lack of much\n   attention for the vault set plus the limited number of Abyss denizens\n   appropriate in threat level and on non-Abyss floors. Moving the\n   entrance earlier allows more weaker monsters that can show up in the\n   Abyss instead of just hurling around high-tier Abyss standout monsters\n   like starcursed masses.\n\n * D:12-15 is a somewhat bland place after Lair, with a few branch\n   entry vaults being the only guarantees of any vaults of interest in\n   a level range after the branch ends of both Lair and Orc, and the\n   Depths entry vault in particularly being fairly restrained by default.\n   The Abyss entry vault itself can be another mild highlight that isn't\n   just the same parades of bones and tengu and slime, especially with\n   a more noticeable variation on this being done here.\n\n * After the combination of 1e4f93a scaling banishment to the player's XL\n   (further updated in 99aa80d) and 00d325f forbidding wielding distortion\n   weapons while worshipping good gods, it is now impossible for such\n   worshippers to use such unwields to try and time reaching the Abyss:3\n   rune depth at the minimal XLs to reach Abyss:3 and not Abyss:4.\n   (This is very roughly around XL 17). Timing this sort of thing is going\n   to be an inevitable issue slowly increasing over time as people\n   consider it a more viable rune, so we might as well also make this\n   something that doesn't rely on specific spoilery strategizing and just\n   allow manually entering the Abyss earlier anyway.\n\n * Some people wanting to try out Lugonu have to get fairly lucky to get\n   them any passably early in the game, due to the only guaranteed\n   entrances being in Depths, though the entire flavour of Lugonu means\n   we also don't want to give them any Temple or overflow altar\n   arrangement. With future Lugonu changes being planned to potentially\n   make them a reasonably enticing planned god for a character even\n   outside of exiting the Abyss, being able to go for the god with the\n   caveat of the risk of entering the Abyss to do so is a reasonable\n   answer to such desires and to support future overhauls.\n\nAs such, this commit moves the guaranteed Abyss entries each game from\nrandomly on each floor of Depths to a serial vault on D:13-15- such a\nchange is meant to inherit the old identity of the entries appearing\nmultiple times across Depths in a new unique identity of visibly\n\"corrupting\" the level with multiple entrance vaults instead.\n\nThis serial vault comes with new vaults nearly tripling the vault count\nto enable three categories of monster density (\"empty\", \"sparse\", and\n\"threat\" internally), and then places three entries in total: either 1 of\neach, or two empty entries and one fully threatening one. These vaults\nmostly use monsters shared in both late D and the Abyss, with scattered\nexceptions of brain worms, small abominations, raiju, ynoxinuls, and\n(most frequently) abyssal acolytes, all of which are reasonably\nappropriate for the depth. (With new threat levels established, this also\nmeans nerfing the previous Abyss entries containing many large\nabominations, or liches, or Elf:3 deep elves). Said vaults have some mildly\nfurther degrees of decoration than previously, and regularly emphasize\nweird vault connectivity and integration tricks that should hopefully\nstand out further, but also be fairly weaker than many of the nasty vaults\nthat can use many 9s and 8s in D:13-15 already. Hopefully, this should\nreasonably work out.\n\n(This also comes with specifying Abyss entrance locations in the four\nencompass vaults that can currently rarely place on D:15 as the Depths\nentrance, and save compat written up to basically just place a plain\nrandom Abyss entrance on Depths:3 if a save finished D but didn't generate\nDepths yet. This commit also doesn't move the Abyss entrances out of\nvaults earlier or later, as such entrances have been already scattered\nacross vaults across the game to begin with.)",
-      "tree": {
-        "sha": "4e2ba5bba135e4aae349e95c589938306da3bc55",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4e2ba5bba135e4aae349e95c589938306da3bc55"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/ed5ad332d488b952e66db659bde005178161dc93",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/ed5ad332d488b952e66db659bde005178161dc93",
-    "html_url": "https://github.com/crawl/crawl/commit/ed5ad332d488b952e66db659bde005178161dc93",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/ed5ad332d488b952e66db659bde005178161dc93/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "6fbb92a129f29d0761c2c426920c5d690353b562",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/6fbb92a129f29d0761c2c426920c5d690353b562",
-        "html_url": "https://github.com/crawl/crawl/commit/6fbb92a129f29d0761c2c426920c5d690353b562"
-      }
-    ]
-  },
-  {
-    "sha": "6fbb92a129f29d0761c2c426920c5d690353b562",
-    "node_id": "C_kwDOAV-JftoAKDZmYmI5MmExMjlmMjlkMDc2MWMyYzQyNjkyMGM1ZDY5MDM1M2I1NjI",
-    "commit": {
-      "author": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-06-27T21:07:18Z"
-      },
-      "committer": {
-        "name": "regret-index",
-        "email": "cloudofregret@hotmail.com",
-        "date": "2026-07-05T03:58:03Z"
-      },
-      "message": "Further tweak the Abyss monsters pool\n\n * With endgame players no longer ever going through Abyss:1 as of\n   1e4f93a, and with the ever-increasing interest in making the different\n   Abyss depths feel more distinct from each other, I am cutting a variety\n   of top-tier endgame threats from spawning on Abyss:1. There's not that\n   much of a meaningful difference between \"unthinkable to fight\" and\n   \"especially unthinkable to fight\", it helps focus the identity of the\n   Abyss more on its growing native monster pool, and it makes earlygame\n   banishment feel slightly less absurd (+ more capable of trying to\n   escape via killing monsters) while still threatening plenty with the\n   rest of encounter possibilities.\n\n   As such, one can no longer encounter bone or quicksilver dragons,\n   ancient or dread liches, classed draconians, or hell sentinels on\n   Abyss:1 outside of Abyss vaults.. They still spawn naturally on\n   Abyss:2-7, of course.\n\n * On the other side of matters, a few more monsters have been removed\n   from natural generation in Abyss:5- (jellies, fire bats) and Abyss:7\n   (wraiths, shadowghasts, plain vampires, hell hounds), which also\n   makes them less common on the floors between those and Abyss:1. While\n   weaker undead and elemental fodder are nice for earlier appearances\n   having more than bespoke monsters or demons, the breadth of the Abyss\n   spawns pool is already large enough without emphasizing monsters\n   well past their threat level, and it continues to help discourage\n   any (silly notion of ) Abyss farming in 3-rune games.\n\n * After their buff in 72556b3, eyes of devastation are now reasonable\n   monsters to appear on Abyss:7, so they now can spawn there too.",
-      "tree": {
-        "sha": "71af44e9fa2d2b4bb802bab0bc040a1f10d654c1",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/71af44e9fa2d2b4bb802bab0bc040a1f10d654c1"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/6fbb92a129f29d0761c2c426920c5d690353b562",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/6fbb92a129f29d0761c2c426920c5d690353b562",
-    "html_url": "https://github.com/crawl/crawl/commit/6fbb92a129f29d0761c2c426920c5d690353b562",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/6fbb92a129f29d0761c2c426920c5d690353b562/comments",
-    "author": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "regret-index",
-      "id": 17419504,
-      "node_id": "MDQ6VXNlcjE3NDE5NTA0",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17419504?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/regret-index",
-      "html_url": "https://github.com/regret-index",
-      "followers_url": "https://api.github.com/users/regret-index/followers",
-      "following_url": "https://api.github.com/users/regret-index/following{/other_user}",
-      "gists_url": "https://api.github.com/users/regret-index/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/regret-index/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/regret-index/subscriptions",
-      "organizations_url": "https://api.github.com/users/regret-index/orgs",
-      "repos_url": "https://api.github.com/users/regret-index/repos",
-      "events_url": "https://api.github.com/users/regret-index/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/regret-index/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "bd093b527c446f9d63ff2c2f78fb145c461f16f4",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/bd093b527c446f9d63ff2c2f78fb145c461f16f4",
-        "html_url": "https://github.com/crawl/crawl/commit/bd093b527c446f9d63ff2c2f78fb145c461f16f4"
       }
     ]
   }

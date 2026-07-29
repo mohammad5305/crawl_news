@@ -1,5 +1,87 @@
 [
   {
+    "sha": "e5bf83d7b583b54c4b57619f51c508c5fab11893",
+    "node_id": "C_kwDOAV-JftoAKGU1YmY4M2Q3YjU4M2I1NGM0YjU3NjE5ZjUxYzUwOGM1ZmFiMTE4OTM",
+    "commit": {
+      "author": {
+        "name": "Isaac Clancy",
+        "email": "ikec4@yahoo.com",
+        "date": "2025-07-11T05:19:57Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-07-29T03:17:57Z"
+      },
+      "message": "Make the lua function dgn.vault_at return a pointer\n\nThe lua function dgn.vault_at was returning a copy of the\nvault_placemnt at a location. Unfortunately, it is slow to copy a\nvault_placement and because the object returned to lua is a wrapper\naround a c++ object lua doesn't know how big it is and won't trigger\ngarbage collection until you have about 8000 of them (about 17 MB).\n\nThe only place using dgn.vault_at is the disco Pan colour function which\ncan work just fine with a pointer rather than a copy and runs\nconsiderably faster.\n\nThis is also consistent with the c++ equivalent that returns a pointer.",
+      "tree": {
+        "sha": "9f43a05ed7939b2d0fa07dbd2bc6f2ad25f6badc",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/9f43a05ed7939b2d0fa07dbd2bc6f2ad25f6badc"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/e5bf83d7b583b54c4b57619f51c508c5fab11893",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/e5bf83d7b583b54c4b57619f51c508c5fab11893",
+    "html_url": "https://github.com/crawl/crawl/commit/e5bf83d7b583b54c4b57619f51c508c5fab11893",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/e5bf83d7b583b54c4b57619f51c508c5fab11893/comments",
+    "author": {
+      "login": "WizardIke",
+      "id": 26264063,
+      "node_id": "MDQ6VXNlcjI2MjY0MDYz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26264063?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/WizardIke",
+      "html_url": "https://github.com/WizardIke",
+      "followers_url": "https://api.github.com/users/WizardIke/followers",
+      "following_url": "https://api.github.com/users/WizardIke/following{/other_user}",
+      "gists_url": "https://api.github.com/users/WizardIke/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/WizardIke/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/WizardIke/subscriptions",
+      "organizations_url": "https://api.github.com/users/WizardIke/orgs",
+      "repos_url": "https://api.github.com/users/WizardIke/repos",
+      "events_url": "https://api.github.com/users/WizardIke/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/WizardIke/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "8bf6446ad21be9216fd787014eeb35d85693435f",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/8bf6446ad21be9216fd787014eeb35d85693435f",
+        "html_url": "https://github.com/crawl/crawl/commit/8bf6446ad21be9216fd787014eeb35d85693435f"
+      }
+    ]
+  },
+  {
     "sha": "8bf6446ad21be9216fd787014eeb35d85693435f",
     "node_id": "C_kwDOAV-JftoAKDhiZjY0NDZhZDIxYmU5MjE2ZmQ3ODcwMTRlZWIzNWQ4NTY5MzQzNWY",
     "commit": {
@@ -8034,88 +8116,6 @@
         "sha": "d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
         "url": "https://api.github.com/repos/crawl/crawl/commits/d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
         "html_url": "https://github.com/crawl/crawl/commit/d35d7b93a6d4b4f9039c8339a64e224dd92c6875"
-      }
-    ]
-  },
-  {
-    "sha": "d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
-    "node_id": "C_kwDOAV-JftoAKGQzNWQ3YjkzYTZkNGI0ZjkwMzljODMzOWE2NGUyMjRkZDkyYzY4NzU",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-07-05T04:02:35Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-07-05T04:27:26Z"
-      },
-      "message": "Fix some oddnesses with zombifying mounted monsters\n\nWhen killing a mounted monster with effects like Death Channel, you could\nproduce two separate spectrals - one for the mount and another for the\nmount+rider combo (ie: a goblin rider could turn into a spectral wyvern\nand a spectral goblin rider, somehow duplicating the wyvern.)\n\nYou were also seemingly unable to get a two different zombies, but either\nthe mount (rarely) or the merged monster. Even wierder, as a zombie, those\ngoblin riders would look like goblins, yet fly and move fast.\n\nNow, derived undead effects should be able to make undead out of each\nhalf of the monster separately, but not both together. And yes, you can\nget two zombies out of one at once.",
-      "tree": {
-        "sha": "4168e24c628e7c2c55d8f1358be22ecd63ae11dc",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4168e24c628e7c2c55d8f1358be22ecd63ae11dc"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
-    "html_url": "https://github.com/crawl/crawl/commit/d35d7b93a6d4b4f9039c8339a64e224dd92c6875",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/d35d7b93a6d4b4f9039c8339a64e224dd92c6875/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "f35382dc01d3b31ad9cec5ac2fd56d9b9a11d670",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/f35382dc01d3b31ad9cec5ac2fd56d9b9a11d670",
-        "html_url": "https://github.com/crawl/crawl/commit/f35382dc01d3b31ad9cec5ac2fd56d9b9a11d670"
       }
     ]
   }

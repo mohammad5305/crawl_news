@@ -1,5 +1,87 @@
 [
   {
+    "sha": "816b138a71565a2e11db6b358b01066c216b13b6",
+    "node_id": "C_kwDOAV-JftoAKDgxNmIxMzhhNzE1NjVhMmUxMWRiNmIzNThiMDEwNjZjMjE2YjEzYjY",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-08-05T19:59:08Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-08-05T19:59:30Z"
+      },
+      "message": "Don't create a stash at the player's position every time we load any\n\nThe default constructor for Stash set its position to the player's, if none\nwas specified. This was, as far as I can tell, only used when loading\nexisting stashes from a save file. Which meant that every single stash\nloaded would first intialize itself from whatever was at the player's\nposition before wiping all that out to load the intended data.\n\nThis is a bit pointless and wasteful, but also could create odd errors in\nsome cases. For instance, the lua tables handling portal markers were not\nfully loaded before stashes were, which could result in a massive number of\nlua errors when loading a save file where the player was on top of a portal\n(as every stash on the level would attempt to read from a table for the\nmarker at the player's feet). This became more obvious after d744bac fully\nreset lua state when the game was reset.\n\nNow we only fully initialize a stash if given an in-bounds position and\ndon't remap (0,0) to the player's location. (As far as I can tell, this was\nonly used prior to loading, which should overwrite all state anyway.)\n\nThis fixes #5363",
+      "tree": {
+        "sha": "ea037b56fdb31bede3e4bb237333a1f1f4732bd7",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/ea037b56fdb31bede3e4bb237333a1f1f4732bd7"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/816b138a71565a2e11db6b358b01066c216b13b6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/816b138a71565a2e11db6b358b01066c216b13b6",
+    "html_url": "https://github.com/crawl/crawl/commit/816b138a71565a2e11db6b358b01066c216b13b6",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/816b138a71565a2e11db6b358b01066c216b13b6/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dd4352f59691c6d4abdce1816d3e5e1575cae0e4",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/dd4352f59691c6d4abdce1816d3e5e1575cae0e4",
+        "html_url": "https://github.com/crawl/crawl/commit/dd4352f59691c6d4abdce1816d3e5e1575cae0e4"
+      }
+    ]
+  },
+  {
     "sha": "dd4352f59691c6d4abdce1816d3e5e1575cae0e4",
     "node_id": "C_kwDOAV-JftoAKGRkNDM1MmY1OTY5MWM2ZDRhYmRjZTE4MTZkM2U1ZTE1NzVjYWUwZTQ",
     "commit": {
@@ -8074,88 +8156,6 @@
         "sha": "13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
         "url": "https://api.github.com/repos/crawl/crawl/commits/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
         "html_url": "https://github.com/crawl/crawl/commit/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc"
-      }
-    ]
-  },
-  {
-    "sha": "13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
-    "node_id": "C_kwDOAV-JftoAKDEzMjc1ZDZkZDkzMDJmM2ExZDZmZDFhYjRhOTI3ODIzMzM3MGM4ZGM",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-07-20T14:31:00Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-07-20T18:52:44Z"
-      },
-      "message": "Fix navigation through off-level transporters\n\nWhen navigating to a particular point (e.g. through ctrl+f, but not\nthrough G), navigation through transporters on other levels was failing.\nThis is because while saving these levels we update the stair distances\nin the travel cache, but this happens with the player off-level, so this\nwas reading the wrong level's transporter locations and therefore\nfailing to navigate correctly. We fix this by specifying a level to\npathfind, rather than assuming that we are pathfinding on the player's\nlevel.",
-      "tree": {
-        "sha": "191d821da43fab0ca220dda7f5c24f22eb2ce9dd",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/191d821da43fab0ca220dda7f5c24f22eb2ce9dd"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
-    "html_url": "https://github.com/crawl/crawl/commit/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/13275d6dd9302f3a1d6fd1ab4a9278233370c8dc/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "743f274a0e9b7a3fb6c1e9679de60996db4167f0",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/743f274a0e9b7a3fb6c1e9679de60996db4167f0",
-        "html_url": "https://github.com/crawl/crawl/commit/743f274a0e9b7a3fb6c1e9679de60996db4167f0"
       }
     ]
   }

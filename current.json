@@ -1,5 +1,87 @@
 [
   {
+    "sha": "a1a45b0d5d10d32bef374102dde409802b5d8f0f",
+    "node_id": "C_kwDOAV-JftoAKGExYTQ1YjBkNWQxMGQzMmJlZjM3NDEwMmRkZTQwOTgwMmI1ZDhmMGY",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-09-01T22:24:07Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-09-01T23:20:04Z"
+      },
+      "message": "Fix a bug with autopickup display on reload\n\nWhen reloading the game, we drew the level before reading the init file.\nThis meant that map information which depends on the rc file didn't\nload. This for exampe meant that redundant rings were displayed as\nneeding autopickup (this is true even with the default init file).\n\nWe fix this by doing an extra full draw after reading the init file. It\nmight be possible to fix it by instead moving the read of the init file\nearlier, but this might mess up rc files which rely on the level being\nloaded when they are run.",
+      "tree": {
+        "sha": "c748c9b119557eb29ae265066ad55fca16529b18",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/c748c9b119557eb29ae265066ad55fca16529b18"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a1a45b0d5d10d32bef374102dde409802b5d8f0f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a1a45b0d5d10d32bef374102dde409802b5d8f0f",
+    "html_url": "https://github.com/crawl/crawl/commit/a1a45b0d5d10d32bef374102dde409802b5d8f0f",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a1a45b0d5d10d32bef374102dde409802b5d8f0f/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6c44df46c364c69c77719be10085c31b1c081b90",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/6c44df46c364c69c77719be10085c31b1c081b90",
+        "html_url": "https://github.com/crawl/crawl/commit/6c44df46c364c69c77719be10085c31b1c081b90"
+      }
+    ]
+  },
+  {
     "sha": "6c44df46c364c69c77719be10085c31b1c081b90",
     "node_id": "C_kwDOAV-JftoAKDZjNDRkZjQ2YzM2NGM2OWM3NzcxOWJlMTAwODVjMzFiMWMwODFiOTA",
     "commit": {
@@ -8094,88 +8176,6 @@
         "sha": "5539bdd7ae305739dd29112ad5d16cc14c077abe",
         "url": "https://api.github.com/repos/crawl/crawl/commits/5539bdd7ae305739dd29112ad5d16cc14c077abe",
         "html_url": "https://github.com/crawl/crawl/commit/5539bdd7ae305739dd29112ad5d16cc14c077abe"
-      }
-    ]
-  },
-  {
-    "sha": "5539bdd7ae305739dd29112ad5d16cc14c077abe",
-    "node_id": "C_kwDOAV-JftoAKDU1MzliZGQ3YWUzMDU3MzlkZDI5MTEyYWQ1ZDE2Y2MxNGMwNzdhYmU",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2026-08-22T04:50:25Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2026-08-22T15:27:54Z"
-      },
-      "message": "Fix green colouring of ego-based menu titles.\n\nDo this by capitalising Ego, which bypasses the entry in\ndat/defaults/menu_colours.txt that turns all menu titles containing\n\"ego\" green, and which also makes it match the eventual capitalisation\nof the first word in such menu titles.",
-      "tree": {
-        "sha": "a2d413ffc91a48c0c557e156f1715a61f956dbc1",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/a2d413ffc91a48c0c557e156f1715a61f956dbc1"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/5539bdd7ae305739dd29112ad5d16cc14c077abe",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/5539bdd7ae305739dd29112ad5d16cc14c077abe",
-    "html_url": "https://github.com/crawl/crawl/commit/5539bdd7ae305739dd29112ad5d16cc14c077abe",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/5539bdd7ae305739dd29112ad5d16cc14c077abe/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "bec901ca33b98ecb2bd4903748101194979130b1",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/bec901ca33b98ecb2bd4903748101194979130b1",
-        "html_url": "https://github.com/crawl/crawl/commit/bec901ca33b98ecb2bd4903748101194979130b1"
       }
     ]
   }

@@ -1,5 +1,169 @@
 [
   {
+    "sha": "93185d61df3636e9c1b5826a750ca806cca3b682",
+    "node_id": "C_kwDOAV-JftoAKDkzMTg1ZDYxZGYzNjM2ZTljMWI1ODI2YTc1MGNhODA2Y2NhM2I2ODI",
+    "commit": {
+      "author": {
+        "name": "SeijiOokami",
+        "email": "seijiookami@gmail.com",
+        "date": "2026-09-19T14:49:03Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2026-09-21T17:58:57Z"
+      },
+      "message": "Reorder and update Russian descriptions\n\n----------\n\nRemove obsolete Russian descriptions and match English order.\n\nThe ru/ description files were last updated several versions ago and\nstill carry entries for content that no longer exists: the Bows,\nCrossbows, Slings, Transmutations and Poison Magic skills (since merged\nor renamed), the Centaur, Deep Dwarf, Halfling, Hill Orc, Ogre and\nVampire species, the Abyssal Knight, Arcane Marksman, Assassin,\nTransmuter and Venom Mage backgrounds, and CMD_PRAY. The game never\nlooks these keys up, and they make it hard to see what still needs\ntranslating.\n\nEntries are also reordered to follow the English source files. The ru/\nfiles had drifted into the ordering of an older version, which made\ncomparing a translation against its original needlessly awkward.\nKeeping the order in sync means future translation diffs show only the\ntext that actually changed.\n\n----------\n\nTranslate Russian descriptions for current skills, species, branches.\n\nAdds 45 Russian descriptions that had no translation, bringing five\nfiles to full coverage against the English source: skills.txt (29/29),\nspecies.txt (27/27), backgrounds.txt (26/26), commands.txt (96/96)\nand branches.txt (37/37).\n\nThese are the entries a player meets first, so they were the most\nvisible gaps. Character creation showed English for eight species\n(Coglin, Djinni, Gale Centaur, Kobold, Mountain Dwarf, Oni,\nPoltergeist, Revenant) and eight backgrounds (Alchemist, Brigand,\nCinder Acolyte, Delver, Forgewright, Hexslinger, Reaver,\nShapeshifter), and the skill menu showed English for the four skills\nthat replaced the ones removed in the previous commit. branches.txt\nwas missing every portal and extradimensional branch, sixteen in all,\namong them the Abyss, Pandemonium, the Depths and Ziggurats.\n\nTerminology follows the existing translation wherever it had already\nmade a choice: Hexslinger is built on the name the Hexes school\nalready carries, Mountain Dwarf reuses the word Deep Dwarf used for\n\"dwarf\", and Depths keeps the form the Hell entry already used for\nit. The Ice Cave Lua conditional is carried over structurally\nunchanged, with only its two string literals translated.\n\nQuotes are left untranslated on purpose, as docs/develop/translation.txt\nasks.\n\n----------\n\nFix a typo in the Russian description of the Shoals.\n\nThe word for \"exotic\" was missing a letter. Spotted while checking the\nrest of this branch's changes in a running game.\n\n----------\n\nUpdate three Russian descriptions that no longer matched the game.\n\nAll three keep their keys, so a key-level check calls them translated\nwhile the text says something the game no longer does.\n\nEarth Magic said the school is linked with Transmutations. That school\nis gone; the English entry now says Alchemy.\n\nThrowing described blowguns and magic needles, neither of which\nexists any more, and closed by saying the skill works together with\nSlings, a skill that has since been merged into Ranged Weapons. It is\nnow a translation of what the English entry currently says.\n\nOni began with the species name, which in Russian is spelled exactly\nlike the pronoun \"they\", so the first line read as \"They are large,\nsturdy...\" rather than as a name. The sentence now opens with the\nadjectives, which is what most entries in this file already do.\n\nSpotted while checking this branch's changes in a running game.\n\n----------\n\nSplit the Russian CMD_IGNORE_INVISIBLE entry to follow #5433.\n\nThe Russian file mirrored the English one, where the verbose text sat\ninside the short entry with only a blank line between them. #5433 has\nsince fixed the English side by adding the missing %%%%, so the\nRussian needs the same separator; without it the Russian verbose text\nstays unreachable while the English one works.\n\n----------\n\nRestore content missing from Russian item descriptions.\n\nFifteen entries in ru/items.txt had lost most of what the English says.\nThe key is there and the text is in Russian, so a key-level check calls\nthem translated, but a player reading them does not learn what the item\ndoes.\n\nThe worst were potions and scrolls, which are read constantly and where\na missing drawback can cost a character. potion of berserk rage said\nonly that it causes an incoherent rage: nothing about being unable to\nmove or attack outside melee, nothing about the fatigue afterwards or\nthe inability to berserk again. scroll of fear omitted which monsters\nare immune. scroll of teleportation omitted that reading it again\ncancels a pending teleport. potion of mutation omitted that it removes\nmutations before granting new ones.\n\npotion of invisibility had also dropped its [[player invis desc]]\ninclude, which is the block explaining how invisibility actually\nbehaves, and that block had no Russian entry at all; it is translated\nhere.\n\nFound by comparing markup, paragraph count and length against the\nEnglish entries.\n\n----------\n\nRestore content missing from Russian spell descriptions.\n\nSeventeen entries in ru/spells.txt had lost most of what the English\nsays, and several had drifted far enough to be actively wrong.\n\nInvisibility was the worst: the Russian described contamination\nbuilding up and making the caster glow back into visibility, which the\ngame no longer does, and said nothing about the accuracy, evasion and\nblocking penalties the current entry is about. Fulminant Prism\ndescribed a prism draining magic from its surroundings rather than the\nunstable gold alloy that explodes, and omitted that destroying it early\nweakens the blast. Teleport Other said the target moves at random\nrather than out of the caster's sight after a delay. Force Lance\ndescribed a knockback conditioned on the target's defences instead of\nthe extra damage from being slammed into a wall or another creature.\n\nThe rest were omissions of things a caster needs to know: that Freeze\nbypasses armour, that Sticky Flame is put out if the victim moves and\nwill not stick to insubstantial targets, that Shatter is weak against\nflying, gelatinous and insubstantial creatures, that Sting poisons even\nresistant targets, that Static Discharge bypasses half of armour, that\nBlink cannot be recast for a while, that Cause Fear ends when the\ntarget leaves line of sight, and that Leda's Liquefaction shrinks over\ntime and slows the caster too.\n\nFound by comparing markup, paragraph count and length against the\nEnglish entries. The file went from 24 flagged entries to 8, with none\nof the remaining ones missing content.\n\n----------\n\nCloses #5432.\nCloses #5436.\nCloses #5437.\nCloses #5438.\n\n[Committer's note: Adjusted/consolidated commit messages, squashed.]",
+      "tree": {
+        "sha": "4d9ebbfbd83181897673c3be99d455fae564611e",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/4d9ebbfbd83181897673c3be99d455fae564611e"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/93185d61df3636e9c1b5826a750ca806cca3b682",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/93185d61df3636e9c1b5826a750ca806cca3b682",
+    "html_url": "https://github.com/crawl/crawl/commit/93185d61df3636e9c1b5826a750ca806cca3b682",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/93185d61df3636e9c1b5826a750ca806cca3b682/comments",
+    "author": {
+      "login": "SeijiOokami",
+      "id": 10127469,
+      "node_id": "MDQ6VXNlcjEwMTI3NDY5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10127469?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SeijiOokami",
+      "html_url": "https://github.com/SeijiOokami",
+      "followers_url": "https://api.github.com/users/SeijiOokami/followers",
+      "following_url": "https://api.github.com/users/SeijiOokami/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SeijiOokami/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SeijiOokami/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SeijiOokami/subscriptions",
+      "organizations_url": "https://api.github.com/users/SeijiOokami/orgs",
+      "repos_url": "https://api.github.com/users/SeijiOokami/repos",
+      "events_url": "https://api.github.com/users/SeijiOokami/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SeijiOokami/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "37ef85a20b4ff177b979c432e7af936c4409333a",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/37ef85a20b4ff177b979c432e7af936c4409333a",
+        "html_url": "https://github.com/crawl/crawl/commit/37ef85a20b4ff177b979c432e7af936c4409333a"
+      }
+    ]
+  },
+  {
+    "sha": "37ef85a20b4ff177b979c432e7af936c4409333a",
+    "node_id": "C_kwDOAV-JftoAKDM3ZWY4NWEyMGI0ZmYxNzdiOTc5YzQzMmU3YWY5MzZjNDQwOTMzM2E",
+    "commit": {
+      "author": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-09-21T14:16:10Z"
+      },
+      "committer": {
+        "name": "DracoOmega",
+        "email": "draco.omega.dcss.dev@gmail.com",
+        "date": "2026-09-21T14:16:10Z"
+      },
+      "message": "Attribute some peripheral damage directly to the player\n\nSolar ember, battlesphere, and rending blade damage now counts as being\ndealt by the owner of those things rather than the peripheral monster\nitself. This is consistent with how damage from foxfire, ball lightning,\norbs of destruction, and other similar things are also attributed directly\nto the actor who first created them.",
+      "tree": {
+        "sha": "38b75c1f2813d1aa85411439d208c12df941e795",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/38b75c1f2813d1aa85411439d208c12df941e795"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/37ef85a20b4ff177b979c432e7af936c4409333a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/37ef85a20b4ff177b979c432e7af936c4409333a",
+    "html_url": "https://github.com/crawl/crawl/commit/37ef85a20b4ff177b979c432e7af936c4409333a",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/37ef85a20b4ff177b979c432e7af936c4409333a/comments",
+    "author": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "DracoOmega",
+      "id": 12538566,
+      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DracoOmega",
+      "html_url": "https://github.com/DracoOmega",
+      "followers_url": "https://api.github.com/users/DracoOmega/followers",
+      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
+      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
+      "repos_url": "https://api.github.com/users/DracoOmega/repos",
+      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "87e7692b6fa105ad0d95ac5d4434da0d6d3a22b2",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/87e7692b6fa105ad0d95ac5d4434da0d6d3a22b2",
+        "html_url": "https://github.com/crawl/crawl/commit/87e7692b6fa105ad0d95ac5d4434da0d6d3a22b2"
+      }
+    ]
+  },
+  {
     "sha": "87e7692b6fa105ad0d95ac5d4434da0d6d3a22b2",
     "node_id": "C_kwDOAV-JftoAKDg3ZTc2OTJiNmZhMTA1YWQwZDk1YWM1ZDQ0MzRkYTBkNmQzYTIyYjI",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "468b78db0ba4bb111c2957c0c265cd337b6e4131",
         "url": "https://api.github.com/repos/crawl/crawl/commits/468b78db0ba4bb111c2957c0c265cd337b6e4131",
         "html_url": "https://github.com/crawl/crawl/commit/468b78db0ba4bb111c2957c0c265cd337b6e4131"
-      }
-    ]
-  },
-  {
-    "sha": "468b78db0ba4bb111c2957c0c265cd337b6e4131",
-    "node_id": "C_kwDOAV-JftoAKDQ2OGI3OGRiMGJhNGJiMTExYzI5NTdjMGMyNjVjZDMzN2I2ZTQxMzE",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-08-31T14:33:14Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-08-31T14:33:14Z"
-      },
-      "message": "Mention vampire form's passive daze in the talisman description\n\nIt should make the 'Daze Power' listed in the form table slightly less\nmysterious to those who don't already know.",
-      "tree": {
-        "sha": "f505e66003497b0a058d9f0b492710792b0d2205",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f505e66003497b0a058d9f0b492710792b0d2205"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/468b78db0ba4bb111c2957c0c265cd337b6e4131",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/468b78db0ba4bb111c2957c0c265cd337b6e4131",
-    "html_url": "https://github.com/crawl/crawl/commit/468b78db0ba4bb111c2957c0c265cd337b6e4131",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/468b78db0ba4bb111c2957c0c265cd337b6e4131/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-        "html_url": "https://github.com/crawl/crawl/commit/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6"
-      }
-    ]
-  },
-  {
-    "sha": "0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-    "node_id": "C_kwDOAV-JftoAKDA2MjljZDdjMzQ2YTNmYTNmOWMyMmY2ZDUzYzg5MmEzMjAxZTdiZDY",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-08-31T14:23:25Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-08-31T14:23:25Z"
-      },
-      "message": "Apply Vainglory's conduct even while melded\n\nTo avoid people dipping stairs while, say, in medusa form.\n\n(Vainglory's conduct is less severe than Toga of Victory's, but a similar\nlogic was already used there.)",
-      "tree": {
-        "sha": "5bc4c3d2b178804e77043742f87a22bee9018d1c",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/5bc4c3d2b178804e77043742f87a22bee9018d1c"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-    "html_url": "https://github.com/crawl/crawl/commit/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0629cd7c346a3fa3f9c22f6d53c892a3201e7bd6/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "4a6844f65bf676578f03d36ca83dc7066f60c574",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/4a6844f65bf676578f03d36ca83dc7066f60c574",
-        "html_url": "https://github.com/crawl/crawl/commit/4a6844f65bf676578f03d36ca83dc7066f60c574"
       }
     ]
   }

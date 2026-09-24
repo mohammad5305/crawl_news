@@ -1,5 +1,169 @@
 [
   {
+    "sha": "a0251cc2b52eb8fa8377e47bd15e01d999caad2b",
+    "node_id": "C_kwDOAV-JftoAKGEwMjUxY2MyYjUyZWI4ZmE4Mzc3ZTQ3YmQxNWUwMWQ5OTljYWFkMmI",
+    "commit": {
+      "author": {
+        "name": "hellmonk",
+        "email": "nldehaan91@gmail.com",
+        "date": "2026-09-24T17:53:41Z"
+      },
+      "committer": {
+        "name": "hellmonk",
+        "email": "nldehaan91@gmail.com",
+        "date": "2026-09-24T17:53:41Z"
+      },
+      "message": "Prompt for removing active toga (projectNoob)\n\nRemoving Victory resets its bonuses, so prompt when doing that.",
+      "tree": {
+        "sha": "2c1e4f5b591b822655cea5042de98f5f94e79dba",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/2c1e4f5b591b822655cea5042de98f5f94e79dba"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/a0251cc2b52eb8fa8377e47bd15e01d999caad2b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/a0251cc2b52eb8fa8377e47bd15e01d999caad2b",
+    "html_url": "https://github.com/crawl/crawl/commit/a0251cc2b52eb8fa8377e47bd15e01d999caad2b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/a0251cc2b52eb8fa8377e47bd15e01d999caad2b/comments",
+    "author": {
+      "login": "Hellmonk",
+      "id": 16345521,
+      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hellmonk",
+      "html_url": "https://github.com/Hellmonk",
+      "followers_url": "https://api.github.com/users/Hellmonk/followers",
+      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
+      "repos_url": "https://api.github.com/users/Hellmonk/repos",
+      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hellmonk",
+      "id": 16345521,
+      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hellmonk",
+      "html_url": "https://github.com/Hellmonk",
+      "followers_url": "https://api.github.com/users/Hellmonk/followers",
+      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
+      "repos_url": "https://api.github.com/users/Hellmonk/repos",
+      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "90608e92e52382c260823b85bcdf1208789a2a28",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/90608e92e52382c260823b85bcdf1208789a2a28",
+        "html_url": "https://github.com/crawl/crawl/commit/90608e92e52382c260823b85bcdf1208789a2a28"
+      }
+    ]
+  },
+  {
+    "sha": "90608e92e52382c260823b85bcdf1208789a2a28",
+    "node_id": "C_kwDOAV-JftoAKDkwNjA4ZTkyZTUyMzgyYzI2MDgyM2I4NWJjZGYxMjA4Nzg5YTJhMjg",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-09-24T08:10:45Z"
+      },
+      "committer": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-09-24T11:54:08Z"
+      },
+      "message": "Fix a rare tentacle connect issue\n\nEvery turn, a tentacle decides where to move its tip, and then lays out\nits segments to be a legal tentacle. If it fails in this step, we log a\ntentacle connection failure and kill the whole thing. This has been\nhappening recently in Gulch in particular, for reasons that are unclear\nbut may be related to the isolated blockages that fungus causes, and/or\ntheir regrowth mechanics.\n\nOne way this can happen (which may or may not be responsible for the\nrecent failures) is that we fail to preserve the \"no holes\" invariant\nthat tentacles enforce. And *that* happened because of the layout code;\nthe tip moved somewhere which respects the no holes rule, but then the\nbody then took an option which does not.\n\nSo we fix this by enforcing holelessness on layouts, as well as in the\ntip's destination. This should avoid holes for tentacles whose base has\nnot moved. If the base has moved, there may be cases where the only\nvalid route has a hole; so in order not to cause new connect failures,\nwe fall back to a search which allows holes.\n\nWe also add comments explaining the algorithm a little, though the\nauthor increasingly suspects that it was folly to attempt to bind the\nineffable tentacle with mere strings of code.",
+      "tree": {
+        "sha": "d3db6a8798e0dcdf55bd298cbb47bedde5f9ccb1",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/d3db6a8798e0dcdf55bd298cbb47bedde5f9ccb1"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/90608e92e52382c260823b85bcdf1208789a2a28",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/90608e92e52382c260823b85bcdf1208789a2a28",
+    "html_url": "https://github.com/crawl/crawl/commit/90608e92e52382c260823b85bcdf1208789a2a28",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/90608e92e52382c260823b85bcdf1208789a2a28/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d9fd9c8d3d282c84649f51baf1c83f905f376820",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/d9fd9c8d3d282c84649f51baf1c83f905f376820",
+        "html_url": "https://github.com/crawl/crawl/commit/d9fd9c8d3d282c84649f51baf1c83f905f376820"
+      }
+    ]
+  },
+  {
     "sha": "d9fd9c8d3d282c84649f51baf1c83f905f376820",
     "node_id": "C_kwDOAV-JftoAKGQ5ZmQ5YzhkM2QyODJjODQ2NDlmNTFiYWYxYzgzZjkwNWYzNzY4MjA",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "afae823072d909216e6e8b635afe11d626e61964",
         "url": "https://api.github.com/repos/crawl/crawl/commits/afae823072d909216e6e8b635afe11d626e61964",
         "html_url": "https://github.com/crawl/crawl/commit/afae823072d909216e6e8b635afe11d626e61964"
-      }
-    ]
-  },
-  {
-    "sha": "afae823072d909216e6e8b635afe11d626e61964",
-    "node_id": "C_kwDOAV-JftoAKGFmYWU4MjMwNzJkOTA5MjE2ZTZlOGI2MzVhZmUxMWQ2MjZlNjE5NjQ",
-    "commit": {
-      "author": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2026-09-03T18:48:09Z"
-      },
-      "committer": {
-        "name": "hellmonk",
-        "email": "nldehaan91@gmail.com",
-        "date": "2026-09-03T18:48:09Z"
-      },
-      "message": "Be more explicit about Fedhas plant move speed\n\nIt adds 5 aut to a normal speed move, so explicitly call it slow.",
-      "tree": {
-        "sha": "434383ce282866b9f0ff249160537b4354cefe26",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/434383ce282866b9f0ff249160537b4354cefe26"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/afae823072d909216e6e8b635afe11d626e61964",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/afae823072d909216e6e8b635afe11d626e61964",
-    "html_url": "https://github.com/crawl/crawl/commit/afae823072d909216e6e8b635afe11d626e61964",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/afae823072d909216e6e8b635afe11d626e61964/comments",
-    "author": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "Hellmonk",
-      "id": 16345521,
-      "node_id": "MDQ6VXNlcjE2MzQ1NTIx",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16345521?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Hellmonk",
-      "html_url": "https://github.com/Hellmonk",
-      "followers_url": "https://api.github.com/users/Hellmonk/followers",
-      "following_url": "https://api.github.com/users/Hellmonk/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Hellmonk/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Hellmonk/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Hellmonk/subscriptions",
-      "organizations_url": "https://api.github.com/users/Hellmonk/orgs",
-      "repos_url": "https://api.github.com/users/Hellmonk/repos",
-      "events_url": "https://api.github.com/users/Hellmonk/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Hellmonk/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "0941e263bb3f04df5aed31cb178b9d513545a12a",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/0941e263bb3f04df5aed31cb178b9d513545a12a",
-        "html_url": "https://github.com/crawl/crawl/commit/0941e263bb3f04df5aed31cb178b9d513545a12a"
-      }
-    ]
-  },
-  {
-    "sha": "0941e263bb3f04df5aed31cb178b9d513545a12a",
-    "node_id": "C_kwDOAV-JftoAKDA5NDFlMjYzYmIzZjA0ZGY1YWVkMzFjYjE3OGI5ZDUxMzU0NWExMmE",
-    "commit": {
-      "author": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-09-02T22:33:27Z"
-      },
-      "committer": {
-        "name": "CrawlOdds",
-        "email": "crawlodds@gmail.com",
-        "date": "2026-09-02T22:57:55Z"
-      },
-      "message": "Show TRJ destruction for remembered walls\n\nThis makes autoexplore work better if the loot vaults had been seen, and\nalso just looks a bit cooler.",
-      "tree": {
-        "sha": "492f2e79d7a03ecf01588d77e603aa8d591ae501",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/492f2e79d7a03ecf01588d77e603aa8d591ae501"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0941e263bb3f04df5aed31cb178b9d513545a12a",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/0941e263bb3f04df5aed31cb178b9d513545a12a",
-    "html_url": "https://github.com/crawl/crawl/commit/0941e263bb3f04df5aed31cb178b9d513545a12a",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0941e263bb3f04df5aed31cb178b9d513545a12a/comments",
-    "author": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "CrawlOdds",
-      "id": 23155525,
-      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/CrawlOdds",
-      "html_url": "https://github.com/CrawlOdds",
-      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
-      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
-      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
-      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
-      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
-      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "baf0f14afe7b7eb9d1ada999bc2f8b371112f95b",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/baf0f14afe7b7eb9d1ada999bc2f8b371112f95b",
-        "html_url": "https://github.com/crawl/crawl/commit/baf0f14afe7b7eb9d1ada999bc2f8b371112f95b"
       }
     ]
   }

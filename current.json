@@ -1,5 +1,87 @@
 [
   {
+    "sha": "bbeaa5dcc028ffe82a8bc0c96db5f3266cd00bd3",
+    "node_id": "C_kwDOAV-JftoAKGJiZWFhNWRjYzAyOGZmZTgyYThiYzBjOTZkYjVmMzI2NmNkMDBiZDM",
+    "commit": {
+      "author": {
+        "name": "SeijiOokami",
+        "email": "seijiookami@gmail.com",
+        "date": "2026-10-10T13:32:07Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2026-10-10T21:06:55Z"
+      },
+      "message": "Fix line-join glitches in Russian tutorial\n\nThe game joins the lines of a description before showing it\n(unwrap_desc in libutil.cc): a line ending in \">\" followed by one\nstarting with \"<\" is joined with no space, and any other line break\nbecomes a space. Four line breaks in the Russian files fell foul of\nthis:\n\n- tutorial2 throwing: \"shift-\" at the end of a line was shown as\n  \"[shift- tab]\";\n- tutorial3 wand_digging: in local tiles the space before the\n  alternative was lost and one appeared before the comma;\n- tutorial2 compare_monster_desc: a space between the <localtiles>\n  and <nomouse> alternatives ended up inside the brackets;\n- Dragoncall status: a hyphenated word broken at the hyphen was shown\n  with a space in it.\n\nOnly line breaks and spaces change; the wording is the same.",
+      "tree": {
+        "sha": "83c7a6e09dd62e7f0079fe4782e33afd8a119600",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/83c7a6e09dd62e7f0079fe4782e33afd8a119600"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/bbeaa5dcc028ffe82a8bc0c96db5f3266cd00bd3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/bbeaa5dcc028ffe82a8bc0c96db5f3266cd00bd3",
+    "html_url": "https://github.com/crawl/crawl/commit/bbeaa5dcc028ffe82a8bc0c96db5f3266cd00bd3",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/bbeaa5dcc028ffe82a8bc0c96db5f3266cd00bd3/comments",
+    "author": {
+      "login": "SeijiOokami",
+      "id": 10127469,
+      "node_id": "MDQ6VXNlcjEwMTI3NDY5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10127469?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/SeijiOokami",
+      "html_url": "https://github.com/SeijiOokami",
+      "followers_url": "https://api.github.com/users/SeijiOokami/followers",
+      "following_url": "https://api.github.com/users/SeijiOokami/following{/other_user}",
+      "gists_url": "https://api.github.com/users/SeijiOokami/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SeijiOokami/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SeijiOokami/subscriptions",
+      "organizations_url": "https://api.github.com/users/SeijiOokami/orgs",
+      "repos_url": "https://api.github.com/users/SeijiOokami/repos",
+      "events_url": "https://api.github.com/users/SeijiOokami/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SeijiOokami/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e6b51bfc9a4d64bd02e6812df1c7ef8108a1a64d",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/e6b51bfc9a4d64bd02e6812df1c7ef8108a1a64d",
+        "html_url": "https://github.com/crawl/crawl/commit/e6b51bfc9a4d64bd02e6812df1c7ef8108a1a64d"
+      }
+    ]
+  },
+  {
     "sha": "e6b51bfc9a4d64bd02e6812df1c7ef8108a1a64d",
     "node_id": "C_kwDOAV-JftoAKGU2YjUxYmZjOWE0ZDY0YmQwMmU2ODEyZGYxYzdlZjgxMDhhMWE2NGQ",
     "commit": {
@@ -8114,88 +8196,6 @@
         "sha": "ecc193f63a6ee16143427d6e9125207d75034e23",
         "url": "https://api.github.com/repos/crawl/crawl/commits/ecc193f63a6ee16143427d6e9125207d75034e23",
         "html_url": "https://github.com/crawl/crawl/commit/ecc193f63a6ee16143427d6e9125207d75034e23"
-      }
-    ]
-  },
-  {
-    "sha": "ecc193f63a6ee16143427d6e9125207d75034e23",
-    "node_id": "C_kwDOAV-JftoAKGVjYzE5M2Y2M2E2ZWUxNjE0MzQyN2Q2ZTkxMjUyMDdkNzUwMzRlMjM",
-    "commit": {
-      "author": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-10-01T19:49:16Z"
-      },
-      "committer": {
-        "name": "DracoOmega",
-        "email": "draco.omega.dcss.dev@gmail.com",
-        "date": "2026-10-04T00:33:34Z"
-      },
-      "message": "Allow oni to potion-cleave from drinking any potion\n\nIt's been a long-requested feature from more sources than I can remember\nthat oni be able to cleave from drinking moonshine - the flavor\nassociations are just too strong.\n\nI considered carving out a specific exception for just moonshine, but with\nStalker now existing, it felt a shame that the potion-specialist species\nhad no synergy with the potion-specialist form. I considered making !mist\nrestore an extremely nominal amount of MP so that it would work with their\npassive, but that felt a little forced.\n\nRather than carve out *two* exceptions, after some discussion with other\ndevs, I've decided to try allowing oni to cleave from any potion at all.\nPeople felt this wouldn't be a significant buff in practice, but I am\nconscious that it's a buff to one of the best-performing species we\ncurrently have. But it's also a situational buff to the aspect of them that\nis considered less strong, so perhaps it will be okay.\n\n(I have given them a cautionary nerf of 1 to their polearm apt, since that\nhas the strongest synergy with all the extra potion cleaving.)",
-      "tree": {
-        "sha": "da459f8446ddc63dbb4d1883cd0573d4859e98a7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/da459f8446ddc63dbb4d1883cd0573d4859e98a7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/ecc193f63a6ee16143427d6e9125207d75034e23",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/ecc193f63a6ee16143427d6e9125207d75034e23",
-    "html_url": "https://github.com/crawl/crawl/commit/ecc193f63a6ee16143427d6e9125207d75034e23",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/ecc193f63a6ee16143427d6e9125207d75034e23/comments",
-    "author": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "DracoOmega",
-      "id": 12538566,
-      "node_id": "MDQ6VXNlcjEyNTM4NTY2",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12538566?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/DracoOmega",
-      "html_url": "https://github.com/DracoOmega",
-      "followers_url": "https://api.github.com/users/DracoOmega/followers",
-      "following_url": "https://api.github.com/users/DracoOmega/following{/other_user}",
-      "gists_url": "https://api.github.com/users/DracoOmega/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/DracoOmega/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/DracoOmega/subscriptions",
-      "organizations_url": "https://api.github.com/users/DracoOmega/orgs",
-      "repos_url": "https://api.github.com/users/DracoOmega/repos",
-      "events_url": "https://api.github.com/users/DracoOmega/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/DracoOmega/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "824c748d80a5f459ba62e8da854ce5c4642d2220",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/824c748d80a5f459ba62e8da854ce5c4642d2220",
-        "html_url": "https://github.com/crawl/crawl/commit/824c748d80a5f459ba62e8da854ce5c4642d2220"
       }
     ]
   }

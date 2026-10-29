@@ -1,5 +1,87 @@
 [
   {
+    "sha": "0f1e910ab6a74a90b6655bf58510013b85f4bec5",
+    "node_id": "C_kwDOAV-JftoAKDBmMWU5MTBhYjZhNzRhOTBiNjY1NWJmNTg1MTAwMTNiODVmNGJlYzU",
+    "commit": {
+      "author": {
+        "name": "Sergey Semushin",
+        "email": "Predelnik@gmail.com",
+        "date": "2026-10-25T22:19:00Z"
+      },
+      "committer": {
+        "name": "David Lawrence Ramsey",
+        "email": "pooka109@gmail.com",
+        "date": "2026-10-28T23:17:16Z"
+      },
+      "message": "Use actual body size in monster-util\n\nLooks like monster::body_size function uses torso size as default. I guess for monster utiltiy it makes sense to use PSIZE_BODY for body size as it affects more interactions such as constriction, knockback etc.\r\n\r\nThere is also an inconsistency between monster_info::body_size() and monster::body_size() because first one will use PSIZE_BODY and second will use PSIZE_TORSO by default. Not sure if it needs to be addressed.\r\n\r\nI noticed this issue because in commit https://github.com/crawl/crawl/commit/1d9b0128ca3354358dabea7fafaf395ac8c04c83 torso size of some monsters was made medium but their body size stayed the same.",
+      "tree": {
+        "sha": "40c15ebb2427d8311a116ae55516d251deb15946",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/40c15ebb2427d8311a116ae55516d251deb15946"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/0f1e910ab6a74a90b6655bf58510013b85f4bec5",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/0f1e910ab6a74a90b6655bf58510013b85f4bec5",
+    "html_url": "https://github.com/crawl/crawl/commit/0f1e910ab6a74a90b6655bf58510013b85f4bec5",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/0f1e910ab6a74a90b6655bf58510013b85f4bec5/comments",
+    "author": {
+      "login": "Predelnik",
+      "id": 2133957,
+      "node_id": "MDQ6VXNlcjIxMzM5NTc=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2133957?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Predelnik",
+      "html_url": "https://github.com/Predelnik",
+      "followers_url": "https://api.github.com/users/Predelnik/followers",
+      "following_url": "https://api.github.com/users/Predelnik/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Predelnik/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Predelnik/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Predelnik/subscriptions",
+      "organizations_url": "https://api.github.com/users/Predelnik/orgs",
+      "repos_url": "https://api.github.com/users/Predelnik/repos",
+      "events_url": "https://api.github.com/users/Predelnik/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Predelnik/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "pooka109",
+      "id": 7695641,
+      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/pooka109",
+      "html_url": "https://github.com/pooka109",
+      "followers_url": "https://api.github.com/users/pooka109/followers",
+      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
+      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
+      "organizations_url": "https://api.github.com/users/pooka109/orgs",
+      "repos_url": "https://api.github.com/users/pooka109/repos",
+      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pooka109/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c7d4e6f535f79fcb445e34e5e311ab1487e8c2c2",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/c7d4e6f535f79fcb445e34e5e311ab1487e8c2c2",
+        "html_url": "https://github.com/crawl/crawl/commit/c7d4e6f535f79fcb445e34e5e311ab1487e8c2c2"
+      }
+    ]
+  },
+  {
     "sha": "c7d4e6f535f79fcb445e34e5e311ab1487e8c2c2",
     "node_id": "C_kwDOAV-JftoAKGM3ZDRlNmY1MzVmNzlmY2I0NDVlMzRlNWUzMTFhYjE0ODdlOGMyYzI",
     "commit": {
@@ -8074,88 +8156,6 @@
         "sha": "3bed4996afac02aae3e9c5cea84eaea79d123b58",
         "url": "https://api.github.com/repos/crawl/crawl/commits/3bed4996afac02aae3e9c5cea84eaea79d123b58",
         "html_url": "https://github.com/crawl/crawl/commit/3bed4996afac02aae3e9c5cea84eaea79d123b58"
-      }
-    ]
-  },
-  {
-    "sha": "3bed4996afac02aae3e9c5cea84eaea79d123b58",
-    "node_id": "C_kwDOAV-JftoAKDNiZWQ0OTk2YWZhYzAyYWFlM2U5YzVjZWE4NGVhZWE3OWQxMjNiNTg",
-    "commit": {
-      "author": {
-        "name": "SeijiOokami",
-        "email": "seijiookami@gmail.com",
-        "date": "2026-10-07T17:44:28Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2026-10-07T23:28:44Z"
-      },
-      "message": "Rework the Russian tutorial\n\nru/tutorial.txt had 57 of the English file's 88 entries, and more than\nhalf of those were defective, so the file is retranslated against the\ncurrent English rather than patched.\n\nThe worst problem was English left inside <input> tags. Those are shown\nto the player verbatim in brackets, so a Russian tutorial was telling\nbeginners to press [arrow keys] and [left click]. Some instructions\nwere also stale: tutorial1 downstairs said Shift-Click where the\nEnglish has said left click for some time, and tutorial1 levelmap had\na sentence that stopped mid-clause and used <console> where the English\nuses <nomouse>.\n\nKey names that are printed on keyboards - Space, Enter, Escape, Shift,\nNumlock, Tab - stay in Latin, while descriptions of actions are\ntranslated. $cmd[] references are untouched, and the two :nowrap key\ndiagrams keep their layout character for character.\n\nMarkup now matches the English in all 88 entries.",
-      "tree": {
-        "sha": "dbe9504156c74e3561530d0505bb1ad3ce43e5e7",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/dbe9504156c74e3561530d0505bb1ad3ce43e5e7"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/3bed4996afac02aae3e9c5cea84eaea79d123b58",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/3bed4996afac02aae3e9c5cea84eaea79d123b58",
-    "html_url": "https://github.com/crawl/crawl/commit/3bed4996afac02aae3e9c5cea84eaea79d123b58",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/3bed4996afac02aae3e9c5cea84eaea79d123b58/comments",
-    "author": {
-      "login": "SeijiOokami",
-      "id": 10127469,
-      "node_id": "MDQ6VXNlcjEwMTI3NDY5",
-      "avatar_url": "https://avatars.githubusercontent.com/u/10127469?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/SeijiOokami",
-      "html_url": "https://github.com/SeijiOokami",
-      "followers_url": "https://api.github.com/users/SeijiOokami/followers",
-      "following_url": "https://api.github.com/users/SeijiOokami/following{/other_user}",
-      "gists_url": "https://api.github.com/users/SeijiOokami/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/SeijiOokami/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/SeijiOokami/subscriptions",
-      "organizations_url": "https://api.github.com/users/SeijiOokami/orgs",
-      "repos_url": "https://api.github.com/users/SeijiOokami/repos",
-      "events_url": "https://api.github.com/users/SeijiOokami/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/SeijiOokami/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "e0b5820336408192ae638e68871bb7f2dd6a30f9",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/e0b5820336408192ae638e68871bb7f2dd6a30f9",
-        "html_url": "https://github.com/crawl/crawl/commit/e0b5820336408192ae638e68871bb7f2dd6a30f9"
       }
     ]
   }

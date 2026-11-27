@@ -1,5 +1,169 @@
 [
   {
+    "sha": "60a48a408a413ab525c7a5db9f3e4c9b8892fa82",
+    "node_id": "C_kwDOAV-JftoAKDYwYTQ4YTQwOGE0MTNhYjUyNWM3YTVkYjlmM2U0YzliODg5MmZhODI",
+    "commit": {
+      "author": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-11-26T06:36:36Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-11-27T01:15:31Z"
+      },
+      "message": "Some tweaks to the spells.beam_path()\n\nReplace the separate booleans for piercing and digging with a single\nenum-style integer: 0 for non-piercing (default), 1 for piercing, and 2\nfor digging. Also add a default true at_target boolean argument to have\nthe beam stop at the specified target. When false, an unblocked beam can\ncontinue past the target.\n\nFor checking beam validity, check the player knowledge map bounds\ninstead of the absolute map bounds. Finally, add range checks so we\nnever try to make a beam longer than player LOS radius.",
+      "tree": {
+        "sha": "865e3c36f8201d193cb016ec3284ace8ac85acbb",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/865e3c36f8201d193cb016ec3284ace8ac85acbb"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/60a48a408a413ab525c7a5db9f3e4c9b8892fa82",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/60a48a408a413ab525c7a5db9f3e4c9b8892fa82",
+    "html_url": "https://github.com/crawl/crawl/commit/60a48a408a413ab525c7a5db9f3e4c9b8892fa82",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/60a48a408a413ab525c7a5db9f3e4c9b8892fa82/comments",
+    "author": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1627392da72dd746eb4f1253ac2d1062f7ee699b",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/1627392da72dd746eb4f1253ac2d1062f7ee699b",
+        "html_url": "https://github.com/crawl/crawl/commit/1627392da72dd746eb4f1253ac2d1062f7ee699b"
+      }
+    ]
+  },
+  {
+    "sha": "1627392da72dd746eb4f1253ac2d1062f7ee699b",
+    "node_id": "C_kwDOAV-JftoAKDE2MjczOTJkYTcyZGQ3NDZlYjRmMTI1M2FjMmQxMDYyZjdlZTY5OWI",
+    "commit": {
+      "author": {
+        "name": "CrawlOdds",
+        "email": "crawlodds@gmail.com",
+        "date": "2026-11-22T21:06:16Z"
+      },
+      "committer": {
+        "name": "gammafunk",
+        "email": "gammafunk@gmail.com",
+        "date": "2026-11-27T01:15:31Z"
+      },
+      "message": "Replace spells.spells_path with spells.beam_path\n\nThis is a breaking change to the player clua API.\n\nspells_path had some nasty info leak problems. While it would be\npossible to fully fix it (as in #5494), this is rather invasive to the\nbeam code, and did not seem worth it in order to support some lua-only\nfunctionality.\n\nSo instead we replace this with a less powerful version, which takes a\nstart and endpoint and produces a ray, optionally piercing through\nmonsters and/or diggable walls. This does not emulate bouncing, details\nof which actors block beams, or tracing the beam past the target.",
+      "tree": {
+        "sha": "6b45af84d07af8d26672c597d85bebe1854fdb18",
+        "url": "https://api.github.com/repos/crawl/crawl/git/trees/6b45af84d07af8d26672c597d85bebe1854fdb18"
+      },
+      "url": "https://api.github.com/repos/crawl/crawl/git/commits/1627392da72dd746eb4f1253ac2d1062f7ee699b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/crawl/crawl/commits/1627392da72dd746eb4f1253ac2d1062f7ee699b",
+    "html_url": "https://github.com/crawl/crawl/commit/1627392da72dd746eb4f1253ac2d1062f7ee699b",
+    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/1627392da72dd746eb4f1253ac2d1062f7ee699b/comments",
+    "author": {
+      "login": "CrawlOdds",
+      "id": 23155525,
+      "node_id": "MDQ6VXNlcjIzMTU1NTI1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23155525?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/CrawlOdds",
+      "html_url": "https://github.com/CrawlOdds",
+      "followers_url": "https://api.github.com/users/CrawlOdds/followers",
+      "following_url": "https://api.github.com/users/CrawlOdds/following{/other_user}",
+      "gists_url": "https://api.github.com/users/CrawlOdds/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/CrawlOdds/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/CrawlOdds/subscriptions",
+      "organizations_url": "https://api.github.com/users/CrawlOdds/orgs",
+      "repos_url": "https://api.github.com/users/CrawlOdds/repos",
+      "events_url": "https://api.github.com/users/CrawlOdds/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/CrawlOdds/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "gammafunk",
+      "id": 6548464,
+      "node_id": "MDQ6VXNlcjY1NDg0NjQ=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6548464?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/gammafunk",
+      "html_url": "https://github.com/gammafunk",
+      "followers_url": "https://api.github.com/users/gammafunk/followers",
+      "following_url": "https://api.github.com/users/gammafunk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/gammafunk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/gammafunk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/gammafunk/subscriptions",
+      "organizations_url": "https://api.github.com/users/gammafunk/orgs",
+      "repos_url": "https://api.github.com/users/gammafunk/repos",
+      "events_url": "https://api.github.com/users/gammafunk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/gammafunk/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "3cbe16d68f8fafdd0b08057cc9acaf10adf27c9e",
+        "url": "https://api.github.com/repos/crawl/crawl/commits/3cbe16d68f8fafdd0b08057cc9acaf10adf27c9e",
+        "html_url": "https://github.com/crawl/crawl/commit/3cbe16d68f8fafdd0b08057cc9acaf10adf27c9e"
+      }
+    ]
+  },
+  {
     "sha": "3cbe16d68f8fafdd0b08057cc9acaf10adf27c9e",
     "node_id": "C_kwDOAV-JftoAKDNjYmUxNmQ2OGY4ZmFmZGQwYjA4MDU3Y2M5YWNhZjEwYWRmMjdjOWU",
     "commit": {
@@ -8032,170 +8196,6 @@
         "sha": "01fcf34389b439fed06685f7c3dbaf2254d6dacf",
         "url": "https://api.github.com/repos/crawl/crawl/commits/01fcf34389b439fed06685f7c3dbaf2254d6dacf",
         "html_url": "https://github.com/crawl/crawl/commit/01fcf34389b439fed06685f7c3dbaf2254d6dacf"
-      }
-    ]
-  },
-  {
-    "sha": "01fcf34389b439fed06685f7c3dbaf2254d6dacf",
-    "node_id": "C_kwDOAV-JftoAKDAxZmNmMzQzODliNDM5ZmVkMDY2ODVmN2MzZGJhZjIyNTRkNmRhY2Y",
-    "commit": {
-      "author": {
-        "name": "advil",
-        "email": "rawlins@gmail.com",
-        "date": "2026-11-11T17:36:37Z"
-      },
-      "committer": {
-        "name": "advil",
-        "email": "rawlins@gmail.com",
-        "date": "2026-11-11T17:49:41Z"
-      },
-      "message": "fix: some compiler warnings\n\nProbably clang-specific:\n\n* \"%lx\" in a format string is not safe for a uint64_t object, since\n  long may or may correspond on any given build. Use the correct\n  format string (and add a 0x here for clarity)\n* EQF_NONE is unused (wouldn't be an issue if this were an enum)\n* the >= HT_WALLS_ONLY check is guaranteed false on the current enum,\n  keep as a future sanity check but avoid the warning via a cast",
-      "tree": {
-        "sha": "f21569881335abbc75aed48e129834bbabd5f441",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/f21569881335abbc75aed48e129834bbabd5f441"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/01fcf34389b439fed06685f7c3dbaf2254d6dacf",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/01fcf34389b439fed06685f7c3dbaf2254d6dacf",
-    "html_url": "https://github.com/crawl/crawl/commit/01fcf34389b439fed06685f7c3dbaf2254d6dacf",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/01fcf34389b439fed06685f7c3dbaf2254d6dacf/comments",
-    "author": {
-      "login": "rawlins",
-      "id": 6290753,
-      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/rawlins",
-      "html_url": "https://github.com/rawlins",
-      "followers_url": "https://api.github.com/users/rawlins/followers",
-      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
-      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
-      "organizations_url": "https://api.github.com/users/rawlins/orgs",
-      "repos_url": "https://api.github.com/users/rawlins/repos",
-      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/rawlins/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "rawlins",
-      "id": 6290753,
-      "node_id": "MDQ6VXNlcjYyOTA3NTM=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6290753?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/rawlins",
-      "html_url": "https://github.com/rawlins",
-      "followers_url": "https://api.github.com/users/rawlins/followers",
-      "following_url": "https://api.github.com/users/rawlins/following{/other_user}",
-      "gists_url": "https://api.github.com/users/rawlins/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/rawlins/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/rawlins/subscriptions",
-      "organizations_url": "https://api.github.com/users/rawlins/orgs",
-      "repos_url": "https://api.github.com/users/rawlins/repos",
-      "events_url": "https://api.github.com/users/rawlins/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/rawlins/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "7ebb014cd129ca084148a488c337d821d6f2994c",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/7ebb014cd129ca084148a488c337d821d6f2994c",
-        "html_url": "https://github.com/crawl/crawl/commit/7ebb014cd129ca084148a488c337d821d6f2994c"
-      }
-    ]
-  },
-  {
-    "sha": "7ebb014cd129ca084148a488c337d821d6f2994c",
-    "node_id": "C_kwDOAV-JftoAKDdlYmIwMTRjZDEyOWNhMDg0MTQ4YTQ4OGMzMzdkODIxZDZmMjk5NGM",
-    "commit": {
-      "author": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2026-11-11T16:54:36Z"
-      },
-      "committer": {
-        "name": "David Lawrence Ramsey",
-        "email": "pooka109@gmail.com",
-        "date": "2026-11-11T16:54:36Z"
-      },
-      "message": "Add two more colours to the database.",
-      "tree": {
-        "sha": "3309d38a1ce0317618332cfccbe850b43a18f951",
-        "url": "https://api.github.com/repos/crawl/crawl/git/trees/3309d38a1ce0317618332cfccbe850b43a18f951"
-      },
-      "url": "https://api.github.com/repos/crawl/crawl/git/commits/7ebb014cd129ca084148a488c337d821d6f2994c",
-      "comment_count": 0,
-      "verification": {
-        "verified": false,
-        "reason": "unsigned",
-        "signature": null,
-        "payload": null,
-        "verified_at": null
-      }
-    },
-    "url": "https://api.github.com/repos/crawl/crawl/commits/7ebb014cd129ca084148a488c337d821d6f2994c",
-    "html_url": "https://github.com/crawl/crawl/commit/7ebb014cd129ca084148a488c337d821d6f2994c",
-    "comments_url": "https://api.github.com/repos/crawl/crawl/commits/7ebb014cd129ca084148a488c337d821d6f2994c/comments",
-    "author": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "committer": {
-      "login": "pooka109",
-      "id": 7695641,
-      "node_id": "MDQ6VXNlcjc2OTU2NDE=",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7695641?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/pooka109",
-      "html_url": "https://github.com/pooka109",
-      "followers_url": "https://api.github.com/users/pooka109/followers",
-      "following_url": "https://api.github.com/users/pooka109/following{/other_user}",
-      "gists_url": "https://api.github.com/users/pooka109/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/pooka109/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/pooka109/subscriptions",
-      "organizations_url": "https://api.github.com/users/pooka109/orgs",
-      "repos_url": "https://api.github.com/users/pooka109/repos",
-      "events_url": "https://api.github.com/users/pooka109/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/pooka109/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "parents": [
-      {
-        "sha": "db4a5d7c48a0f64f07877f388aa74329e1e89d15",
-        "url": "https://api.github.com/repos/crawl/crawl/commits/db4a5d7c48a0f64f07877f388aa74329e1e89d15",
-        "html_url": "https://github.com/crawl/crawl/commit/db4a5d7c48a0f64f07877f388aa74329e1e89d15"
       }
     ]
   }
